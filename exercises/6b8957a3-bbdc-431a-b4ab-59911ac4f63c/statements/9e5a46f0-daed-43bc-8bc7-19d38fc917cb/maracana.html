@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-1 (1.68)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>maracana</title>
+<META NAME="description" CONTENT="maracana">
+<META NAME="keywords" CONTENT="maracana">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="maracana.css">
+
+</head>
+
+<BODY >
+<DIV ALIGN="CENTER">
+<FONT SIZE="+4"><B>Problema G</b></font></div>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+3"><B>Reservas para Estádio do Maracanã</b></font></div>
+
+<P>
+
+<H2><A NAME="SECTION00001000000000000000">
+Problema</a>
+</h2>
+O Estádio do Maracanã, localizado na Zona Norte do Rio de Janeiro,
+foi inaugurado em 16 de Junho de 1950 e tem actualmente uma capacidade para 200 000 pessoas,
+a qual é reduzida para 100 000 por razões de segurança.
+Supondo que os lugares são numerados de 1 a 200 000, 
+e que são efectuadas reservas de bilhetes para lugares com esses
+números, pretende-se verificar se uma sequência de reservas de bilhetes é
+<EM>aceitável</em>. Para tal, o número total de bilhetes vendidos não deverá exceder 
+ 100 000 e não podem ser vendidos dois (ou mais) bilhetes com o
+mesmo número.
+
+<P>
+
+<H2><A NAME="SECTION00002000000000000000">
+Tarefa</a>
+</h2>
+
+<P>
+Escrever um programa que verifica se uma sequência de reservas é <EM> aceitável</em>
+ e, caso o seja, 
+indica os lugares vendidos, duma forma sintetizada.
+Podem efectuar-se reservas de bilhetes individuais ou de 
+vários bilhetes com números consecutivos.
+
+<P>
+
+<H2><A NAME="SECTION00003000000000000000">
+Input</a>
+</h2>
+É dada a sequência de reservas, uma reserva em cada linha. A sequência
+termina 
+por <!-- MATH
+ $\mathbf{ {-}1}$
+ -->
+<IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\mathbf{ {-}1}$"> e tem sempre pelo menos uma reserva e no máximo
+100. Cada reserva pode
+ser da forma <!-- MATH
+ $\mathbf{0}\; n$
+ -->
+<IMG
+ WIDTH="30" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\mathbf{0}\; n$"> ou  
+<!-- MATH
+ $\mathbf{1}\;n\;m$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\mathbf{1}\;n\;m$">. No primeiro caso, é de apenas um bilhete, o 
+qual deverá ter o número <IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$n$">. No segundo, é dos
+<IMG
+ WIDTH="81" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$m-n+1$"> bilhetes cujos números são os do intervalo
+<!-- MATH
+ ${\mathbf[n,m]}$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="${\mathbf[n,m]}$">, isto é, <IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$n$">, <IMG
+ WIDTH="45" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$n+1$">, ..., <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$m$">.
+Por exemplo,
+<PRE>
+0 13
+1 500 1000
+1 57 499
+...
+</pre>
+indicaria, a reserva do número 13, de todos os números de 500 a 1000,
+de todos de 57 a 499, ...
+
+<P>
+
+<H2><A NAME="SECTION00004000000000000000">
+Output</a>
+</h2>
+Deve indicar o número total de bilhetes reservados, 
+e  nas linhas seguintes uma representação do conjunto
+de reservas efectuadas.
+
+<P>
+O conjunto deverá estar ordenado, e será 
+a união dos conjuntos que indicar em cada linha, devendo a sua
+representação ser o mais compacta possível.
+Sempre que tiver reservado bilhetes com números consecutivos, deverá
+incluí-los todos num só intervalo.
+Reservas de bilhetes isolados, deverão ser agrupadas, desde que 
+seja mantido ordenado o conjunto final (conforme se ilustra abaixo).
+
+<P>
+O número total de bilhetes reservados será <code>0</code> se 
+não for possível efectuar a sequência de reservas, por esta não ser <EM>  aceitável</em>. Nesse caso, não escreverá nada na linha seguinte.
+
+<H2><A NAME="SECTION00005000000000000000">
+Exemplo de input 1</a>
+</h2>
+<PRE>
+0 13
+0 17
+1 500 1000
+0 1001 
+1 57 499
+1 17000 20535
+1 2000 2001
+0 1009
+1 1002 1003
+1 100013 100113
+0 18
+0 1150
+1 20536 50005
+0 1007 
+-1
+</pre>
+
+<P>
+
+<H2><A NAME="SECTION00006000000000000000">
+Exemplo de output 1</a>
+</h2>
+<PRE>
+34062
+{13} 
+[17,18]
+[57,1003]
+{1007,1009,1150}
+[2000,2001] 
+[17000,50005] 
+[100013,100113]
+</pre>
+
+<P>
+
+<H2><A NAME="SECTION00007000000000000000">
+Exemplo de input 2</a>
+</h2> 
+<PRE>
+1 502 1012 
+0 1001 
+1 57 495
+1 502 1000
+1 1003 1101
+1 496 500
+0 504
+1 4500 5000
+0 1002
+-1
+</pre>
+
+<P>
+
+<H2><A NAME="SECTION00008000000000000000">
+Exemplo de output 2</a>
+</h2>
+<PRE>
+0
+</pre>
+
+<P>
+
+<ADDRESS>
+ToPAS 2003
+</address>
+</body>
+</html>
+
+
