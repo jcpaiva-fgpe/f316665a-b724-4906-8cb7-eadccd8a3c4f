@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Problem E: Cronogramas</TITLE>
+<META NAME="description" CONTENT="Problem E: Cronogramas">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+
+<H1><A NAME="SECTION00050000000000000000">
+Problema E: Cronogramas</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="188" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="./cronograma.png"
+ ALT="Image cronograma">
+
+</DIV>
+
+<P>
+Um cronograma é uma frase que pode ser lida como uma data. A palavra
+portuguesa deriva das palavras gregas "chronos" (tempo) e "grama"
+(letra).  Embora hoje em dia a palavra "cronograma" tenha adquirido
+uma nova conotação - a de diagrama representando a evolução temporal -
+em tempo idos os cronogramas eram simplesmente frases que escondiam
+uma data. Os cronogramas eram inscritos em monumentos e túmulos como
+uma forma poética de aludir às datas que estes evocam. Em vez de
+simplesmente escrever a data em numeração romana, como nesses tempos
+era norma, as letras da numeração romana eram usadas no meio das
+palavras de uma frase, misturadas com outras letras que não têm
+significado como numerais romanos. Por exemplo, da frase 
+
+<P>
+<DIV ALIGN="CENTER">
+A<B>M</B>OR <B>M</B>A<B>XI</B>
+
+</DIV>
+
+<P>
+podem-se extrair os caracteres da numeração romana MMXI que equivalem
+ao numero 2011. Como todos sabemos, a numeração romana é de base
+decimal, como a árabe, mas não é posicional. Cada letra tem um valor e
+o valor do número baseia-se na soma do valor das letra que o
+compõem. Para os mais esquecidos a tabela seguinte relembra a
+correspondência entre letras romanas e o seu valor. 
+
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TH ALIGN="CENTER"><B>Letra</B></TH>
+<TH ALIGN="RIGHT"><B>Valor</B></TH>
+</TR>
+<TR><TD ALIGN="CENTER">I</TD>
+<TD ALIGN="RIGHT">1</TD>
+</TR>
+<TR><TD ALIGN="CENTER">V</TD>
+<TD ALIGN="RIGHT">5</TD>
+</TR>
+<TR><TD ALIGN="CENTER">X</TD>
+<TD ALIGN="RIGHT">10</TD>
+</TR>
+<TR><TD ALIGN="CENTER">L</TD>
+<TD ALIGN="RIGHT">50</TD>
+</TR>
+<TR><TD ALIGN="CENTER">C</TD>
+<TD ALIGN="RIGHT">100</TD>
+</TR>
+<TR><TD ALIGN="CENTER">D</TD>
+<TD ALIGN="RIGHT">500</TD>
+</TR>
+<TR><TD ALIGN="CENTER">M</TD>
+<TD ALIGN="RIGHT">1000</TD>
+</TR>
+</TABLE>
+</DIV> 
+
+<P>
+Na numeração romana as letras são geralmente escritas por ordem
+decrescente do seu valor. Por exemplo 1500 é escrito como MD e nunca
+como DM. As letras que correspondem a potências de 10 (I, X, C e o M)
+podem ser repetidas até 3 vezes.  
+Pode também ser usado o princípio subtrativo para simplificar
+algumas representações. Escreve-se assim IV em vez de
+IIII, e IX em vez de VIIII, por exemplo. A utilização do
+princípio subtrativo está limitada a valores da grandeza
+próxima. Podemos usar um I antes de um V ou um X, um X antes de um L
+ou um C, ou um C antes de um D ou de um M; mas nunca um I antes de um
+C ou de um M, ou X antes de um D ou de um M. Por exemplo, não faz
+sentido escrever MIM para 1999 que deverá ser escrito como MCMXCIX.
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Pretende-se um programa que recebe como entrada uma linha com uma
+sequência de palavras que eventualmente contém um cronograma
+de valor inferior a 3999, e produza uma linha com o número correspondente em notação
+árabe.  Dado que os romanos não usavam minúsculas, assumimos que as
+palavras são sequências de uma ou mais maiúsculas e que os 
+cronogramas têm no máximo 100 caracteres. 
+Se nenhuma das letras
+ I, V, X, L, C, D, e M  ocorrer,
+então a linha resultante terá o
+valor 0. Caso contrário, terá o valor correspondente ao numeral
+romano, que se supõe estar sempre bem definido.
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00052100000000000000">
+Input</A>
+</H3>
+<PRE>
+AMORE MATVRITAS
+</PRE>
+<H3><A NAME="SECTION00052200000000000000">
+Output</A>
+</H3>
+<PRE>
+2006
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00053000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00053100000000000000">
+Input</A>
+</H3>
+<PRE>
+ESTES ROMANOS SAO LOUKOS
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00053200000000000000">
+Output</A>
+</H3>
+<PRE>
+1050
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00054000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00054100000000000000">
+Input</A>
+</H3>
+<PRE>
+OK
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00054200000000000000">
+Output</A>
+</H3>
+<PRE>
+0
+</PRE>
+<HR>
+<ADDRESS>
+ToPAS'2011
+</ADDRESS>
+</BODY>
+</HTML>
