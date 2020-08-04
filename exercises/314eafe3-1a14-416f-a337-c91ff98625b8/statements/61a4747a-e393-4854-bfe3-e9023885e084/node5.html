@@ -1,0 +1,161 @@
+<H1><A NAME="SECTION00050000000000000000">
+Problem E: Ti-Nó-Ni</A>
+</H1> 
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="139" HEIGHT="119" ALIGN="BOTTOM" BORDER="0"
+ SRC="./cartoon_ambulance.jpg"
+ ALT="Image cartoon_ambulance">
+ 
+<IMG
+  WIDTH="148" HEIGHT="138" ALIGN="BOTTOM" BORDER="0"
+ SRC="./short_sensors.jpg"
+ ALT="Image short_sensors">
+
+</DIV>
+
+<P>
+Num futuro não muito longínquo teremos sensores dentro e fora do nosso corpo 
+que permitirão monitorizar e auxiliar a diagnosticar as doenças que nos 
+afligem. Já não é de todo ficção científica a possibilidade de um doente ir 
+para casa com um conjunto de sensores e um PDA para ser acompanhado à 
+distância pelos seus médicos  (que, eventualmente, lhe ligarão para o telemóvel a dizer 
+que não está bem).
+Como se pode determinar 
+o estado do doente a partir das leituras dos sensores? Usando uma árvore de decisão, por exemplo, como a da
+figura,  para obter o indicador de
+doença (no exemplo, seria o valor do indicador de <EM>Estado de Ansiedade</EM>).
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="372" HEIGHT="217" ALIGN="BOTTOM" BORDER="0"
+ SRC="./bodySensors-img.jpg"
+ ALT="Image bodySensors-img">
+   
+</DIV>
+
+<P>
+Processa-se a árvore de baixo para cima para obter um valor
+ para cada nó. Esse valor vai ser a <EM>parte
+ inteira</EM> da 
+ média pesada dos valores dos nós de que depende 
+imediatamente (nós  filhos). O peso de cada filho é definido pelo
+ valor que está no ramo que o liga ao pai. O peso total dos filhos será sempre 10.
+Os nós que não têm filhos
+são os que
+correspondem aos sensores (e chamam-se folhas). Na figura, a leitura do sensor está indicada no nó entre
+parentesis.
+Assim, 
+por exemplo, para calcular o <I>Nível Respiração</I>, de acordo com a figura, 
+teriamos:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\mbox{\em\small Nível Respiração} = \left( 7\times
+  \mbox{\em\small Resp.~Tórax}+3\times \mbox{\em\small Resp. Abdómen}\right)/10 = 
+\left( 7\times 4 + 3 \times 10\right)/10  = 5.8 \approx {\bf 5}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="669" HEIGHT="31" BORDER="0"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}\mbox{\em\small Nível Respiração} = \left( 7\times
+\mbox{\em...
+...left( 7\times 4 + 3 \times 10\right)/10 = 5.8 \approx {\bf 5}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Logo, também  <!-- MATH
+ $\mbox{\em\small Respiração} = 5$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\mbox{\em\small Respiração} = 5$"> pois  <!-- MATH
+ $\mbox{\em
+ \small Respiração} =
+ \left( 10\times \mbox{\em\small Nível Respiração} \right)/10$
+ -->
+<IMG
+ WIDTH="265" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mbox{\em
+\small Respiração} =
+\left( 10\times \mbox{\em\small Nível Respiração} \right)/10$">.
+Se a árvore só tivesse um nó, esse nó
+correspondia a um 
+sensor e a sua leitura dava o indicador da doença.
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000">
+Tarefa</A>
+</H2>
+Pretende-se implementar um programa que, dada a especificação duma árvore
+de decisão e os valores das leituras dos sensores, 
+escreva o ``<I>valor</I>'' do nó 1 da árvore (seguido de
+mudança de linha).
+
+<P>
+Na primeira linha de <EM>input</EM> terá dois inteiros <code>n</code> e
+<code>f</code>, separados por espaço: <code>n</code> é o número total de nós e <code>f</code> o de folhas. Cada uma das <code>n-1</code>
+linhas seguintes define um ramo: <code>Pai</code> <code>Filho</code>
+<code>Peso</code>. Em cada uma das <code>f</code> linhas seguintes terá um par de
+valores <code>Sensor Leitura</code>.  Os nós foram numerados de 1 a <code>n</code> de forma que
+cada filho tivesse um número superior ao seu pai e os sensores
+tivessem números de <TT>n-f+1</TT> a <code>n</code>. Os ramos estão ordenados por ordem 
+crescente de número de nó pai. O número de nós  é maior ou
+igual a 1 e não excede 100. Os valores (lidos ou calculados) também
+serão relativamente pequenos. 
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000">
+Exemplo</A>
+</H2>
+
+<H3><A NAME="SECTION00052100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+12 6
+1 2 5
+1 3 5
+2 4 6
+2 5 4
+3 6 10
+4 7 10
+5 8 3
+5 9 5
+5 10 2
+6 11 7
+6 12 3
+7 9
+8 10
+10 8
+11 4
+12 10
+9 4
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00052200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+6
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2008
+</ADDRESS>
