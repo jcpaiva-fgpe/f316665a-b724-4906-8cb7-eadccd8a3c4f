@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;C: Patinagem</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;C: Patinagem">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00030000000000000000">
+Problem&nbsp;C: Patinagem</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="140" HEIGHT="148" ALIGN="BOTTOM" BORDER="0"
+ SRC="./littlekid.jpg"
+ ALT="Image littlekid">
+
+</DIV>
+
+<P>
+Existem desportos, como a patinagem artística, em que não há um valor
+facilmente observável e mensurável para aferir o mérito dos
+atletas. Não há bolas a entrar na baliza, tempos de corrida ou alturas
+de fasquia. A avaliação é feita por um júri e cada elemento
+atribui uma classificação individual. A classificação final é a média das classificações dos vários elementos. 
+
+<P>
+Mesmo assim, por vezes há elementos que atribuem classificações
+bastante diferentes dos restantes, o que pode distorcer
+significativamente a classificação final. Por isso é habitual retirar
+os valores extremos antes de calcular a média. No entanto, se os 
+valores extremos ocorrerem mais de uma vez, ou seja, se mais do que um elemento
+do júri atribuir essa classificação (máxima ou mínima),  o valor correspondente
+é tomado como significativo e é considerado para o cálculo da média. 
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Pretende-se um programa que, dadas 
+as <EM>n</EM> classificações individuais atribuídas pelos <EM>n</EM>
+elementos do júri, calcule a classificação final. Estas classificações
+são números inteiros entre 0 e 100.
+
+<P>
+A classificação final deve 
+ser calculada como um valor inteiro. Isto é, deve ser usada a divisão
+inteira para dividir a soma dos valores considerados pelo número de
+valores considerados.
+
+<P>
+A primeira linha dos dados contem o valor de <EM>n</EM>, que é sempre 
+maior do que 2 e menor ou igual a 10.
+Seguem-se <EM>n</EM> inteiros não negativos e menores ou iguais a
+100, que são as classificações individuais atribuídas.
+
+<P>
+O resultado é constituído por uma única linha com um inteiro não negativo e menor ou igual a 100.
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000">
+Exemplo</A>
+</H2>
+
+<H3><A NAME="SECTION00032100000000000000">
+Input</A>
+</H3>
+<PRE>
+5
+45
+55
+43
+55
+44
+</PRE>
+<H3><A NAME="SECTION00032200000000000000">
+Output</A>
+</H3>
+<PRE>
+49
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2012
+</ADDRESS>
+</BODY>
+</HTML>
