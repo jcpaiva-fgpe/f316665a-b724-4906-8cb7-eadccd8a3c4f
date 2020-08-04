@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem G: Sentar ou não Sentar?</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;G: Sentar ou não Sentar?">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00070000000000000000">
+Problem G: Sentar ou não Sentar?</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Problema</A>
+</H2>
+
+<P>
+São de ideias quase fixas os habitantes do reino da Teimosia,
+preferindo ficar de pé do que sentar-se em cadeiras pelas
+quais não nutrem especial empatia. 
+Só já muito exaustos se sentam 
+nalguma que, não sendo das suas predilectas,
+também não rejeitam totalmente.
+Em sociedade respeitam uma  hierarquia estrita,
+aguardando que os
+seus superiores se sentem ou insistam em ficar de pé, para
+avançar então para um lugar da sua preferência, ainda desocupado.
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="158" HEIGHT="215" ALIGN="BOTTOM" BORDER="0"
+ SRC="Chair_Cartoon.jpg"
+ ALT="Image Chair_Cartoon">
+
+</DIV>
+<H2><A NAME="SECTION00072000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa que dado
+ o número de cadeiras existentes de cada 
+tipo e  dadas as preferências dos habitantes,
+por ordem decrescente de preferência,
+determina o número dos que ficam de pé e o número
+de cadeiras que ficam por ocupar. Os habitantes estão exaustos.
+
+<P>
+
+<H2><A NAME="SECTION00073000000000000000">
+Input</A>
+</H2>
+A primeira linha tem o número de tipos de cadeiras.
+A seguir, são dados pares <!-- MATH
+ $\mathtt{t\;\;  v}$
+ -->
+<IMG
+ WIDTH="32" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\mathtt{t\;\; v}$">, em que 
+<IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\mathtt t$"> é um tipo e <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathtt v$"> o número de cadeiras que
+existem do tipo <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\mathtt t$">. Se não existirem cadeiras dum dado
+tipo <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\mathtt t$">, nos dados terá <!-- MATH
+ $\mathtt{t\;\;  0}$
+ -->
+<IMG
+ WIDTH="32" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\mathtt{t\;\; 0}$">. Note que
+<IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\mathtt t$"> e <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\mathtt v$"> estão em linhas consecutivas.
+
+<P>
+Depois da informação sobre as cadeiras, encontra
+o número de habitantes do reino e, em seguida,
+as preferências de cada um, estando já indicadas
+<B>segundo a hierarquia do reino</B>.
+Para cada habitante é dado o número de opções (que pode ser <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\mathtt 0$">)
+e, em 
+seguida, os tipos de cadeiras em que aceita sentar-se, 
+por ordem descrescente de preferência.
+
+<P>
+Podem existir até 100 tipos de cadeiras e até 
+1000 de cada tipo. Nem o número de habitantes do reino nem o
+número total de cadeiras
+excede 60000. 
+
+<P>
+
+<H2><A NAME="SECTION00074000000000000000">
+Output</A>
+</H2>
+Duas linhas: uma com o
+número de habitantes que
+ficam de pé
+e a outra com o número de cadeiras que ficam livres.
+Terminam por mudança de linha.
+
+<P>
+
+<H2><A NAME="SECTION00075000000000000000">
+Exemplo: input</A>
+</H2>
+<BR>
+<PRE>
+4
+1
+4
+4
+0
+3
+1
+2
+1
+7
+2
+3
+1
+4
+3
+1
+2
+4
+0
+1
+2 
+2
+3
+2
+1
+1
+3
+2
+4
+1
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00076000000000000000">
+Exemplo: output</A>
+</H2>
+<BR>
+<PRE>
+2
+1
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2005
+</ADDRESS>
+</BODY>
+</HTML>
