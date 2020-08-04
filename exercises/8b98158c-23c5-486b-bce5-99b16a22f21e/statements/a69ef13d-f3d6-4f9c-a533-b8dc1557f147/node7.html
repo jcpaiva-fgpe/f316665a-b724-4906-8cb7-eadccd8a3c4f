@@ -1,0 +1,134 @@
+
+<H1><A NAME="SECTION00070000000000000000">
+Problem G: Genial!</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="119" HEIGHT="52" ALIGN="BOTTOM" BORDER="0"
+ SRC="./igenial.jpg"
+ ALT="Image igenial">
+
+</DIV>
+No jogo de tabuleiro <I>Genial!</I> cada um de quatro jogadores obtém
+pontos em seis cores: vermelho, verde, azul, laranja, amarelo e roxo.
+O conhecimento das regras deste jogo não é importante
+para o problema 
+que se segue.
+A posição relativa
+de cada jogador no final do jogo é determinada pela pontuação
+na cor em que tiver o <I>menor</I> número de pontos.  
+Ganha o jogador que tiver mais pontos
+na sua <I>pior</I> cor.
+Quando dois jogadores tiverem igual pontuação na pior cor, faz-se
+o desempate pela <!-- MATH
+ $2^{\mbox{\b{a}}}$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="$2^{\mbox{\b{a}}}$"> pior cor e assim sucessivamente.
+Por exemplo: sejam as pontuações dadas pela tabela:
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT"> </TD>
+<TD ALIGN="CENTER">Vermelho</TD>
+<TD ALIGN="CENTER">Verde</TD>
+<TD ALIGN="CENTER">Azul</TD>
+<TD ALIGN="CENTER">Laranja</TD>
+<TD ALIGN="CENTER">Amarelo</TD>
+<TD ALIGN="CENTER">Roxo</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Joana</TD>
+<TD ALIGN="CENTER">11</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">8</TD>
+<TD ALIGN="CENTER">17</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">14</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Pedro</TD>
+<TD ALIGN="CENTER">8</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">9</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">18</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Miguel</TD>
+<TD ALIGN="CENTER">11</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">18</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Beatriz</TD>
+<TD ALIGN="CENTER">13</TD>
+<TD ALIGN="CENTER">12</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">18</TD>
+<TD ALIGN="CENTER">15</TD>
+<TD ALIGN="CENTER">18</TD>
+</TR>
+</TABLE>
+</DIV>
+A Beatriz será  vencedora (com 12 pontos) e em segundo lugar
+fica o Miguel (com 11 pontos).
+A  Joana e o Pedro têm a mesma pontuação na pior cor (8 pontos),
+mas a Joana tem melhor resultado na <!-- MATH
+ $2^{\mbox{\b{a}}}$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="$2^{\mbox{\b{a}}}$"> menor (11 pontos contra 9 do Pedro);
+a Joana fica em terceiro e o Pedro em último lugar.
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Tarefa</A>
+</H2>
+<BR>
+Escrever um programa que leia as pontuações dos jogadores e 
+escreva a ordem relativa entre estes. 
+É dada a tabela de pontuações: 4 linhas; cada linha tem 
+as 6 pontuações de um jogador (são inteiros positivos).
+O programa deve escrever uma única linha com
+a ordem relativa entre os jogadores, 
+do melhor para o pior classificado.
+Não haverá empates.
+Identificamos os jogadores por números de 1 a 4:
+o jogador 1 tem as pontuações da primeira linha,
+o jogador 2 as da segunda, etc.
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000">
+Exemplo</A>
+</H2> 
+<H3><A NAME="SECTION00072100000000000000">
+Input</A>
+</H3> <BR>
+<PRE>
+11 18 8 17 18 14
+8 18 18 9 18 18
+11 18 18 18 18 18
+13 12 18 18 15 18
+</PRE>
+<H3><A NAME="SECTION00072200000000000000">
+Output</A>
+</H3> <BR>
+<PRE>
+4 3 1 2
+</PRE>
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2008
+</ADDRESS>
