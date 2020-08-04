@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Problem B: Gasolina</TITLE>
+<META NAME="description" CONTENT="Problem B: Gasolina">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+
+<H1><A NAME="SECTION00020000000000000000">
+Problema B: Gasolina</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="198" HEIGHT="256" ALIGN="BOTTOM" BORDER="0"
+ SRC="./out_of_gas_361515.jpg"
+ ALT="Image out_of_gas_361515">
+
+</DIV>
+
+<P>
+Estamos em crise (isso todos nós estamos fartos de saber) e para
+tornar as coisas ainda mais desagradáveis, os preços do petróleo nos
+mercados internacionais não param de subir. Por causa disso, a
+gasolina e o gasóleo estão cada vez mais caros. Aliás, até parece que
+não há semana em que não haja um aumento no preço dos combustíveis. Não
+será bem assim, mas a memória trai-nos e por isso o melhor mesmo é
+verificar.
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+Tarefa</A>
+</H2>
+Consultando a página Web da Galp, temos acesso ao preço da gasolina, em cada dia desde o início do ano, ou, em geral, desde alguma data no passado. Pretendemos, usando esses dados, desfazer mitos e calcular exatamente o número de semanas em que o preço da gasolina subiu pelo menos uma vez. 
+
+<P>
+
+<H2><A NAME="SECTION00022000000000000000">
+Input</A>
+</H2>
+A primeira linha tem o número de semanas para as quais temos dados sobre o preço da gasolina. A segunda linha tem um número representando o preço no domingo anterior ao da primeira semana com registos completos. Para efeitos deste problema, usamos a norma que determina que a semana começa à segunda-feira e termina no domingo seguinte. Seguem-se tantas linhas como o número de semanas indicado na primeira linha, cada uma com sete números, representando o preço da gasolina em cada um dos dias da semana. Os preços da gasolina são expressos por números inteiros em milésimas de euros. Por exemplo, o número 1759 significa que o preço é 1.759 euros.
+
+<H2><A NAME="SECTION00023000000000000000">
+Output</A>
+</H2>
+Há apenas uma linha onde aparece apenas um número: o número de semanas em que o preço subiu pelo menos uma vez, de um dia para o outro. Note que se o preço subir do domingo da semana anterior para a segunda-feira da semana corrente, conta como tendo subido na semana corrente.
+
+<P>
+
+<H2><A NAME="SECTION00024000000000000000">
+Exemplo 1</A>
+</H2>
+
+
+<H3><A NAME="SECTION00024100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+5
+1689
+1689 1689 1689 1689 1689 1689 1689
+1689 1689 1689 1699 1699 1699 1699
+1699 1659 1659 1659 1659 1659 1659
+1659 1659 1669 1674 1679 1674 1679
+1679 1679 1679 1679 1679 1679 1679
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00024200000000000000">
+Output</A>
+</H3>
+
+<PRE>
+2
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00025000000000000000">
+Exemplo 2</A>
+</H2>
+
+
+<H3><A NAME="SECTION00025100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+12
+1499
+1524 1524 1524 1524 1524 1524 1524
+1524 1524 1524 1524 1524 1524 1524
+1529 1529 1529 1529 1529 1529 1529
+1529 1529 1529 1529 1529 1529 1529
+1529 1529 1529 1529 1529 1529 1529
+1529 1529 1529 1529 1529 1529 1529
+1529 1529 1529 1539 1539 1539 1539
+1514 1514 1514 1514 1514 1514 1514
+1514 1514 1514 1514 1514 1514 1514
+1514 1544 1544 1544 1544 1544 1544
+1544 1544 1544 1544 1544 1544 1544
+1544 1554 1554 1554 1544 1544 1544
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00025200000000000000">
+Output</A>
+</H3>
+
+<PRE>
+5
+</PRE>
+<HR>
+<ADDRESS>
+ToPAS'2011
+</ADDRESS>
+</BODY>
+</HTML>
