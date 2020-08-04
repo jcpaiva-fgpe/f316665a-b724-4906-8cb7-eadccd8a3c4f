@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;C: Sopinha de letras</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;C: Sopinha de letras">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00030000000000000000">
+Problem&nbsp;C: Sopinha de letras</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER">A</TD>
+<TD ALIGN="CENTER">T</TD>
+<TD ALIGN="CENTER">R</TD>
+<TD ALIGN="CENTER">Y</TD>
+<TD ALIGN="CENTER">K</TD>
+<TD ALIGN="CENTER">L</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Q</TD>
+<TD ALIGN="CENTER">D</TD>
+<TD ALIGN="CENTER">X</TD>
+<TD ALIGN="CENTER">I</TD>
+<TD ALIGN="CENTER">E</TD>
+<TD ALIGN="CENTER">T</TD>
+</TR>
+<TR><TD ALIGN="CENTER">A</TD>
+<TD ALIGN="CENTER">E</TD>
+<TD ALIGN="CENTER">X</TD>
+<TD ALIGN="CENTER">T</TD>
+<TD ALIGN="CENTER">V</TD>
+<TD ALIGN="CENTER">A</TD>
+</TR>
+<TR><TD ALIGN="CENTER">M</TD>
+<TD ALIGN="CENTER">O</TD>
+<TD ALIGN="CENTER">R</TD>
+<TD ALIGN="CENTER">L</TD>
+<TD ALIGN="CENTER">K</TD>
+<TD ALIGN="CENTER">Z</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Z</TD>
+<TD ALIGN="CENTER">A</TD>
+<TD ALIGN="CENTER">P</TD>
+<TD ALIGN="CENTER">O</TD>
+<TD ALIGN="CENTER">S</TD>
+<TD ALIGN="CENTER">I</TD>
+</TR>
+<TR><TD ALIGN="CENTER">S</TD>
+<TD ALIGN="CENTER">S</TD>
+<TD ALIGN="CENTER">T</TD>
+<TD ALIGN="CENTER">O</TD>
+<TD ALIGN="CENTER">A</TD>
+<TD ALIGN="CENTER">S</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+A sopa de letras é  um género de puzzle  usado muitas vezes como
+exercício, para melhorar o vocabulário dos alunos num certo
+domínio. Este puzzle consiste numa matriz de letras onde se formam
+palavras, podendo estas ocorrer numa mesma linha, coluna ou diagonal. Para
+tornar o desafio mais interessante as palavras podem até estar
+escritas de trás para a frente. Às vezes é tão difícil encontrar todas as palavras!
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa que lê uma matriz de letras e um conjunto de
+palavras e escreve a localização da primeira última letra de cada
+palavra lida. As letras das palavras estão em posições contíguas da
+mesma linha, coluna ou diagonal, podendo estar na ordem
+inversa. Pode-se assumir que cada palavra só ocorre uma vez, nenhuma palavra é uma sub-palavra de
+outra, embora as mesmas posições da matriz possam ser usadas em várias
+palavras. 
+As células da matriz são referenciadas pela sua linha e coluna, sendo a linha número 1 a primeira contar do topo e a coluna número 1 a mais à esquerda. 
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000">
+Input</A>
+</H2>
+
+<P>
+A primeira linha contém dois inteiros, <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$m$"> e <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$n$">, separados por um
+espaço, ambos maiores ou iguais a&nbsp;4 e
+menores ou iguais a&nbsp;20. Esses inteiros representam as dimensões da matriz,
+sendo <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$m$"> o número de 
+linhas e <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$n$"> o número de colunas.
+
+<P>
+As <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$m$"> linhas seguintes contêm  sequências de carateres com <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$n$"> letras. 
+Segue-se uma linha com um inteiro <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$k$">, que é o número
+de palavras na matriz, e <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$k$"> linhas contendo sequências de caracteres,
+que são as palavras a procurar na sopa de letras, sendo <!-- MATH
+ $1\leq k \leq 100$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$1\leq k \leq 100$">. 
+
+<P>
+
+<H2><A NAME="SECTION00033000000000000000">
+Output</A>
+</H2>
+
+<P>
+É constituído por <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$k$"> linhas, cada uma com quatro inteiros
+separados por um espaço,  <!-- MATH
+ $L_i\; C_i\;
+L_f\; C_f$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$L_i\; C_i\;
+L_f\; C_f$">, que identificam a posição da palavra correspondente
+(segundo a ordem de leitura), sendo 
+<IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$L_i$"> a linha inicial da palavra, <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$C_i$"> a coluna inicial, e <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$L_f$"> e
+<IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$C_f$"> a linha final e a coluna final, com <!-- MATH
+ $1\leq L_i\leq m$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$1\leq L_i\leq m$">, <!-- MATH
+ $1\leq C_i\leq n$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$1\leq C_i\leq n$">, 
+<!-- MATH
+ $1\leq L_f\leq m$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$1\leq L_f\leq m$">, e <!-- MATH
+ $1\leq C_f\leq n$
+ -->
+<IMG
+ WIDTH="91" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$1\leq C_f\leq n$">.
+
+<P>
+
+<H2><A NAME="SECTION00034000000000000000">
+Exemplo</A>
+</H2>
+
+<H3><A NAME="SECTION00034100000000000000">
+Input</A>
+</H3>
+
+<P>
+<PRE> 
+6 6 
+ATRYKL
+QDXIET
+AEXTVA
+MORLKZ
+ZAPOSI
+SSTOAS
+3
+SOPA
+DE
+LETRAS
+</PRE>
+<H3><A NAME="SECTION00034200000000000000">
+Output</A>
+</H3>
+
+<P>
+<PRE>
+5 5 5 2
+2 2 3 2
+1 6 6 1
+</PRE> 
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2013
+</ADDRESS>
+</BODY>
+</HTML>
