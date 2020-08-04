@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+
+<TITLE>Registo de altos e baixos do caminhante</TITLE>
+<META NAME="description" CONTENT="Registo de altos e baixos do caminhante">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<script type="text/javascript" 
+        src="../mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+</HEAD>
+
+
+<H1><A NAME="SECTION00010000000000000000">
+Registo de altos e baixos do caminhante</A>
+</H1>
+
+
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="223" HEIGHT="250" src="caminhante.jpeg" border="0" align=center>
+</TD> </TR>
+</TABLE>
+
+
+
+<P>
+Um caminhante gosta de registar a distância percorrida 
+em cada uma das suas caminhadas. 
+E, de forma a controlar a sua evolução, 
+quer conhecer a diferença entre as distâncias percorridas
+em caminhadas consecutivas.
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escreva um programa que, 
+para cada caminhada registada (exceto a primeira), 
+indica se a distância percorrida nessa caminhada 
+aumentou (<TT>ALTO</TT>), 
+manteve-se (<TT>PATAMAR</TT>) ou 
+diminuiu (<TT>BAIXO</TT>)
+em relação à distância percorrida na caminhada anterior.
+Quando a distância aumentou ou diminuiu,
+o programa calcula a diferença entre as distâncias percorridas,
+em quilómetros e metros.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Input</A>
+</H2>
+
+<P>
+O input tem \(n+1\) linhas. 
+
+<P>
+Cada uma das \(n\)<!--  <IMG -->
+ <!-- WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img3.gif" -->
+ <!-- ALT="$n$">  --> 
+primeiras linhas tem o registo de uma caminhada.
+A linha tem dois inteiros, \(k\) <!--  <IMG -->
+ <!-- WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img4.gif" -->
+ <!-- ALT="$k$"> --> e \(m\), <!-- <IMG -->
+ <!-- WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img5.gif" -->
+ <!-- ALT="$m$">, -->
+que indicam que o caminhante percorreu \(k\) <!-- <IMG -->
+ <!-- WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img4.gif" -->
+ <!-- ALT="$k$"> --> quilómetros e \(m\) <!-- <IMG -->
+ <!-- WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img5.gif" -->
+ <!-- ALT="$m$"> --> metros.
+
+<P>
+A última linha, que já não corresponde a uma caminhada, tem <TT>0 0</TT>.
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Restrições</A>
+</H2>
+
+<P>
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $2 \leq n \leq 1\,000$
+ -->
+\(2 \leq n \leq 1\,000\)
+<!-- <IMG -->
+<!--  WIDTH="108" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img6.gif" -->
+<!--  ALT="$2 \leq n \leq 1\,000$"> --></TD>
+<TD ALIGN="LEFT">Número de caminhadas</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $0 \leq k \leq 100$
+ --> \(0 \leq k \leq 100\)
+<!-- <IMG -->
+<!--  WIDTH="95" HEIGHT="34" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img7.gif" -->
+<!--  ALT="$0 \leq k \leq 100$"> --></TD>
+<TD ALIGN="LEFT">Quilómetros percorridos numa caminhada</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $0 \leq m \leq 999$
+ -->
+\(0 \leq m \leq 999\)
+<!-- <IMG -->
+<!--  WIDTH="101" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img8.gif" -->
+<!--  ALT="$0 \leq m \leq 999$"> --></TD>
+<TD ALIGN="LEFT">Metros (para além dos \(k\)<!-- <IMG -->
+ <!-- WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img4.gif" -->
+ <!-- ALT="$k$"> --> quilómetros) 
+                         percorridos numa caminhada</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Output</A>
+</H2>
+O output tem \(n-1\) <!-- <IMG -->
+ <!-- WIDTH="45" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img9.gif" -->
+ <!-- ALT="$n-1$"> --> linhas: 
+uma linha por cada duas caminhadas consecutivas.
+A linha correspondente às caminhadas \(i\) e \(i+1\) <!-- <IMG -->
+ <!-- WIDTH="10" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img10.gif" -->
+ <!-- <\!-- ALT="$i$"> -\-> e <IMG -->
+ <!-- WIDTH="40" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img11.gif" -->
+ <!-- ALT="$i+1$">  --> tem o seguinte formato:
+
+<UL>
+<LI><TT>ALTO \(k\) km \(m\) m</TT> <!-- <\!--  <IMG -\-> -->
+ <!-- <\!-- WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -\-> -->
+ <!-- <\!-- SRC="img4.gif" -\-> -->
+ <!-- <\!-- ALT="$k$"> -\-> km <IMG -->
+ <!-- WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img5.gif" -->
+ <!-- ALT="$m$"> m</TT> -->
+<BR>
+se a distância percorrida na caminhada \(i+1\) aumentou  \(k\) quilómetros e 
+\(m\) 
+ <!-- \(k\) <IMG -->
+ <!-- WIDTH="40" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img11.gif" -->
+ <!-- ALT="$i+1$">  -->
+ <!--      aumentou <IMG -->
+ <!-- WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img4.gif" -->
+ <!-- ALT="$k$"> quilómetros e <IMG -->
+ <!-- WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img5.gif" -->
+ <!-- ALT="$m$"> --> metros
+      em relação à distância percorrida na caminhada \(i\); <!-- <IMG -->
+ <!-- WIDTH="10" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img10.gif" -->
+ <!-- ALT="$i$">; -->
+</LI>
+<LI><TT>PATAMAR</TT>
+<BR>
+se a distância percorrida na caminhada \(i+1\) <!--  <IMG -->
+ <!-- WIDTH="40" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img11.gif" -->
+ <!-- ALT="$i+1$">  -->
+      se manteve
+      em relação à distância percorrida na caminhada \(i\);
+<!-- <IMG -->
+<!--  WIDTH="10" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+<!--  SRC="img10.gif" -->
+<!--  ALT="$i$">; -->
+</LI>
+<LI><TT>BAIXO \(k\) km \(m\) m</TT> <!-- <IMG -->
+ <!-- WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img4.gif" -->
+ <!-- ALT="$k$"> km <IMG -->
+ <!-- WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img5.gif" -->
+ <!-- ALT="$m$"> m</TT> -->
+<BR>
+se a distância percorrida na caminhada \(i+1\)<!--  <IMG -->
+ <!-- WIDTH="40" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img11.gif" -->
+ <!-- ALT="$i+1$">  -->
+      diminuiu \(k\) <!-- <IMG -->
+ <!-- WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img4.gif" -->
+ <!-- ALT="$k$"> --> quilómetros e \(m\) <!-- <IMG -->
+ <!-- WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img5.gif" -->
+ <!-- ALT="$m$"> --> metros
+      em relação à distância percorrida na caminhada \(i\).
+<!-- <IMG -->
+<!--  WIDTH="10" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+<!--  SRC="img10.gif" -->
+<!--  ALT="$i$">. -->
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00015000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00015100000000000000">
+Input</A>
+</H3>
+<PRE>
+10 200
+9 800
+10 250
+20 0
+20 0
+0 900
+0 0
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00015200000000000000">
+Output</A>
+</H3>
+<PRE>
+BAIXO 0 km 400 m
+ALTO 0 km 450 m
+ALTO 9 km 750 m
+PATAMAR
+BAIXO 19 km 100 m
+</PRE> 
+
+<P>
+
+<H2><A NAME="SECTION00016000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00016100000000000000">
+Input</A>
+</H3>
+<PRE>
+1 205
+1 205
+0 0
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00016200000000000000">
+Output</A>
+</H3>
+<PRE>
+PATAMAR
+</PRE> 
+
+<P>
+
+<P>
+<BR>
+
+</BODY>
+</HTML>
