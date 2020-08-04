@@ -1,0 +1,15 @@
+14 23
+XXXXXXXXXXXXXXXXXXXXXXX
+X         X           X
+X   B     X    B      X
+X         X        B  S
+X      B  XB          X
+X  B      XXXXXXXPXXXXX
+X         X           X
+X     B   X   B     B X
+X         XXXXXXXXXPXXX
+X         X     X     X
+X         P     P     X
+X    B    X B   X    BX
+X         X     X     X
+XXEXXXXXXXXXXXXXXXXXXXX
