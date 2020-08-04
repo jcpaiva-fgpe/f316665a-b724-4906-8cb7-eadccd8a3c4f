@@ -1,0 +1,103 @@
+
+<H1>
+Problem A: Não gosto de Geometria</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+</DIV>
+<P>
+<DIV ALIGN="CENTER"><IMG
+  WIDTH="131" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="./circo.jpg"
+ ALT="Image circo">
+
+</DIV>
+
+<P>
+Uma circunferência de centro <EM>C</EM>  e raio <EM>r</EM> é o lugar
+geométrico dos pontos do plano  que estão a distância <EM>r</EM> do ponto
+<EM>C</EM>. O círculo delimitado por essa circunferência é constituído pelos 
+pontos cuja distância a  <EM>C</EM> é menor ou igual a <EM>r</EM>. A circunferência é a fronteira do círculo e os restantes pontos 
+constituem o seu interior. 
+
+<P>
+Se  <EM>(a,b)</EM> e <EM>(c,d)</EM> forem as coordenadas de  dois pontos <EM>P</EM> e <EM>Q</EM>
+no referencial cartesiano ortonormado usual, então 
+o quadrado da distância entre <EM>P</EM> e <EM>Q</EM>
+é dado por <EM>(c-a)(c-a)+(d-b)(d-b)</EM>.
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa que dada uma circunferência e uma sequência de
+pontos caracterize a posição de cada ponto em relação 
+ao círculo delimitado por essa circunferência, indicando se
+este está <code>no interior</code>, <code>na fronteira</code> ou 
+<code>no exterior</code> do círculo.
+
+<P>
+Na primeira linha de input tem as coordenadas do centro da
+circunferência e na segunda tem a medida do raio. Na linha seguinte
+tem o número de pontos da sequência e, nas restantes, as 
+coordenadas <EM>x</EM> e <EM>y</EM> de cada ponto. Todos os valores são
+inteiros no intervalo [-1000,1000] (naturalmente o raio é positivo).
+
+<P>
+O programa apresenta a classificação dos pontos, pela ordem em que
+foram dados. Cada linha de saída segue o formato
+<code>(</code><EM>x</EM><code>,</code><EM>y</EM><code>): </code><EM>pos</EM>, em que <EM>pos</EM> é
+a classificação do ponto  e <EM>x</EM> e <EM>y</EM> as suas coordenadas.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Exemplo</A>
+</H2>
+
+<H3><A NAME="SECTION00012100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+-1 0
+10
+10
+6 100
+-1 10
+3 2
+-3 2
+7 6
+10 -1
+7 25
+-1 0
+8 5
+25 -1000
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00012200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+(6,100): no exterior
+(-1,10): na fronteira
+(3,2): no interior
+(-3,2): no interior
+(7,6): na fronteira
+(10,-1): no exterior
+(7,25): no exterior
+(-1,0): no interior
+(8,5): no exterior
+(25,-1000): no exterior
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2009
+</ADDRESS>
+</BODY>
+</HTML>
