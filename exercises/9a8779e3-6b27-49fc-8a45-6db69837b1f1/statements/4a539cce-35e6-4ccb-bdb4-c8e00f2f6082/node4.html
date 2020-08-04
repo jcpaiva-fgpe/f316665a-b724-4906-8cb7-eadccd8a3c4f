@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem D: Triângulo de Sierpinski</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;D: Triângulo de Sierpinski">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00040000000000000000">
+Problem D: Triângulo de Sierpinski</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+Problema</A>
+</H2>
+
+<P>
+O triângulo de Pascal é uma representação possível para os
+coeficientes da expansão do binómio de Newton: 
+<!--
+<IMG
+ WIDTH="82" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$(a+b)^{n+1}$">. 
+-->
+(a+b)<sup>(n-1)</sup>
+
+O triângulo
+pode ser definido usando a regra: o elemento de ordem <IMG
+ WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$k+1$"> na linha <IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$i+1$">
+resulta da soma dos elementos de ordem <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$k$"> e <IMG
+ WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$k+1$"> da linha <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="$i$">.  O
+triângulo para <IMG
+ WIDTH="47" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$n=8$"> é:
+
+<P>
+<PRE>
+1:                1
+2:              1   1
+3:            1   2   1
+4:          1   3   3   1
+5:        1   4   6   4   1
+6:      1   5  10  10   5   1
+7:    1   6  15  20  15   6   1
+8:  1   7  21  35  35  21   7   1
+</PRE>
+
+<P>
+O triângulo de Sierpinski obtem-se do anterior seguindo a mesma
+representação mas substituindo os elementos ímpares pelo caracter pelo
+caracter '*' e os pares pelo caracter '.'.  Para <IMG
+ WIDTH="47" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$n=8$"> o triângulo de
+Sierpinski é:
+
+<P>
+<PRE>
+1:                *
+2:              *   *
+3:            *   .   *
+4:          *   *   *   *
+5:        *   .   .   .   *
+6:      *   *   .   .   *   *
+7:    *   .   *   .   *   .   *
+8:  *   *   *   *   *   *   *   *
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escreva um programa que dado um valor de <IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$n$"> (<IMG
+ WIDTH="69" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$n&lt;=25$">) escreva o
+triângulo de Sierpinski correspondente, alinhado à esquerda e sem espaços.
+
+<P>
+
+<H2><A NAME="SECTION00043000000000000000">
+Input</A>
+</H2>
+Uma linha com um inteiro <IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$n$"> que corresponde ao tamanho do triângulo
+de Sierpinski a calcular.
+
+<P>
+
+<H2><A NAME="SECTION00044000000000000000">
+Output</A>
+</H2>
+O programa deverá apresentar como resultado o triângulo de Sierpinski
+alinhado à esquerda e sem espaços, correspondente ao valor de <IMG
+ WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$n$">.
+
+<P>
+
+<H2><A NAME="SECTION00045000000000000000">
+Exemplo: input</A>
+</H2>
+<PRE>
+8
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00046000000000000000">
+Exemplo: output</A>
+</H2>
+<PRE>
+*
+**
+*.*
+****
+*...*
+**..**
+*.*.*.*
+********
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2005
+</ADDRESS>
+</BODY>
+</HTML>
