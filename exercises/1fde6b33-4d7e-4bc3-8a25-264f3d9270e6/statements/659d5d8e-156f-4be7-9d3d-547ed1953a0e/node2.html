@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;B: Problemas de Agenda</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;B: Problemas de Agenda">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00020000000000000000">
+Problem&nbsp;B: Problemas de Agenda</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="111" HEIGHT="111" ALIGN="BOTTOM" BORDER="0"
+ SRC="./Calendar.jpg"
+ ALT="Image Calendar">
+
+</DIV>
+
+<P>
+As pessoas com agendas sobrecarregadas têm alguma dificuldade em marcar 
+reuniões. Há as que dizem "posso das
+<EM>x</EM> às <EM>y</EM>, mas às <EM>y</EM> já tenho outra reunião" e as
+que dizem "não posso das <EM>z</EM> às <EM>t</EM>, mas às <EM>t</EM> já estou
+livre".
+As outras possibilidades não serão interessantes agora e para
+simplificar vamos supor que dizem sempre "posso".
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa que, dada a duração (em horas) prevista para uma reunião
+entre duas pessoas
+e dois pares de inteiros <EM>A B</EM>  e <EM>C D</EM>, verifica se é possível
+agendar a reunião e  quando. Neste caso,  a primeira pessoa diria
+"posso das <EM>A</EM> horas às <EM>B</EM> horas, mas às <EM>B</EM> 
+já tenho outra reunião" e a segunda diria "posso das <EM>C</EM> horas às <EM>D</EM> horas, mas às <EM>D</EM> já tenho outra reunião", sendo
+ <EM>A, B, C</EM> e&nbsp;<EM>D</EM>  inteiros 
+entre 9 e 19. Assume-se que <EM>A</EM> é menor do que <EM>B</EM> e que <EM>C</EM> é
+menor do
+que&nbsp;<EM>D</EM>. 
+
+<P>
+A reunião
+tem de decorrer entre as 9 e as 19 horas e a sua duração é um inteiro.
+A primeira linha de dados tem essa duração e as duas seguintes os dois
+pares referidos.
+Conforme o caso, o programa escreve uma linha 
+ou com 
+a palavra <code>Impossivel</code> (sem acento) ou com um
+ inteiro se a reunião só se puder realizar a
+uma hora  ou com dois inteiros se houver flexibilidade 
+(estes inteiros definem o intervalo em que se pode fixar o início da reunião).
+
+<P>
+
+<H2><A NAME="SECTION00022000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00022100000000000000">
+Input</A>
+</H3>
+<PRE>
+1
+9 12
+12 16
+</PRE>
+
+
+<H3><A NAME="SECTION00022200000000000000">
+Output</A>
+</H3>
+<PRE>
+Impossivel
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00023000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00023100000000000000">
+Input</A>
+</H3>
+<PRE>
+2
+10 15
+10 17
+</PRE>
+
+
+
+<H3><A NAME="SECTION00023200000000000000">
+Output</A>
+</H3>
+<PRE>
+10 13
+</PRE>
+
+<HR>
+<ADDRESS>
+ToPAS'2009
+</ADDRESS>
+</BODY>
+</HTML>
