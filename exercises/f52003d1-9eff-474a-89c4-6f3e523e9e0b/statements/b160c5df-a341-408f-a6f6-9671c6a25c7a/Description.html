@@ -1,0 +1,163 @@
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;G: Jogo do Galo</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;G: Jogo do Galo">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00070000000000000000">
+Problem&nbsp;G: Jogo do Galo</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Problema</A>
+</H2>
+
+<P>
+O jogo do galo joga-se com dois jogadores num tabuleiro de
+dimens&#227;o 3*3. 
+Cada jogador coloca alternadamente uma das suas pe&#231;as numa
+das posi&#231;&#245;es por preencher. Ganha o jogador que conseguir colocar 3
+pe&#231;as suas em linha na horizontal, vertical ou diagonal. O jogo
+termina assim que um dos jogadores ven&#231;a ou quando todas as posi&#231;&#245;es
+estiverem ocupadas, situa&#231;&#227;o esta considerada de empate.
+
+<P>
+<IMG
+ WIDTH="724" HEIGHT="234" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="\includegraphics[width=16cm]{galo}">
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa que, dado um tabuleiro com o estado final de um
+jogo, verifica se o estado &#233; correcto ou n&#227;o. Se o estado for
+correcto, o programa deve ainda determinar se existe algum vencedor ou
+se o jogo terminou empatado. As posi&#231;&#245;es no tabuleiro s&#227;o
+representadas pelos valores 0, 1 e 2. O valor 0 representa uma
+posi&#231;&#227;o por preencher, o valor 1 representa uma pe&#231;a do
+<I>jogador 1</I>, e o valor 2 representa uma pe&#231;a do <I>jogador
+2</I>. O <I>jogador 1</I> &#233; sempre o primeiro a jogar.
+
+<P>
+
+<H2><A NAME="SECTION00073000000000000000">
+Input</A>
+</H2>
+O input &#233; o estado final do tabuleiro. O tabuleiro &#233; dado por tr&#234;s
+linhas, cada uma com tr&#234;s inteiros (0, 1 ou 2) representado as
+pe&#231;as colocadas nas posi&#231;&#245;es dessa linha.
+
+<P>
+
+<H2><A NAME="SECTION00074000000000000000">
+Output</A>
+</H2>
+O programa dever&#225; apresentar como resultado:
+
+<P>
+<I><TT>jogo incorrecto</TT></I>: se o estado do jogo n&#227;o &#233; correcto.
+
+<P>
+<I><TT>venceu jogador 1</TT></I>: se o estado do jogo &#233; correcto e se
+  venceu o jogador 1.
+
+<P>
+<I><TT>venceu jogador 2</TT></I>: se o estado do jogo &#233; correcto e se
+  venceu o jogador 2.
+
+<P>
+<I><TT>empate</TT></I>: se o estado do jogo &#233; correcto e se terminou
+com um empate.
+
+<P>
+
+<H2><A NAME="SECTION00075000000000000000">
+Exemplo 1: input</A>
+</H2>
+<BR>
+<PRE>
+1 2 1
+2 2 1
+1 0 2
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00076000000000000000">
+Exemplo 1: output</A>
+</H2>
+<BR>
+<PRE>
+jogo incorrecto
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00077000000000000000">
+Exemplo 2: input</A>
+</H2>
+<BR>
+<PRE>
+1 0 2
+1 0 2
+1 0 2
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00078000000000000000">
+Exemplo 2: output</A>
+</H2>
+<BR>
+<PRE>
+jogo incorrecto
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00079000000000000000">
+Exemplo 3: input</A>
+</H2>
+<BR>
+<PRE>
+1 1 2
+0 2 0
+2 0 1
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION000710000000000000000">
+Exemplo 3: output</A>
+</H2>
+<BR>
+<PRE>
+venceu jogador 2
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2004
+</ADDRESS>
+</BODY>
+</HTML>
