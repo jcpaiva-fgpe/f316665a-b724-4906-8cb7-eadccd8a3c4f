@@ -1,0 +1,131 @@
+<H1><font color = blue>
+Problema A: Minuto Verde</font>
+</H1>
+
+
+
+<IMG
+  WIDTH="237" HEIGHT="166"  BORDER="0"
+ SRC="ecoponto.jpg"
+ ALT="Image ecoponto" align="right">
+
+<P>
+Mais de metade do lixo que produzimos todos os dias pode ser
+ reciclado. Por isso, os cidadãos devem participar activamente na correcta
+ separação dos resíduos para posterior reciclagem.  
+
+<P>
+<DIV ALnIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Papelão - contentor azul (produtos 1 a 10), papel e
+cartão, jornais, revistas e papel de escrita;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Embalão -  contentor amarelo (produtos 24 a 40), 
+embalagens de plástico e metal;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Vidrão -  contentor verde (produtos 11 a 23), embalagens
+de vidro;</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<H2><font color = blue>Tarefa</font>
+</H2>
+Dada uma sequência de produtos para reciclar, identificados 
+por números de 1 a 40, determinar quantos
+seriam colocados em cada contentor.
+
+<P>
+
+<H2><font color = blue>Input</font>
+</H2>
+Uma sequência de inteiros (com valores de 1 a 40)
+e que termina por -1. O número de valores de cada um dos tipos
+é inferior a 2^30 = 1GByte.
+
+<P>
+
+<H2><font color = blue>
+Output</font>
+</H2>
+Em cada linha escreve uma sequência <code>cor: numero</code>, em 
+que <code>cor</code> é a cor do contentor e <code>numero</code> é o número
+de produtos colocados 
+nesse contentor.
+Começa pelo contentor de
+cor azul, depois amarelo, e finalmente verde. 
+
+<P>
+
+<H2><font color = blue>
+Exemplo 1</font>
+</H2>
+
+<H3><font color = blue>
+Input</font>
+</H3>
+<BR>
+<PRE>
+3
+13
+13
+-1
+</PRE>
+<H3><font color = blue>
+Ouput</font>
+</H3>
+<BR>
+<PRE>
+azul: 1
+amarelo: 0
+verde: 2
+</PRE>
+
+<P>
+
+<H2><font color = blue>
+Exemplo 2</font>
+</H2>
+
+<H3><font color = blue>
+Input</font>
+</H3>
+<BR>
+<PRE>
+8
+3
+10
+3
+1
+25
+30
+3
+2
+15
+23
+40
+1
+3
+6
+8
+14
+-1
+</PRE>
+
+<P>
+
+<H3><font color = blue>
+Ouput</font>
+</H3>
+<BR>
+<PRE>
+azul: 11
+amarelo: 3
+verde: 3
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2007
+</ADDRESS>
