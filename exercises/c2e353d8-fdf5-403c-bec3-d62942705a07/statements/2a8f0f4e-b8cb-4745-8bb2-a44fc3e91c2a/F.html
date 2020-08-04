@@ -1,0 +1,65 @@
+<h1><font color="blue">Problema F: Pânico na autoestrada</font></h1>
+<br>
+
+<img alt="autoestrada"
+ src="HIGHWAY.gif" height="283" width="313" align="right">
+
+Uma empresa de gestão de autoestradas instalou um sistema de sensores
+para contar o número de veículos ligeiros e pesados que atravessam cada
+via das portagens.  O sistema é constituído por dois sensores
+autónomos, um activado por veículos ligeiros e outro por pesados. Por
+princípio, um veículo só deveria activar um dos tipos de sensores,
+ligeiro ou pesado. Devido a um erro de colocação, os resultados de cada
+sensor não são fidedignos se veículos do mesmo tipo passarem com um
+intervalo inferior a 10 segundos. Portanto, sempre que o 
+sensor de pesados detectar um qualquer veículo os seus resultados 
+não são fidedignos até terem decorrido 10 segundos sem 
+nada registar. O mesmo acontece 
+com o sensor de ligeiros.
+<br>
+<br>
+Felizmente existem registos dos sensores com o momento em que foram
+activados por cada tipo de veículo e podemos assumir que se ocorrem no
+mesmo momento pertencem ao mesmo veículo. Se um mesmo veículo for
+assinalado simultaneamente como ligeiro e pesado e tiver passado um
+pesado nos últimos 10 segundos então podemos concluir que é um ligeiro.
+Na mesma situação, se tiver passado um ligeiro nos últimos 10 segundos
+então podemos concluir que é um pesado. No entanto, se não houver
+sobreposição de registos no mesmo momento e se os dois registos de
+veículo do mesmo tipo diferem por menos de 10 segundos, então o segundo
+registo é indefinido. <br>
+<h2><font color="blue">Tarefa</font></h2>
+Escrever um programa que  lê os registos dos sensores e retorna a
+contagem de ligeiros, pesados e veículos de tipo indefinido, por esta
+ordem.
+A primeira linha do input indica o total de linhas de registo. Cada um
+das restantes linhas de input tem no início o número de segundos desde
+que os sensores foram ligados, seguida de um caracter indicando o tipo
+de veículo detectado, "L" (Ligeiro) ou "P" (Pesado). Podemos assumir
+que as linhas de registo estão ordenadas por ordem crescente do número
+de segundos.<br>
+<h2><font color="blue">Exemplo de input</font></h2>
+<font face="Courier New, Courier, monospace">13<br>
+100 P<br>
+105 P<br>
+105 L<br>
+200 P<br>
+205 L<br>
+205 P<br>
+300 P<br>
+305 L<br>
+307 L<br>
+307 P <br>
+400 P<br>
+405 P<br>
+500 L<br>
+</font>
+<h2><font color="blue">Exemplo de output</font></h2>
+<font face="Courier New, Courier, monospace">4<br>
+4<br>
+2<br>
+</font><br>
+<BR><HR>
+<ADDRESS>
+ToPAS'2007
+</ADDRESS>
