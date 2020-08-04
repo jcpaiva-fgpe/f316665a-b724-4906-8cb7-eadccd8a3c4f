@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;G: Calimero no túnel</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;G: Calimero no túnel">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00070000000000000000">
+Problem&nbsp;G: Calimero no túnel</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="123" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="./calimero_3.png"
+ ALT="Image calimero_3">
+</DIV>
+<P>
+<DIV ALIGN="CENTER">
+</DIV>
+
+<P>
+As primeiras séries de desenhos animados Calimero estrearam
+na RTP nos anos 1970. Calimero era um pintainho, simpático e
+ingénuo, que se sentia infeliz e injustiçado. Criado 
+pelos italianos Nino e Toni Pagot, para um anúncio de
+um sabão, em 1963, festeja agora os 50 anos com uma nova série em 3D.
+ ``Abusam porque sou pequenino'' e ``É uma injustiça,
+pois é'' eram duas das suas frases emblemáticas. Vá-se lá saber
+porquê, estas frases ganharam uma nova atualidade, a par de uma outra, que tem a
+ver com ``ver luz ao fundo do túnel''. Daria um tema para um novo episódio:  Calimero, em apuros, num túnel. Conseguirá sair sem que a sua
+energia se esgote? 
+<P>
+O túnel não forma ciclos e está numa região retangular definida por
+uma grelha. Cada posição da grelha tem uma letra  <code>T</code>, <code>F</code>, <code>X</code>, <code>N</code>,  <code>S</code>, <code>E</code>, <code>O</code>
+ou <code>L</code>, ou  um traço (<code>-</code>, indicando que está livre). O
+túnel é a sequência de <code>T</code>'s na região, tem pelo menos
+dois <code>T</code>'s e  termina
+em <code>L</code> (saída do túnel). No instante zero, Calimero está no
+início do túnel (posição com <code>T</code>, não adjacente a <code>L</code>, e com
+uma única adjacente&nbsp;<code>T</code>). Cada uma das restantes
+posições do túnel tem uma adjacente com&nbsp;<code>T</code>, que dá continuidade ao túnel, ou com&nbsp;<code>L</code>, que é a sua saída. Existe um único <code>L</code> na grelha e é
+adjacente a apenas um&nbsp;<code>T</code>. As
+posições  com <code>N</code>, <code>S</code>, <code>E</code>, e <code>O</code> contêm focos
+que emitem um raio de luz (pode haver tipos repetidos). No instante zero, esses raios estão direcionados para
+Norte, Sul, Este e Oeste, respetivamente, e, em cada instante, rodam 90 graus no sentido
+horário.
+Calimero tem alguma energia, inicialmente, que é positiva. Em cada instante, pode avançar uma posição, perdendo uma unidade de energia. Pode recuperar
+energia em certas posições através de frestas (assinaladas por&nbsp;<code>F</code>).
+Se chegar a uma posição adjacente a uma fresta no instante
+em que esta está no alcance do raio emitido por algum foco, recebe a energia
+correspondente. A energia do raio só poderá chegar ao Calimero se
+entre o foco e a fresta não houver nenhum <code>T</code>, nem <code>X</code>
+(obstáculo) nem outros focos. A
+energia recebida é igual à
+diferença entre a intensidade do foco e a distância a que se
+encontra dele. É zero se esse valor for zero ou negativo. A distância é
+dada pelo número de células desde o foco até à posição em que Calimero está. A intensidade dos focos é igual para todos os
+focos.  Calimero pode receber
+energia de vários focos em simultâneo. Se chegar a uma
+posição adjacente a uma fresta e não receber energia (positiva), 
+fica sem perceber se tal se deve a algum desfasamento temporal. 
+Por
+isso, se o seu nível de energia for <B>superior</B> a 4 unidades, arrisca esperar até 
+receber algum raio (se não receber nenhum, avança ao fim de três instantes).
+Enquanto está à espera, perde uma unidade de
+energia também em cada instante.  Se ficar com energia zero no instante em que é atingido por algum raio, recebe energia e prossegue. Se não for salvo por um
+raio, desfalece, e não sairá. Pode aguardar mesmo estando na posição
+adjacente a <code>L</code>. 
+Os raios não se propagam no túnel. Não há focos incidentes
+em <code>L</code>. Para nunca recuar, Calimero vai
+assinalando por onde passou.
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa para seguir o Calimero no túnel a partir do
+instante zero e verificar o que lhe sucederá: se
+desfalece dentro do túnel, em que instante tal sucedeu; se consegue sair
+do túnel, em que instante chega <code>L</code> e com que energia fica. Se ficar com
+energia zero no instante em que chega a <code>L</code>, assume-se que mesmo
+assim saíu do túnel. 
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000">
+Input</A>
+</H2>
+Uma linha com as dimensões <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$m$"> e <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$n$"> da grelha (<IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$m$"> é o número de
+linhas e <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$n$"> o de 
+colunas, e são ambos não superiores a 50). Segue-se um inteiro que define a
+intensidade dos focos (positivo e inferior a 150) e um outro 
+inteiro que representa a energia de Calimero no instante zero
+(positivo e menor do que 5000). 
+A seguir tem o estado inicial da grelha, dado em <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$m$"> linhas. Em cada
+linha, tem uma sequência de <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$n$"> símbolos  formada
+por <code>T</code>, <code>F</code>, <code>X</code>, <code>L</code>, <code>-</code>, <code>N</code>,  <code>S</code>, <code>E</code>,
+ou <code>O</code> (um <code>O</code> de Oeste).
+
+<P>
+
+<H2><A NAME="SECTION00073000000000000000">
+Output</A>
+</H2>
+Se chegar a <code>L</code>, terá uma linha com dois inteiros separados por um
+espaço: o primeiro é o instante em que chega a <code>L</code> e o segundo a
+energia final. Se não, terá uma linha com um inteiro apenas, que
+representa o instante em que desfaleceu.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION00074000000000000000">
+Exemplo 1</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00074100000000000000">
+Input</A>
+</H3>
+<PRE>
+7 9
+8
+10
+---E-----
+---S-----
+---F---X-
+--TTTL-X-
+N-TF-----
+--TE-X---
+---------
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00074200000000000000">
+Output</A>
+</H3>
+<PRE>
+8 2
+</PRE>
+
+<H2><A NAME="SECTION00075000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00075100000000000000">
+Input</A>
+</H3>
+<PRE>
+6 7
+100
+3
+TTTTTTL
+T----F-
+TF-O-X-
+TTF--E-
+-TS----
+-T----X
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00075200000000000000">
+Output</A>
+</H3>
+<PRE>
+15 181
+</PRE>
+
+<H2><A NAME="SECTION00076000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00076100000000000000">
+Input</A>
+</H3>
+<PRE>
+8 10
+100
+3
+TTTTTTTT--
+T----F-T--
+T------L--
+TF-O-X----
+TTF--O---N
+-TS-------
+-T----X--S
+-----E----
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00076200000000000000">
+Output</A>
+</H3>
+<PRE>
+3
+</PRE>
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2013
+</ADDRESS>
+</BODY>
+</HTML>
