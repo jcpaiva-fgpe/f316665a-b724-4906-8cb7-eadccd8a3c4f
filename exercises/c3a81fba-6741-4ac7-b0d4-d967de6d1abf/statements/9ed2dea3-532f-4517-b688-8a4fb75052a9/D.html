@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+
+<HTML>
+<HEAD>
+<TITLE>Problema&nbsp;D: E, de resto?</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;D: E, de resto?">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<script type="text/javascript" 
+        src="../mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00040000000000000000">
+Problema&nbsp;D: E, de resto?</A>
+</H1>
+
+<P>
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="223" HEIGHT="250" src="jogo_resto.png" border="0" align=center>
+</TD> </TR>
+</TABLE>
+
+
+
+<P>
+Realizam-se este ano na Abobadeira as finais nacionais das Olimpíadas da Numerologia, 
+cujo evento principal é o Jogo do Resto. 
+Nós vamos apoiar com a programação do quadro de resultados e precisamos da vossa colaboração. 
+Ainda não conhecem o Jogo do Resto? É muito simples:
+
+<P>
+
+<OL>
+<LI>joga-se com \(N\)
+<!-- <IMG -->
+<!--  WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+<!--  SRC="img22.gif" -->
+<!--  ALT="$N$">  -->jogadores, do jogador \(0\) ao \(N-1\); <!-- <IMG -->
+ <!-- WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img23.gif" -->
+ <!-- ALT="$0$"> ao <IMG -->
+ <!-- WIDTH="50" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img24.gif" -->
+ <!-- ALT="$N-1$">; -->
+</LI>
+<LI>cada jogo tem \(M\)<!--  <IMG -->
+ <!-- WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img25.gif" -->
+ <!-- ALT="$M$"> --> jogadas;
+</LI>
+<LI>em cada jogada, cada jogador regista um número inteiro de \(0\) a \(N-1\); <!-- <IMG -->
+ <!-- WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img23.gif" -->
+ <!-- ALT="$0$"> a <IMG -->
+ <!-- WIDTH="50" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img24.gif" -->
+ <!-- ALT="$N-1$">; -->
+</LI>
+<LI>somam-se os números registados por todos os jogadores, \(S\);<!--  <IMG -->
+ <!-- WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img26.gif" -->
+ <!-- ALT="$S$"> ; -->
+</LI>
+<LI>calcula-se o resto \(R\)<!--  <IMG -->
+ <!-- WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img27.gif" -->
+ <!-- ALT="$R$"> --> da divisão inteira de \(S\)
+<!-- <IMG -->
+<!--  WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+<!--  SRC="img26.gif" -->
+<!--  ALT="$S$"> --> por \(N\), <!-- <IMG -->
+ <!-- WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img22.gif" -->
+ <!-- ALT="$N$">, --> com
+\(0\leq R \leq N-1\);<!--  <\!-- MATH -->
+<!--  $0 \le R \le N-1$ -->
+<!--  -\-> -->
+<!-- <IMG -->
+<!--  WIDTH="119" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img28.gif" -->
+<!--  ALT="$0 \le R \le N-1$">; -->
+</LI>
+<LI>o jogador com o número \(R\)<!--  <IMG -->
+ <!-- WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img27.gif" -->
+ <!-- ALT="$R$"> --> contabiliza mais 1 ponto, os restantes mantêm os que têm;
+</LI>
+<LI>no final das \(M\) <!-- <IMG -->
+ <!-- WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img25.gif" -->
+ <!-- ALT="$M$"> --> jogadas ganha quem totalizar mais pontos.
+</LI>
+</OL>
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escreva um programa para ler as várias jogadas, contabilizar os pontos dos jogadores e indicar os vencedores. 
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000">
+Input</A>
+</H2>
+
+<P>
+A primeira linha tem dois inteiros: \(N\) <!-- <IMG -->
+ <!-- WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img22.gif" -->
+ <!-- ALT="$N$"> --> (o número de jogadores) e \(M\)<!--  <IMG -->
+ <!-- WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img25.gif" -->
+ <!-- ALT="$M$"> --> (o número de jogadas). Seguem-se \(M\) <!-- <IMG -->
+ <!-- WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img25.gif" -->
+ <!-- ALT="$M$"> --> linhas contendo as jogadas. Cada linha com uma jogada contém \(N\) <!-- <IMG -->
+ <!-- WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img22.gif" -->
+ <!-- ALT="$N$"> --> inteiros  \(J_0, J_1, \ldots J_i, 
+\ldots J_{N-1}\), com \(0 \leq i <  N\) e \(0 \leq J_i < N\).
+
+<P>
+
+<H2><A NAME="SECTION00043000000000000000">
+Restrições</A>
+</H2>
+
+<P>
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $1 \leq N < 100$
+ --> \(1\leq N < 100\)
+<!-- <IMG -->
+<!--  WIDTH="101" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img32.gif" -->
+<!--  ALT="$1 \leq N &lt; 100$"> --></TD>
+<TD ALIGN="LEFT">Número de jogadores</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $1 \leq M < 100$
+ -->
+\(1 \leq M < 100\)
+<!-- <IMG -->
+<!--  WIDTH="104" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img33.gif" -->
+<!--  ALT="$1 \leq M &lt; 100$"> --></TD>
+<TD ALIGN="LEFT">Número de jogadas</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H2><A NAME="SECTION00044000000000000000">
+Output</A>
+</H2>
+
+<P>
+O resultado consiste em 2 grupos de linhas, cada linha com apenas um inteiro.
+As linhas do primeiro grupo têm o total de pontos de cada jogador, por ordem crescente do número do jogador.
+Entre o primeiro e o segundo grupo de linhas há uma linha em branco.
+As linhas do segundo grupo apresentam os números dos jogadores que totalizaram o
+maior número de pontos e por isso venceram o jogo, também por ordem crescente do
+seu número.
+
+<P>
+
+<H2><A NAME="SECTION00045000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00045100000000000000">
+Input</A>
+</H3>
+<PRE>
+2 4 
+0 0 
+0 1 
+1 0 
+1 1
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00045200000000000000">
+Output</A>
+</H3>
+<PRE>
+2
+2
+
+0
+1
+</PRE> 
+
+<P>
+
+<H2><A NAME="SECTION00046000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00046100000000000000">
+Input</A>
+</H3>
+<PRE>
+3 5 
+0 1 2 
+2 1 0 
+0 0 0 
+1 1 2 
+0 2 0
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00046200000000000000">
+Output</A>
+</H3>
+<PRE>
+3
+1
+1
+ 
+0
+</PRE> 
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2016
+</ADDRESS>
+</BODY>
+</HTML>
