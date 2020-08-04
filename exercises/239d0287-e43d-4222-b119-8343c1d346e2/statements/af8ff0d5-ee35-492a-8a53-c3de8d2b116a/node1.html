@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;A: Rock in Rio</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;A: Rock in Rio">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00010000000000000000">
+Problem&nbsp;A: Rock in Rio</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="323" HEIGHT="197" ALIGN="BOTTOM" BORDER="0"
+ SRC="./rockinrio-img1.jpg"
+ ALT="Image rockinrio-img1">
+
+</DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+A tripula&#231;&#227;o dos
+avi&#245;es da companhia AirGlobe recebe um b&#243;nus sempre que atravessa o
+meridiano de Greenwich ou o equador. O b&#243;nus pode ser convertido em
+dias de descanso e &#233; expresso em pontos, atribu&#237;dos do seguinte
+modo: 1 ponto se o voo atravessa o meridiano de Greenwich; 2 pontos se
+o voo atravessa o equador; 4 pontos se o voo atravessa o meridiano de
+Greenwich e o equador.
+
+<P>
+O comandante Passarinho
+quer ir ao Rock in Rio de Lisboa e precisa de saber se j&#225; tem os
+pontos necess&#225;rios para poder descansar nesses dias. 
+O semimeridiano de Greenwich,  usado como referência
+para a determinação da longitude, é  por vezes designado por ``meridiano
+de Greenwich'', sendo normalmente representado nas cartas
+geográficas (marca de 0 graus de longitude). Contudo, o comandante
+Passarinho sabe também 
+que o meridiano de Greenwich é um círculo máximo que
+passa pelos polos e que divide a Terra em dois hemisférios: o
+hemisfério oriental e o hemisfério ocidental. Não dará a volta ao
+mundo para ganhar mais pontos mas quer os pontos a que tem 
+direito, pois meridiano é meridiano, não é semimeridiano!
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Para efeito de c&#225;lculo do
+b&#243;nus, cada voo &#233; descrito pelas coordenadas geogr&#225;ficas
+(latitude e longitude) do aeroporto de partida e do aeroporto de
+chegada. A latitude, que mede a dist&#226;ncia ao equador, &#233; expressa em
+graus e varia entre
+0 e 90
+graus, para norte ou para sul. A longitude, que mede a
+dist&#226;ncia  ao ``meridiano de Greenwich'', &#233; tamb&#233;m expressa em graus
+e varia entre 0  e 180 graus, para este ou para oeste.
+
+<P>
+Com esta informa&#231;&#227;o
+dispon&#237;vel para cada um dos voos pilotados pelo comandante
+Passarinho, ser&#225; f&#225;cil calcular quantos pontos ele tem.
+
+<P>
+Os dados para o programa
+s&#227;o introduzidos da seguinte maneira: primeiro, o n&#250;mero de voos do
+comandante Passarinho. Depois seguem-se tantas linhas quantas o
+n&#250;mero de voos. Em cada linha surgem oito elementos de
+informa&#231;&#227;o, em dois grupos de quatro. O primeiro grupo descreve
+as coordenadas do aeroporto de partida e o segundo grupo descreve as
+coordenadas do aeroporto de chegada. Em cada um dos grupos, primeiro
+vem um n&#250;mero inteiro, com valor entre 0 e 90 exclusive, depois uma
+letra mai&#250;scula <TT>N</TT> ou
+<TT>S</TT>, depois um n&#250;mero com valor entre
+0 e 180 exclusive e depois uma letra mai&#250;scula
+<TT>E</TT> ou <TT>W</TT>. Nesta descri&#231;&#227;o, o primeiro
+par de valores, n&#250;mero e letra, representa a latitude do aeroporto,
+com <TT>N</TT>
+significando
+hemisf&#233;rio norte e <TT>S</TT> o hemisf&#233;rio
+sul; o segundo par representa a longitude do aeroporto, com
+<TT>E</TT> significando que o aeroporto fica no
+hemisf&#233;rio oriental e <TT>W</TT> no
+ocidental. 
+
+<P>
+O programa escrever&#225;
+uma linha, com um n&#250;mero inteiro representando o n&#250;mero de pontos
+do comandante Passarinho. 
+
+<P>
+Note que n&#227;o h&#225; nenhum
+aeroporto situado sobre o meridiano de Greenwich nem sobre o
+equador. 
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00012100000000000000">
+Input</A>
+</H3>
+<PRE>
+4
+41 N 8 W 38 N 9 W
+33 N 7 W 68 N 95 E
+1 S 69 W 3 N 25 W
+48 N 175 E 48 N 175 W
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00012200000000000000">
+Output</A>
+</H3>
+<PRE>
+4
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00013100000000000000">
+Input</A>
+</H3>
+<PRE>
+5
+81 N 120 W 12 S 11 W
+9 S 5 E 33 N 155 W
+34 N 56 E 68 N 95 E
+2 S 2 W 9 N 42 W
+48 N 6 E 38 N 9 W
+</PRE>
+<H3><A NAME="SECTION00013200000000000000">
+Output</A>
+</H3>
+<PRE>
+9
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2012
+</ADDRESS>
+</BODY>
+</HTML>
