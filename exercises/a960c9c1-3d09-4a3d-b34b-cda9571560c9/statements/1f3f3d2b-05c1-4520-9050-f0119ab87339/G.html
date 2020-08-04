@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Problema&nbsp;G: ToPAS parking</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;G: ToPAS parking">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+
+<script type="text/javascript" 
+        src="../mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00070000000000000000">
+Problema&nbsp;G: ToPAS parking</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="800" HEIGHT="321" ALIGN="BOTTOM" BORDER="0"
+ SRC="topas_parking.jpg"
+ ALT="Image topas_parking">
+
+</DIV>
+
+Normalmente, nos parques de estacionamento dos centros comerciais, os lugares de estacionamento estão organizados em filas paralelas, duas a duas, com uma faixa de circulação entre cada par de filas. Nos parques mais sofisticados, existe um sistema de semáforos para facilitar a localização de lugares livres pelos condutores que querem estacionar. É muito simples: coloca-se um semáforo por cima de cada lugar de estacionamento. Quando o lugar está livre, o semáforo fica verde; quando está ocupado, fica vermelho.
+
+<P>
+O parque de estacionamento do futuro TopaShopping de Loulé usará uma organização de lugares revolucionária, suprimindo as faixas de circulação. Quer dizer, a placa de estacionamento estará dividida em células de estacionamento retangulares, todas contíguas, cada uma com um semáforo. É verdade que, havendo condutores desrespeitosos, alguns carros podem ficar bloqueados, isto é, impossibilitados de sair do parque. Além disso, pode acontecer que certas zonas do parque fiquem vazias mas inacessíveis, porque há carros estacionados rodeando essa zona completamente. Para facilitar a vida aos clientes que querem estacionar, ajudando-os a encontrar lugar para o carro, vão usar-se semáforos com três cores — verde, vermelho e amarelo — funcionando da seguinte forma:
+
+<P>
+Em cada momento, cada uma das células de estacionamento estará ocupada, livre, bloqueante ou isolada. Estará ocupada, com o semáforo vermelho, se lá estiver um carro parado; estará livre, com o semáforo verde, se estiver vazia mas não bloqueante nem isolada; estará bloqueante, com o semáforo amarelo, se estiver vazia mas, se estivesse ocupada, pelo menos uma das células adjacentes que estejam ocupadas ficaria com o respetivo carro bloqueado; estará isolada, com o semáforo apagado, se estiver livre mas inacessível a partir do exterior do parque.
+
+<P>
+Note que um carro pode estar bloqueado mesmo sem estar entalado entre quatro carros (um à frente, outro atrás, outro à esquerda e outro à direita). Na verdade estar bloqueado significa que os lugares adjacentes à frente, atrás, à esquerda e à direita estão todos ocupados ou isolados.
+
+<P>
+Note ainda que, não sendo o parque de estacionamento vedado, os carros que estacionarem nas filas das pontas nunca ficarão bloqueados. Além disso, pode-se entrar na superfície do parque por qualquer uma das células de estacionamento das filas das pontas, desde que estejam vazias. Logo, essas células nunca ficarão isoladas.
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Tarefa</A>
+</H2>
+Por favor, escreva um programa que leia da consola a descrição do parque e os lugares ocupados e que escreva na consola o plano dos semáforos. O parque é retangular, de dimensões \(W\) e \(H\),  <<!-- IMG -->
+ <!-- WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img50.gif" -->
+ <!-- ALT="$W$"> e <IMG -->
+ <!-- WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img51.gif" -->
+ <!-- ALT="$H$">,  --> sendo \(W\) <!-- <IMG -->
+ <!-- WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img50.gif" -->
+ <!-- ALT="$W$"> --> a medida do lado horizontal e \(H\) <!-- <IMG -->
+ <!-- WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img51.gif" -->
+ <!-- ALT="$H$"> --> a medida do lado vertical, e cada lugar de estacionamento é representado por um par de coordenadas \(x\), \(y\),<!--  <IMG -->
+ <!-- WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img52.gif" -->
+ <!-- ALT="$x$">, <IMG -->
+ <!-- WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img53.gif" -->
+ <!-- ALT="$y$">,  --> com   \(0 \leq x < W\) e \(0 \leq y < H\).
+<!-- <IMG -->
+<!--  WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img54.gif" -->
+<!--  ALT="$0 \leq x &lt; W$"> e <IMG -->
+<!--  WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img55.gif" -->
+<!--  ALT="$0 \leq y &lt; H$">.  -->
+O plano dos semáforos é uma matriz com \(H\) linhas e \(W\)
+<!-- <IMG -->
+<!--  WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+<!--  SRC="img51.gif" -->
+<!--  ALT="$H$"> linhas e  <IMG -->
+<!--  WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+<!--  SRC="img50.gif" -->
+<!--  ALT="$W$"> --> colunas, onde cada posição terá a cor do semáforo do lugar correspondente, com a seguinte codificação: apagado,&nbsp;<B>0</B>; verde,&nbsp;<B>1</B>; vermelho,&nbsp;<B>2</B>; amarelo,&nbsp;<B>3</B>. 
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000">
+Input</A>
+</H2>
+A primeira linha do input contém os valores de \(W\) e \(H\), <!-- <IMG -->
+ <!-- WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img50.gif" -->
+ <!-- ALT="$W$"> e <IMG -->
+ <!-- WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img51.gif" -->
+ <!-- ALT="$H$">, --> por esta ordem. As restantes lin<!-- has, em número indeterminado, contêm cada uma o par de coordenadas \(x\), \(y\) <IMG -->
+ <!-- WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img52.gif" -->
+ <!-- ALT="$x$">, <IMG -->
+ <!-- WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img53.gif" -->
+ <!-- ALT="$y$"> --> de cada lugar de estacionamento que está atualmente ocupado, sem repetições. O fim dos dados é assinalado por uma linha contendo duas vezes o número <TT>-1</TT>.
+
+<P>
+
+<H2><A NAME="SECTION00073000000000000000">
+Restrições</A>
+</H2>
+
+<P>
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $1 \leq W\leq 100$
+ -->
+ \(1\leq W\leq 100\)
+<!-- <IMG -->
+<!--  WIDTH="104" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img56.gif" -->
+<!--  ALT="$1 \leq W\leq 100$"> --></TD>
+<TD ALIGN="LEFT">Número de colunas</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $1 \leq H \leq 100$
+ -->
+\(1\leq H \leq 100\)
+<!-- <IMG -->
+<!--  WIDTH="101" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img57.gif" -->
+<!--  ALT="$1 \leq H \leq 100$"> --></TD>
+<TD ALIGN="LEFT">Número de linhas</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H2><A NAME="SECTION00074000000000000000">
+Output</A>
+</H2>
+ O output é a matriz com o plano dos semáforos,  escrita linha a linha, com todos os números justapostos.
+
+<P>
+
+<H2><A NAME="SECTION00075000000000000000">
+Exemplo</A>
+</H2>
+
+<H3><A NAME="SECTION00075100000000000000">
+Input</A>
+</H3>
+<PRE>
+8 6
+0 0
+1 0
+3 0
+4 0
+5 0
+6 0
+2 1
+5 1
+6 1
+2 2
+4 2
+5 2
+6 2
+1 3
+2 3
+3 3
+5 3
+7 3
+3 4
+6 4
+0 5
+2 5
+5 5
+7 5
+-1 -1
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00075200000000000000">
+Output</A>
+</H3>
+<PRE>
+22122221
+11200223
+13202223
+12223202
+11321121
+21211212
+</PRE> 
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+O input corresponde à seguinte configuração, ainda sem semáforos:
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="80%" ALIGN="BOTTOM" BORDER="0"
+ SRC="topas_parking_example_1.png"
+ ALT="Image topas_parking_example_1">
+</DIV>
+<P>
+<DIV ALIGN="CENTER">
+</DIV>
+O  output já assinala as cores, ficando a cinzento os lugares onde o semáforo está apagado:
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="80%" ALIGN="BOTTOM" BORDER="0"
+ SRC="topas_parking_example_2.png"
+ ALT="Image topas_parking_example_2">
+</DIV>
+<P>
+<DIV ALIGN="CENTER">
+</DIV>
+
+<P>
+Note que o sistema é prático mas não é perfeito. Quer dizer, não garante que um carro que estacione num lugar com luz verde não impeça outro carro de sair do parque. O sistema apenas assinala que um carro que estacionasse num lugar com luz amarela bloquearia pelo menos um dos carros estacionados nos lugares adjacentes.
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2016
+</ADDRESS>
+</BODY>
+</HTML>
