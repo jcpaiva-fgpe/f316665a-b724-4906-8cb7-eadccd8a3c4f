@@ -1,0 +1,133 @@
+<H1><A NAME="SECTION00060000000000000000">
+Problem F: Barbearia Chic</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="257" HEIGHT="178" ALIGN="BOTTOM" BORDER="0"
+ SRC="./Michel_Waldmann_barbeiro.jpg"
+ ALT="Image Michel_Waldmann_barbeiro">
+<BR><FONT SIZE="-2">(Foto de <EM>Michel Waldmann</EM>) </FONT>
+
+</DIV>
+
+<P>
+A Barbearia Chic não é grande mas
+é muito asseada. Três cadeiras, onde os clientes aguardam 
+a sua vez antes de passarem ao cadeirão do
+barbeiro, e pouco mais lá cabe. O barbeiro não gosta nada
+de ter clientes em pé a estorvar. Por isso, quando não há lugares vagos, os
+clientes não entram! Mas, podem entrar se chegarem no momento em que 
+outro fica pronto, desde que a Chic esteja aberta.
+A Chic abre às 9:00 e encerra às 12:00 para
+almoço. Reabre às 15:00 e encerra às 19:00. Os clientes que cheguem
+até  às 12:00 ou até às 19:00, inclusivé, são atendidos, 
+se a Chic não estiver cheia.  O atendimento é feito por ordem de
+chegada. Os clientes não esperam se o barbeiro estiver livre e não ficam à espera
+à porta quando a Chic está fechada ou cheia. 
+ Não há mãos a medir para não perder
+clientes nem os fazer esperar muito.  Pretende-se simular o
+funcionamento da Chic num certo dia, supondo que em cada
+instante chegará no máximo um cliente e que o barbeiro não dispende
+mais de quarenta minutos com cada cliente (o que lhe dá sempre algum
+tempo para almoçar). 
+
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa para determinar o número de clientes que não puderam entrar, e que
+escreverá  <code>Perdeu = r</code>, seguido de mudança de linha, sendo
+<code>r</code> esse número. 
+O programa analisará uma sequência ordenada de <code>K</code> ocorrências <code>H M D</code>, em que
+<code>H</code> e <code>M</code> definem o instante em que o cliente chegou 
+(<code>H</code> horas e <code>M</code> minutos) e <code>D</code> o tempo (em minutos)
+que o barbeiro dispenderia a atender o cliente se o puder fazer. Assim,  <code>9 2 10</code> indica que o cliente chegou às 9:02 e
+o barbeiro gastaria 10 minutos, caso o atendesse. O
+valor de <code>K</code> é dado na primeira linha.
+
+<H2><A NAME="SECTION00062000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00062100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+11
+9 2 10
+9 5 20
+9 7 10
+9 20 25
+9 22 10
+9 25 15
+16 30 12
+18 0 20
+18 2 15
+18 20 35
+19 5 10
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00062200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+Perdeu = 2
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00063000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00063100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+20
+9 2 10
+9 5 20
+9 7 10
+9 20 25
+9 22 10
+10 15 15
+10 35 10
+11 55 10
+12 0 10 
+14 30 15
+15 5 10
+15 17 10
+15 30 15
+16 40 40
+16 45 17
+17 0 12
+17 35 15
+18 21 25
+18 40 10
+18 45 20
+</PRE>
+<H3><A NAME="SECTION00063200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+Perdeu = 1
+</PRE>
+
+<P>
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2008
+</ADDRESS>
