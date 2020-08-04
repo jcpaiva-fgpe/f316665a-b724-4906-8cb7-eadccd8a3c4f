@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+
+<HTML>
+<HEAD>
+<TITLE>Doentes da bola</TITLE>
+<META NAME="description" CONTENT="Doentes da bola">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+
+
+<H1><A NAME="SECTION00010000000000000000">
+Doentes da bola</A>
+</H1>
+
+<P>
+
+
+
+
+
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="223" HEIGHT="250" src="bola.png" border="1" align=center>
+</TD> </TR>
+</TABLE>
+
+
+
+<P>
+Com o aproximar do fim do campeonato os doentes da bola agarram-se à calculadora para saberem se já podem festejar ou a trabalhar na racionalização. As contas nem são difíceis de fazer. Em cada uma das jornadas em falta estão 3 pontos em disputa. Se o adversário mais próximo obtiver todos esses pontos, a nossa equipa nenhum, e mesmo assim tivermos mais pontos, então o campeonato já é nosso. Se for ao contrário, temos dizer adeus ao campeonato. Mas também pode acontecer que se perdermos pontos e eles ganharem qualquer das equipas ainda possa ganhar.
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Dados os pontos da nossa equipa, do adversário mais próximo, e o número de jornadas em falta (havendo 3 pontos em disputa em cada uma delas), determinar em qual dos casos está a nossa equipa, identificado por um <EM>smiley</EM>, a saber:
+<BLOCKQUOTE>
+<TT>:-D </TT>   somos campeões -  mesmo que percamos todos os jogos e eles os ganhem todos, não conseguirão ter mais pontos do que nós;
+<BR><TT>:-) </TT>  somos os maiores - temos mais pontos que o adversário e eles só vencem se nós perdermos demasiados pontos;  
+<BR><TT>:-| </TT>  ainda há esperança - temos menos pontos que o adversário mas ainda podemos ser vencedores;
+<BR><TT>:-( </TT>  para o ano é a nossa vez - mesmo que ganhemos todos os jogos e eles percam todos já não temos hipótese.
+<BR>
+</BLOCKQUOTE>
+
+<P>
+Para simplificar as contas vamos supor que a equipa neste momento com mais pontos tem um número de golos muito maior (imbatível).  Sendo assim, se o número de pontos no final do campeonato for igual, será campeã a equipa que neste momento tem mais pontos. Vamos também supor que neste momento as equipas têm pontuações diferentes.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Input</A>
+</H2>
+
+<P>
+Há apenas uma linha de input com 3 inteiros, nesta ordem:
+
+<UL>
+<LI>o número de pontos da nossa equipa
+</LI>
+<LI>o número de pontos do nosso adversário mais próximo
+</LI>
+<LI>o número de jornadas a disputar   
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Output</A>
+</H2>
+
+<P>
+Apenas uma linha de output com um <EM>smiley</EM> apropriado, consoante a diferença pontual e a explicação acima.
+
+<P><P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00014100000000000000">
+Input</A>
+</H3>
+<PRE>
+30 20 3
+</PRE>
+<H3><A NAME="SECTION00014200000000000000">
+Output</A>
+</H3>
+<PRE>
+:-D
+</PRE>
+
+<H2><A NAME="SECTION00015000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00015100000000000000">
+Input</A>
+</H3>
+<PRE>
+30 21 3
+</PRE>
+<H3><A NAME="SECTION00015200000000000000">
+Output</A>
+</H3>
+<PRE>
+:-D
+</PRE>
+
+<H2><A NAME="SECTION00016000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00016100000000000000">
+Input</A>
+</H3>
+<PRE>
+30 22 3
+</PRE>
+<H3><A NAME="SECTION00016200000000000000">
+Output</A>
+</H3>
+<PRE>
+:-)
+</PRE>
+
+<H2><A NAME="SECTION00017000000000000000">
+Exemplo 4</A>
+</H2>
+
+<H3><A NAME="SECTION00017100000000000000">
+Input</A>
+</H3>
+<PRE>
+22 30 3
+</PRE>
+<H3><A NAME="SECTION00017200000000000000">
+Output</A>
+</H3>
+<PRE>
+:-|
+</PRE>
+
+
+<H2><A NAME="SECTION00018000000000000000">
+Exemplo 5</A>
+</H2>
+
+<H3><A NAME="SECTION00018100000000000000">
+Input</A>
+</H3>
+<PRE>
+21 30 3
+</PRE>
+<H3><A NAME="SECTION00018200000000000000">
+Output</A>
+</H3>
+<PRE>
+:-(
+</PRE>
+
+<H2><A NAME="SECTION00019000000000000000">
+Exemplo 6</A>
+</H2>
+
+<H3><A NAME="SECTION00019100000000000000">
+Input</A>
+</H3>
+<PRE>
+20 30 3
+</PRE>
+<H3><A NAME="SECTION00019200000000000000">
+Output</A>
+</H3>
+<PRE>
+:-(
+</PRE>
+
+<P>
+<BR>
+
+</BODY>
+</HTML>
