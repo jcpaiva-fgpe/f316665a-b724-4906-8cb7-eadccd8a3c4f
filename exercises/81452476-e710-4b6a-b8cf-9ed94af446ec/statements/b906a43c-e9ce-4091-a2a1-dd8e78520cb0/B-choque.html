@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;B: ET em Estado de Choque</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;B: ET em Estado de Choque">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+
+</HEAD>
+
+<BODY >
+
+<H1>
+Problem&nbsp;B: ET em Estado de Choque</A>
+</H1> 
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="104" HEIGHT="119" ALIGN="BOTTOM" BORDER="0"
+ SRC="et3.jpg"
+ ALT="Image et3">
+
+</DIV>
+
+<P>
+
+<H2>
+Problema</A>
+</H2>
+
+<P>
+Ontem, dia 12 de Maio, foi encontrado no maravilhoso jardim do futuro edifício
+do Departamento de Ciência de Computadores, um OVNI com uma vida
+extra-terrestre (ET) a bordo. O ET foi retirado da nave sem qualquer
+ferimento físico, mas em aparente estado de choque. Chamado ao local,
+o INEM nada conseguiu fazer para avaliar o seu estado,
+transportando-o
+imediatamente para o hospital mais próximo.  
+
+<P>
+Reconhecidos cientistas portugueses trabalharam então em
+conjunto para tentar avaliar o seu estado de saúde. 
+As descobertas foram impressionantes. Segundo o boletim
+clínico, divulgado após várias
+horas, tinham conseguido desvendar 
+completamente o 
+código genético do ET.  O seu  ADN era apenas constituído por 3 elementos distintos: <TT>c</TT>,
+<TT>t</TT> e <TT>a</TT> (o genoma humano é constituído por 4
+elementos).  Os cientistas também perceberam que o ADN do ET sofria
+uma mutação por cada hora que passava, seguindo um padrão constante. O primeiro elemento do ADN era mantido
+mas os restantes elementos do ADN eram alterados de acordo com a
+regra seguninte. Para cada par de letras vizinhas, a segunda era
+alterada se era diferente da anterior. Nesse caso, era substituída pela
+letra que não estava no par. Por exemplo,
+para a sequência de ADN <TT>actt</TT>, a mutação seria:
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">a primeira letra continua <TT>a</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT">a segunda letra do par <TT>ac</TT> evolui para  <TT>t</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT">a segunda letra do par <TT>ct</TT> evolui para  <TT>a</TT></TD>
+</TR>
+<TR><TD ALIGN="LEFT">a segunda letra do par <TT>tt</TT> continua  <TT>t</TT></TD>
+</TR>
+</TABLE>
+</DIV>
+e o resultado final seria <TT>atat</TT>.
+As alterações numa sequência ocorriam em simultâneo.
+
+<P>
+
+<H2>
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa que, dado um estado do ADN do ET, 
+calcule qual será o seu estado passado uma hora. 
+
+<P>
+
+<H2>
+Input</A>
+</H2>
+
+<P>
+O input é uma sequência  de letras 
+(<TT>c</TT>, <TT>t</TT> ou <TT>a</TT> separadas por espaços),
+arbitrariamente longa,
+representando o ADN do ET, e que terminará por <TT>#</TT>.
+Nos dados, tem um símbolo por linha. Todas as linhas têm
+um caracter de mudança de linha.
+
+<P>
+
+<H2>
+Output</A>
+</H2>
+
+<P>
+O output é a sequência do ADN 
+depois de uma mutação. Terminará por mudança de linha.
+
+<P>
+
+<H2>
+Exemplo 1</A>
+</H2>
+
+<H3>
+Input</A>
+</H3>
+<BR>
+<PRE>
+a
+t
+c
+c
+a
+#
+</PRE>
+
+<P>
+
+<H3>
+Output</A>
+</H3>
+<BR>
+<PRE>
+a
+c
+a
+c
+t
+</PRE>
+
+<P>
+
+<H2>
+Exemplo 2</A>
+</H2>
+
+<H3>
+Input</A>
+</H3>
+<BR>
+<PRE>
+t
+t
+a
+a
+c
+#
+</PRE>
+
+<P>
+
+<H3>
+Output</A>
+</H3>
+<BR>
+<PRE>
+t
+t
+c
+a
+t
+</PRE>
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2006
+</ADDRESS>
+</BODY>
+</HTML>
