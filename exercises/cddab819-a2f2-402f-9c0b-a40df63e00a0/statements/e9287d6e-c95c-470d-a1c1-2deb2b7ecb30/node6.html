@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem F: Relógio Digital</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;F: Relógio Digital">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00060000000000000000">
+Problem F: Relógio Digital</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+Problema</A>
+</H2>
+
+<P>
+Os relógios digitais mais comuns usam os chamados mostradores de sete
+segmentos, em que cada dígito é construído a partir de três segmentos
+horizontais e quatro verticais, que podem estar acesos ou apagados.
+O mapeamento de dígitos em segmentos acesos para os dígitos de 0 a
+9 é o seguinte:
+
+<P>
+<IMG
+  WIDTH="671" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="numbers.png"
+ ALT="Image numbers">
+
+<P>
+
+<H2><A NAME="SECTION00062000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa que, a partir da hora em formato HH:MM (relógio
+de 24 horas) imprima a correspondente imagem do mostrador de sete
+segmentos.
+
+<P>
+
+<H2><A NAME="SECTION00063000000000000000">
+Input</A>
+</H2>
+
+<P>
+A hora em formato HH:MM (relógio de 24 horas).
+
+<P>
+
+<H2><A NAME="SECTION00064000000000000000">
+Output</A>
+</H2>
+
+<P>
+A imagem do mostrador de sete segmentos, construída a partir dos caracteres
+``<TT>-</TT>'', ``<TT>|</TT>'' e espaço, com a disposição seguinte:
+
+<P>
+<IMG
+  WIDTH="290" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="display.png"
+ ALT="Image display">
+
+<P>
+Repare que entre os dois dígitos das horas, assim como entre os dois
+dígitos dos minutos, existe uma coluna vertical de espaços; entre
+as horas e os minutos existe um sinal ``<TT>:</TT>''; todas as linhas de
+output têm 15 caracteres.
+
+<P>
+
+<H2><A NAME="SECTION00065000000000000000">
+Exemplo: input</A>
+</H2>
+<BR>
+<PRE>
+12:35
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00066000000000000000">
+Exemplo: output</A>
+</H2>
+<BR>
+<PRE>
+     -   -   -  
+  |   |   | |  
+     - : -   - 
+  | |     |   |
+     -   -   -
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2005
+</ADDRESS>
+</BODY>
+</HTML>
