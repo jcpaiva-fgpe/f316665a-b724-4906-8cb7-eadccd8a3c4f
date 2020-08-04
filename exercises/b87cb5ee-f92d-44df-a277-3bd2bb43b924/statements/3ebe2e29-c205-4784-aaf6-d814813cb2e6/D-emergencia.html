@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem D: Telefones de Emergência</TITLE>
+<META NAME="description" CONTENT="Problem D: Telefones de Emergência">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+
+</HEAD>
+
+<BODY>
+<H1>
+Problem D: Telefones de Emergência</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="73" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="phone3.jpg"
+ ALT="Image phone3">
+ 
+<IMG
+  WIDTH="96" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="phone4.jpg"
+ ALT="Image phone4">
+
+</DIV>
+
+<P>
+
+<H2>
+Problema</A>
+</H2>
+
+<P>
+Uma determinada concessionária de auto-estradas pretende instalar
+  uma rede de telefones de emergência.
+ Contudo, devido ao preço exorbitante dos cabos eléctricos nos últimos tempos, a
+  concessionária está a tentar resolver o problema de enviar
+  electricidade aos telefones de uma forma que não a obrigue a colocar
+  cabos ao longo de toda a auto-estrada. 
+Embora sejam amplamente adoptados noutras auto-estradas, nesta zona  os
+  painéis solares não são uma opção, pois está permanentemente mau tempo.
+
+<P>
+Contudo nem tudo está perdido. Recentemente foi inventada uma nova tecnologia de transmissão de electricidade sem fios que, recorrendo a sofisticadíssimas antenas direccionais permite o envio directo de todo o sinal para um dado telefone, sempre que este iniciar uma chamada.
+Com esta tecnologia de transmissão de electricidade, a potência eléctrica decresce apenas uma unidade por cada quilómetro que o sinal percorre.
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="241" HEIGHT="135" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="\includegraphics[height=3cm]{Telefones/exemplo}">
+
+</DIV>
+Apesar de entusiasmados com a ideia, os responsáveis, zelosos pelas questões de segurança, pretendem
+  confirmar que todos os telefones de emergência terão electricidade
+  suficiente para funcionar.
+  
+<H2>
+Tarefa</A>
+</H2>
+Escrever um programa que dadas as posições das antenas e dos telefones
+ e as suas potências (de emissão das antenas e de funcionamento dos telefones), verifique se
+  os telefones poderão ou não funcionar. Um telefone poderá receber simultaneamente sinais de várias antenas, sendo a potência total
+  recebida igual ao somatório das potências recebidas de cada antena.
+  Assuma que não será utilizado mais do que um telefone em simultâneo.
+  
+<P>
+
+<H2>
+Input</A>
+</H2>
+  Corresponde a um plano de instalação de <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$N$"> antenas e de
+  localização de <IMG
+ WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$M$"> telefones de emergência.  Na primeira 
+  linha tem um inteiro <IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$L$"> que indica a extensão em Km (medida em linha
+  recta) da 
+  região em que serão instaladas as antenas, <!-- MATH
+ $1 \leq L \leq 1000$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$1 \leq L \leq 1000$">.
+  Nas linhas seguintes tem o valor de <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$N$">(<!-- MATH
+ $1 \leq N \leq 100$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$1 \leq N \leq 100$">) 
+e depois <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$N$"> pares de linhas: a primeira linha de cada par tem a posição <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$x$"> da antena (<!-- MATH
+ $1 \leq x \leq L$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$1 \leq x \leq L$">)
+ e a segunda a sua potência <IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$p$"> (<!-- MATH
+ $1 \leq p \leq 64$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$1 \leq p \leq 64$">), medida numa
+  unidade
+especialmente desenvolvida para estas antenas.  
+   Depois encontrará o número de
+  telefones <IMG
+ WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$M$"> (<!-- MATH
+ $1 \leq M \leq 500$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$1 \leq M \leq 500$">) e <IMG
+ WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$M$"> pares de linhas: a primeira linha de cada par 
+  tem a posição <IMG
+ WIDTH="14" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$x$"> de cada telefone (<IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$1 \le x \le L$">) e a segunda,  a potência <IMG
+ WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$p$"> necessária 
+para o seu funcionamento 
+(<!-- MATH
+ $1   \le p \le 64$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$1 \le p \le 64$">).
+
+<P>
+
+<H2>
+Output</A>
+</H2>
+  É composto por <IMG
+ WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$M$"> linhas. A <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$i$">-ésima linha indica 
+  se o   <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$i$">-ésimo telefone de emergência fica funcional ou não: 
+  terá <TT>SIM</TT> se ficar e <TT>NAO</TT> caso contrário.
+  Todas terminam por mudança de linha.
+
+<P>
+
+<H2>
+Exemplo - input</A>
+</H2>
+<BR>
+<PRE>
+10
+2
+1
+5
+10
+5
+4
+5
+2
+5
+1
+10
+6
+8
+3
+</PRE>
+
+<P>
+
+<H2>
+Exemplo - output</A>
+</H2>
+<BR>
+<PRE>
+NAO
+SIM
+NAO
+SIM
+</PRE>
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2006
+</ADDRESS>
+</BODY>
+</HTML>
