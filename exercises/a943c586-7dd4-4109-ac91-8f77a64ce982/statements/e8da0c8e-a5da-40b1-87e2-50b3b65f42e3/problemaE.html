@@ -1,0 +1,148 @@
+<H1><font color=blue>
+Problema E: Não lhes dês Troco </font>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="CENTER"><IMG
+  WIDTH="78" HEIGHT="79" ALIGN="BOTTOM" BORDER="0"
+ SRC="2e_comm.jpg"
+ ALT="Image 2e_comm">
+<IMG
+  WIDTH="72" HEIGHT="71" ALIGN="BOTTOM" BORDER="0"
+ SRC="1euro.jpg"
+ ALT="Image 1euro">
+<IMG
+  WIDTH="65" HEIGHT="63" ALIGN="BOTTOM" BORDER="0"
+ SRC="50eurocent.jpg"
+ ALT="Image 50eurocent">
+<IMG
+  WIDTH="56" HEIGHT="56" ALIGN="BOTTOM" BORDER="0"
+ SRC="20eurocent.jpg"
+ ALT="Image 20eurocent">
+<IMG
+  WIDTH="48" HEIGHT="48" ALIGN="BOTTOM" BORDER="0"
+ SRC="10eurocent.jpg"
+ ALT="Image 10eurocent">
+<IMG
+  WIDTH="43" HEIGHT="44" ALIGN="BOTTOM" BORDER="0"
+ SRC="5c_comm.jpg"
+ ALT="Image 5c_comm"></TD>
+<TD ALIGN="CENTER"> </TD>
+<TD ALIGN="CENTER"> </TD>
+<TD ALIGN="CENTER"> </TD>
+<TD ALIGN="CENTER"> </TD>
+</TR>
+</TABLE>
+</DIV>
+
+
+Uma <EM>slot-machine</EM> retém frequentemente o troco ou parte dele, deixando
+os utilizadores descontentes. Tal acontece porque 
+a máquina só aceita moedas de certos valores (de 2 euros, 1
+euro, e de  50,
+20, 10 e 5 cêntimos) e, por vezes, 
+após algumas transacções, certas moedas ficam
+temporariamente  esgotadas.  Acontece também porque, 
+para perfazer uma quantia,
+a máquina começa sempre por usar as moedas de valor mais
+alto que tiver. Este modo de operar não é
+muito correcto. Por exemplo, se num certo instante,
+a máquina dispuser apenas  de
+moedas de 50 e 20 cêntimos, não conseguiria devolver 60 cêntimos
+(reteria 10 cêntimos). Utilizadores desprevenidos,
+que insiram quantias muito superiores às necessárias, 
+podem ficar perplexos.
+
+<P>
+
+<H2><font color=blue>Tarefa</font>
+</H2>
+Escrever um programa que  simule o comportamento da máquina 
+quando é efectuada uma sequência de transacções,
+a partir dum certo estado dado. O programa 
+deverá determinar a quantia que a máquina reteve 
+e a fracção das
+transacções com retenção de troco.
+
+<P>
+
+<H2><font color=blue>
+Input</font>
+</H2>
+Na primeira linha tem o número de moedas de cada tipo 
+disponíveis inicialmente, segundo a ordem dada acima.
+Segue-se a descrição duma sequência de transacções
+a processar, terminada por <B>0 0</B>. Haverá pelo menos
+uma transacção.
+A primeira linha de cada transacção é constituída 
+por um par <B>(E,D)</B> de inteiros não negativos que representam 
+o montante a pagar (<B>E</B> euros e <B>C</B> cêntimos), seguindo-se 
+a sequência de moedas introduzidas pelo cliente (a qual termina
+por <B>0</B>). 
+
+<P>
+
+<H2><font color=blue>Output</font>
+</H2>
+Escreverá a quantia total retida e 
+na linha seguinte a fracção de transacções 
+com retenção, terminando por mudança de linha.
+Essa fracção terá a forma <B>N/T</B>, em que <B>N</B> pode ser zero
+(<B>T</B> designa o número total de transacções).
+
+<P>
+
+<H2><font color=blue>Exemplo</font>
+</H2>
+
+<H3><font color=blue>Input</font>
+</H3>
+<BR>
+<PRE>
+0 0 4 0 0 0 
+0 25
+2
+20
+0
+3 10
+1
+20
+1
+50
+20
+20
+0
+0 40
+1
+0
+1 25
+20
+50
+50
+5
+0
+0 45
+20
+10
+5
+5
+5
+0
+0 40
+2
+0
+0 0
+</PRE>
+<H3><font color=blue>Ouput</font>
+</H3>
+<BR>
+<PRE>
+0 35
+2/6
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2007
+</ADDRESS>
