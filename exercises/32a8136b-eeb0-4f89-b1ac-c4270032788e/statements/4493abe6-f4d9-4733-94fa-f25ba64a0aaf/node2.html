@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>Problem B: Autenticação forte</TITLE>
+<META NAME="description" CONTENT="Problem B: Autenticação forte">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00020000000000000000">
+Problema B: Autenticação forte</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="82" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="./fingerprint-r.png"
+ ALT="Image fingerprint-r">
+
+</DIV>
+
+<P>
+Parabéns! Vocês foram admitidos no GIS (Grupo de Interesse em
+Segurança). A vossa primeira tarefa é implementarem o sistema de
+autenticação forte requerido pela autenticação do nosso site. Nós não
+usamos  palavras-chave. Para vos autenticar ser-vos-á colocado um
+desafio que terá de ser respondido em 10 milissegundos, sem falhas e à
+primeira tentativa. Isto significa que o desafio terá de ser
+respondido por um programa que terão de instalar no vosso cliente de
+autenticação. Este programa recebe uma sequência de caracteres como
+desafio e responde com uma outra sequência de caracteres. 
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Os desafios serão modificados semanalmente. Nesta primeira semana a
+resposta ao desafio será a sequência de caracteres fornecida com os
+caracteres nas posições de índice <IMG
+ WIDTH="40" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$2*n$"> trocados com os caracteres nas
+posições de índice <IMG
+ WIDTH="70" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$2*n+1$">, sendo 0 o primeiro índice da sequência,
+para <!-- MATH
+ $0 \leq n < l/2$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$0 \leq n < l/2$">, onde <IMG
+ WIDTH="10" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$l$">, o comprimento da sequência de
+caracteres, é um número par entre 2 e 100, inclusivé. 
+
+<P>
+
+<H2><A NAME="SECTION00022000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00022100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+abba
+</PRE>
+<H3><A NAME="SECTION00022200000000000000">
+Output</A>
+</H3>
+
+<PRE>
+baab
+</PRE>
+<H2><A NAME="SECTION00023000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00023100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+123456
+</PRE>
+<H3><A NAME="SECTION00023200000000000000">
+Output</A>
+</H3>
+
+<PRE>
+214365
+</PRE>
+
+<P>
+<HR>
+<ADDRESS>
+ToPAS'2011 (Treino)
+</ADDRESS>
+</BODY>
+</HTML>
