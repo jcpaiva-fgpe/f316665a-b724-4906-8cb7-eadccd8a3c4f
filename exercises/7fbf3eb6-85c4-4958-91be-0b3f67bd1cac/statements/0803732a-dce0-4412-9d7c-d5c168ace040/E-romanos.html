@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem E: Numerais Romanos</TITLE>
+<META NAME="description" CONTENT="Problem E: Numerais Romanos">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+</HEAD>
+
+<BODY >
+<H1>
+Problem E: Numerais Romanos</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="130" HEIGHT="79" ALIGN="BOTTOM" BORDER="0"
+ SRC="roman.jpg"
+ ALT="Image roman">
+<IMG
+  WIDTH="130" HEIGHT="79" ALIGN="BOTTOM" BORDER="0"
+ SRC="roman.jpg"
+ ALT="Image roman">
+
+</DIV>
+
+<P>
+
+<H2>
+Problema</A>
+</H2>
+A civilização clássica romana desenvolveu um sistema
+de numeração que perdurou durante muito séculos e que
+ainda hoje é usado em referências particulares:
+``D. Manuel II'', ``séc. XXI'', ``ano MCMXCVIII'', por exemplo.
+
+<P>
+Na notação romana usam-se as letras I, V, X, L, C, D, M
+para representar quantidades de 1 a 1000:
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="RIGHT">I</TD>
+<TD ALIGN="LEFT">1</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">V</TD>
+<TD ALIGN="LEFT">5</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">X</TD>
+<TD ALIGN="LEFT">10</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">L</TD>
+<TD ALIGN="LEFT">50</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">C</TD>
+<TD ALIGN="LEFT">100</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">D</TD>
+<TD ALIGN="LEFT">500</TD>
+</TR>
+<TR><TD ALIGN="RIGHT">M</TD>
+<TD ALIGN="LEFT">1000</TD>
+</TR>
+</TABLE>
+</DIV>
+A principal diferença entre a notação romana e a árabe
+(que usamos hoje em dia) é que os valores
+dos símbolos não são posicionais, mas sim
+adicionados ou subtraídos conforme a ordem por que
+ocorrem.
+Primeiramente, os símbolos repetidos são
+agrupados e o seu valor adicionado, por exemplo:
+   III é <IMG
+ WIDTH="105" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$1+1+1=3$">, XX é <IMG
+ WIDTH="101" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$10+10=20$">, MMM é <!-- MATH
+ $1000+1000+1000=3000$
+ -->
+<IMG
+ WIDTH="210" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$1000+1000+1000=3000$">.
+Seguidamente, analisamos os grupos
+de símbolos da direita para a esquerda:
+
+<UL>
+<LI>O grupo mais à direita é sempre <B>positivo</B>.
+</LI>
+<LI>Se um grupo vale mais em módulo que o seu vizinho
+  à direita, o valor tem sinal <B>positivo</B>:
+  XII é <IMG
+ WIDTH="136" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$(1+1)+10=12$">, LVIII é <!-- MATH
+ $(1+1+1)+5+50 = 58$
+ -->
+<IMG
+ WIDTH="196" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$(1+1+1)+5+50 = 58$">.
+</LI>
+<LI>Se o grupo vale menos em módulo que o vizinho 
+  à direita, o seu valor tem sinal <B>negativo</B>:
+  IX é <IMG
+ WIDTH="111" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$10+(-1) = 9$">, XXM é <!-- MATH
+ $1000 + (-10-10) = 980$
+ -->
+<IMG
+ WIDTH="193" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$1000 + (-10-10) = 980$">.
+</LI>
+<LI>Não podem ocorrer grupos de símbolos distintos com
+  valores igual  (correspondem
+  a numerais inválidos como ``XVV'' ou ``VIIIII'').
+</LI>
+</UL>
+Assim, o numeral romano MCMXCVIII vale 
+<!-- MATH
+ $(1+1+1)+5+100-10+1000-100+1000 = 1998$
+ -->
+<IMG
+ WIDTH="421" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$(1+1+1)+5+100-10+1000-100+1000 = 1998$">.
+
+<P>
+
+<H2>
+Tarefa</A>
+</H2>
+Escrever um programa que lê um numeral romano e escreve
+o seu valor em decimal. 
+
+<P>
+
+<H2>
+Input</A>
+</H2>
+O input é um numeral romano numa única linha, em carácteres maiúsculas,
+de comprimento inferior a 20 carácteres. 
+Pode assumir que o numeral é sempre válido 
+e que o seu valor não excede 5000.
+
+<P>
+
+<H2>
+Output</A>
+</H2>
+O output deve ter o valor do numeral romano em decimal (seguido de mudança
+de linha).
+
+<P>
+
+<H2>
+Exemplo 1</A>
+</H2>
+
+<H3>
+Input</A>
+</H3>
+<BR>
+<TT>CCCLXXIX</TT>
+
+<P>
+
+<H3>
+Output</A>
+</H3>
+<BR>
+<TT>379</TT>
+
+<P>
+
+<H2>
+Exemplo 2</A>
+</H2>
+
+<H3>
+Input</A>
+</H3>
+<BR>
+<TT>CDXLVII</TT>
+
+<P>
+
+<H3>
+Output</A>
+</H3>
+<BR>
+<TT>447</TT>
+
+<P>
+
+<H2>
+Exemplo 3</A>
+</H2>
+
+<H3>
+Input</A>
+</H3>
+<BR>
+<TT>MMMDCCCXLVIII</TT>
+
+<P>
+
+<H3>
+Output</A>
+</H3>
+<BR>
+<TT>3848</TT>
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2006
+</ADDRESS>
+</BODY>
+</HTML>
