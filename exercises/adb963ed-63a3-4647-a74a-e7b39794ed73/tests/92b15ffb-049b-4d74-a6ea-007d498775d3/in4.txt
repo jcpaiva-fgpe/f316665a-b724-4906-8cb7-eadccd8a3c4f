@@ -1,0 +1,14 @@
+13 20
+XXXXXXXXXXXXXXXXXXXX
+XBBBBBBXBBBBBBBBBBBX
+X      P         BBX
+X      XXXXXXXXPXXXX
+X      X    X      X
+X      X    X      X
+X     BX    X    B X
+X      X    XXXXXXXX
+X      XXXPXXB BBBBX
+X B    XB   X     BX
+X      X    P     BX
+X      XB   X  BBBBX
+XXEXXXXXXXXXXXSXXXXX
