@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Química à toa</TITLE>
+<META NAME="description" CONTENT="Química à toa">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<script type="text/javascript" 
+        src="../mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+ </HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00030000000000000000">
+Química à toa</A>
+</H1>
+
+<P>
+<BR>
+
+
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="223" HEIGHT="250" src="quimicaFig.png" border="0" align=center>
+</TD> </TR>
+</TABLE>
+
+<!-- <IMG  -->
+<!--  WIDTH="45" HEIGHT="18" BORDER="0" -->
+<!--  SRC="img14.gif" -->
+<!--  ALT="\begin{wrapfigure}[7]{r}{0.3\textwidth} -->
+<!-- %\centering -->
+<!-- \includegraphics[width=0.3\textwidth]{C/quimicaFig.png} -->
+<!-- \end{wrapfigure}"> -->
+<BR>
+
+<P>
+Quando o Rui estava a estudar Química, 
+escrevendo fórmulas de compostos no caderno 
+(como CaCO<sub>3</sub>
+<!-- <IMG -->
+<!--  WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img15.gif" -->
+<!--  ALT="$_3$"> -->, Na<sub>2</sub>CO<sub>3</sub> e H<sub>2</sub>SO<sub>4</sub>),
+<!-- <IMG -->
+<!--  WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img16.gif" -->
+<!--  ALT="$_2$">CO<IMG -->
+<!--  WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img15.gif" -->
+<!--  ALT="$_3$"> e H<IMG -->
+<!--  WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img16.gif" -->
+<!--  ALT="$_2$">SO<IMG -->
+<!--  WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img17.gif" -->
+<!--  ALT="$_4$">) -->,
+apareceu a irmã mais nova, 
+que ficou fascinada com aquelas sequências de letras e algarismos.
+O pior é que ela não se calava, exigindo que ele lhe explicasse
+como dividia uma sequência grande em pedacinhos.
+Desesperado, o Rui enunciou as regras:
+
+<P>
+
+<UL>
+<LI>Cada sequência de letras que começa com uma letra grande
+      (a irmã não conhecia a palavra "maiúscula") representa um elemento;
+</LI>
+</UL>
+
+<P>
+
+<UL>
+<LI>Se houver algum número a seguir ao elemento,
+      esse é o número de átomos do elemento;
+      se não houver, o número de átomos do elemento é 1.
+</LI>
+</UL>
+
+<P>
+Depois, exemplificou com a fórmula do carbonato de cálcio, CaCO<sub>3</sub>,
+<!-- <IMG -->
+<!--  WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img15.gif" -->
+<!--  ALT="$_3$">, -->
+que tem um átomo de cálcio (Ca), 
+um átomo de carbono (C) e 
+três átomos de oxigénio (O).
+
+<P>
+A irmã ficou muito contente e queria aprender mais Química.
+Mas ele convenceu-a a praticar.
+Para poder regressar ao estudo rapidamente,
+decidiu escrever "fórmulas químicas" à toa e
+até inventou símbolos químicos com 1, 2, 3, 4 e 5 letras.
+Por exemplo, deu-lhe a fórmula Ai<sub>19</sub>Xpto<sub>5</sub>Uus<!-- <IMG -->
+ <!-- WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img18.gif" -->
+ <!-- ALT="$_{19}$">Xpto<IMG -->
+ <!-- WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img19.gif" -->
+ <!-- ALT="$_5$">Uus  -->
+(que tem tamanho 12) para decompor.
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escreva um programa que,
+dada uma fórmula química inventada pelo Rui e 
+terminada por "<TT>.</TT>",
+apresenta os elementos que ocorrem na fórmula e
+o número de átomos de cada um.
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000">
+Input</A>
+</H2>
+
+<P>
+Uma linha com uma fórmula química (inventada pelo Rui) 
+terminada por "<TT>.</TT>".
+A fórmula é uma sequência de \(n\) <!-- <IMG -->
+ <!-- WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img3.gif" -->
+ <!-- ALT="$n$"> --> letras e algarismos,
+que começa com uma letra maiúscula e
+que não tem o algarismo zero imediatamente a seguir a uma letra,
+nem uma letra minúscula imediatamente a seguir a um algarismo.
+Nenhum elemento tem mais de cinco letras, 
+nem ocorre mais do que uma vez na fórmula.
+O número de algarismos seguidos não excede \(n-1\). <!-- <IMG -->
+ <!-- WIDTH="45" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img9.gif" -->
+ <!-- ALT="$n-1$">. -->
+
+<P>
+
+<H2><A NAME="SECTION00033000000000000000">
+Restrições</A>
+</H2>
+
+<P>
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $1 \leq n \leq 1\,000$
+ -->
+\(1 \leq n \leq 1\,000\)
+
+<!-- <IMG -->
+<!--  WIDTH="108" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img20.gif" -->
+<!--  ALT="$1 \leq n \leq 1\,000$" --></TD>
+<TD ALIGN="LEFT">Tamanho da fórmula</TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H2><A NAME="SECTION00034000000000000000">
+Output</A>
+</H2>
+
+<P>
+O output tem uma linha por cada elemento que ocorre na fórmula.
+Cada linha tem um elemento, um espaço, o número de átomos desse elemento 
+e uma mudança de linha.
+Os elementos têm de aparecer pela ordem em que ocorrem na fórmula.
+
+<P>
+
+<H2><A NAME="SECTION00035000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00035100000000000000">
+Input</A>
+</H3>
+<PRE>
+CaCO3.
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00035200000000000000">
+Output</A>
+</H3>
+<PRE>
+Ca 1
+C 1
+O 3
+</PRE> 
+
+<P>
+
+<H2><A NAME="SECTION00036000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00036100000000000000">
+Input</A>
+</H3>
+<PRE>
+Ai19Xpto5Uus.
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00036200000000000000">
+Output</A>
+</H3>
+<PRE>
+Ai 19
+Xpto 5
+Uus 1
+</PRE> 
+
+<P>
+
+<P>
+<BR>
+
+</BODY>
+</HTML>
