@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;D: Ali Baba e a Biometria</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;D: Ali Baba e a Biometria">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00040000000000000000">
+Problem&nbsp;D: Ali Baba  e a Biometria</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="122" HEIGHT="158" ALIGN="BOTTOM" BORDER="0"
+ SRC="./aliBaba_b.jpg"
+ ALT="Image aliBaba_b">
+<BR>
+</DIV>
+
+<P>
+A voz funciona como uma impressão digital para identificação de cada
+indíviduo, à semelhança da íris ou do seu DNA. As suas características únicas são 
+determinadas quer pela forma como as cordas vocais vibram quer por
+padrões resultantes de outros aspectos físicos do indíviduo. 
+Como seria a história de Ali Baba se a caverna do tesouro estivesse
+protegida por sistema biométrico baseado em reconhecimento de voz? 
+Não bastaria  pronunciar 
+a fórmula mágica "Abre-te Sésamo". Mas, conseguiria tirar algum 
+partido do facto do sistema  de autenticação utilizar medidas 
+probabilísticas e, consequentemente, poder tomar decisões erradas (os <EM>falsos
+positivos</EM> que serviriam os seus interesses) ?
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+Tarefa</A>
+</H2>
+Pretende-se analisar uma sequência interacções de Ali Baba com o
+sistema biométrico da caverna e escrever um programa para 
+determinar o número máximo de vezes seguidas que conseguiu abrir a
+porta sem dificuldades.
+O programa analisará um registo de ocorrências em que <code>1 1</code>
+designa <EM>abertura sem problemas</EM>  e <code>1 0</code> um <EM>insucesso</EM>. 
+Depois dum insucesso haverá sempre uma sequência de zero ou mais tentativas 
+falhadas (cada uma representada por <code>0</code>) 
+que terminará por <code>1</code> (sucesso) ou por  <code>2</code> (desistência). 
+Cada linha de input apresenta uma ocorrência, com excepção da
+última linha que é sempre <code>-1 -1</code>. O output será uma linha
+com o valor pedido.
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000">
+Exemplo</A>
+</H2>
+
+<H3><A NAME="SECTION00042100000000000000">
+Input</A>
+</H3>
+<PRE>
+1 1
+1 0
+0
+0
+1
+1 1
+1 1
+1 0
+1
+1 1
+1 0
+0
+2
+1 0
+0
+0
+1
+1 1
+1 1
+1 0
+2
+1 1
+-1 -1
+</PRE>
+
+
+<H3><A NAME="SECTION00042200000000000000">
+Output</A>
+</H3>
+<PRE>
+2
+</PRE>
+
+<P>
+<HR>
+<ADDRESS>
+ToPAS'2009
+</ADDRESS>
+</BODY>
+</HTML>
