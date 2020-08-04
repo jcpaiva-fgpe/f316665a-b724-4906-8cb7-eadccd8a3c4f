@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;E: Leilões Morse</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;E: Leilões Morse">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00050000000000000000">
+Problem&nbsp;E: Leilões Morse</A>
+</H1>
+
+<P>
+
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="306" HEIGHT="283" src="numeros_color.png" border="1" align=center>
+</TD> </TR>
+</TABLE>
+
+A leiloeira TopasLeilões inaugurou recentemente um sistema eletrónico para controlar os leilões que organiza. Com o novo sistema, os compradores fazem os seus lances usando um aparelho electrónico muito simples, onde existe apenas um botão. Carregando brevemente no botão, o aparelho emite um "bip" eletrónico curto, que representa o carácter ponto, '.'; carregando mais durante mais tempo, o aparelho emite um "bip" mais longo, que representa o carácter traço, '-'. 
+
+<P>
+Usando sequências de pontos e traços, os compradores comunicam ao sistema o valor dos seus lances, usando o código Morse.
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000">
+Tarefa</A>
+</H2>
+Escreva um programa que aceite da consola a sequência de lances recebidos pelo sistema e escreva, também na consola, após cada lance, o valor do lance mais alto recebido até à altura e o número de lances válidos. Um lance é válido se a sequência de pontos e traços representar inequivocamente um número, de acordo com a tabela de códigos Morse dos algarismos decimais:
+<PRE>
+     1  ·----
+     2  ··---
+     3  ···--
+     4  ····-
+     5  ·····
+     6  -····
+     7  --···
+     8  ---··
+     9  ----·
+     0  -----
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000">
+Input</A>
+</H2>
+
+<P>
+O input é uma sequência de linhas contendo apenas carateres '.' (ponto) e '-' (hífen, traço, sinal de menos). Cada linha representa um lance, que pode ser válido ou inválido, tal com explicado na secção precedente. A sequência termina quando chega uma linha com cinco traços, representando o número zero.
+ Um ficheiro tem no máximo 100 linhas e cada linha tem no máximo 40 caracteres.
+
+<P>
+
+<H2><A NAME="SECTION00053000000000000000">
+Output</A>
+</H2>
+O output é uma sequência de linhas, uma linha por cada linha do input, excluindo a linha de terminação. Em cada linha vêm dois números separados por um espaço: o primeiro representa o maior lance até à linha de input correspondente e o segundo o número de lances válidos, até essa linha de input. Se não houver lances válidos até essa linha, o valor do maior lance válido será 0 até essa linha.
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00054000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00054100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+.---------
+-----
+</PRE>
+
+
+<H3><A NAME="SECTION00054200000000000000">
+Output</A>
+</H3>
+<PRE>
+10 1
+</PRE>
+
+<P>
+
+
+<H2><A NAME="SECTION00055000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00055100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+.---------
+.-.-......
+-----
+</PRE>
+
+<H3><A NAME="SECTION00055200000000000000">
+Output</A>
+</H3>
+<PRE>
+10 1
+10 1
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00056000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00056100000000000000">
+Input</A>
+</H3>
+
+<P>
+<PRE>
+.---------
+.-.-......
+..........
+-----
+</PRE>
+
+
+<H3><A NAME="SECTION00056200000000000000">
+Output</A>
+</H3>
+<PRE>
+10 1
+10 1
+55 2
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00057000000000000000">
+Exemplo 4</A>
+</H2>
+
+<H3><A NAME="SECTION00057100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+.---.--
+.----.-
+-----
+</PRE>
+
+
+<H3><A NAME="SECTION00057200000000000000">
+Output</A>
+</H3>
+<PRE>
+0 0
+0 0
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2015
+</ADDRESS>
+</BODY>
+</HTML>
