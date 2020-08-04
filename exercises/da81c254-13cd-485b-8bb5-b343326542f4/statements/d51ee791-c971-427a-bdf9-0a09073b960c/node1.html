@@ -1,0 +1,157 @@
+
+<H1><A NAME="SECTION00010000000000000000">
+Problem A: Preciosismos</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="99" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="./clock_image.jpg"
+ ALT="Image clock_image">
+
+</DIV>
+
+<P>
+Dois amigos que já não se viam há alguns meses encontraram-se duas 
+vezes no mesmo dia, às 7:58 e às 14:05. Um deles exclamou
+``Passaram apenas 367 minutos!'' e o outro retorquiu
+ ``Queres
+dizer, 6 horas e 7 minutos?!''. Mas, se se tivessem reencontrado às 7:59,
+o primeiro diria ``Passou apenas 1 minuto!''.
+O segundo diria ``De facto!''. Diria sempre isso se o
+ intervalo fosse inferior a uma hora.
+Se se tivessem reencontrado às 13:58, o
+segundo diria ``Queres dizer, 6
+horas?!'' e se fosse  às 8:59 já seria ``Queres dizer, 1
+hora e 1 minuto?!''. Pretendemos escrever diálogos idênticos a estes.
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa que produza as duas frases do diálogo 
+para dois
+encontros (consecutivos), registados às <IMG
+ WIDTH="22" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$h_1$"> horas e <IMG
+ WIDTH="27" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$m_1$"> minutos e
+<IMG
+ WIDTH="22" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$h_2$"> horas e <IMG
+ WIDTH="27" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$m_2$"> minutos, sendo <!-- MATH
+ $h_1, m_1,h_2,m_2$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$h_1, m_1,h_2,m_2$"> inteiros tais que <!-- MATH
+ $0\leq h_i \leq 23$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$0\leq h_i \leq 23$"> e <!-- MATH
+ $0\leq m_i \leq 59$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$0\leq m_i \leq 59$">, para <IMG
+ WIDTH="59" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$i=1,2$">.
+Os valores de <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$h_i$"> e <IMG
+ WIDTH="25" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$m_i$"> são dados numa linha separados por um
+espaço. Cada uma das duas frases do diálogo é escrita numa linha
+diferente, terminando por mudança de linha.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00012100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+7 58
+14 5
+</PRE>
+<H3><A NAME="SECTION00012200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+Passaram apenas 367 minutos!
+Queres dizer, 6 horas e 7 minutos?!
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00013100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+2 1
+2 48
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00013200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+Passaram apenas 47 minutos!
+De facto!
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00014100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+8 0
+9 1
+</PRE>
+<H3><A NAME="SECTION00014200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+Passaram apenas 61 minutos!
+Queres dizer, 1 hora e 1 minuto?!
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2008
+</ADDRESS>
