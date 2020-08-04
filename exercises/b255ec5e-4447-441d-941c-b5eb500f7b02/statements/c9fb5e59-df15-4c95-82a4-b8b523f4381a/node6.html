@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem F: O Padeiro Viajante</TITLE>
+<META NAME="description" CONTENT="Problem F: O Padeiro Viajante">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00060000000000000000">
+Problem F: O Padeiro Viajante</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="438" HEIGHT="336" ALIGN="BOTTOM" BORDER="0"
+ SRC="./mapa-padeiro-r.png"
+ ALT="Image mapa-padeiro-r">
+     
+</DIV>
+
+<P>
+João estuda Ciência de Computadores e trabalha também numa
+padaria para ajudar a suportar os custos dos estudos. 
+Faz entregas de pães todas as manhãs a 
+ diferentes padarias e confeitarias em Espinho.
+Ora para dificultar o seu trabalho, mesmo quando tem de ir aos mesmos
+locais pode ter de o fazer por ordem diferente.  
+Por isso, com alguns colegas de curso resolveu desenvolver um guia
+GPS <I>home made</I>. Quando pegaram no mapa 
+da zona das distribuições do João (dado na figura), perceberam logo
+que o problema era facilitado por ser em Espinho: as ruas formavam um
+padrão quase quadricular e os seus nomes eram
+números.
+Fruto da boa organização, decidiram dividir o trabalho por vários
+componentes. Ao João coube desenvolver a parte que dava as direcções 
+sabendo os pontos por onde ia passar. 
+
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+Tarefa</A>
+</H2> 
+O João parte todos os dias da padaria central,
+ponto <b>(4,5)</b>,
+e a sua carrinha está sempre virada para <b>Este</b> (no mapa, para a direita). 
+Para a sequência de percursos que tem de efectuar nesse dia, o
+GPS <I>home made</I> vai dando as direcções a seguir,
+dizendo 
+      se seguirá em frente (<b>F</b>) ou se tem de virar à esquerda
+      (<b>E</b>), virar à direita (<b>D</b>), ou inverter a
+      marcha (<b>I</b>).  
+Caso não seja necessário mudar de direcção 
+      diz frente (<b>F</b>). Assim, 
+quando tem um cruzamento dá sempre uma indicação, bem como no início
+      de cada percurso. Se der a indicação <b>E</b>, <b>D</b> ou <b>I</b>, já não dá <b>F</b>. Quando chega ao fim de um percurso, ou
+      seja, a um cliente, diz stop (<b>S</b>).
+
+<P>
+Cada percurso tem início no
+local onde o João se encontrar no momento e é descrito por uma
+sequência de pontos que identificam todos os cruzamentos em que deve
+mudar de direcção. O último ponto num percurso define um local de
+entrega (cliente). 
+
+<P>
+
+<H2><A NAME="SECTION00062000000000000000">
+Input</A>
+</H2>
+Na primeira linha tem o número de clientes que deverá visitar (no máximo 4),
+que corresponde ao número de percursos a efectuar. 
+Segue-se a descrição dos percursos, a qual, para cada percurso, começa por um inteiro que
+indica o número de pontos que o definem, e a seguir tem as
+coordenadas desses pontos. Cada ponto é dado numa linha por dois
+inteiros separados por um espaço.
+
+<P>
+
+<H2><A NAME="SECTION00063000000000000000">
+Output</A>
+</H2>
+Em cada linha, a sequência das direcções a seguir em cada percurso,
+identificadas pelas letras 
+<b>F</b>, <b>E</b>, <b>D</b>, <b>I</b>, e <b>S</b>, do modo 
+descrito acima.
+
+<P>
+
+<H2><A NAME="SECTION00064000000000000000">
+Exemplo 1</A>
+</H2>
+
+
+<H3><A NAME="SECTION00064100000000000000">
+Input</A>
+</H3>
+
+
+<P>
+<PRE>
+4
+2
+12 5
+12 7
+3
+12 13
+6 13
+6 9
+4
+14 9
+14 7
+2 7
+2 1
+2
+2 13
+4 13
+</PRE>
+
+
+<H3><A NAME="SECTION00064200000000000000">
+Output</A>
+</H3>
+
+<PRE>
+FFFFDS
+FFFDFFDFS
+DFFFEEFFFFFDFFS
+IFFFFFES
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00065000000000000000">
+Exemplo 2</A>
+</H2>
+
+
+<H3><A NAME="SECTION00065100000000000000">
+Input</A>
+</H3>
+
+
+<P>
+<PRE>
+1
+3
+2 5
+2 13
+4 13
+</PRE>
+
+
+<H3><A NAME="SECTION00065200000000000000">
+Output</A>
+</H3>
+
+<PRE>
+IEFFFES
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2010
+</ADDRESS>
+</BODY>
+</HTML>
