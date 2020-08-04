@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem F: Afinal ainda há metro</TITLE>
+<META NAME="description" CONTENT="Problem F: Afinal ainda há metro">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00060000000000000000">
+Problem F: Afinal ainda há metro</A>
+</H1>
+
+
+
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="400" HEIGHT="300" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ViajeDeMetro.jpg"
+ ALT="Image ViajeDeMetro.jpg">
+
+</DIV>
+
+
+
+<P>
+A administração do metro decidiu
+substituir as máquinas automáticas de venda de bilhetes nas
+estações, porque, sendo muito sofisticadas, a verdade é que
+são muito caras e avariam muito. As novas máquinas são mais
+baratas e mais robustas, mas infelizmente são mais básicas: exigem
+que o comprador introduza a quantia exata (não dão troco, portanto)
+e além disso, não aceitam mais de quatro moedas de cada vez, numa
+mesma compra. Por exemplo, se o preço do bilhete fosse
+1.30 €, o comprador poderia introduzir uma moeda de um euro e
+uma de 20 cêntimos e uma de 10 cêntimos, ou então uma de um euro
+e três de 10 cêntimos, mas a máquina recusaria se o pagamento
+fosse feito com uma moeda de um euro, duas de 10 cêntimos e duas de 5
+cêntimos.
+
+<P>
+Assim sendo, os preços das viagens têm
+de ser escolhidos de forma a poderem ser pagos com quatro moedas. Por
+exemplo, não pode haver viagens que custem 3.35 €, pois
+precisaríamos de cinco moedas, pelo menos, para pagar esse valor.
+
+<P>
+Portanto, no momento de aumentar o preço
+do bilhete, o novo preço tem de ser escolhido de maneira a poder
+ser pago com quatro moedas, quando muito. A administração não
+quer perder dinheiro e, por isso, se o novo valor pensado pela
+administração não for aceitável pelas máquinas, esse valor
+terá de ser aumentado, o menos que for possível, de maneira a
+atingir-se um valor aceitável. Retomando o exemplo acima, se a
+administração quisesse inicialmente que o novo preço fosse
+3.35 €, teria de o aumentar para 3.40 €, que já
+pode ser pago com quatro moedas. 
+
+<P>
+O problema é, dado o preço que a
+administração pretende e os valores da moedas que a máquina
+aceita, calcular o menor preço maior ou igual ao preço
+pretendido que pode ser pago com quatro moedas dessas. Note que a
+máquina está configurada de maneira a não aceitar todas as moedas
+em circulação (por exemplo, pode não aceitar moedas de um
+cêntimo ou de dois cêntimos, ou de dois euros). Além disso, não
+é impossível que outras moedas entrem em circulação em breve
+(por exemplo, moedas de 3 cêntimos ou de 25 cêntimos, como há em
+alguns países). Por isso é que é preciso indicar também os
+valores das moedas que a máquina está preparada para aceitar.
+
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa para
+calcular o preço do bilhete, dado o valor que administração
+pretende e os valores das moedas que a máquina aceita. O preço
+deve ser o menor valor maior ou igual ao preço pretendido pela
+administração que pode ser formado usando no máximo quatro
+moedas das que a máquina aceita.
+
+<P>
+Os dados para o programa são introduzidos
+pela seguinte ordem: primeiro, o preço pretendido pela
+administração, em cêntimos; depois, na linha seguinte, um
+número, que indica quantos tipos de moedas a máquina aceita;
+finalmente, na linha seguinte, uma lista de números, com tantos
+números quantos os tipos de moedas, com o valor correspondente a cada
+um desses tipos de moedas, expressos em cêntimos, por ordem
+crescente.
+
+<P>
+O programa escreverá o preço
+calculado para o bilhete, na forma de um número inteiro de
+cêntimos.
+
+<P>
+Sabemos que preço pretendido pela
+administração não é maior do que o quádruplo do valor moeda
+de maior valor e que o número de moedas diferentes nunca será maior
+do que 10.
+
+<P>
+
+<H2><A NAME="SECTION00062000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00062100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+335
+6
+5 10 20 50 100 200
+</PRE>
+<H3><A NAME="SECTION00062200000000000000">
+Output</A>
+</H3>
+
+<PRE>
+340
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00063000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00063100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+44
+5
+1 3 10 20 50
+</PRE>
+<H3><A NAME="SECTION00063200000000000000">
+Output</A>
+</H3>
+
+<PRE>
+44
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00064000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00064100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+90
+3
+5 10 25
+</PRE>
+<H3><A NAME="SECTION00064200000000000000">
+Output</A>
+</H3>
+
+<PRE>
+100
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2012
+</ADDRESS>
+</BODY>
+</HTML>
