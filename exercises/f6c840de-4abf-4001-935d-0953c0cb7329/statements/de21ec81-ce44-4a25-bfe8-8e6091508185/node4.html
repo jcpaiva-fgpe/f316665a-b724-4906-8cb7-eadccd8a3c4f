@@ -1,0 +1,112 @@
+<H1><A NAME="SECTION00040000000000000000">
+Problem D: Olh-Ó-Robot</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="119" HEIGHT="125" ALIGN="BOTTOM" BORDER="0"
+ SRC="./Robot-left.jpg"
+ ALT="Image Robot-left">
+<IMG
+  WIDTH="119" HEIGHT="125" ALIGN="BOTTOM" BORDER="0"
+ SRC="./Robot-right.jpg"
+ ALT="Image Robot-right">
+
+</DIV>
+
+<P>
+Uma empresa tem um armazém robotizado: 2 robôs colocam e retiram as 
+mercadorias das prateleiras sem qualquer intervenção humana. O armazém é 
+rectangular e cada um dos robôs está atribuído a um dos lado. À partida 
+os robôs nunca se encontrariam mas, por um erro de concepção, podem 
+encontrar-se num único ponto. No centro do armazém está instalado o 
+posto de carregamento das baterias que é comum a ambos os robôs. Os 
+robôs aproveitam para ir a este sítio quando estão com as baterias em 
+baixo e suficientemente perto do centro do armazém. Quando resolvem 
+carregar baterias simultaneamente colidem e é necessária a intervenção 
+humana.
+
+<P>
+Os robôs são comandados por instruções que partem do princípio que o 
+armazém é uma grelha regular de 30 por 15 células, com o ponto de
+abastecimento nas coordenadas (0,0). Uma sequência de 
+de instruções é executada sem ciclos nem saltos, indicando 
+apenas os movimentos do robô. Os comandos são apenas os números inteiros 
+2, 4, 5, 6 e 8, representando as direcções, como no teclado numérico: o 2 
+aponta para Sul, o 8 para Norte, o 4 para Oeste e o 6 para Este; o 5 
+significa permanecer no mesmo lugar (este comando pode ser executado
+em qualquer instante). A sequência de instruções é precedida pela 
+localização do robô e terminada por 0.
+Os robôs estão sincronizados e a cada segundo executam um comando, 
+começando exactamente ao mesmo tempo.  Sabe-se que durante a 
+execução das instruções o robô vai <EM>no máximo uma única vez</EM>
+ao posto de carregamento das baterias e fica aí durante alguns segundos (executando o comando 5).
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+Tarefa</A>
+</H2>
+Vai ser 
+necessário escrever um programa que analise as sequências de comandos de 
+ambos os robôs e verifique se podem ocorrer colisões; isto é,  
+se os intervalos de tempo em que os robôs estariam a
+abastecer se sobrepõem. O programa recebe duas sequências de instruções
+que têm exactamente o mesmo comprimento e garantem já que os robôs se
+deslocam no interior do armazém. 
+Cada uma delas precedida da posição inicial do robô e terminada por 0.
+Se levarem à colisão dos robôs então o 
+programa de verificação escreve <code>KO</code>. Se não existir perigo de colisão, 
+escreve <code>OK</code>. 
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000">
+Exemplo</A>
+</H2>
+
+<H3><A NAME="SECTION00042100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+-7 0
+6
+6
+6
+6
+6
+6
+6
+5
+5
+0
+7 0
+4
+4
+4
+4
+4
+4
+4
+5
+5
+0
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00042200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+KO
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2008
+</ADDRESS>
