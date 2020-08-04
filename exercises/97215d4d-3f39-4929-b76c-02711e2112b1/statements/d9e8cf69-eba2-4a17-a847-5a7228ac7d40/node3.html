@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem C: Matrículas</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;C: Matrículas">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00030000000000000000">
+Problem C: Matrículas</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+Problema</A>
+</H2>
+
+<P>
+No reino da Lusitânia, o Centro do Automóvel e das Rodovias (CAR)
+apresentou recentemente um novo plano para a atribuição de matrículas
+automóveis. Esse plano, para além de propor um novo modelo de
+atribuição, apresenta um elaborado estudo estatístico sobre os anos
+passados. Na elaboração desse estudo, uma das tarefas mais relevantes
+foi calcular o número de veículos matriculados durante os últimos
+anos.
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa que dadas as matrículas do primeiro e do último
+veículo automóvel matriculado num dado ano, calcule o número de
+veículos matriculados nesse mesmo ano. Considere apenas matrículas do
+tipo AA-AA-LL, em que A é um algarismo e L é uma das 23 letras do
+alfabeto português. A primeira matrícula é 00-00-AA e a última é
+99-99-ZZ. A atribuição de matrículas segue o seguinte critério: (i)
+partindo da última matrícula atribuída, o segundo par de algarismos é
+incrementado em uma unidade; (ii) se o segundo par de algarismos
+atingir o valor 99, este passa a 00 e o primeiro par de algarismos é
+incrementado em uma unidade; (iii) se o primeiro par de algarismos
+atingir o valor 99, este passa a 00 e a segunda letra é incrementada
+em uma unidade, segundo a ordem das letras no alfabeto; (iv) se a
+segunda letra atingir o valor Z, esta passa a A e a primeira letra é
+incrementada em uma unidade.
+
+<P>
+
+<H2><A NAME="SECTION00033000000000000000">
+Input</A>
+</H2>
+
+<P>
+A primeira linha de input é um inteiro N (<IMG
+ WIDTH="62" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$&lt;=100$">) que indica o número
+de pares de matrículas a considerar. As N linhas seguintes são pares
+de matrículas do tipo AA-AA-LL, em que A é um algarismo e L é uma das
+23 letras do alfabeto português. A primeira matrícula de cada par diz
+respeito ao primeiro veículo automóvel matriculado num dado ano,
+enquanto a segunda diz respeito ao último veículo matriculado nesse
+mesmo ano.
+
+<P>
+
+<H2><A NAME="SECTION00034000000000000000">
+Output</A>
+</H2>
+
+<P>
+O output é um conjunto de N linhas, em que cada linha apresenta o
+número de veículos matriculados tendo por base o par de matrículas
+indicado.
+
+<P>
+
+<P><P>
+<BR>
+
+<P><P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION00035000000000000000">
+Exemplo de Input</A>
+</H2>
+
+<P>
+<PRE>
+3
+00-00-AA 99-99-AA
+00-00-AZ 00-00-BA
+01-99-XZ 99-01-ZV
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00036000000000000000">
+Exemplo de Output</A>
+</H2>
+<PRE>
+10000
+10001
+449703
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2005
+</ADDRESS>
+</BODY>
+</HTML>
