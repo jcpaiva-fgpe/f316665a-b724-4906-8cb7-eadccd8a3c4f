@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;D: Sequência de Dígitos</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;D: Sequência de Dígitos">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00040000000000000000">
+Problem&nbsp;D: Sequ&#234;ncia de D&#237;gitos</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+Problema</A>
+</H2>
+Numa prova com 10 jogadores (numerados de 0 a 9), ganha o
+concorrente com o maior n&#250;mero de respostas correctas consecutivas. A
+prova desenrola-se da seguinte forma: um concorrente &#233; seleccionado
+aleatoriamente para responder. Sempre que der uma resposta certa o
+concorrente ganha um ponto e mant&#233;m o direito de resposta. Sempre que
+der uma resposta errada o concorrente perde o direito a responder
+sendo aleatoriamente seleccionado outro concorrente. A informa&#231;&#227;o de
+uma prova consiste numa sequ&#234;ncia de d&#237;gitos que correspondem aos
+n&#250;meros dos jogadores que responderam acertadamente &#224;s respostas. Por
+exemplo na prova
+<PRE>
+0 0 2 3 5 5 4 4 4 7 5 5 5 5 1 9
+</PRE>
+O vencedor foi o concorrente 5 com um m&#225;ximo de 4 respostas certas consecutivas.  
+
+<P>
+No caso de empate, ganha o primeiro jogador a obter a sequ&#234;ncia m&#225;xima de respostas certas. 
+Por exemplo na prova
+<PRE>
+0 2 3 4 4 4 7 5 5 1 1 1 9 4 4 5 5 5
+</PRE>
+O vencedor foi o concorrente 4 pois foi o primeiro a obter 3 respostas certas consecutivas.
+<BR>
+
+<H2><A NAME="SECTION00042000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa que, dada uma sequ&#234;ncia de d&#237;gitos (0, 1, ...,
+9), contendo a informa&#231;&#227;o de uma prova, determine qual o vencedor da
+prova e o n&#250;mero de respostas que lhe deu a vit&#243;ria. Ou seja,
+determine qual o tamanho da maior sub-sequ&#234;ncia de ocorr&#234;ncias
+consecutivas do mesmo d&#237;gito (n&#250;mero de respostas) e para que d&#237;gito
+ocorreu esse m&#225;ximo (n&#250;mero do jogador).
+
+<P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION00043000000000000000">
+Input</A>
+</H2>
+A primeira linha do input &#233; um inteiro <I>N</I> (<=1000) que
+indica o tamanho da sequ&#234;ncia a considerar. A segunda linha &#233; a
+sequ&#234;ncia de N d&#237;gitos que representa a informa&#231;&#227;o da prova.
+<BR>
+
+<H2><A NAME="SECTION00044000000000000000">
+Output</A>
+</H2>
+O output &#233; uma linha com os dois inteiros, representando o n&#250;mero do
+jogador que ganhou a prova e o n&#250;mero de respostas certas consecutivas
+que lhe deu a vit&#243;ria.
+
+<P>
+
+<H2><A NAME="SECTION00045000000000000000">
+Exemplo de Input</A>
+</H2>
+<BR>
+
+<P>
+<PRE>
+20
+0 0 2 3 3 3 4 5 5 6 3 3 3 3 3 2 3 3 3 3
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00046000000000000000">
+Exemplo de Output</A>
+</H2>
+<BR>
+<PRE>
+3 5
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2004
+</ADDRESS>
+</BODY>
+</HTML>
