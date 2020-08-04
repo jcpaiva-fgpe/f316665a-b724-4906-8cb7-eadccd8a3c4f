@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem E: Quarto!</TITLE>
+<META NAME="description" CONTENT="Problem E: Quarto!">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00050000000000000000">
+Problem E: Quarto!</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="197" HEIGHT="148" ALIGN="BOTTOM" BORDER="0"
+ SRC="./quarto.jpg"
+ ALT="Image quarto">
+
+</DIV>
+
+<P>
+No jogo <I>Quarto</I>, os jogadores colocam alternadamente uma de 16 peças
+num tabuleiro de <IMG
+ WIDTH="43" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$4\times 4$"> posições.
+As peças têm quatro características dicotómicas:<DL>
+<DT><STRONG>côr</STRONG></DT>
+<DD>branca ou preta;
+</DD>
+<DT><STRONG>altura</STRONG></DT>
+<DD>baixa ou alta;
+</DD>
+<DT><STRONG>forma</STRONG></DT>
+<DD>redonda ou quadrada;
+</DD>
+<DT><STRONG>consistência</STRONG></DT>
+<DD>oca ou sólida.
+</DD>
+</DL>
+Ganha o jogo o primeiro jogador que colocar quatro peças em linha
+horizontal, vertical ou diagonal com pelo menos
+uma característica comum entre elas (i.e. quatro
+peças da mesma côr, da mesma altura, da mesma forma ou com a mesma
+consistência).
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000">
+Tarefa</A>
+</H2>
+Pretende-se analisar a descrição dum tabuleiro e indicar
+se a condição de vitória foi satisfeita.
+São dadas 4 linhas de texto correspondentes
+às 4 linhas do tabuleiro; cada peça no tabuleiro
+é representada por uma sequência de 4 letras:
+<b>P</b> ou <b>B</b> (preta ou branca);
+<b>a</b> ou <b>A</b> (baixa ou alta);
+<b>R</b> ou <b>Q</b> (redonda ou quadrada);
+<b>O</b> ou <b>S</b> (oca ou sólida).
+As posições  vazias no tabuleiro 
+são representadas por 4 traços <b>-</b>.
+
+<P>
+O resultado deverá ser <b>QUARTO</b> se a condição de vitória está satisfeita
+ou <b>NADA</b> caso contrário.
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00052100000000000000">
+Input</A>
+</H3>
+<PRE>
+----------------
+PAQSPaQSPAROPaRS
+----------------
+----------------
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00052200000000000000">
+Output</A>
+</H3>
+<PRE>
+QUARTO
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00053000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00053100000000000000">
+Input</A>
+</H3>
+<PRE>
+PaROBAROPaQS----
+PAQSBAQOPARSBaQO
+BARS--------BaQS
+BAQSPAROPaQOPaRS
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00053200000000000000">
+Output</A>
+</H3>
+<PRE>
+NADA
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2010
+</ADDRESS>
+</BODY>
+</HTML>
