@@ -1,0 +1,11 @@
+10 19
+XXXXXXXXXXXXXXXXXXX
+X      X          X
+X   B  P      BB  X
+X     BX B      B X
+X      X          X
+X      X          X
+X B    XB  B     BX
+X      X   B  B  BX
+X      XB  B  BBBBX
+XXEXXXXXXXXXXSXXXXX
