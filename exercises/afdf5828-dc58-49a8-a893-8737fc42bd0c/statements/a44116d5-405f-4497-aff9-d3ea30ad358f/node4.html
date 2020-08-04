@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;D: Codificação run-length</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;D: Codificação run-length">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00040000000000000000">
+Problem&nbsp;D: Codificação <EM>run-length</EM></A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="165" HEIGHT="148" ALIGN="BOTTOM" BORDER="0"
+ SRC="./comprime.jpg"
+ ALT="Image comprime">
+
+</DIV>
+
+<P>
+A codificação <I>run-length</I>  é uma técnica para comprimir 
+textos onde existem sequências longas de carateres repetidos.
+Por exemplo, a sequência 
+<code>AAAAAAA</code>  podia ser representada por <code>7A</code> (sete vezes o
+carater <code>A</code>), facto em que se inspira a representação que vamos usar.
+
+<P>
+Para evitar ambiguidade e não aumentar muito o comprimento do textos nos
+casos de sequências curtas, não comprimimos as sequências com menos de três carateres repetidos (i.e.
+ficam inalteradas). Se um carater for repetido três ou mais vezes,
+então deve ser seguido de um dígito (<TT>0</TT> a <TT>9</TT>) que  indica o número
+de carateres repetidos (para além dos três iniciais).
+Se um carater ocorrer repetido mais do <TT>12</TT>&nbsp;vezes <TT>(3+9)</TT> então 
+as restantes devem ser tratadas como uma nova sequência;
+por exemplo, <TT>AAA9AAA0</TT> seria a codificação
+de <TT>AAAAAAAAAAAAAAA</TT>, isto é, da sequência de <TT>15
+(=3+9+3+0)</TT> carateres 
+<TT>A</TT>.
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+Tarefa</A>
+</H2>
+Escreva um programa que lê da entrada-padrão um texto  e produz na
+saída-padrão a sua 
+codificação <I>run-length</I>. O texto é dado numa única linha, tem
+apenas letras ou dígitos, tendo pelo menos uma letra ou dígito e não
+mais do que 1000. Além desses carateres,  terá apenas o terminador de
+linha. 
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00042100000000000000">
+Input</A>
+</H3>
+<PRE>
+ABBA
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00042200000000000000">
+Output</A>
+</H3>
+<PRE>
+ABBA
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00043000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00043100000000000000">
+Input</A>
+</H3>
+<PRE>
+AAABBBBAAAAAAAAAAAAAA
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00043200000000000000">
+Output</A>
+</H3>
+<PRE>
+AAA0BBB1AAA9AA
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00044000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00044100000000000000">
+Input</A>
+</H3>
+<PRE>
+000bbbaaaaaa1110AAA000000000000000BaaaaaBbbb000000
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00044200000000000000">
+Output</A>
+</H3>
+<PRE>
+0000bbb0aaa311100AAA000090000Baaa2Bbbb00003
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2012
+</ADDRESS>
+</BODY>
+</HTML>
