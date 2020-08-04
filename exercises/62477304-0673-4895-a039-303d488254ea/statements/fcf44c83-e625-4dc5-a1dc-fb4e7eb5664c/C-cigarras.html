@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem C: Cigarras Tontas</TITLE>
+<META NAME="description" CONTENT="Problem C: Cigarras Tontas">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+
+</HEAD>
+
+<BODY >
+<H1>
+Problem C: Cigarras Tontas</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="40" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="antolive.jpg"
+ ALT="Image antolive">
+<IMG
+  WIDTH="40" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="antolive.jpg"
+ ALT="Image antolive">
+<IMG
+  WIDTH="40" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="antolive.jpg"
+ ALT="Image antolive">
+<IMG
+  WIDTH="40" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="antolive.jpg"
+ ALT="Image antolive">
+<IMG
+  WIDTH="40" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="antolive.jpg"
+ ALT="Image antolive">
+
+</DIV>
+
+<P>
+
+<H2>
+Problema</A>
+</H2>
+Fartas de ouvirem dizer que passavam o dia a cantar, 
+algumas cigarras resolveram imitar as suas rivais.
+Não percebendo bem a lógica da deslocação em carreiros, 
+fomos encontrá-las atarantadas: tendo saído dum certo local
+em fila indiana, começaram a andar às voltas, passando 
+sistematicamente por locais onde anteriormente já tinham estado,
+como se andassem perdidas num labirinto.
+Finalmente encontraram o local onde pretendiam chegar.
+De qualquer modo, gostariamos de saber o que poderiam 
+ter feito se tivessem tido um melhor sentido de orientação
+e não tivessem ``visitado'' os mesmos locais repetidamente.
+
+<P>
+
+<H2>
+Tarefa</A>
+</H2>
+Escrever um programa que
+analise 
+a sequência 
+de locais que foram ``visitando'', a qual inclui o ponto de partida e
+no fim o de chegada, e 
+encontre um trajecto que respeite essa sequência mas retire
+todas as voltas desnecessárias. Só a última passagem 
+em cada um desses locais poderá ser considerada útil. Todas as
+outras constituem desvios. Em caso de engano, 
+toda a volta que as cigarras deram, desde
+que passaram num dado local até que lá voltaram, será considerada desnecessária.  O local de chegada não foi visitado
+duas vezes, mas qualquer um dos restantes, incluindo a origem, pode
+ter sido.
+
+<P>
+
+<H2>
+Input</A>
+</H2>
+É dada apenas a sequência de locais onde as cigarras foram
+passando, um local por cada linha de dados.  A última linha tem
+o valor 0. 
+O número de locais distintos não excede 30. Cada local é identificado
+por um inteiro positivo inferior a 10000.
+
+<P>
+
+<H2>
+Output</A>
+</H2>
+A sequência de locais que visitariam se não se tivessem enganado,
+cada local numa linha.
+
+<P>
+
+<H2>
+Exemplo 1</A>
+</H2>
+
+<H3>
+Input</A>
+</H3>
+<BR>
+<PRE>
+1600
+15
+2315
+15
+1315
+0
+</PRE>
+
+<P>
+
+<H3>
+Output</A>
+</H3>
+<BR>
+<PRE>
+1600
+15
+1315
+</PRE>
+
+<P>
+
+<H2>
+Exemplo 2</A>
+</H2>
+
+<H3>
+Input</A>
+</H3>
+<BR>
+<PRE>
+1513
+3171
+178
+1316
+1600
+1513
+1774
+178
+3171
+672
+1315
+0
+</PRE>
+
+<P>
+
+<H3>
+Output</A>
+</H3>
+<BR>
+<PRE>
+1513
+1774
+178
+3171
+672
+1315
+</PRE>
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2006
+</ADDRESS>
+</BODY>
+</HTML>
