@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem G: Linhas Coloridas</TITLE>
+<META NAME="description" CONTENT="Problem G: Linhas Coloridas">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+<HR>
+
+<H1><A NAME="SECTION00070000000000000000">
+Problem G: Linhas Coloridas</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="160" HEIGHT="237" ALIGN="BOTTOM" BORDER="0"
+ SRC="./glines3a.jpg"
+ ALT="Image glines3a">       
+<IMG
+  WIDTH="160" HEIGHT="237" ALIGN="BOTTOM" BORDER="0"
+ SRC="./glines4a.jpg"
+ ALT="Image glines4a">        
+<IMG
+  WIDTH="160" HEIGHT="237" ALIGN="BOTTOM" BORDER="0"
+ SRC="./glines7a.jpg"
+ ALT="Image glines7a">
+
+</DIV>
+
+<P>
+No jogo de tabuleiro <EM>Color
+Lines</EM>, o objectivo é alinhar cinco ou mais bolas da mesma cor,
+tantas vezes quantas conseguir, para contabilizar pontos.
+O tabuleiro tem dimensão  <IMG
+ WIDTH="43" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$9 \times
+9$">.
+O alinhamento pode ser vertical,
+horizontal ou em qualquer diagonal.
+
+<P>
+Normalmente o jogo começa com cinco bolas no tabuleiro posicionadas
+ao acaso. Em 
+cada jogada, o jogador selecciona uma bola qualquer e a posição para
+onde a quer mover.  A bola desloca-se para essa posição desde que ela esteja
+ livre e exista
+um caminho livre até lá
+(esse caminho é sempre uma sequência de passos
+unitários horizontais e/ou verticais quaisquer).
+Na nova posição, a bola pode completar 
+um ou vários alinhamentos, cada um com 5 ou mais bolas (como nos exemplos).
+Sempre que tal acontece, o jogador acumula pontos e 
+as bolas envolvidas saem do tabuleiro. Só saem bolas que 
+pertençam a um alinhamento de 5 ou mais bolas.
+Na situação ilustrada pela figura mais à direita,
+completaria um alinhamento de 6 bolas e um de 5
+(e sairiam 10 bolas do tabuleiro).
+
+<P>
+Quando não perfaz alinhamentos, entram novas bolas, ocupando posições
+ aleatórias. O jogo termina quando o tabuleiro ficar sem qualquer
+espaço livre.   
+
+<P>
+Pretende-se apenas saber se o jogador consegue completar algum
+alinhamento numa certa jogada e, caso o consiga, quantas bolas sairão 
+do tabuleiro (antes de entrarem outras).
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa para simular uma jogada a partir
+dum certo estado e indicar quantas bolas saem do tabuleiro
+nessa jogada.
+
+<P>
+Cada posição do
+tabuleiro é identificada por um par (I,J) de
+inteiros entre 1 e 9, sendo I o número da linha e J o da coluna:
+(1,1),(1,9),(9,9) e (9,1) são os cantos inferior esquerdo, inferior
+direito, superior direito e superior esquerdo, respectivamente.
+Em cada posição tem um inteiro (de 1 a 7).
+
+<P>
+O input começa pelo estado do tabuleiro, dado por linhas, do
+topo para a base (0 significa posição livre). 
+As duas linhas seguintes dão a posição da bola seleccionada e da célula 
+para onde a vai deslocar, se conseguir.
+
+<P>
+O output é uma linha com o número de bolas
+que sairam (possivelmente 0).
+
+<P>
+Os exemplos seguintes referem-se às jogadas esquematizadas nas
+duas figuras mais à esquerda (as cores azul claro, azul escuro, verde,
+vermelho, laranja, rosa, e amarelo são representadas por inteiros de 1 a 7).
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000">
+Exemplo 1</A>
+</H2>
+<BR>
+
+<H3><A NAME="SECTION00072100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+0 2 0 7 3 0 7 0 4
+7 0 0 0 0 2 0 0 4
+6 7 0 1 2 0 0 0 7
+1 0 0 2 0 0 7 3 4
+0 4 0 0 0 6 0 3 0
+5 2 0 0 0 0 0 3 5
+2 0 0 0 1 0 0 3 5
+1 5 0 1 0 1 0 0 5
+0 6 6 6 0 0 0 3 0
+9 5
+2 8
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00072200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+6
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00073000000000000000">
+Exemplo 2</A>
+</H2>
+<BR>
+
+<H3><A NAME="SECTION00073100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+0 2 0 7 0 0 7 0 4
+7 0 0 0 0 2 0 0 4
+6 7 0 1 2 0 0 0 7
+1 0 0 2 0 0 7 0 4
+0 4 0 0 0 6 0 0 0
+5 2 0 0 0 0 0 0 5
+2 0 0 0 1 0 0 0 5
+1 5 0 1 0 1 0 0 5
+0 6 6 6 0 0 0 0 0
+9 2
+5 3
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00073200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+6
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2009
+</ADDRESS>
+</BODY>
+</HTML>
