@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;E: Robôs Ricochete</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;E: Robôs Ricochete">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+<HR>
+
+<H1><A NAME="SECTION00050000000000000000">
+Problem&nbsp;E: Robôs Ricochete</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="300" HEIGHT="200" ALIGN="BOTTOM" BORDER="0"
+ SRC="./robots.png"
+ ALT="Image robots">
+
+</DIV>
+
+<P>
+A fábrica <I>Robôs Ricochete, Lda.</I> produz robôs autónomos 
+para limpeza de grandes superfícies em horário pós-laboral.
+Os robôs movimentam-se sobre uma grelha no plano
+executando sequências das  seguintes instruções:
+<DL>
+<DT><STRONG>F</STRONG></DT>
+<DD>deslocar-se em frente até encontrar um obstáculo; 
+</DD>
+<DT><STRONG>D</STRONG></DT>
+<DD>rodar sobre si mesmo <IMG
+ WIDTH="29" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$90^\circ$"> à direita;
+</DD>
+<DT><STRONG>E</STRONG></DT>
+<DD>rodar sobre si mesmo <IMG
+ WIDTH="29" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$90^\circ$"> à esquerda.
+</DD>
+</DL>
+
+<P>
+A figura ilustra um percurso dum robô numa grelha 9 x 6
+<!--<IMG
+ WIDTH="43" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$9\times 6$">
+-->,
+começando no canto inferior esquerdo e executando a sequência
+"F, D, F, E, F, D, F, D, F, D, F".
+
+<P>
+Pretende-se determinar
+a distância total percorrida pelo robô (número de células visitadas);
+são dados a dimensão da grelha, a posição dos obstáculos e
+sequência de instruções. Para simplificar o enunciado, supõe-se que cada
+obstáculo ocupa exactamente uma célula da grelha;
+ supõe-se ainda que o robô se encontra inicialmente
+no canto inferior esquerdo (coordenadas (0,0)) 
+voltado para cima (i.e. na direcção do vector (0,1)).
+
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa para determinar 
+a distância total percorrida pelo robô.
+
+<P>
+Os dados dos problema são introduzidos pela
+seguinte ordem, um valor por cada linha:
+o número de colunas e o número de linhas da grelha
+seguido do número de obstáculos e as coordenadas de cada
+obstáculo (coluna, linha);
+por último, a sequência de instruções do robô
+(usando caracteres <TT>F</TT>, <TT>D</TT>, <TT>E</TT>).
+Pode assumir que a grelha tem dimensão máxima 
+<!--<IMG
+ WIDTH="61" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$30\times 30$">-->
+30 x 30
+e que o programa do robô tem no máximo 50 instruções.
+
+<P>
+A saída é um inteiro que representa a distância total percorrida pelo robô.
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000">
+Exemplo</A>
+</H2>
+
+<H3><A NAME="SECTION00052100000000000000">
+Input</A>
+</H3>
+<PRE>
+9
+6
+8
+0
+4 
+1 
+1 
+6 
+3 
+6 
+4 
+7 
+0 
+8 
+0 
+8 
+1 
+8 
+5
+FDFEFDFDFDF
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00052200000000000000">
+Output</A>
+</H3>
+<PRE>
+21
+</PRE>
+
+<P>
+<HR>
+<ADDRESS>
+ToPAS'2009
+</ADDRESS>
+</BODY>
+</HTML>
