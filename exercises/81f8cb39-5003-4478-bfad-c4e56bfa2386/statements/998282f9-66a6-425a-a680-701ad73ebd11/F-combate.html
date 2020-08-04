@@ -7,8 +7,8 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
 <HTML>
 <HEAD>
-<TITLE>Problem F: Combate Final</TITLE>
-<META NAME="description" CONTENT="Problem F: Combate Final">
+<TITLE>Combate Final</TITLE>
+<META NAME="description" CONTENT="Combate Final">
 <META NAME="keywords" CONTENT="html">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -20,7 +20,7 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 
 <BODY >
 <H1>
-Problem F: Combate Final</A>
+Combate Final</A>
 </H1>
 
 <P>
@@ -52,55 +52,55 @@ Problema</A>
 </H2>
 
 <P>
-Dois amigos encontram-se para um torneio de cartas mágicas. Cada um
-tem um baralho de cartas com monstros, contendo cada carta um número
-inteiro que indica a força de combate do personagem. 
+Dois amigos encontram-se para um torneio de cartas mÃ¡gicas. Cada um
+tem um baralho de cartas com monstros, contendo cada carta um nÃºmero
+inteiro que indica a forÃ§a de combate do personagem. 
 Cada jogador empilha ``estrategicamente'' <IMG
  WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="img23.gif"
  ALT="$n$"> cartas
-(número igual para os dois jogadores). O desenvolvimento de um jogo ocorre
-numa sequência de combates da seguinte forma.
+(nÃºmero igual para os dois jogadores). O desenvolvimento de um jogo ocorre
+numa sequÃªncia de combates da seguinte forma.
 O jogador A e o jogador B tiram a carta de topo do seu baralho. 
 
 <UL>
 <LI>Se a
 carta do jogador A for mais poderosa do que a do jogador B, 
-então o jogador A ganha esse combate, e a carta do jogador B fica para
-o jogador A. Ambas as cartas são colocadas na base do baralho de
+entÃ£o o jogador A ganha esse combate, e a carta do jogador B fica para
+o jogador A. Ambas as cartas sÃ£o colocadas na base do baralho de
 jogador A, ficando a carta do jogador B por baixo da carta do jogador A. 
 </LI>
 <LI>Se a carta do jogador B tiver mais poder de ataque que a carta do
-jogador A, então B ganha esse combate. Neste caso, é o
+jogador A, entÃ£o B ganha esse combate. Neste caso, Ã© o
 jogador B que fica com a carta do jogador A. Coloca na base do seu
 baralho
 primeiro a sua carta e depois a de A.
 </LI>
-<LI>Se ambas as cartas tiverem o mesmo poder de ataque então ocorre um
+<LI>Se ambas as cartas tiverem o mesmo poder de ataque entÃ£o ocorre um
 empate. Neste caso, cada jogador coloca 
 a sua carta na base do seu baralho.
 </LI>
 </UL>
-O jogo vai prosseguindo de modo análogo.
-A particularidade e interesse do jogo advém do facto das cartas serem
-mágicas. De tal forma que quando duas cartas se encontram,
-independentemente do resultado do combate, o poder da carta é
+O jogo vai prosseguindo de modo anÃ¡logo.
+A particularidade e interesse do jogo advÃ©m do facto das cartas serem
+mÃ¡gicas. De tal forma que quando duas cartas se encontram,
+independentemente do resultado do combate, o poder da carta Ã©
 decrementado de um (porque o monstro fica cansado do combate e perde
-energia). Se o valor da carta chegar a 0 ela é retirada de jogo. 
+energia). Se o valor da carta chegar a 0 ela Ã© retirada de jogo. 
 Esta regra introduz interesse no jogo, pois caso
-contrário o jogador com a carta mais alta nunca poderia perder o
+contrÃ¡rio o jogador com a carta mais alta nunca poderia perder o
 jogo. 
 
 <P>
-O jogador que durante uma sequência de combates perder todas as cartas
+O jogador que durante uma sequÃªncia de combates perder todas as cartas
 perde o jogo. Para evitar jogos muito longos, se ao fim de
 <IMG
  WIDTH="54" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
  SRC="img24.gif"
  ALT="$n^3+n$">
-jogadas nenhum dos jogadores tiver ganho, o jogo é considerado como
+jogadas nenhum dos jogadores tiver ganho, o jogo Ã© considerado como
 empatado. Se ambos os jogadores ficarem sem cartas simultaneamente o
-jogo também fica empatado. 
+jogo tambÃ©m fica empatado. 
 
 <P>
 
@@ -116,10 +116,10 @@ ganha.
 <H2>
 Input</A>
 </H2> 
-Na primeira linha tem o número <IMG
+Na primeira linha tem o nÃºmero <IMG
  WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="img23.gif"
- ALT="$n$"> de cartas com que jogarão 
+ ALT="$n$"> de cartas com que jogarÃ£o 
 (<!-- MATH
  $1 \leq n\leq 20$
  -->
@@ -127,18 +127,18 @@ Na primeira linha tem o número <IMG
  WIDTH="87" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
  SRC="img25.gif"
  ALT="$1 \leq n\leq 20$">).
-Nas linhas seguintes tem a descrição das <IMG
+Nas linhas seguintes tem a descriÃ§Ã£o das <IMG
  WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="img23.gif"
  ALT="$n$"> cartas do baralho do jogador A
-(isto é, <IMG
+(isto Ã©, <IMG
  WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="img23.gif"
  ALT="$n$"> inteiros que representam o poder das cartas escolhidas, do topo 
-até à base). Nas <IMG
+atÃ© Ã  base). Nas <IMG
  WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="img23.gif"
- ALT="$n$"> restantes, tem a descrição das <IMG
+ ALT="$n$"> restantes, tem a descriÃ§Ã£o das <IMG
  WIDTH="15" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
  SRC="img23.gif"
  ALT="$n$"> cartas do
@@ -150,8 +150,8 @@ jogador B.
 Output</A>
 </H2>
 O programa deve escrever <TT>A</TT>, <TT>B</TT> ou <TT>E</TT>, para indicar 
-o jogador que ganha o jogo, seguido de mudança de linha.
-Escreverá <TT>E</TT> se tiver havido empate.
+o jogador que ganha o jogo, seguido de mudanÃ§a de linha.
+EscreverÃ¡ <TT>E</TT> se tiver havido empate.
 
 
 <P>
@@ -220,8 +220,5 @@ A
 
 <P>
 <BR><HR>
-<ADDRESS>
-ToPAS'2006
-</ADDRESS>
 </BODY>
 </HTML>
