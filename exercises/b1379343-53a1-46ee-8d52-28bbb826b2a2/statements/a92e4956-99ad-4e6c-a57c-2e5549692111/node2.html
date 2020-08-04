@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;B: Quando é o ToPAS?</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;B: Quando é o ToPAS?">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00020000000000000000">
+Problem&nbsp;B: Quando é o ToPAS?</A>
+</H1>
+
+<!-- WIDTH="137" HEIGHT="99" -->
+<P>
+<DIV ALIGN="CENTER">
+<IMG  WIDTH="205" HEIGHT="148"
+ALIGN="BOTTOM" BORDER="0"
+ SRC="./calendario.jpeg"
+ ALT="Image calendario">
+
+</DIV>
+
+<P>
+É frequente perguntarem-nos: "Quando é este ano o ToPAS?". É simples. O
+ToPAS é habitualmente na sexta feira da semana académica da
+Universidade do Porto, que por sua vez se realiza na primeira semana
+completa do mês de maio. Ou seja, é a sexta feira da primeira
+semana cujo domingo calha em maio. Até se pode fazer um programa
+para determinar esta data!
+
+<P>
+Só é necessário saber como se calcula o dia da semana de uma data
+do calendário representada por <EM>ano</EM>, <EM>mês</EM> e <EM>dia</EM>. Uma forma simples
+de o fazer é usar o algoritmo de Tondering e calcular a seguinte expressão.
+
+<P>
+<PRE>
+   (ano + ano/4 - ano/100 + ano/400 + Tabela[mes] + dia) % 7
+</PRE>
+
+<P>
+O valor da expressão é um inteiro 
+entre 0 e 6, inclusive, sendo 0 interpretado como domingo, 1&nbsp;como segunda e assim sucessivamente.
+Antes de a avaliar é necessário começar por subtrair 1 ao ano se o mês for anterior a
+março (janeiro ou fevereiro). 
+
+<P>
+Nesta expressão o operador <TT>%</TT> corresponde à operação módulo
+(resto da divisão inteira), sendo as divisões indicadas também
+inteiras.  A expressão também depende do mês, sendo essa função 
+definida pela tabela 
+que se segue. 
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT"><B>Mês</B></TD>
+<TH ALIGN="CENTER"><B>Valor</B></TH>
+<TH ALIGN="LEFT"><B>Mês</B></TH>
+<TH ALIGN="CENTER"><B>Valor</B></TH>
+</TR>
+<TR><TD ALIGN="LEFT">janeiro</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="LEFT">fevereiro</TD>
+<TD ALIGN="CENTER">3</TD>
+</TR>
+<TR><TD ALIGN="LEFT">março</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="LEFT">abril</TD>
+<TD ALIGN="CENTER">5</TD>
+</TR>
+<TR><TD ALIGN="LEFT">maio</TD>
+<TD ALIGN="CENTER">0</TD>
+<TD ALIGN="LEFT">junho</TD>
+<TD ALIGN="CENTER">3</TD>
+</TR>
+<TR><TD ALIGN="LEFT">julho</TD>
+<TD ALIGN="CENTER">5</TD>
+<TD ALIGN="LEFT">agosto</TD>
+<TD ALIGN="CENTER">1</TD>
+</TR>
+<TR><TD ALIGN="LEFT">setembro</TD>
+<TD ALIGN="CENTER">4</TD>
+<TD ALIGN="LEFT">outubro</TD>
+<TD ALIGN="CENTER">6</TD>
+</TR>
+<TR><TD ALIGN="LEFT">novembro</TD>
+<TD ALIGN="CENTER">2</TD>
+<TD ALIGN="LEFT">dezembro</TD>
+<TD ALIGN="CENTER">4</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+Para
+a data do ToPAS, que é afinal o que se pretende, esta fórmula simplifica-se porque maio é posterior a
+março e o respetivo valor da tabela é zero.
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escreva um programa que funcione como um calendário perpétuo do ToPAS,
+e que, dado um ano, determina o dia
+do mês de maio em que este concurso tem lugar.
+
+<P>
+Os dados são constituídos por uma linha com apenas o inteiro superior a 2010 e inferior a 3000, que identifica o ano. 
+<P>
+O resultado é também constituído por uma única linha  com um inteiro
+entre 1 e 31 (inclusive), e que é o dia em que se realiza o concurso no
+ano dado. 
+<P>
+
+<H2><A NAME="SECTION00022000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00022100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+2012
+</PRE>
+<H3><A NAME="SECTION00022200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+11
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00023000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00023100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+2022
+</PRE>
+<H3><A NAME="SECTION00023200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+6
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2012
+</ADDRESS>
+</BODY>
+</HTML>
