@@ -1,0 +1,13 @@
+12 37
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X      XBBBXBBBBBBXBBBB BBBBBBBBBBBBX
+X   B  XB  X  BB  P                 X
+X BBB  XB  P    BBX                 X
+X  BB  XBBBX B BBBX                 X
+X  BB  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X BBBB X          X                 X
+X      P  BBBBBBB X                 S
+X  BBB X BBBBBBBB P                 X
+X  BBB X BBBBBBBB X                 X
+X      X          X        B        X
+XXEXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
