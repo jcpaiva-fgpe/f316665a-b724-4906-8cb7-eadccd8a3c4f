@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;A: Rebuçados Virtuais</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;A: Rebuçados Virtuais">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00010000000000000000">
+Problem&nbsp;A: Rebuçados Virtuais</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="210" HEIGHT="158" ALIGN="BOTTOM" BORDER="0"
+ SRC="./candy.jpg"
+ ALT="Image candy">
+
+</DIV>
+
+<P>
+Como é fácil distribuir rebuçados virtuais! 
+Basta calcular o quociente e o resto de uma divisão inteira para saber quantos 
+rebuçados pode dar e quantos ainda sobram. O maior problema é, por
+vezes, recordar a tabuada.
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa para ajudar na análise de vários cenários, apresentando o
+resultado da distribuição em cada caso. 
+
+<P>
+Na primeira linha de dados tem o número de cenários a considerar. 
+Segue-se igual número de linhas, cada uma contendo dois inteiros
+positivos (número de rebuçados a distribuir e número de pessoas) e dois carateres (<code>Q</code> e <code>R</code> ou <code>R</code>
+e <code>Q</code>), separados por um espaço.
+
+<P>
+Para cada cenário, o programa escreve uma linha. Se no cenário
+tiver <code>Q</code> seguido de <code>R</code>, terá primeiro o quociente e depois
+o resto, e se for <code>R</code> e depois <code>Q</code>, terá primeiro o resto e
+depois o quociente. De qualquer modo, terá sempre de identificar cada valor,
+precedendo-o de <code>Q</code> ou <code>R</code> seguido de dois-pontos e um espaço.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Exemplo</A>
+</H2>
+
+<H3><A NAME="SECTION00012100000000000000">
+Input</A>
+</H3>
+<PRE>
+5
+7 5 R Q
+10 2 Q R
+23 8 R Q
+8 23 R Q
+110 23 Q R
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00012200000000000000">
+Output</A>
+</H3>
+<PRE>
+R: 2 Q: 1
+Q: 5 R: 0
+R: 7 Q: 2
+R: 8 Q: 0
+Q: 4 R: 18
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2012
+</ADDRESS>
+</BODY>
+</HTML>
