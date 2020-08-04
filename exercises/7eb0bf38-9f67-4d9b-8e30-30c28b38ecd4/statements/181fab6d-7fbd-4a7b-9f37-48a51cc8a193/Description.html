@@ -1,0 +1,203 @@
+<HTML>
+<HEAD>
+<TITLE>Problem F: Fogo Cruzado</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;F: Fogo Cruzado">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00060000000000000000">
+Problem F: Fogo Cruzado</A>
+</H1>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00061000000000000000">
+Problema</A>
+</H2>
+
+<P>
+Considere um tabuleiro com <I>L</I> linhas e <I>C</I> colunas. Na
+primeira linha está colocada numa das colunas uma bola branca que se
+desloca verticalmente ao longo dessa coluna e uma posição de cada
+vez. Nas restantes linhas (em qualquer coluna), poderão estar
+colocadas bolas pretas (no máximo uma por linha), representando
+projectéis. As bolas pretas movem-se apenas horizontalmente, uma
+posição de cada vez. As bolas pretas movimentam-se a partir de uma
+coluna inicial dada e segundo um sentido inicial também dado. Quando
+uma bola preta atinge o limite do tabuleiro esta inverte o sentido do
+seu movimento.
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="315" HEIGHT="227" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.gif"
+ ALT="\includegraphics[width=7cm]{fogo}">
+
+</DIV>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00062000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa que, dadas as dimensões do tabuleiro inicial
+L*C, 
+a coluna onde se encontra a bola branca, o número de bolas
+pretas e, para cada bola preta, a sua posição inicial (linha e coluna)
+e o sentido de movimento, determine se a bola branca chega ao fundo do
+tabuleiro sem colidir com nenhuma das bolas pretas em movimento. Em
+caso de colisão, o programa deve imprimir <TT>Colide</TT> e a linha
+correspondente à bola preta que colide com a bola branca. Caso
+contrário o programa deverá imprimir simplemente que a bola
+<TT>Passa</TT>.
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00063000000000000000">
+Input</A>
+</H2>
+Os dados do problema são apresentados da seguinte forma: 
+<BR>
+
+<UL>
+<LI>uma linha com dois inteiros <I>L</I> e <I>C</I> (<=50)
+    que correspondem ao tamanho do tabuleiro;
+
+<P>
+</LI>
+<LI>uma linha com um só inteiro <I>ColBranca</I> que indica a
+     coluna onde inicialmente se encontra a bola branca;
+
+<P>
+</LI>
+<LI>uma linha com um só inteiro <I>NPretas</I> que indica
+     quantas bolas pretas vão ser usadas;
+
+<P>
+</LI>
+<LI><I>NPretas</I> linhas, cada uma com três inteiros
+     representando respectivamente: a linha onde a bola preta vai ser
+     colocada, a coluna em que se encontra inicialmente e o sentido
+     <TT>-1</TT> (para a esquerda) ou <TT>1</TT> (para a direita) do
+     movimento.
+</LI>
+</UL>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00064000000000000000">
+Output</A>
+</H2>
+O programa deverá apresentar como resultado:
+
+<UL>
+<LI><TT>passa</TT>: se não há colisão.
+</LI>
+<LI><TT>colide n</TT>:
+   se há colisão, em que <TT>n</TT> é o número da linha em que se
+   encontra a bola preta que colidiu com a bola branca:
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00065000000000000000">
+Exemplo 1: input</A>
+</H2>
+<BR>
+<PRE>
+5 7
+3
+3
+2 2 -1
+5 1 1
+4 6 1
+</PRE>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00066000000000000000">
+Exemplo 1: output</A>
+</H2>
+<BR>
+<PRE>
+passa
+</PRE>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00067000000000000000">
+Exemplo 2: input</A>
+</H2>
+<BR>
+<PRE>
+3 3
+1
+2
+2 2 1
+3 3 1
+</PRE>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00068000000000000000">
+Exemplo 2: output</A>
+</H2>
+<BR>
+<PRE>
+colide 3
+</PRE>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00069000000000000000">
+Exemplo 3: input</A>
+</H2>
+<BR>
+<PRE>
+4 2
+2
+3
+4 2 -1
+2 2  1
+3 1  1
+</PRE>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION000610000000000000000">
+Exemplo 3: output</A>
+</H2>
+<BR>
+<PRE>
+passa
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2004
+</ADDRESS>
+</BODY>
+</HTML>
