@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+
+<HTML>
+<HEAD>
+<TITLE>Batalha Naval</TITLE>
+<META NAME="description" CONTENT="Batalha Naval">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+<script type="text/javascript" src="../mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00060000000000000000">
+Batalha Naval</A>
+</H1>
+
+<P>
+
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="306" HEIGHT="217" src="batalha.png" border="1" align=center>
+</TD> </TR>
+</TABLE>
+<P>
+Não havia Game Boy, PlayStation, New Nintendo 3DS, Wii, PADs, Smartphones, nada, nada ...papel e lápis bastava para dar largas à imaginação e assegurar umas horas de entretenimento. 
+Não falamos do período Jurássico. Segundo alguns registos,  o 
+jogo Batalha Naval surge na Primeira Guerra Mundial (1914-1918). É, assim um jogo de má memória  mas, contudo,  centenário. 
+<P>
+Na Batalha Naval participam dois jogadores, cada um com a sua frota e 
+o objetivo é afundar a frota do oponente, adivinhando a posição dos navios inimigos. 
+
+<P>
+Cada jogador dispõe a sua frota numa grelha e mantém também uma outra grelha que representa a disposição da frota do adversário (segundo o que for descobrindo dela durante o jogo). No posicionamento da frota, pode optar por qualquer orientação  para cada navio, na vertical ou horizontal, desde que os navios não se toquem em nenhum ponto.
+
+<P>
+Existem várias versões do jogo, que diferem na dimensão da grelha, na constituição da frota ou nas regras do jogo. Vamos assumir que a grelha é 
+\(10\times 10\). Em cada  jogo, a  constituição da frota é igual para ambos os jogadores, mas admitimos alguma flexibilidade no tipo e número de navios a usar. Os tipos possíveis são: porta-aviões (<B>P</B>), encouraçados (<B>E</B>), hidroaviões (<B>H</B>), cruzadores (<B>C</B>) e submarinos (<B>S</B>). A figura mostra as suas formas. Os jogadores decidirão quantos usam de cada tipo.  
+Quanto às regras, assumimos  que, cada jogador dá três tiros em cada jogada e depois passa a vez ao adversário, a menos que a sua jogada seja inválida. Em resposta, o adversário indica-lhe se  os três tiros acertaram na água ou o número de tiros que atingiram cada tipo de navio atingido (sem dizer quantos navios atingiu de cada tipo). 
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+Tarefa</A>
+</H2>
+Como papel-e-lápis e jogos presenciais 
+parecem estar fora de moda, vamos criar um programa simples para dar suporte à Batalha Naval  <EM>online</EM>.
+O programa recebe a disposição da frota de cada jogador e  uma sequência de jogadas e dá o <EM>feedback</EM> que o adversário daria a cada jogada. A sequência termina se um dos jogadores vencer o jogo mas pode também terminar em qualquer fase do jogo. O programa tem de identificar a frota escolhida. 
+<P>
+
+<H2><A NAME="SECTION00062000000000000000">
+Input</A>
+</H2>
+Começa por 10 linhas, com 20 
+inteiros separados por espaços, que são <TT>0</TT>  (água) ou <TT>1</TT>
+(navio). A parte esquerda define o posicionamento da frota do jogador 1 e a direita define o posicionamento da frota do jogador 2.
+A seguir tem uma linha com um inteiro positivo \(m\)
+que representa o número total de jogadas. Depois, tem \(m\) linhas, cada uma com três pares de inteiros positivos. Cada par corresponde a um tiro e identifica  a linha e coluna da posição a atingir (as linhas e colunas são numeradas a partir de 1, de cima para baixo e da esquerda para a direita).  
+Começa sempre a jogar o <EM>jogador 1</EM>. Se algum dos tiros de uma jogada referir uma posição já anteriormente atingida pelo jogador (navio ou água), essa jogada é considerada totalmente inválida e, na linha seguinte, estará uma jogada do mesmo jogador. 
+
+<P>
+
+<H2><A NAME="SECTION00063000000000000000">
+Output</A>
+</H2>
+Para cada jogada, tem uma linha com o formato "<code>Jogador k: Agua</code>", 
+"<code>Jogador k: Invalida</code>", "<code>Jogador k: seq</code>", onde  <code>k</code> será substituído pelo identificador do jogador e <code>seq</code> pela informação sobre o número de tiros que atingiu cada tipo de navio atingido. As aspas não são incluídas nem acentos.
+ A sequência <code>seq</code> é uma sequência de pares \(Tt\),  com um espaço entre cada par mas não entre \(T\) e \(t\),  sendo \(T\)
+ o identificador de um tipo de navio e \(t\)
+ o número de tiros que atingiram navios desse tipo nessa jogada ( \(t=1,2,3\) ). A sequência deverá estar ordenada, por tipo de navio (segundo a ordem <code>P</code>, <code>E</code>, <code>H</code>, <code>C</code>, <code>S</code>). 
+
+<P>
+Se algum dos jogadores vencer o jogo, por destruição da frota do adversário, o output terá mais uma linha com "<code>Venceu o jogador k</code>", sendo <code>k</code> o 
+identificador do vencedor.
+
+
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00064000000000000000">
+Exemplo 1</A>
+</H2>
+
+
+<H3><A NAME="SECTION00064100000000000000">
+Input</A>
+</H3>
+<PRE>
+1 1 1 1 0 0 1 0 0 0 0 0 1 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0
+0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0
+1 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1
+0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1
+0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 1
+0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 1
+0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0
+0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0
+6
+9 1 9 8 5 3
+1 1 1 2 1 3
+8 2 9 3 9 9
+1 4 7 8 1 10
+10 2 9 7 8 8
+9 1 9 3 8 1
+</PRE>
+
+
+
+<H3><A NAME="SECTION00064200000000000000">
+Output</A>
+</H3> <PRE>
+Jogador 1: H2 C1
+Jogador 2: E3
+Jogador 1: H1
+Jogador 2: P1 E1
+Jogador 1: H1
+Jogador 2: S1
+</PRE>
+<P>
+
+
+<H2><A NAME="SECTION00065000000000000000">
+Exemplo 2</A>
+</H2>
+<H3><A NAME="SECTION00065100000000000000">
+Input</A>
+</H3>
+<PRE>
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 1 1 1 0 0 0 0 0 1 1 0 0 0 0 0 0
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+11
+1 5 3 5 6 9
+1 4 4 4 10 3
+8 8 8 6 3 4
+2 4 4 4 4 3
+2 4 6 4 6 5
+1 5 10 7 9 7
+5 5 10 7 7 9
+4 6 5 6 6 6
+8 7 9 6 7 6
+6 3 4 5 1 1
+3 3 2 4 4 4
+</PRE>
+
+
+<H3><A NAME="SECTION00065200000000000000">
+Output</A>
+</H3><PRE>
+Jogador 1: Agua
+Jogador 2: Agua
+Jogador 1: P2 C1
+Jogador 2: Invalida
+Jogador 2: C1
+Jogador 1: Invalida
+Jogador 1: Agua
+Jogador 2: P2
+Jogador 1: P3
+Jogador 2: Agua
+Jogador 1: C1
+Venceu o jogador 1
+</PRE>
+<P>
+
+<P>
+<BR>
+
+</BODY>
+</HTML>
