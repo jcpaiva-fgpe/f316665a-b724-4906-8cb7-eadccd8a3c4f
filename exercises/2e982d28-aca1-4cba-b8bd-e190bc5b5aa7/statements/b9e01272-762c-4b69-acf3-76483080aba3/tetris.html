@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-1 (1.68)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>tetris</title>
+<META NAME="description" CONTENT="tetris">
+<META NAME="keywords" CONTENT="tetris">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="tetris.css">
+
+</head>
+
+<BODY >
+<DIV ALIGN="CENTER">
+<FONT SIZE="+4"><B>Problema D</b></font></div>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+3"><B>Simulador de Tetris</b></font></div>
+
+<P>
+
+<H2><A NAME="SECTION00001000000000000000">
+Problema</a>
+</h2>
+
+<P>
+Quem não conhece o famoso jogo Tetris? Quando nos anos de 1985 e 1986
+Alexey Pajitnov e Dmitry Pavlovsky, dois programadores do Centro de
+Computação da Academia Russa de Ciências, inventaram o jogo,
+inspirados na ideia de peças a caírem num copo de vidro, nunca
+imaginaram o sucesso que este viria a ter. E pensar que a primeira
+versão do jogo tinha apenas 4 cores e uma resolução de 320x200 !
+
+<P>
+<!-- MATH
+ $\epsffile{tetris.eps}$
+ -->
+<IMG
+ WIDTH="607" HEIGHT="500" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="\epsffile{tetris.eps}">
+
+<P>
+
+<H2><A NAME="SECTION00002000000000000000">
+Tarefa</a>
+</h2>
+
+<P>
+A tua tarefa consiste em criar um programa para simular um jogo de
+Tetris. Podes assumir que, tal como ilustrado na figura, o tabuleiro
+de jogo é sempre uma matriz quadriculada de 15 linhas por 8
+colunas. As peças são pequenos conjuntos de quadrados ligados que caem
+com a força da gravidade, parando quando alguma das suas partes toca
+numa outra peça ou no fim do tabuleiro. Quando uma linha está
+completamente preenchida, desaparece, e todas as linhas que estão por
+cima dela caem, deslocando-se uma linha para baixo. Por cada linha
+completada, o jogador ganha uma série de pontos e vai subindo de
+nível, sendo que as peças vão caíndo cada vez mais rápido. mas esta
+parte final não te interessa a ti e o que te é pedido é um programa
+que dada uma sequência de peças, bem como o sítio onde elas caem, diga
+como fica a configuração final do tabuleiro. Inicialmente, o tabuleiro
+está sempre completamente vazio.
+
+<P>
+
+<H2><A NAME="SECTION00003000000000000000">
+Input</a>
+</h2>
+
+<P>
+A primeira linha de input tem um número <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$N$"> (<IMG
+ WIDTH="129" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$1&lt;=N&lt;=100$">) que diz qual
+o número de peças da sequência, seguida de <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$N$"> linhas descrevendo as
+peças, pela ordem de queda. Cada peça é descrita numa linha com 3
+números: <IMG
+ WIDTH="58" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$DIM_X$">, <IMG
+ WIDTH="57" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$DIM_Y$"> e <IMG
+ WIDTH="20" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$X$"> (<IMG
+ WIDTH="104" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$1&lt;=DIM_X$">,<IMG
+ WIDTH="102" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$DIM_Y&lt;=4$"> ; <IMG
+ WIDTH="111" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$1&lt;=X&lt;=8$">)
+indicando respectivamente o número de linhas e colunas da peça e a
+número da coluna mais à esquerda da peça, que indica onde a peça
+cai. Estes 3 números são seguidos por <IMG
+ WIDTH="57" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$DIM_Y$"> linhas, cada uma com
+<IMG
+ WIDTH="58" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$DIM_X$"> caracteres, indicando a configuração da peça. Um '#' significa
+um quadrado preenchido e um '.' significa um espaço em branco.
+
+<P>
+
+<H2><A NAME="SECTION00004000000000000000">
+Output</a>
+</h2>
+
+<P>
+O output é constituído com 15 linhas, cada uma com 8 caracteres,
+indicando a configuração final do tabuleiro.  Tal como no input, um
+'#' significa um quadrado preenchido e um '.' significa um espaço em
+branco.
+
+<P>
+
+<H2><A NAME="SECTION00005000000000000000">
+Exemplo de Input 1</a>
+</h2>
+
+<P>
+<PRE>
+4
+2 3 1
+.#.
+###
+3 2 3
+#.
+##
+.#
+2 2 5
+##
+##
+4 1 8
+#
+#
+#
+#
+</pre>
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00006000000000000000">
+Exemplo de Output 1</a>
+</h2>
+<PRE>
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+.......#
+..#....#
+.#####.#
+######.#
+</pre>
+
+<P>
+
+<H2><A NAME="SECTION00007000000000000000">
+Exemplo de Input 2</a>
+</h2>
+
+<P>
+<PRE>
+5
+2 3 1
+.#.
+###
+3 2 3
+#.
+##
+.#
+2 2 5
+##
+##
+4 1 8
+#
+#
+#
+#
+4 1 7
+#
+#
+#
+#
+</pre>
+
+<P>
+
+<P>
+
+<H2><A NAME="SECTION00008000000000000000">
+Exemplo de Output 2</a>
+</h2>
+<PRE>
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+......##
+..#...##
+.#######
+</pre>
+
+<P>
+
+<ADDRESS>
+ToPAS 2003
+</address>
+</body>
+</html>
+
+
