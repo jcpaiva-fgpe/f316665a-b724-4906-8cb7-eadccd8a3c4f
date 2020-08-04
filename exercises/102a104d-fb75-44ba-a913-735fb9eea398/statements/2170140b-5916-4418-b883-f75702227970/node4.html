@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem D: Casamentos Perfeitos</TITLE>
+<META NAME="description" CONTENT="Problem D: Casamentos Perfeitos">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00040000000000000000">
+Problem D: Casamentos Perfeitos</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="107" HEIGHT="158" ALIGN="BOTTOM" BORDER="0"
+ SRC="./wedding.jpg"
+ ALT="Image wedding">
+
+</DIV>
+
+<P>
+É dia de Santo António no reino das expressões, e os parentesis e chavetas
+estão emocionados por se irem casar.  Contudo, ainda precisam de encontrar
+o seu par. Os noivos aguardarão ordenamente as suas
+noivas e, para não criar muita confusão, irão saindo logo que estas
+chegarem. Como são gente moderna, vão mesmo recorrer a um programa de computador
+para controlar este processo.
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+O programa deve ler uma linha de texto com uma expressão, que pode
+conter parentesis curvos, parentesis rectos e chavetas.  Se todos os
+pares estiverem bem casados, o programa deve imprimir o tipo de cada
+par - <b>(&nbsp;)</b>, <b>[&nbsp;]</b> ou <b>{&nbsp;}</b> - e as respectivas posições de abertura e fecho (a
+começar em 0).  Deve ser impressa uma linha para cada par, pela ordem de
+fecho (o segundo número é estritamente crescente).  Se algum dos pares
+estiver mal casado, o programa apenas deve imprimir uma linha a dizer
+<b>Pares mal formados</b>.  Se a linha não contiver parentesis nem chavetas,
+o programa deve imprimir uma linha a dizer <b>Sem noivos para casar</b>.
+
+<P>
+Não é necessário fazer qualquer validação da expressão além do casamento
+de parentesis e chavetas. A expressão não tem mais de 1000 símbolos. 
+Na saída, os inteiros estão separados do tipo de par por um espaço, mas os 
+parentesis ou chavetas não têm separadores entre eles.
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00042100000000000000">
+Input</A>
+</H3>
+<PRE>
+3(x+2)-4{x+[2y-(27-z)+8w]}-1
+</PRE>
+<H3><A NAME="SECTION00042200000000000000">
+Output</A>
+</H3>
+<PRE>
+() 1 5
+() 15 20
+[] 11 24
+{} 8 25
+</PRE>
+<H2><A NAME="SECTION00043000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00043100000000000000">
+Input</A>
+</H3>
+<PRE>
+2(x+3]
+</PRE>
+<H3><A NAME="SECTION00043200000000000000">
+Output</A>
+</H3>
+<PRE>
+Pares mal formados
+</PRE>
+<H2><A NAME="SECTION00044000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00044100000000000000">
+Input</A>
+</H3>
+<PRE>
+2(x+3)+2)
+</PRE>
+<H3><A NAME="SECTION00044200000000000000">
+Output</A>
+</H3>
+<PRE>
+Pares mal formados
+</PRE>
+<H2><A NAME="SECTION00045000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00045100000000000000">
+Input</A>
+</H3>
+<PRE>
+2x+4y+7
+</PRE>
+<H3><A NAME="SECTION00045200000000000000">
+Output</A>
+</H3>
+<PRE>
+Sem noivos para casar
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2010
+</ADDRESS>
+</BODY>
+</HTML>
