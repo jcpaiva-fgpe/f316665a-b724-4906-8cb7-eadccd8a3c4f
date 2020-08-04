@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<TITLE>Problem A: Torneio de Programação</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;A: Torneio de Programação">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00010000000000000000">
+Problem A: Torneio de Programação</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Problema</A>
+</H2>
+O Departamento de Ciência de Computadores da Faculdade de Ciências da
+Universidade do Porto está a promover um torneio de programação para
+alunos do secundário: o ToPAS.
+
+<P>
+A classificação final é obtida mediante o número de problemas
+resolvidos por cada equipa. Em caso de empate usa-se como critério de
+desempate o tempo total gasto. O tempo total gasto por uma equipa é a
+soma do tempo gasto em cada problema resolvido por essa equipa. Ganha a
+equipa que resolver o maior número de problemas no menor tempo
+possível.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa que, dado o tempo gasto por cada equipa a
+resolver cada um dos problemas, determine qual o primeiro, segundo e
+terceiro classificado no torneio. Ou seja, ordene as equipas segundo
+os critérios já enunciados e seleccione as três melhores
+classificadas. <I>Assuma que nenhuma das três equipas melhores
+  classificadas resolve o mesmo número de problemas no mesmo tempo
+  total.</I>
+
+<P>
+<BR>
+
+<H2><A NAME="SECTION00013000000000000000">
+Input</A>
+</H2>
+A primeira linha do input são quatro inteiros <I>N</I> (<100),
+<I>P</I> (<100), <I>T</I> (<600) e <I>R</I> (<10000) que indicam
+respectivamente o número de equipas a participar no torneio, o número
+de problemas existentes, o tempo em minutos do torneio e o número de
+problemas resolvidos por todas as equipas. As restantes <I>R</I>
+linhas apresentam informação relativa aos problemas resolvidos.  Cada
+linha é uma sequência de três inteiros, representando o número da
+equipa, o número do problema resolvido e o tempo gasto em minutos a
+resolver esse problema.  <BR>
+
+<H2><A NAME="SECTION00014000000000000000">
+Output</A>
+</H2>
+O output são três linhas que apresentam respectivamente informação
+relativa ao primeiro, segundo e terceiro classificado no torneio. Cada
+linha é uma sequência de três inteiros, representando o número da
+equipa, o número de problemas resolvidos e o tempo total gasto.
+
+<H2><A NAME="SECTION00015000000000000000">
+Exemplo de Input</A>
+</H2>
+<BR>
+<PRE>
+10 7 60 10
+1 4 35
+2 3 37
+5 4 43
+4 3 45
+3 4 46
+5 3 25
+2 1 36
+7 4 54
+1 1 45
+5 1 33
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00016000000000000000">
+Exemplo de Output</A>
+</H2>
+<BR>
+<PRE>
+5 3 101
+2 2 73
+1 2 80
+</PRE>
+<BR><HR>
+<ADDRESS>
+ToPAS'2004
+</ADDRESS>
+</BODY>
+</HTML>
