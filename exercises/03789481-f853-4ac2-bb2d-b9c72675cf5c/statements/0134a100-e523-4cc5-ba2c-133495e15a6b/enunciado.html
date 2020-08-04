@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+
+<HTML>
+<HEAD>
+<TITLE>iNetCode this message</TITLE>
+<META NAME="description" CONTENT="iNetCode this message">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+<script type="text/javascript" src="../mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00070000000000000000">
+<EM>iNetCode this message</EM></A>
+</H1>
+
+<P>
+
+
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="230" HEIGHT="370" src="butterflyNet-crop.png" border="1" align=center>
+</TD> </TR>
+</TABLE>
+
+
+<P>
+As redes de comunicação estão cada vez mais ocupadas e as aplicações requerem um crescendo de largura de banda. Com o objetivo de otimizar o uso das redes e conseguir transportar o maior número de bytes possíveis nas mesmas ligações, desenvolveu-se a codificação de rede (<EM>network coding</EM>).
+
+<P>
+Na codificação de rede não se envia os dados exatamente como são gerados pelas aplicações, mas envia-se sim combinações de pedaços desses dados. Desde que as combinações de pedaços recebidas sejam independentes, consegue-se recuperar os dados originais. Um exemplo de operador para essas combinações (um "combinador") é o XOR (\(\oplus\) ), que corresponde ao <EM>ou-exclusivo</EM>.
+
+<P>
+O interessante do XOR é a sua propriedade lógica de que que
+\(p\oplus p = 0\). Ou seja, quando aplicamos a operação ao mesmo elemento (valor) obtemos zero. E quando operamos com zero obtemos o valor dado, i.e., 
+\(p\oplus 0 = p\). Por isso, se tivermos 
+\(p\) e \(r\) temos:
+
+<DIV ALIGN="CENTER">
+<!--\(
+ \begin{displaymath}
+\begin{array}{lcl}
+\left.\begin{array}{ll}
+ p\oplus p &=0 \\
+ & \\
+ p\oplus 0 &= p 
+\end{array}\right\} &\Rightarrow & 
+p\oplus r\oplus p =  r \oplus (p\oplus p) = r\\
+\end{array}
+\end{displaymath}
+\)-->
+<img src="img40.gif">
+<!--
+<IMG
+ WIDTH="359" HEIGHT="73" BORDER="0"
+ SRC="img40.gif"
+ ALT="\begin{displaymath}\begin{array}{lcl}
+\left.\begin{array}{ll}
+p\oplus p &=0  ...
+... &
+p\oplus r\oplus p = r \oplus (p\oplus p) = r\\
+\end{array}\end{displaymath}">
+-->
+
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Na figura, podemos ver como se consegue alguma poupança nas mensagens enviadas. Os nós emissores têm, cada um, dados diferentes (\(p\) e \(r\))
+para enviar para ambos os nós recetores. Na ligação A, usando a codificação de rede,  apenas precisamos de enviar uma mensagem com \(
+p\oplus r\) em vez de enviarmos duas mensagens separadas \(p\) e \(r\). E, 
+ os nós recetores conseguem descodificar o \(p\) e o \(r\)
+usando as propriedades indicadas. 
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Tarefa</A>
+</H2>
+Este problema pede que ponham as vossas mentes matemáticas a trabalhar para desenvolver um programa que dada uma lista de mensagens recebidas, descodifique o máximo possível de dados individuais. Serão dadas as combinações de dados nas várias mensagens recebidas. Como saída devem ser apresentados os dados individuais que se conseguiram descodificar (por ordem alfabética). Cada letra (sempre minúscula) representa um dado diferente. As várias mensagens são fornecidas em linhas separadas, e cada mensagem pode conter a combinação de várias letras.
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000">
+Input</A>
+</H2>
+Na primeira linha tem um inteiro \(n\) 
+ que é o número de mensagens recebidas, com \(2\leq n\leq 10\).
+Seguem-se \(n\)
+linhas: cada uma tem uma sequência de letras minúsculas que representam os dados enviados numa mensagem.  Em cada mensagem, as letras são distintas e, globalmente, não são usadas mais do que 10 letras diferentes. 
+
+<P>
+
+<H2><A NAME="SECTION00073000000000000000">
+Output</A>
+</H2>
+ Uma  única linha com a lista de dados (letras únicas) que se conseguiram descodificar separados por vírgulas, e um espaço a seguir a cada vírgula, e ordenados alfabeticamente. Caso não se consiga descodificar nada deve ter simplesmente a palavra <TT>erro</TT>.
+
+<P><P>
+<BR>
+
+
+<H2><A NAME="SECTION00074000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00074100000000000000">
+Input</A>
+</H3>
+<PRE>
+2
+pr
+r
+</PRE>
+
+
+<H3><A NAME="SECTION00074200000000000000">
+Output</A>
+</H3>
+<PRE>
+p, r
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00075000000000000000">
+Exemplo 2</A>
+</H2>
+
+
+
+<H3><A NAME="SECTION00075100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+4
+abc
+ab
+cd
+ac
+</PRE>
+
+
+<H3><A NAME="SECTION00075200000000000000">
+Output</A>
+</H3>
+<PRE>
+a, b, c, d
+</PRE>
+<P>
+
+<H2><A NAME="SECTION00076000000000000000">
+Exemplo 3</A>
+</H2>
+
+
+<H3><A NAME="SECTION00076100000000000000">
+Input</A>
+</H3>
+
+<P>
+<PRE>
+3
+abc
+abd
+de
+</PRE>
+
+
+
+<H3><A NAME="SECTION00076200000000000000">
+Output</A>
+</H3>
+<PRE>
+erro
+</PRE>
+
+
+<P>
+
+<H2><A NAME="SECTION00077000000000000000">
+Exemplo 4</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00077100000000000000">
+Input</A>
+</H3>
+
+
+<PRE>
+3
+abc
+ab
+dc
+</PRE>
+
+
+
+<H3><A NAME="SECTION00077200000000000000">
+Output</A>
+</H3>
+<PRE>
+c, d
+</PRE>
+
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Nota:</B>  O Exemplo 1, diz respeito ao nó recetor que está à direita na figura.
+
+<P>
+
+<P>
+<BR>
+
+</BODY>
+</HTML>
