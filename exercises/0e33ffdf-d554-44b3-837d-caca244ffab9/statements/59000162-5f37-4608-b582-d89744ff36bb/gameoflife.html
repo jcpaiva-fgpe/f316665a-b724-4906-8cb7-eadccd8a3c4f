@@ -1,15 +1,15 @@
-<h1><font color="blue">Problema D: Jogo da Vida</font></h1>
+<h1><font color="blue">Jogo da Vida</font></h1>
 
 <p><p><img align=right src="gameoflife.jpg" width="251" height="143"
-alt="" border="0">O Jogo da Vida não é um jogo "convencional". Não
+alt="" border="0">O Jogo da Vida nÃ£o Ã© um jogo "convencional". NÃ£o
 existem jogadores, nem se pode ganhar ou perder. E uma vez colocadas
-as peças, regras aparentemente simples determinam tudo o que vai
+as peÃ§as, regras aparentemente simples determinam tudo o que vai
 acontecer a seguir, com comportamentos muito complexos, cheios de surpresas!
 
-<p>Este jogo é jogado num tabuleiro quadriculado. Cada quadrícula (ou
-célula) pode estar <i>morta</i> ou <i>viva</i>. Assinalamos uma célula
-viva com o caracter <tt>'#'</tt> e uma célula morta com o caracter
-<tt>'.'</tt>. Neste sentido, um tabuleiro inicial válido para o jogo
+<p>Este jogo Ã© jogado num tabuleiro quadriculado. Cada quadrÃ­cula (ou
+cÃ©lula) pode estar <i>morta</i> ou <i>viva</i>. Assinalamos uma cÃ©lula
+viva com o caracter <tt>'#'</tt> e uma cÃ©lula morta com o caracter
+<tt>'.'</tt>. Neste sentido, um tabuleiro inicial vÃ¡lido para o jogo
 da vida seria por exemplo:
 
 <pre>
@@ -23,26 +23,26 @@ da vida seria por exemplo:
 .........
 </pre>
 
-<p>Cada célula tem 8 células vizinhas (excepto as células no limite do
-tabuleiro), que são as quadrículas adjacentes em todas as direcções
-(incluindo as diagonais). Dada uma configuração inicial, o tabuleiro
-vai evoluindo com a aplicação de regras. Assim, para cada célula,
-contamos o número de vizinhos com células vivas e  o que acontece a
-seguir depende desse número:
+<p>Cada cÃ©lula tem 8 cÃ©lulas vizinhas (excepto as cÃ©lulas no limite do
+tabuleiro), que sÃ£o as quadrÃ­culas adjacentes em todas as direcÃ§Ãµes
+(incluindo as diagonais). Dada uma configuraÃ§Ã£o inicial, o tabuleiro
+vai evoluindo com a aplicaÃ§Ã£o de regras. Assim, para cada cÃ©lula,
+contamos o nÃºmero de vizinhos com cÃ©lulas vivas e  o que acontece a
+seguir depende desse nÃºmero:
 
 <ul>
-<li>Uma célula morta com exactamente 3 vizinhos vivos <i>nasce</i>,
+<li>Uma cÃ©lula morta com exactamente 3 vizinhos vivos <i>nasce</i>,
 ficando viva no passo seguinte;
-<li>Uma célula viva com 2 ou 3 vizinhos vivos <i>sobrevive</i>,
+<li>Uma cÃ©lula viva com 2 ou 3 vizinhos vivos <i>sobrevive</i>,
 ficando viva no passo seguinte;
-<li>Em todos os outros casos, uma célula <i>morre</i> (se estava
-viva), ou mantém-se morta.
+<li>Em todos os outros casos, uma cÃ©lula <i>morre</i> (se estava
+viva), ou mantÃ©m-se morta.
 </ul>
 
-<p>Nota que esta regra é aplicada ao mesmo tempo a todas as células,
-isto é, para determinarmos o que acontece num determinado passo temos
-de verificar o que acontece a cada célula antes de realmente fazermos
-as mudanças que as regras determinam. Por exemplo, para o tabuleiro dado acima, a aplicação das regras originava os seguintes passos (e depois continuaria):
+<p>Nota que esta regra Ã© aplicada ao mesmo tempo a todas as cÃ©lulas,
+isto Ã©, para determinarmos o que acontece num determinado passo temos
+de verificar o que acontece a cada cÃ©lula antes de realmente fazermos
+as mudanÃ§as que as regras determinam. Por exemplo, para o tabuleiro dado acima, a aplicaÃ§Ã£o das regras originava os seguintes passos (e depois continuaria):
 
 <table>
 <tr>
@@ -101,34 +101,34 @@ as mudanças que as regras determinam. Por exemplo, para o tabuleiro dado acima, 
 </tr>
 </table>
 
-<p>Precisamos da tua ajuda. Serás capaz de simular o Jogo da Vida?
+<p>Precisamos da tua ajuda. SerÃ¡s capaz de simular o Jogo da Vida?
 
 <h2><font color=blue>Tarefa</font></h2>
 
-Escreve um programa que, dada uma configuração inicial do tabuleiro do
+Escreve um programa que, dada uma configuraÃ§Ã£o inicial do tabuleiro do
 jogo da vida, obtenha o estado desse mesmo tabuleiro ao fim de um
-determinado número de passos.
+determinado nÃºmero de passos.
 
 
 <h2><font color=blue>Input</font></h2>
 
-<p>Na primeira linha de <i>input</i> vêm 3 números inteiros <b>L</b>,
-<b>C</b> e <b>P</b> (separados por espaços), indicando respectivamente
-o número de linhas do tabuleiro, o número de colunas e o número de
+<p>Na primeira linha de <i>input</i> vÃªm 3 nÃºmeros inteiros <b>L</b>,
+<b>C</b> e <b>P</b> (separados por espaÃ§os), indicando respectivamente
+o nÃºmero de linhas do tabuleiro, o nÃºmero de colunas e o nÃºmero de
 passos a usar. Podes assumir que 1 &#8804; L,C &#8804; 100 e que 1 &#8804; P
 &#8804; 250;.
 
 <p>Seguem-se exactamente <b>L</b> linhas, cada uma contendo
 exactamente <b>C</b> caracteres, indicando o estado inicial do
-tabuleiro (<tt>'#'</tt> para uma célula viva, e <tt>'.'</tt> para uma
-célula morta).
+tabuleiro (<tt>'#'</tt> para uma cÃ©lula viva, e <tt>'.'</tt> para uma
+cÃ©lula morta).
 
 <h2><font color=blue>Output</font></h2>
 
-<p>O <i>output</i> é constituído por <b>L</b> linhas, cada uma com
+<p>O <i>output</i> Ã© constituÃ­do por <b>L</b> linhas, cada uma com
 <b>C</b> caracteres, indicando o estado do tabuleiro ao fim de
-<b>P</b> passos de aplicação das regras. Os caracteres a ser usados
-são os mesmos do <i>input</i>.
+<b>P</b> passos de aplicaÃ§Ã£o das regras. Os caracteres a ser usados
+sÃ£o os mesmos do <i>input</i>.
 
 <h2><font color=blue>Exemplo de Input</font></h2>
 
@@ -157,6 +157,3 @@ são os mesmos do <i>input</i>.
 .........
 </pre>
 <BR><HR>
-<ADDRESS>
-ToPAS'2007
-</ADDRESS>
