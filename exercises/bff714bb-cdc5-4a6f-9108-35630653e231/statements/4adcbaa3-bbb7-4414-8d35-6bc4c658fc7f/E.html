@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+
+<HTML>
+<HEAD>
+<TITLE>Problema&nbsp;E: Compras, só em moedas</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;E: Compras, só em moedas">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<script type="text/javascript" 
+        src="../mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00050000000000000000">
+Problema&nbsp;E: Compras, só em moedas</A>
+</H1>
+
+
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="223" HEIGHT="250" src="dinheiro.jpeg" border="1" align=center>
+</TD> </TR>
+</TABLE>
+
+<BR>
+
+<P>
+Na loja do Senhor Moeda, não se aceitam notas para pagar 
+as compras realizadas pelos clientes, 
+nem se dá troco em notas. 
+Tudo é realizado com as moedas de&nbsp;2 e&nbsp;1 euros e 
+as moedas de 50, 20, 10, 5, 2 e 1 cêntimos. 
+Na loja existe um stock ilimitado de moedas e,
+já agora, de artigos para venda.
+
+<P>
+De forma a manter os clientes satisfeitos, 
+sempre que o Sr. Moeda dá troco, 
+dá o menor número possível de moedas.
+
+<P>
+
+<H2><A NAME="SECTION00051000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Escreva um programa que, dado o valor da compra e 
+as moedas que o cliente entregou para pagar a compra,
+indica as moedas dadas no troco, 
+caso seja possível realizar a compra 
+(ou seja, quando o valor entregue pelo cliente é superior ou igual 
+ao valor da compra). 
+No caso contrário, 
+a compra não se pode concretizar e as moedas entregues pelo cliente
+são-lhe devolvidas.
+
+<P>
+Por exemplo, se o valor a pagar for 5 euros e 25 cêntimos e 
+o cliente entregar
+uma moeda de 2 euros, 
+três moedas de 1 euro e 
+duas moedas de 50 cêntimos, 
+o troco será composto por 
+uma moeda de 50 cêntimos, 
+uma moeda de 20 cêntimos e 
+uma moeda de 5 cêntimos.
+
+<P>
+
+<H2><A NAME="SECTION00052000000000000000">
+Input</A>
+</H2>
+
+<P>
+Existem sempre 2 linhas. 
+
+<P>
+A primeira linha tem dois números inteiros, \(E\) e \(C\), <!-- <IMG -->
+ <!-- WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img35.gif" -->
+ <!-- ALT="$E$"> e <IMG -->
+ <!-- WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img36.gif" -->
+ <!-- ALT="$C$">,  -->
+que indicam que o valor da compra é \(E\) euros e \(C\)<!--  <IMG -->
+ <!-- WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img35.gif" -->
+ <!-- ALT="$E$"> euros e <IMG -->
+ <!-- WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0" -->
+ <!-- SRC="img36.gif" -->
+ <!-- ALT="$C$"> --> cêntimos.
+Pelo menos um destes números é positivo.
+
+<P>
+A segunda linha tem 8 números inteiros não negativos,
+\(n_1, n_2, \ldots, n_8\), 
+<!-- <\!-- MATH -->
+<!--  $n_1, n_2, \ldots, n_8$ -->
+<!--  -\-> -->
+<!-- <IMG -->
+<!--  WIDTH="105" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img37.gif" -->
+<!--  ALT="$n_1, n_2, \ldots, n_8$">, -->
+que indicam o número de moedas de cada tipo entregues pelo cliente 
+para efetuar o pagamento. 
+Estes números são dados da moeda com maior valor à moeda com menor valor.
+Assim, \(n_1\)
+<!-- <IMG -->
+<!--  WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img38.gif" -->
+<!--  ALT="$n_1$"> --> é o número de moedas de 2 euros entregues pelo cliente e
+\(n_8\) <!-- <IMG -->
+ <!-- WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+ <!-- SRC="img39.gif" -->
+ <!-- ALT="$n_8$"> --> é o número de moedas de 1 cêntimo entregues pelo cliente.
+
+<P>
+
+<H2><A NAME="SECTION00053000000000000000">
+Restrições</A>
+</H2>
+
+<P>
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">
+\(0 \leq E \leq 1\,000\)
+<!-- <\!-- MATH -->
+<!--  $0 \leq E \leq 1\,000$ -->
+<!--  -\-> -->
+<!-- <IMG -->
+<!--  WIDTH="111" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img40.gif" -->
+<!--  ALT="$0 \leq E \leq 1\,000$" --></TD>
+<TD ALIGN="LEFT">Euros do valor da compra</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $0 \leq C \leq 99$
+ -->
+\(0\leq C \leq 99\)
+<!-- <IMG -->
+<!--  WIDTH="91" HEIGHT="32" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img41.gif" -->
+<!--  ALT="$0 \leq C \leq 99$"> --></TD>
+<TD ALIGN="LEFT">Cêntimos do valor da compra</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $0 \leq n_i \leq 8\,000$
+ -->
+\(0 \leq n_i \leq 8\,000\)
+<!-- <IMG -->
+<!--  WIDTH="113" HEIGHT="31" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img42.gif" -->
+<!--  ALT="$0 \leq n_i \leq 8\,000$"> --></TD>
+<TD ALIGN="LEFT">Número de moedas de um tipo (com \(i=1,2,\ldots,8\))
+<!-- <\!-- MATH -->
+<!--  $i=1,2,\ldots,8$ -->
+<!--  -\-> -->
+<!-- <IMG -->
+<!--  WIDTH="106" HEIGHT="33" ALIGN="MIDDLE" BORDER="0" -->
+<!--  SRC="img43.gif" -->
+<!--  ALT="$i=1,2,\ldots,8$">) --></TD>
+</TR>
+</TABLE>
+
+<P>
+
+<H2><A NAME="SECTION00054000000000000000">
+Output</A>
+</H2>
+
+<P>
+Uma única linha com 8 inteiros não negativos,
+que indicam o número de moedas de cada tipo que serão dadas ao cliente.
+Caso o valor entregue pelo cliente seja superior ou igual ao valor da compra,
+essas moedas são o troco dado pelo Sr. Moeda. 
+No caso contrário, 
+essas moedas foram as entregues pelo cliente ao Sr. Moeda. 
+Tal como na entrada,
+o primeiro número corresponde à moeda de 2 euros, 
+o segundo número corresponde à moeda de 1 euro, 
+e assim sucessivamente,
+respeitando a ordem decrescente do valor facial das moedas.
+
+<P>
+
+<H2><A NAME="SECTION00055000000000000000">
+Exemplo 1 - Venda efetuada</A>
+</H2>
+
+<H3><A NAME="SECTION00055100000000000000">
+Input</A>
+</H3>
+<PRE>
+5 25
+1 3 2 0 0 0 0 0
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00055200000000000000">
+Output</A>
+</H3>
+<PRE>
+0 0 1 1 0 1 0 0
+</PRE> 
+
+<P>
+
+<H2><A NAME="SECTION00056000000000000000">
+Exemplo 2 - Venda efetuada</A>
+</H2>
+
+<H3><A NAME="SECTION00056100000000000000">
+Input</A>
+</H3>
+<PRE>
+5 25
+0 3 0 1 0 1 0 200
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00056200000000000000">
+Output</A>
+</H3>
+<PRE>
+0 0 0 0 0 0 0 0
+</PRE> 
+
+<P>
+
+<H2><A NAME="SECTION00057000000000000000">
+Exemplo 3 - Venda não efetuada</A>
+</H2>
+
+<H3><A NAME="SECTION00057100000000000000">
+Input</A>
+</H3>
+<PRE>
+5 25
+0 3 0 1 0 1 0 100
+</PRE> 
+
+<P>
+
+<H3><A NAME="SECTION00057200000000000000">
+Output</A>
+</H3>
+<PRE>
+0 3 0 1 0 1 0 100
+</PRE> 
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2016
+</ADDRESS>
+</BODY>
+</HTML>
