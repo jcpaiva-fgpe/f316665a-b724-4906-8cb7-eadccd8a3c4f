@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem&nbsp;A: Vai Subir?</TITLE>
+<META NAME="description" CONTENT="Problem&nbsp;A: Vai Subir?">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00010000000000000000">
+Problem&nbsp;A: Vai Subir?</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="77" HEIGHT="119" ALIGN="BOTTOM" BORDER="0"
+ SRC="./Aiga_elevator.png"
+ ALT="Image Aiga_elevator">
+
+</DIV>
+
+<P>
+A companhia de elevadores Suba-Suba optou por um novo o sistema de
+controlo de grupos de elevadores de forma
+a minimizar o consumo de energia. Para um grupo de dois elevadores,
+identificados como 1 e 2,
+o sistema enviará o elevador que se encontre mais próximo do andar
+de onde foi feita a chamada. Se os elevadores se encontram à mesma
+distância então será enviado o que encontra numa posição mais
+elevada. Se ambos os elevadores se encontram no mesmo andar,
+accionará sempre o elevador 1.
+Nem sempre os elevadores estarão parados e disponíveis a serem
+chamados. Poderão estar em serviço, em manutenção ou avariados. Neste
+caso, enviará o único elevador disponível, ou um erro se ambos
+estiverem indisponíveis. 
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Pretende-se programar o sistema 
+que controla a chamada de um grupo dois elevadores 
+segundo a especificação dada. 
+O programa receberá
+como input o número do andar em que um elevador foi chamado, bem como
+a situação actual de cada um dos elevadores; indicará o número do
+elevador melhor posicionado para efectuar o percurso. 
+O input é constituído por três inteiros separados por um espaço: o número do andar de onde foi feita a chamada, a situação do elevador 1, seguida da situação do elevador 2. O número do andar onde foi chamado o elevador é um inteiro entre -100 e 100. A posição dos elevadores 1 e 2 poderá ser o número de um andar, também um valor entre -100 e 100, ou o número 999 para indicar que se encontra indisponível.
+O output é 0, 1 ou 2. O valor 0 é reservado para o caso
+de ambos os elevadores estarem indisponíveis. Caso contrário será
+indicado o  número do elevador melhor
+posicionado para responder à chamada (1 ou 2).
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00012100000000000000">
+Input</A>
+</H3>
+<PRE>
+2 4 2
+</PRE>
+<H3><A NAME="SECTION00012200000000000000">
+Output</A>
+</H3>
+<PRE>
+2
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00013100000000000000">
+Input</A>
+</H3>
+<PRE>
+1 999 -1
+</PRE>
+<H3><A NAME="SECTION00013200000000000000">
+Output</A>
+</H3>
+<PRE>
+2
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Exemplo 3</A>
+</H2>
+
+<H3><A NAME="SECTION00014100000000000000">
+Input</A>
+</H3>
+<PRE>
+3 1 5
+</PRE>
+<H3><A NAME="SECTION00014200000000000000">
+Output</A>
+</H3>
+<PRE>
+2
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00015000000000000000">
+Exemplo 4</A>
+</H2>
+
+<H3><A NAME="SECTION00015100000000000000">
+Input</A>
+</H3>
+<PRE>
+4 6 6
+</PRE>
+<H3><A NAME="SECTION00015200000000000000">
+Output</A>
+</H3>
+<PRE>
+1
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00016000000000000000">
+Exemplo 5</A>
+</H2>
+
+<H3><A NAME="SECTION00016100000000000000">
+Input</A>
+</H3>
+<PRE>
+7 999 999
+</PRE>
+<H3><A NAME="SECTION00016200000000000000">
+Output</A>
+</H3>
+<PRE>
+0
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2009
+</ADDRESS>
+</BODY>
+</HTML>
