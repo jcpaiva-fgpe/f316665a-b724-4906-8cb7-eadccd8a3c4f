@@ -1,0 +1,303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+
+<HTML>
+<HEAD>
+<TITLE>Problem D: O estranho caso dos símbolos mutantes</TITLE>
+<META NAME="description" CONTENT="Problem D: O estranho caso dos símbolos mutantes">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+<script type="text/javascript" src="../mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+</HEAD>
+
+<BODY >
+
+<H1><A NAME="SECTION00040000000000000000">
+Problem D: O estranho caso dos símbolos mutantes</A>
+</H1>
+
+<P>
+
+
+
+
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="315" HEIGHT="368" src="parity_trick.jpg" border="1" align=center>
+</TD> </TR>
+</TABLE>
+
+
+
+<P>
+A Alice inventou um código constituído por sequências de símbolos (zeros e uns), que utiliza para a troca de mensagens secretas com o Bernardo.
+A Teresa Coscuvilheira, que gosta de estar a par de tudo que acontece e que não acontece, 
+ficou muito frustada quando se viu incapaz de decifrar as mensagens que a Alice deixava na secretária do Bernardo.
+Como vingança por tamanha desfaçatez, decidiu adulterar as mensagens secretas da Alice.
+Sempre que encontrava um novo bilhete na secretária, apressava-se a trocar 
+<TT>1</TT>'s por <TT>0</TT>'s e <TT>0</TT>'s por <TT>1</TT>'s, mas não muitos para o Bernardo e a Alice não suspeitarem.
+
+<P>
+Apercebendo-se deste estranho fenômeno de símbolos mutantes -- poucos, mas suficientes para retirar
+o sentido às mensagens --, a Alice arranjou uma solução para permitir ao Bernardo corrigir, ou pelo menos, detetar alguns casos de mutações. 
+A solução é a seguinte. Por exemplo, para uma  mensagem
+\(s_1\, s_2\, s_3\, s_4\, s_5\, s_6\, s_7\, s_8\, s_9\),
+constituída por uma sequência de nove símbolos (<TT>0</TT>'s e <TT>1</TT>'s), a Alice passou a acrescentar sete novos símbolos
+\(\,p_1\, p_2\, p_3\, p_4\, p_5\, p_6\, p_7\).
+O cálculo dos novos símbolos é feito assim. Os nove símbolos originais são agrupados numa matriz quadrada (de dimensão \(3\times3\), neste  exemplo). 
+A cada uma das linhas é acrescentado um novo símbolo
+\(p_i\), com valor <TT>0</TT> ou <TT>1</TT>, por forma a que o número total de <TT>1</TT>'s numa linha seja par.
+Para as colunas a estratégia é a mesma. A cada uma das colunas é acrescentado um novo símbolo \(p_i\)
+com valor <TT>0</TT>  ou <TT>1</TT>, por forma a que o número total de <TT>1</TT>'s em cada  coluna seja par.
+
+<P>
+<DIV ALIGN="CENTER">
+\(\begin{array}{lll|l}
+s_1 & s_2 &   s_3 & p_4\\
+s_4 & s_5 &   s_6 & p_5\\
+s_7 & s_8 &  s_9 & p_6\\
+\hline
+p_1 &  p_2 &  p_3 & p_7\\ \end{array}
+\)
+</DIV>
+
+<P>
+A mensagem a transmitir seria então constituída por 16 símbolos agrupados da seguinte forma \(\,s_1\, s_2\, s_3\, s_4\, s_5\, s_6\, s_7\, s_8\, s_9\, p_1\, p_2\, p_3\, p_4\, p_5\, p_6\, p_7\),
+ou seja, primeiro tem a sequência original e depois a de controlo.
+Se na análise da mensagem for detetado  um erro de paridade numa só linha e numa só coluna, então o erro fica localizado.
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Dada uma mensagem recebida, codificada conforme se descreveu acima, indicar:
+
+<UL>
+<LI>se não foram detetados erros;
+</LI>
+<LI>ou se foi detetado um erro, indicando a posição onde ocorreu na mensagem recebida;
+</LI>
+<LI>ou se foi detetado mais do que um erro.
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00042000000000000000">
+Input</A>
+</H2>
+Uma linha constituída por um  número inteiro \(n\),
+um espaço, e uma sequência de \((n+1)^2\)
+caracteres (<TT>0</TT>'s e <TT>1</TT>'s) correspondentes à mensagem recebida, sendo \(2 \leq n \leq 50\).
+Note que \((n+1)^2=n^2+2n+1\) e 
+a matriz quadrada formada com a mensagem recebida tem \(n+1\)
+linhas e colunas.
+
+<P>
+
+<H2><A NAME="SECTION00043000000000000000">
+Output</A>
+</H2>
+Uma única linha com uma das mensagens seguintes (sem aspas):
+<BR><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"> "<TT>OK</TT>"</TD>
+<TD ALIGN="LEFT">- se não foram detetados erros.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">"<TT>ERRO EM k</TT>"</TD>
+<TD ALIGN="LEFT">- se foi detetado um erro na posição \(k\), com
+ \(1\leq k\leq (n+1)^2\).
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT"> </TD>
+<TD ALIGN="LEFT"> \(k\) é a posição na mensagem recebida onde foi detetado (e corrigido) o erro.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">"<TT>ERROS</TT>"</TD>
+<TD ALIGN="LEFT">- caso tenha sido detetado mais do que um erro.</TD>
+</TR>
+</TABLE>
+
+<P>
+<P>
+
+
+<H2><A NAME="SECTION00044000000000000000">
+Exemplo 1</A>
+</H2>
+
+
+<H3><A NAME="SECTION00044100000000000000">
+Input</A>
+</H3>
+
+<PRE>
+2 100111110
+</PRE>
+
+<H3><A NAME="SECTION00044200000000000000">
+Output</A>
+</H3>
+<PRE>
+OK
+</PRE>
+<P>
+<P>
+
+
+<H2><A NAME="SECTION00045000000000000000">
+Exemplo 2</A>
+</H2>
+
+
+<H3><A NAME="SECTION00045100000000000000">
+Input</A>
+</H3>
+<PRE>
+2 000111110
+</PRE>
+
+
+
+<H3><A NAME="SECTION00045200000000000000">
+Output</A>
+</H3>
+<PRE>
+ERRO EM 1
+</PRE>
+
+<P>
+<P>
+
+
+<H2><A NAME="SECTION00046000000000000000">
+Exemplo 3</A>
+</H2>
+<H3><A NAME="SECTION00046100000000000000">
+Input</A>
+</H3>
+<PRE>
+2 000111111
+</PRE>
+<H3><A NAME="SECTION00046200000000000000">
+Output</A>
+</H3>
+<PRE>
+ERROS
+</PRE>
+
+<P>
+<P>
+
+<H2><A NAME="SECTION00047000000000000000">
+Exemplo 4</A>
+</H2>
+<H3><A NAME="SECTION00047100000000000000">
+Input</A>
+</H3>
+<PRE>
+3 1001011111101010
+</PRE>
+<H3><A NAME="SECTION00047200000000000000">
+Output</A>
+</H3>
+<PRE>
+OK
+</PRE>
+
+<P>
+<P>
+
+<H2><A NAME="SECTION00048000000000000000">
+Exemplo 5</A>
+</H2>
+<H3><A NAME="SECTION00048100000000000000">
+Input</A>
+</H3>
+<PRE>
+3 1011011111101010
+</PRE>
+
+<H3><A NAME="SECTION00048200000000000000">
+Output</A>
+</H3>
+<PRE>
+ERRO EM 3
+</PRE>
+
+<P>
+<P>
+
+<H2><A NAME="SECTION00049000000000000000">
+Exemplo 6</A>
+</H2>
+
+<H3><A NAME="SECTION00049100000000000000">
+Input</A>
+</H3>
+<PRE>
+3 1010011111101010
+</PRE>
+<H3><A NAME="SECTION00049200000000000000">
+Output</A>
+</H3>
+<PRE>
+ERROS
+</PRE>
+
+<P>
+<P>
+
+<H2><A NAME="SECTION000410000000000000000">
+Exemplo 7</A>
+</H2>
+<H3><A NAME="SECTION000410100000000000000">
+Input</A>
+</H3>
+<PRE>
+2 100111100
+</PRE>
+<H3><A NAME="SECTION000410200000000000000">
+Output</A>
+</H3>
+<PRE>
+ERRO EM 8
+</PRE>
+
+<P>
+<P>
+
+<H2><A NAME="SECTION000411000000000000000">
+Exemplo 8</A>
+</H2>
+
+<H3><A NAME="SECTION000411100000000000000">
+Input</A>
+</H3>
+<PRE>
+5 001011010010110101010010001111001111
+</PRE>
+<H3><A NAME="SECTION000411200000000000000">
+Output</A>
+</H3>
+<PRE>
+ERROS
+</PRE>
+
+<P>
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2015
+</ADDRESS>
+</BODY>
+</HTML>
