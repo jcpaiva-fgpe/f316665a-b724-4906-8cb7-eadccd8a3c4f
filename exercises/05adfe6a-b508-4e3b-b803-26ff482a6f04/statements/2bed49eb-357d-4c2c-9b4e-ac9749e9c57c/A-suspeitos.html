@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem A: Prendam os suspeitos do costume!</TITLE>
+<META NAME="description" CONTENT="Problem A: Prendam os suspeitos do costume!">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+
+</HEAD>
+
+<BODY >
+<H1>
+Problem A: Prendam os suspeitos do costume!</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="158" HEIGHT="119" ALIGN="BOTTOM" BORDER="0"
+ SRC="usual_suspects.jpg"
+ ALT="Image usual_suspects">
+
+</DIV>
+
+<P>
+
+<H2>
+Problema</A>
+</H2>
+Uma conhecida multinacional de <EM>software</EM>, que prefere permanecer
+anónima, foi vítima dum ataque informático ao repositório de código da
+próxima versão de um dos seus produtos mais difundidos. Os
+<EM>crackers</EM> introduziram uma série de vírus que assim foram
+propagados pela primeira vez através de <EM>software</EM> licenciado!
+
+<P>
+O ataque foi tão bem feito que ainda não foi possível determinar a
+sua origem. Sabe-se apenas que os autores terão conseguido acesso à
+rede da empresa usando uma ou mais contas dos funcionários da
+empresa. Comparando as datas de modificações dos ficheiros
+alterados determinou-se um intervalo de tempo em que foi
+realizado o ataque.
+
+<P>
+Neste momento todos os funcionários da empresa são suspeitos, o
+clima é insustentável e a investigação deste incidente não
+avança. Para reduzir o número de suspeitos foi proposto comparar os
+registos de autenticação dos funcionários. Estes registos indicam a 
+data e hora quer do início, quer do fim de cada sessão de
+trabalho. Um funcionário será suspeito se uma das suas sessões de
+trabalho se sobrepuser com período em que ocorreu o ataque.
+Portanto, uma sessão será suspeita se tiver início antes do fim do
+ataque e terminar depois do início do ataque.
+
+<H2>
+Tarefa</A>
+</H2>
+Escrever um programa para determinar 
+o <B>número</B> de suspeitos que
+seriam localizados deste modo.
+
+<P>
+
+<H2>
+Input</A>
+</H2>
+Na primeira linha dos dados tem os instantes inicial e
+final do ataque. Depois segue-se  um inteiro <EM>n</EM>  com o número de
+sessões a processar. As <EM>n</EM> linhas seguintes descrevem
+as sessões, ordenadas temporalmente: em cada linha tem 
+o número do funcionário, o início e fim da respectiva sessão.
+
+<P>
+A empresa não tem mais do que 100 funcionários.
+Nos dados fornecidos, os momentos de início e fim do ataque e
+das sessões, são inteiros não negativos 
+(representáveis em 32 bits). Os tempos estão todos indicados
+em segundos, correspondendo a um intervalo que decorreu desde
+um certo instante inicial.
+
+<P>
+
+<H2>
+Output</A>
+</H2>
+
+<P>
+O output do programa resume-se ao número de suspeitos detectados
+(termina por mudança de linha)
+
+<P>
+
+<H2>
+Exemplo de input</A>
+</H2>
+<BR>
+<PRE>
+2574 3390
+6
+10 1760 2330
+2 1761 2574
+13 2341 2522
+10 3377 4885
+3 3393 7811
+1 4173 4814
+</PRE>
+
+<P>
+
+<H2>
+Exemplo de output</A>
+</H2>
+<BR>
+<PRE>
+1
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2006
+</ADDRESS>
+</BODY>
+</HTML>
