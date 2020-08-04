@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem H: Onde vem a tartaruga?</TITLE>
+<META NAME="description" CONTENT="Problem H: Onde vem a tartaruga?">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+</HEAD>
+
+<BODY >
+<H1>
+Problem G: Corrida maluca</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="79" HEIGHT="77" ALIGN="BOTTOM" BORDER="0"
+ SRC="run1.jpg"
+ ALT="Image run1">
+<IMG
+  WIDTH="79" HEIGHT="75" ALIGN="BOTTOM" BORDER="0"
+ SRC="run3.jpg"
+ ALT="Image run3">
+<IMG
+  WIDTH="79" HEIGHT="91" ALIGN="BOTTOM" BORDER="0"
+ SRC="run4.jpg"
+ ALT="Image run4">
+<IMG
+  WIDTH="79" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="lento2.jpg"
+ ALT="Image lento2">
+
+</DIV>
+
+<P>
+
+<H2>
+Problema</A>
+</H2>
+
+<P>
+Numa prova de atletismo, ainda 
+não introduzida nos concursos mundiais por falta de
+consenso,
+ a
+classificação de cada equipa é dada pelo número de 
+elementos que chegaram à meta e pelo tempo de chegada do  último.
+É usado um critério de desempate quando atletas de equipas diferentes
+cruzam a meta ao mesmo tempo 
+e as equipas a que pertencem também terminaram a prova com o mesmo 
+número de
+atletas. 
+Se a imagem gravada não permitir ver qual o atleta que 
+esticou mais o pescoço, o peso total dos elementos da
+equipa é usado para as desempatar. 
+
+<P>
+Cada equipa é constituída por três atletas.
+É possível que alguns atletas desistam. 
+Ficam classificadas nos lugares mais cimeiros
+as equipas em que mais atletas conseguiram terminar a prova.
+Uma equipa não é classificada se nenhum dos seus atletas cruzar a
+meta.
+
+<P>
+
+<H2>
+Tarefa</A>
+</H2>
+
+<P>
+Escrever um programa que dada uma sequência de chegadas determina a 
+ordem de classificação das equipas (em que pelo menos um atleta
+terminou a prova).
+
+<H2>
+Input</A>
+</H2>
+A primeira linha tem o número de equipas inscritas na
+prova.
+As restantes linhas contêm a  sequência de chegada dos atletas
+(já desempatados). Cada valor identifica
+ apenas o número da equipa a que
+pertence o atleta que chegou na posição correspondente.
+Os dados terminam com -1.
+
+<P>
+As equipas são identificadas por inteiros consecutivos maiores ou
+iguais a 1. Não há mais do que 200 equipas.
+
+<P>
+
+<H2>
+Output</A>
+</H2>
+Tantas linhas quanto o número de equipas classificadas: a primeira linha indica o
+número da equipa que ficou em primeiro lugar, a segunda será 
+o da classificada em segundo e assim sucessivamente.
+No fim escreve o número de equipas não classificadas, precedido
+da mensagem ``<code>No. abandonos (equipa toda): </code>¨.
+Todas as linhas terminam por mudança de linha.
+
+<H2>
+Exemplo: input</A>
+</H2>
+<BR>
+<PRE>
+8
+1
+2
+5
+5
+2
+3
+4
+5
+2
+3
+4
+3
+7
+1
+-1
+</PRE>
+
+<P>
+
+<H2>
+Exemplo: output</A>
+</H2>
+<BR>
+<PRE>
+5
+2
+3
+4
+1
+7
+No. abandonos (equipa toda): 2
+</PRE>
+
+<P>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="119" HEIGHT="125" ALIGN="BOTTOM" BORDER="0"
+ SRC="tartaruga.jpg"
+ ALT="Image tartaruga">
+<BR>
+<BR>
+<BR>
+<IMG
+  WIDTH="119" HEIGHT="67" ALIGN="BOTTOM" BORDER="0"
+ SRC="tartaruga_corre.jpg"
+ ALT="Image tartaruga_corre">
+<BR>
+<BR>
+<BR>
+<IMG
+  WIDTH="119" HEIGHT="67" ALIGN="BOTTOM" BORDER="0"
+ SRC="tartaruga2.jpg"
+ ALT="Image tartaruga2">
+
+</DIV>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2006
+</ADDRESS>
+</BODY>
+</HTML>
