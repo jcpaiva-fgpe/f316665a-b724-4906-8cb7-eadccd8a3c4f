@@ -1,0 +1,52 @@
+<h1><font color="blue">Problema B: Febre de sábado à tarde</font></h1>
+<br>
+
+<img alt="Termómetro" src="thermometer.gif" height="289" width="205" align="right">
+A vasculhar no sótão encontramos uma verdadeira relíquia: um dos 
+primeiros termómetros digitais do século passado que, além da a 
+temperatura actual, apresenta também as temperaturas máxima e mínima
+das últimas 24 horas. Infelizmente o termómetro está desregulado e não
+parece haver uma maneira de o calibrar.<br>
+<br>
+No entanto, como sabemos as temperaturas máxima e mínima registadas no
+dia anterior, e podemos facilmente saber quais foram as temperaturas
+máxima e mínima efectivas consultando um jornal, podemos aplicar uma
+função linear para corrigir os valores do termómetro. Ou seja, para
+corrigir os valores podemos usar uma função cujo gráfico é uma recta.<br>
+<br>
+A função de correcção  transformará a temperatura mínima do termómetro
+na temperatura mínima real e a temperatura máxima do termómetro na
+temperatura máxima real. Podemos assumir que as temperaturas mínima e
+máxima registadas pelo termómetro nunca são de igual valor.<br>
+<h2><font color="blue">Tarefa</font></h2>
+A vossa tarefa é fazer um programa que começa por ler as temperaturas
+mínima e máxima registadas pelo termómetro, depois as temperaturas
+mínima e máxima efectivas, seguida por uma sequência de temperaturas
+terminada por um valor igual ou superior a 100.0. Para cada uma destas
+temperaturas (excepto as quatro iniciais usadas para calibrar e a que
+termina a sequência) o programa escreve o valor da temperatura
+aplicando a correcção linear. Os valores de todas as temperaturas são
+em virgula flutuante, e os valores devem ser arredondados a uma casa
+decimal.<br>
+<h2><font color="blue">Exemplo de input</font></h2>
+
+<pre>
+0.0 30.0
+10.0 20.0
+0.0
+30.0
+15.0
+10.0
+100.0
+</pre>
+<h2><font color="blue">Exemplo de output</font></h2>
+<pre>
+10.0
+20.0
+15.0
+13.3
+</pre>
+<BR><HR>
+<ADDRESS>
+ToPAS'2007
+</ADDRESS>
