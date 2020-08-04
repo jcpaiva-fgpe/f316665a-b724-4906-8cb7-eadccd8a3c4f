@@ -1,0 +1,141 @@
+<H1><A NAME="SECTION00020000000000000000">
+Problem B: Caçando Caudas</A>
+</H1>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="99" HEIGHT="94" ALIGN="BOTTOM" BORDER="0"
+ SRC="./cao_a1.jpg"
+ ALT="Image cao_a1">
+<IMG
+  WIDTH="99" HEIGHT="95" ALIGN="BOTTOM" BORDER="0"
+ SRC="./cao_a2.jpg"
+ ALT="Image cao_a2">
+<IMG
+  WIDTH="99" HEIGHT="93" ALIGN="BOTTOM" BORDER="0"
+ SRC="./cao_a3.jpg"
+ ALT="Image cao_a3">
+<IMG
+  WIDTH="99" HEIGHT="86" ALIGN="BOTTOM" BORDER="0"
+ SRC="./cao_a4.jpg"
+ ALT="Image cao_a4">
+ 
+<IMG
+  WIDTH="99" HEIGHT="101" ALIGN="BOTTOM" BORDER="0"
+ SRC="./pcardeais.jpg"
+ ALT="Image pcardeais">
+
+</DIV>
+
+<P>
+Por 
+pura diversão ou algum tipo de perturbação, é habitual cães e
+gatos rodopiarem freneticamente, enquanto tentam apanhar a sua própria cauda
+(<EM>``be chasing my tail''</EM> 
+quer dizer estar ocupado com mil e um afazeres, mas pouco sucesso).
+Com tantas voltas, é de imaginar que ao fim de algum tempo fiquem
+tontos, que ora rodem para um lado ora
+rodem para o outro, etc. Pretendemos saber qual a posição, o sentido de
+movimento e o estado em que se encontraria um animal 
+depois de ter efectuado uma sequência de movimentos,
+considerando que:
+
+<UL>
+<LI>inicialmente, o animal está bem (estado <code>normal</code>) e tem a
+cabeça a Sul (<code>S</code>); 
+</LI>
+<LI>cada movimento corresponde a uma rotação dum
+múltiplo de <IMG
+ WIDTH="29" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$45^\circ$">;  pode ser efectuado em sentido horário (<code>CW</code>) ou
+anti-horário (<code>CCW</code>); o primeiro movimento será 
+no sentido anti-horário;
+</LI>
+<LI>se a amplitude dum dado movimento exceder <IMG
+ WIDTH="38" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$720^\circ$"> (duas voltas),
+o animal fica <code>tonto</code> e passa a rodar em sentido contrário;
+voltará ao 
+estado <code>normal</code> logo que rodar novamente (se nesse movimento não
+rodar outra vez  demais).
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00021000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa que, dada uma sequência de movimentos, indique a
+posição final da cabeça do animal (<code>N</code>, 
+<code>S</code>, <code>E</code>, <code>W</code>, <code>NE</code>, <code>SE</code>, <code>NW</code>, ou
+<code>SW</code>), o sentido em que o animal iria rodar
+(<code>CW</code> ou <code>CCW</code>), e o seu estado final (<code>normal</code> ou
+<code>tonto</code>). Cada linha de <EM>input</EM> tem um inteiro positivo 
+múltiplo de 45 (e inferior a 2000), o qual 
+representa a amplitude da rotação, com excepção da última linha que 
+tem <code>-1</code>. Haverá pelo menos um movimento. O programa escreve um terno 
+<code>(posição, sentido, estado)</code>, com um espaço após cada vírgula,
+seguindo-se mudança de linha.
+
+<P>
+
+<H2><A NAME="SECTION00022000000000000000">
+Exemplo 1</A>
+</H2>
+<BR>
+
+<H3><A NAME="SECTION00022100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+180
+360
+360
+-1
+</PRE>
+<H3><A NAME="SECTION00022200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+(N, CCW, normal)
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00023000000000000000">
+Exemplo 2</A>
+</H2>
+<BR>
+
+<H3><A NAME="SECTION00023100000000000000">
+Input</A>
+</H3>
+<BR>
+<PRE>
+540
+405
+765
+45
+810
+855
+810
+810
+-1
+</PRE>
+<H3><A NAME="SECTION00023200000000000000">
+Output</A>
+</H3>
+<BR>
+<PRE>
+(W, CW, tonto)
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2008
+</ADDRESS>
