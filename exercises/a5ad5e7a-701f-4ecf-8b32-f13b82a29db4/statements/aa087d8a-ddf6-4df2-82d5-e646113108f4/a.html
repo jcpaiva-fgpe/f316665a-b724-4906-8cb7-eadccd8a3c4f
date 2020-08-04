@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<BODY >
+
+<H1><A NAME="SECTION00010000000000000000">
+Problema&nbsp;A: Preço arredondado</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="185" HEIGHT="302" ALIGN="BOTTOM" BORDER="0"
+ SRC="./tio-patinhas.jpg"
+ ALT="Image tio-patinhas">
+
+</DIV>
+
+<P>
+
+Com a súbida da taxa máxima do IVA para 23,25%, anunciada para 2015, 
+deparamo-nos com alguns problemas de cálculo.
+Para obter uma estimativa do preço com IVA, podemos arredondar 
+para o inteiro mais próximo, <EM>por defeito</EM> (maior inteiro não
+superior). <br>
+Ora, para obter o valor do imposto, 
+multiplicamos o preço por 6 e dividimos por 100, quando é a taxa mínima (6%). Logo, para 23,25%, podemos multiplicar 
+agora por 2325 e dividir por 10000 (quociente da divisão inteira).
+Com algum cuidado, o resto da divisão inteira até nos permitiria obter
+o erro exato, mas não interessa.
+
+<P>
+
+
+
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+
+Escrever um programa para calcular o preço com
+IVA arredondado por defeito.
+
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Input</A>
+</H2>
+Uma linha com um inteiro que representa o preço base (sem IVA).
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Output</A>
+</H2>
+Uma linha com um inteiro que representa o preço com IVA, seguido de um
+espaço, e da frase "<TT>(talvez estimativa por defeito)</TT>", sem aspas.
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Exemplo 1</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00014100000000000000">
+Input</A>
+</H3>
+<PRE>
+100
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00014200000000000000">
+Output</A>
+</H3>
+<PRE>
+123 (talvez estimativa por defeito)
+</PRE>
+
+<P>
+
+
+<H2><A NAME="SECTION00016000000000000000">
+Exemplo 2</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00016100000000000000">
+Input</A>
+</H3>
+<PRE>
+15
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00016200000000000000">
+Output</A>
+</H3>
+<PRE>
+18 (talvez estimativa por defeito)
+</PRE>
+
+
+
+<P>
+
+
+<H2><A NAME="SECTION00018000000000000000">
+Exemplo 3</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00018100000000000000">
+Input</A>
+</H3>
+<PRE>
+3560
+</PRE>
+
+
+<P>
+
+<H3><A NAME="SECTION00018200000000000000">
+Output</A>
+</H3>
+<PRE>
+4387 (talvez estimativa por defeito)
+</PRE>
+
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2014
+</ADDRESS>
+</BODY>
+</HTML>
