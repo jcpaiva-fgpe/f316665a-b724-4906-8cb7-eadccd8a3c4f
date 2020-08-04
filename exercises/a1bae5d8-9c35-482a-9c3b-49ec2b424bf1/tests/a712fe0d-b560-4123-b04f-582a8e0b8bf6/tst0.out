@@ -1,0 +1,10 @@
+(6,100): no exterior
+(-1,10): na fronteira
+(3,2): no interior
+(-3,2): no interior
+(7,6): na fronteira
+(10,-1): no exterior
+(7,25): no exterior
+(-1,0): no interior
+(8,5): no exterior
+(25,-1000): no exterior
