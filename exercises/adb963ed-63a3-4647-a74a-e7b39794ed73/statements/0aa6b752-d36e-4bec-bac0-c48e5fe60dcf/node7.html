@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problem G: Balão à vista</TITLE>
+<META NAME="description" CONTENT="Problem G: Balão à vista">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+<HR>
+
+<H1><A NAME="SECTION00070000000000000000">
+Problem G: Balão à vista</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="126" HEIGHT="158" ALIGN="BOTTOM" BORDER="0"
+ SRC="./robotics.jpg"
+ ALT="Image robotics">
+
+</DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+Quem bloqueou as portas?
+Não foi um ET em estado de choque, mas <TT>TAKIOR</TT>, robot
+inteligente especialmente programado para pôr termo a feriados, 
+festas e balões. Como podia o décimo aniversário do ToPAS lhe escapar?
+Rapidamente se pôs a caminho do Departamento em festa, sem perder
+um minuto a estudar a planta do amplo edíficio, tendo apenas as
+coordenadas da porta de entrada. À entrada,
+pareceu-lhe um labirinto. Por isso, decidiu adoptar um algoritmo simples, mas
+arriscado. Percorreria laboratórios, anfiteatros, gabinetes,
+salas e afins, sem se afastar das paredes.  Bloquearia as portas por onde tivesse de passar, evitando
+andar as voltas e parecer uma cigarra tonta. Confiscaria os balões
+que encontrasse, que utilizaria para levantar voo quando saisse.
+
+<P>
+Recapitulando, <TT>TAKIOR</TT> deve percorrer todos os compartimentos que conseguir.
+Quando entra num compartimento, deve  bloquear a porta por onde
+entrou. Depois, sem se afastar da parede, percorre o compartimento e
+recolhe os balões que
+encontra junto da parede (supomos que as portas não
+bloqueadas estão encostadas e funcionam como paredes nesta pesquisa). A seguir procura a porta não bloqueada. 
+Se existir, abre-a para passar ao compartimento vizinho ou abandonar o
+edíficio se essa porta for a de saída. Se o compartimento só tiver uma
+porta (a que bloqueou quando entrou), aguarda pacientemente que o
+encontrem agarrado aos balões que pretendia confiscar. Se sair do
+edíficio, levanta imediatamente voo. Terá sempre confiscado pelo menos
+um balão.
+
+<P>
+<TT>TAKIOR</TT> parece um boneco de corda, mas, de facto, esse
+dispositivo lateral tem os sensores que lhe permitem manter o contacto
+com as paredes e voltar orientar-se quando entra num compartimento
+novo. Assim, quando entra numa sala, <B>vira sempre à sua
+direita</B>, ficando o sensor direccionado para a parede que tem à sua
+direira. Manterá esta condição durante o movimento no compartimento.
+
+
+
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa para analisar um cenário virtual, e determinar o número de
+balões que <TT>TAKIOR</TT> confiscou ou pretendia confiscar,
+e detectar ainda se ficou preso no edíficio ou levantou voo. Cada cenário é composto por uma
+planta do edíficio, representada por uma grelha rectangular, com identificação das
+posições das paredes e das portas, bem como das posições que contêm
+balões. Não há balões atrás de portas. <B>Todos os compartimentos
+são rectangulares e têm  ou  uma  ou duas portas. Não há portas junto
+aos cantos</B>. O
+compartimento de entrada tem sempre duas portas e só uma delas dá 
+acesso ao exterior. Existe pelo menos uma porta de saída para o exterior num
+outro compartimento. 
+
+<P>
+Na primeira linha de dados tem dois inteiros <EM>m</EM> e <EM>n</EM>,  menores do que
+100, e que representam o número de linhas e de colunas da grelha. 
+Seguem-se <EM>m</EM> linhas. Cada uma contém uma sequência de <EM>n</EM> carateres, formada por <TT>'E'</TT> 
+(porta de entrada), <TT>'S'</TT> (porta de saída),  <TT>'P'</TT> (porta
+interior), <TT>'X'</TT> (parede), <TT>'B'</TT> (balão), ou espaços 
+<TT>' '</TT>. No ínicio e fim de cada linha pode ter <TT>'X'</TT>, <TT>'S'</TT> ou <TT>'E'</TT>,
+existindo apenas um <TT>'S'</TT> e <TT>'E'</TT> no cenário. Pode
+supor que a porta de entrada se encontra sempre na <B>célula (0,2)</B>, junto
+ao canto inferior esquerdo da grelha.
+
+<P>
+O resultado é composto por duas linhas: na primeira tem o número de
+balões recolhidos; a segunda tem a frase
+``<TT>Levantou voo</TT>'' ou ``<TT>Veio para ficar</TT>'',
+conforme <TT>TAKIOR</TT> tenha ou não
+conseguido sair do edíficio.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00072100000000000000">
+Input</A>
+</H3>
+<PRE>
+18 20
+XXXXXXXXXXXXXXXXXXXX
+X      X           X
+X   B  X           X
+X      XXPXXXXXXXXXX
+X      X    X      X
+X     BX    X    B S
+X      P    X      X
+X      X    XXPXXXXX
+X      XXXXXX      X
+X      X    X      X
+X      X    P      X
+X      X    X      X
+XXXXPXXXXXXXXXXXXXXX
+X                 BX
+X       B          X
+X       B          X
+X             B    X
+XXEXXXXXXXXXXXXXXXXX
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00072200000000000000">
+Output</A>
+</H3>
+<PRE>
+3
+Veio para ficar
+</PRE>
+
+<P>
+
+<H2><A NAME="SECTION00073000000000000000">
+Exemplo 2</A>
+</H2>
+
+<H3><A NAME="SECTION00073100000000000000">
+Input</A>
+</H3>
+
+<P>
+<PRE>
+14 23
+XXXXXXXXXXXXXXXXXXXXXXX
+X         X           X
+X   B     X    B      X
+X         X        B  S
+X      B  XB          X
+X  B      XXXXXXXPXXXXX
+X         X           X
+X     B   X   B     B X
+X         XXXXXXXXXPXXX
+X         X     X     X
+X         P     P     X
+X    B    X B   X    BX
+X         X     X     X
+XXEXXXXXXXXXXXXXXXXXXXX
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00073200000000000000">
+Output</A>
+</H3>
+<PRE>
+4
+Levantou voo
+</PRE>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2012
+</ADDRESS>
+</BODY>
+</HTML>
