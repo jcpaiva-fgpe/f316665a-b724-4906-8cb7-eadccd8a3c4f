@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+
+<HTML>
+<HEAD>
+<TITLE>Preço incerto</TITLE>
+<META NAME="description" CONTENT="Preço incerto">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2012">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+</HEAD>
+
+<BODY >
+
+
+<H1><A NAME="SECTION00030000000000000000">
+Preço incerto</A>
+</H1>
+
+<TABLE ALIGN="RIGHT"> 
+<TR><TD ALIGN="CENTER">
+<img  WIDTH="301" HEIGHT="167" src="velocimetro.jpg" border="1" align=center>
+</TD> </TR>
+</TABLE>
+
+
+<P>
+O João e os seus amigos estão a criar uma app para ajudar a poupar no custo dos combustíveis automóveis. Neste momento a app já consegue obter o preço por litro dos combustíveis em todas as bombas localizadas num certo  raio, bem como a distância a que estas se encontram. O problema é que muitas vezes a bomba com o melhor preço fica tão longe que a poupança se dissiparia no custo da deslocação.
+
+<P>
+A tarefa do João é determinar a bomba de gasolina a recomendar ao condutor que utiliza a app, sabendo que quantidade quer abastecer e qual o consumo médio do automóvel. Por simplicidade, assume-se que após abastecer, o condutor volta ao ponto partida.
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">
+Tarefa</A>
+</H2>
+
+<P>
+Dada a quantidade de gasolina que pretende abastecer e o consumo do automóvel, 
+e ainda uma lista de  postos de abastecimento com indicação da sua distância ao ponto atual e do preço por litro do combustível, determinar a bomba de gasolina que permite um menor custo por litro efetivo (em cêntimos, com arredondamento por defeito). 
+
+<P>
+O <EM>custo por litro efetivo</EM> contabiliza também o custo da deslocação até à bomba de gasolina (ida e volta). 
+Assim, se pretender abastecer 50 litros mas tiver de fazer 5 quilómetros até à bomba, e outros 5 para voltar, e o automóvel gastar 10 litros de gasolina por cada 100 quilómetros (isto é, 1 litro por cada 10 Km) então, no final, era como se tivesse ficado apenas com 49 litros dos 50 que abasteceu. Aos 49,5 litros efetivamente disponíveis no fim,  há que acrescentar o meio litro que gastou na ida. Se o preço por litro cobrado na bomba for de 1,30 euros então pagaria  65 euros pelos 50 litros, pelo que o preço por litro efetivo era de 132 cêntimos, o que corresponderia a pagar 65 euros pelos 49 litros.  Na estimativa, assume-se que o preço da gasolina que já tem no depósito antes de abastecer é igual ao que iria pagar.
+O custo por litro efetivo é obtido por arredondamento para o maior inteiro não superior (por exemplo, <EM>132,7</EM> e <EM>132,1</EM> 
+cêntimos seriam ambos arredondados para 132 cêntimos).
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000">
+Input</A>
+</H2>
+
+<P>
+A linha inicial contém dois inteiros: o primeiro é a quantidade a abastecer (em litros) e o segundo o consumo do automóvel (litros por cada 100 Km).
+A segunda linha contém um inteiro <EM>n</EM>
+ que indica  o número de bombas  de gasolina a considerar, sendo
+<EM>1&lt; n &lt; 2000</EM>. Cada uma das  <EM>n</EM>
+linhas seguintes, tem dois inteiros, referentes a uma bomba: a distância a que se encontra (em metros) e o preço por litro de combustível (em cêntimos). 
+Supõe-se que esse combustível é o que o condutor pretende usar.
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<B>Nota:</B> Os casos de teste não serão sensíveis a perdas de precisão, podendo realizar os cálculos intermédios em vírgula flutuante.
+
+<P>
+
+<H2><A NAME="SECTION00033000000000000000">
+Output</A>
+</H2>
+
+<P>
+O número da bomba a recomendar, na ordem em que estas foram listadas nos dados, sendo a bomba 1 a primeira a ser listada. Se houver mais do que uma bomba com o <EM>melhor preço efetivo</EM>, será apresentada a que se encontrar mais perto. Se mesmo assim existir mais do que uma nessas condições, indicará a que estiver primeiro na lista. 
+
+<P>
+
+
+<P>
+
+<H2><A NAME="SECTION00034000000000000000">
+Exemplo 1</A>
+</H2>
+
+<H3><A NAME="SECTION00034100000000000000">
+Input</A>
+</H3>
+<PRE> 
+50 6
+7
+8231 135
+9542 132
+4143 139
+5700 134
+6532 140 
+7225 139
+5700 134
+</PRE>
+<H3><A NAME="SECTION00034200000000000000">
+Output</A>
+</H3>
+<PRE>
+4
+</PRE> 
+
+<H2><A NAME="SECTION00035000000000000000">
+Exemplo 2</A>
+</H2>
+<H3><A NAME="SECTION00035100000000000000">
+Input</A>
+</H3>
+<PRE> 
+45 5
+3
+7500 137
+9400 135
+900 138
+</PRE>
+<H3><A NAME="SECTION00035200000000000000">
+Output</A>
+</H3>
+
+
+<PRE>
+2
+</PRE> 
+
+<H2><A NAME="SECTION00036000000000000000">
+Exemplo 3</A>
+</H2>
+<H3><A NAME="SECTION00036100000000000000">
+Input</A>
+</H3>
+<PRE> 
+40 5
+3
+7500 137
+9400 135
+900 138
+</PRE>
+<H3><A NAME="SECTION00036200000000000000">
+Output</A>
+</H3>
+<PRE>
+3
+</PRE> 
+
+<P>
+<BR>
+
+</BODY>
+</HTML>
