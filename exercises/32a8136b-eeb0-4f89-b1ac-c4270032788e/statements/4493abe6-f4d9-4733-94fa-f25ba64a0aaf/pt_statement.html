@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Autenticação forte
+    </title>
+    <meta name="description" content="Autenticação forte">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00020000000000000000">Autenticação forte</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="82" height="99" align="bottom" border="0" src=
+      "./fingerprint-r.png" alt="Image fingerprint-r">
+    </div>
+    <p>
+      Parabéns! Vocês foram admitidos no GIS (Grupo de Interesse em Segurança).
+      A vossa primeira tarefa é implementarem o sistema de autenticação forte
+      requerido pela autenticação do nosso site. Nós não usamos palavras-chave.
+      Para vos autenticar ser-vos-á colocado um desafio que terá de ser
+      respondido em 10 milissegundos, sem falhas e à primeira tentativa. Isto
+      significa que o desafio terá de ser respondido por um programa que terão
+      de instalar no vosso cliente de autenticação. Este programa recebe uma
+      sequência de caracteres como desafio e responde com uma outra sequência
+      de caracteres.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00021000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Os desafios serão modificados semanalmente. Nesta primeira semana a
+      resposta ao desafio será a sequência de caracteres fornecida com os
+      caracteres nas posições de índice <img width="40" height="14" align=
+      "bottom" border="0" src="img1.gif" alt="$2*n$"> trocados com os
+      caracteres nas posições de índice <img width="70" height="31" align=
+      "middle" border="0" src="img2.gif" alt="$2*n+1$">, sendo 0 o primeiro
+      índice da sequência, para <img width="93" height="36" align="middle"
+      border="0" src="img3.gif" alt="$0 \leq n &lt; l/2$">, onde <img width=
+      "10" height="15" align="bottom" border="0" src="img4.gif" alt="$l$">, o
+      comprimento da sequência de caracteres, é um número par entre 2 e 100,
+      inclusivé.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00022000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00022100000000000000">Input</a>
+    </h3>
+    <pre>
+abba
+</pre>
+    <h3>
+      <a name="SECTION00022200000000000000">Output</a>
+    </h3>
+    <pre>
+baab
+</pre>
+    <h2>
+      <a name="SECTION00023000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00023100000000000000">Input</a>
+    </h3>
+    <pre>
+123456
+</pre>
+    <h3>
+      <a name="SECTION00023200000000000000">Output</a>
+    </h3>
+    <pre>
+214365
+</pre>
+    <p></p>
+  </body>
+</html>
