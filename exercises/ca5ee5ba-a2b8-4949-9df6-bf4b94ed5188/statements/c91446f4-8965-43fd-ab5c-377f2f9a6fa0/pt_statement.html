@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000">iFind - a App para encontrares o
+      que queres</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="452" height="397" align="bottom" border="0" src=
+      "./mapa-iFind-crop.jpg" alt="Image mapa-iFind-crop">
+    </div>
+    <p>
+      Para se encontrar a loja de um certo tipo que se encontra o mais perto
+      possível de onde estamos podemos recorrer a uma <em>app</em> para o nosso
+      telemóvel. Foi isso que pensaram o Manuel e os seus colegas do curso.
+      Assim resolverem desenvolver uma aplicação dessas para telemóvel esperto
+      (vulgo <em>smart-phone</em>).
+    </p>
+    <p>
+      Como são organizados decidiram dividir o programa em diversos módulos,
+      ficando cada um responsável por uma parte. No fim integrá-los-iam numa
+      aplicação. O Manuel ficou de implementar o módulo para determinar o local
+      do tipo pedido que está a menor distância do utilizador. São dadas as
+      coordenadas do local onde o utilizador está e o tipo de loja que
+      pretende, bem como a descrição dos locais existentes. Para cada local,
+      são dadas as coordenadas e tipo (restaurante, centro comercial, bar,
+      café, etc.). Se houver vários locais do tipo pretendido à mesma
+      distância, deve indicar o que ocorreu primeiramente na lista de dados.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00011000000000000000">Tarefa</a>
+    </h2>Escrever o programa para processar os dados e dar resposta ao pedido.
+    As coordenadas de cada local, relativas a um mesmo referencial
+    (ortonormado), são definidas por um par de inteiros. O tipo de local é
+    identificado por uma sequência de maiúsculas (no máximo três).
+    <p></p>
+    <h2>
+      <a name="SECTION00012000000000000000">Input</a>
+    </h2>A primeira linha contém a descrição da localização atual do utilizador
+    e o tipo de loja pretendido, sendo as coordenadas e o tipo separados por um
+    espaço (por exemplo, <tt>100 -160 SM</tt>). Na segunda linha, tem o número
+    de locais existentes (nunca terá mais de 200). Segue-se uma linha por cada
+    local com os dados respetivos: coordenadas do ponto (inteiros) e tipo de
+    local separados por um espaço (por exemplo, <tt>140 120 R</tt>, que indica
+    um Restaurante). O tipo é sempre uma sequência de letras maiúsculas (não
+    mais do que três). Podem aparecer outras lojas que não as indicadas no
+    exemplo. As coordenadas pertencem ao intervalo [-300,300].
+    <p></p>
+    <h2>
+      <a name="SECTION00013000000000000000">Output</a>
+    </h2>Uma linha com as coordenadas do local pedido, seguido da indicação do
+    tipo e de um inteiro que é o <em>quadrado da distância</em> a que está (por
+    exemplo, <tt>220 -140 SM 14800</tt>). <b>Não será assim necessário (nem
+    deverá) calcular raízes quadradas</b>. Como se referiu, se houver dois ou
+    mais locais à mesma distância, dará como resposta o que ocorrer primeiro
+    nos dados. Se não houver nenhuma loja do tipo pretendido deve imprimir
+    <tt>Nenhum</tt> (note a maiúscula na primeira letra).
+    <p></p>
+    <h2>
+      <a name="SECTION00014000000000000000">Exemplo 1</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00014100000000000000">Input</a>
+    </h3>
+    <pre>
+100 -160 SM
+15
+140 120 R
+-60 160 C
+200 -200 R
+-160 180 CC
+-100 -100 SM
+220 -140 SM
+-40 160 C
+180 100 CC
+60 40 SM
+180 -20 R
+120 220 SM
+100 -180 R
+180 -100 CC
+200 0 SM
+-120 0 R
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00014200000000000000">Output</a>
+    </h3>
+    <pre>
+220 -140 SM 14800
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00016000000000000000">Exemplo 2</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00016100000000000000">Input</a>
+    </h3>
+    <pre>
+100 -160 SM
+0
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00016200000000000000">Output</a>
+    </h3>
+    <pre>
+Nenhum
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
