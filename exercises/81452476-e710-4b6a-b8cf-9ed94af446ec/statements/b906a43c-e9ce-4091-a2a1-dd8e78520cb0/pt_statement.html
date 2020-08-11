@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      ET em Estado de Choque
+    </title>
+    <meta name="description" content="ET em Estado de Choque">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+  </head>
+  <body>
+    <h1>
+      ET em Estado de Choque
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="104" height="119" align="bottom" border="0" src="et3.jpg"
+      alt="Image et3">
+    </div>
+    <p></p>
+    <h2>
+      Problema
+    </h2>
+    <p>
+      Ontem, dia 12 de Maio, foi encontrado no maravilhoso jardim do futuro
+      edifício do Departamento de Ciência de Computadores, um OVNI com uma vida
+      extra-terrestre (ET) a bordo. O ET foi retirado da nave sem qualquer
+      ferimento físico, mas em aparente estado de choque. Chamado ao local, o
+      INEM nada conseguiu fazer para avaliar o seu estado, transportando-o
+      imediatamente para o hospital mais próximo.
+    </p>
+    <p>
+      Reconhecidos cientistas portugueses trabalharam então em conjunto para
+      tentar avaliar o seu estado de saúde. As descobertas foram
+      impressionantes. Segundo o boletim clínico, divulgado após várias horas,
+      tinham conseguido desvendar completamente o código genético do ET. O seu
+      ADN era apenas constituído por 3 elementos distintos: <tt>c</tt>,
+      <tt>t</tt> e <tt>a</tt> (o genoma humano é constituído por 4 elementos).
+      Os cientistas também perceberam que o ADN do ET sofria uma mutação por
+      cada hora que passava, seguindo um padrão constante. O primeiro elemento
+      do ADN era mantido mas os restantes elementos do ADN eram alterados de
+      acordo com a regra seguninte. Para cada par de letras vizinhas, a segunda
+      era alterada se era diferente da anterior. Nesse caso, era substituída
+      pela letra que não estava no par. Por exemplo, para a sequência de ADN
+      <tt>actt</tt>, a mutação seria:
+    </p>
+    <div align="center">
+      <table cellpadding="3">
+        <tr>
+          <td align="left">
+            a primeira letra continua <tt>a</tt>
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            a segunda letra do par <tt>ac</tt> evolui para <tt>t</tt>
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            a segunda letra do par <tt>ct</tt> evolui para <tt>a</tt>
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            a segunda letra do par <tt>tt</tt> continua <tt>t</tt>
+          </td>
+        </tr>
+      </table>
+    </div>e o resultado final seria <tt>atat</tt>. As alterações numa sequência
+    ocorriam em simultâneo.
+    <p></p>
+    <h2>
+      Tarefa
+    </h2>
+    <p>
+      Escrever um programa que, dado um estado do ADN do ET, calcule qual será
+      o seu estado passado uma hora.
+    </p>
+    <p></p>
+    <h2>
+      Input
+    </h2>
+    <p>
+      O input é uma sequência de letras (<tt>c</tt>, <tt>t</tt> ou <tt>a</tt>
+      separadas por espaços), arbitrariamente longa, representando o ADN do ET,
+      e que terminará por <tt>#</tt>. Nos dados, tem um símbolo por linha.
+      Todas as linhas têm um caracter de mudança de linha.
+    </p>
+    <p></p>
+    <h2>
+      Output
+    </h2>
+    <p>
+      O output é a sequência do ADN depois de uma mutação. Terminará por
+      mudança de linha.
+    </p>
+    <p></p>
+    <h2>
+      Exemplo 1
+    </h2>
+    <h3>
+      Input
+    </h3><br>
+    <pre>
+a
+t
+c
+c
+a
+#
+</pre>
+    <p></p>
+    <h3>
+      Output
+    </h3><br>
+    <pre>
+a
+c
+a
+c
+t
+</pre>
+    <p></p>
+    <h2>
+      Exemplo 2
+    </h2>
+    <h3>
+      Input
+    </h3><br>
+    <pre>
+t
+t
+a
+a
+c
+#
+</pre>
+    <p></p>
+    <h3>
+      Output
+    </h3><br>
+    <pre>
+t
+t
+c
+a
+t
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
