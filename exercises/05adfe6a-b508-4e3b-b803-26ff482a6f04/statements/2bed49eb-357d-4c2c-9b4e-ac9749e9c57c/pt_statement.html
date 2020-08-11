@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Prendam os suspeitos do costume!
+    </title>
+    <meta name="description" content="Prendam os suspeitos do costume!">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+  </head>
+  <body>
+    <h1>
+      Prendam os suspeitos do costume!
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="158" height="119" align="bottom" border="0" src=
+      "usual_suspects.jpg" alt="Image usual_suspects">
+    </div>
+    <p></p>
+    <h2>
+      Problema
+    </h2>Uma conhecida multinacional de <em>software</em>, que prefere
+    permanecer anónima, foi vítima dum ataque informático ao repositório de
+    código da próxima versão de um dos seus produtos mais difundidos. Os
+    <em>crackers</em> introduziram uma série de vírus que assim foram
+    propagados pela primeira vez através de <em>software</em> licenciado!
+    <p>
+      O ataque foi tão bem feito que ainda não foi possível determinar a sua
+      origem. Sabe-se apenas que os autores terão conseguido acesso à rede da
+      empresa usando uma ou mais contas dos funcionários da empresa. Comparando
+      as datas de modificações dos ficheiros alterados determinou-se um
+      intervalo de tempo em que foi realizado o ataque.
+    </p>
+    <p>
+      Neste momento todos os funcionários da empresa são suspeitos, o clima é
+      insustentável e a investigação deste incidente não avança. Para reduzir o
+      número de suspeitos foi proposto comparar os registos de autenticação dos
+      funcionários. Estes registos indicam a data e hora quer do início, quer
+      do fim de cada sessão de trabalho. Um funcionário será suspeito se uma
+      das suas sessões de trabalho se sobrepuser com período em que ocorreu o
+      ataque. Portanto, uma sessão será suspeita se tiver início antes do fim
+      do ataque e terminar depois do início do ataque.
+    </p>
+    <h2>
+      Tarefa
+    </h2>Escrever um programa para determinar o <b>número</b> de suspeitos que
+    seriam localizados deste modo.
+    <p></p>
+    <h2>
+      Input
+    </h2>Na primeira linha dos dados tem os instantes inicial e final do
+    ataque. Depois segue-se um inteiro <em>n</em> com o número de sessões a
+    processar. As <em>n</em> linhas seguintes descrevem as sessões, ordenadas
+    temporalmente: em cada linha tem o número do funcionário, o início e fim da
+    respectiva sessão.
+    <p>
+      A empresa não tem mais do que 100 funcionários. Nos dados fornecidos, os
+      momentos de início e fim do ataque e das sessões, são inteiros não
+      negativos (representáveis em 32 bits). Os tempos estão todos indicados em
+      segundos, correspondendo a um intervalo que decorreu desde um certo
+      instante inicial.
+    </p>
+    <p></p>
+    <h2>
+      Output
+    </h2>
+    <p>
+      O output do programa resume-se ao número de suspeitos detectados (termina
+      por mudança de linha)
+    </p>
+    <p></p>
+    <h2>
+      Exemplo de input
+    </h2><br>
+    <pre>
+2574 3390
+6
+10 1760 2330
+2 1761 2574
+13 2341 2522
+10 3377 4885
+3 3393 7811
+1 4173 4814
+</pre>
+    <p></p>
+    <h2>
+      Exemplo de output
+    </h2><br>
+    <pre>
+1
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
