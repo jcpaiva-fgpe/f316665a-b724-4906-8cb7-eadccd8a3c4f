@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Mastermind
+    </title>
+    <meta name="description" content="Mastermind">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00040000000000000000">Mastermind</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="119" height="126" align="bottom" border="0" src=
+      "./Mastermind.jpg" alt="Image Mastermind">
+    </div>
+    <p>
+      O <i>Mastermind</i> é um jogo para duas pessoas que fazem os papeis de
+      <i>codemaker</i> e <i>codebreaker</i>:
+    </p>
+    <ul>
+      <li>o <i>codemaker</i> escolhe uma chave secreta (uma sequência de quatro
+      pinos escolhidos entre seis cores);
+      </li>
+      <li>o <i>codebreaker</i> vai deduzir qual é a chave usando o menor número
+      de tentativas.
+      </li>
+    </ul>Por cada tentativa o <i>codemaker</i> diz duas pontuações: o <i>número
+    de cores correctas na posição correcta</i>; e o <i>número de cores
+    correctas mas na posição errada</i>.
+    <p>
+      Representamos as seis cores pelas letras minúsculas de '<tt>a</tt>' a
+      '<tt>f</tt>'; se a chave for, por exemplo, "<tt>acfb</tt>" e a tentativa
+      "<tt>abcd</tt>" as pontuações são (1,2), ou seja, uma letra
+      ('<tt>a</tt>') correcta na posição correcta e duas ('<tt>c</tt>',
+      '<tt>b</tt>') correctas mas em posiçòes erradas.
+    </p>
+    <p>
+      Podem ocorrer cores repetidas. Por exemplo, se a chave for
+      "<tt>acfa</tt>" e a tentativa "<tt>aaac</tt>" as pontuações são (1,1), ou
+      seja, um '<tt>a</tt>' na posição correcta e um '<tt>a</tt>' em posiçào
+      errada (o terceiro '<tt>a</tt>' na tentativa não conta).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00041000000000000000">Tarefa</a>
+    </h2>Pretende-se um programa que leia a chave e a tentativa e calcule as
+    duas pontuações.
+    <p></p>
+    <p></p>
+    <h2>
+      <a name="SECTION00042000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00042100000000000000">Input</a>
+    </h3>
+    <pre>
+acfb
+abcd
+</pre>
+    <h3>
+      <a name="SECTION00042200000000000000">Output</a>
+    </h3>
+    <pre>
+1
+2
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00043000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00043100000000000000">Input</a>
+    </h3>
+    <pre>
+acfa
+aaac
+</pre>
+    <h3>
+      <a name="SECTION00043200000000000000">Output</a>
+    </h3>
+    <pre>
+1
+2
+</pre>
+  </body>
+</html>
