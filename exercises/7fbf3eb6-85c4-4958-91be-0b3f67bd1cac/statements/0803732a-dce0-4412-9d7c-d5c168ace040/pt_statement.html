@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Numerais Romanos
+    </title>
+    <meta name="description" content="Numerais Romanos">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+  </head>
+  <body>
+    <h1>
+      Numerais Romanos
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="130" height="79" align="bottom" border="0" src="roman.jpg"
+      alt="Image roman"> <img width="130" height="79" align="bottom" border="0"
+      src="roman.jpg" alt="Image roman">
+    </div>
+    <p></p>
+    <h2>
+      Problema
+    </h2>A civilização clássica romana desenvolveu um sistema de numeração que
+    perdurou durante muito séculos e que ainda hoje é usado em referências
+    particulares: ``D. Manuel II'', ``séc. XXI'', ``ano MCMXCVIII'', por
+    exemplo.
+    <p>
+      Na notação romana usam-se as letras I, V, X, L, C, D, M para representar
+      quantidades de 1 a 1000:
+    </p>
+    <div align="center">
+      <table cellpadding="3">
+        <tr>
+          <td align="right">
+            I
+          </td>
+          <td align="left">
+            1
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+            V
+          </td>
+          <td align="left">
+            5
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+            X
+          </td>
+          <td align="left">
+            10
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+            L
+          </td>
+          <td align="left">
+            50
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+            C
+          </td>
+          <td align="left">
+            100
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+            D
+          </td>
+          <td align="left">
+            500
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+            M
+          </td>
+          <td align="left">
+            1000
+          </td>
+        </tr>
+      </table>
+    </div>A principal diferença entre a notação romana e a árabe (que usamos
+    hoje em dia) é que os valores dos símbolos não são posicionais, mas sim
+    adicionados ou subtraídos conforme a ordem por que ocorrem. Primeiramente,
+    os símbolos repetidos são agrupados e o seu valor adicionado, por exemplo:
+    III é <img width="105" height="31" align="middle" border="0" src=
+    "img15.gif" alt="$1+1+1=3$">, XX é <img width="101" height="31" align=
+    "middle" border="0" src="img16.gif" alt="$10+10=20$">, MMM é <img width=
+    "210" height="31" align="middle" border="0" src="img17.gif" alt=
+    "$1000+1000+1000=3000$">. Seguidamente, analisamos os grupos de símbolos da
+    direita para a esquerda:
+    <ul>
+      <li>O grupo mais à direita é sempre <b>positivo</b>.
+      </li>
+      <li>Se um grupo vale mais em módulo que o seu vizinho à direita, o valor
+      tem sinal <b>positivo</b>: XII é <img width="136" height="35" align=
+      "middle" border="0" src="img18.gif" alt="$(1+1)+10=12$">, LVIII é
+      <img width="196" height="35" align="middle" border="0" src="img19.gif"
+      alt="$(1+1+1)+5+50 = 58$">.
+      </li>
+      <li>Se o grupo vale menos em módulo que o vizinho à direita, o seu valor
+      tem sinal <b>negativo</b>: IX é <img width="111" height="35" align=
+      "middle" border="0" src="img20.gif" alt="$10+(-1) = 9$">, XXM é
+      <img width="193" height="35" align="middle" border="0" src="img21.gif"
+      alt="$1000 + (-10-10) = 980$">.
+      </li>
+      <li>Não podem ocorrer grupos de símbolos distintos com valores igual
+      (correspondem a numerais inválidos como ``XVV'' ou ``VIIIII'').
+      </li>
+    </ul>Assim, o numeral romano MCMXCVIII vale <img width="421" height="35"
+    align="middle" border="0" src="img22.gif" alt=
+    "$(1+1+1)+5+100-10+1000-100+1000 = 1998$">.
+    <p></p>
+    <h2>
+      Tarefa
+    </h2>Escrever um programa que lê um numeral romano e escreve o seu valor em
+    decimal.
+    <p></p>
+    <h2>
+      Input
+    </h2>O input é um numeral romano numa única linha, em carácteres
+    maiúsculas, de comprimento inferior a 20 carácteres. Pode assumir que o
+    numeral é sempre válido e que o seu valor não excede 5000.
+    <p></p>
+    <h2>
+      Output
+    </h2>O output deve ter o valor do numeral romano em decimal (seguido de
+    mudança de linha).
+    <p></p>
+    <h2>
+      Exemplo 1
+    </h2>
+    <h3>
+      Input
+    </h3><br>
+    <tt>CCCLXXIX</tt>
+    <p></p>
+    <h3>
+      Output
+    </h3><br>
+    <tt>379</tt>
+    <p></p>
+    <h2>
+      Exemplo 2
+    </h2>
+    <h3>
+      Input
+    </h3><br>
+    <tt>CDXLVII</tt>
+    <p></p>
+    <h3>
+      Output
+    </h3><br>
+    <tt>447</tt>
+    <p></p>
+    <h2>
+      Exemplo 3
+    </h2>
+    <h3>
+      Input
+    </h3><br>
+    <tt>MMMDCCCXLVIII</tt>
+    <p></p>
+    <h3>
+      Output
+    </h3><br>
+    <tt>3848</tt>
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
