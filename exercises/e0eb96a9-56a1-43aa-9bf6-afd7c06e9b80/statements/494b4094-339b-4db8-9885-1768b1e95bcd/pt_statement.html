@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Leilões Morse
+    </title>
+    <meta name="description" content="Leilões Morse">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000">Leilões Morse</a>
+    </h1>
+    <p></p>
+    <table align="right">
+      <tr>
+        <td align="center">
+          <img width="306" height="283" src="numeros_color.png" border="1"
+          align="center" alt="[missing alt]">
+        </td>
+      </tr>
+    </table>A leiloeira TopasLeilões inaugurou recentemente um sistema
+    eletrónico para controlar os leilões que organiza. Com o novo sistema, os
+    compradores fazem os seus lances usando um aparelho electrónico muito
+    simples, onde existe apenas um botão. Carregando brevemente no botão, o
+    aparelho emite um "bip" eletrónico curto, que representa o carácter ponto,
+    '.'; carregando mais durante mais tempo, o aparelho emite um "bip" mais
+    longo, que representa o carácter traço, '-'.
+    <p>
+      Usando sequências de pontos e traços, os compradores comunicam ao sistema
+      o valor dos seus lances, usando o código Morse.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00051000000000000000">Tarefa</a>
+    </h2>Escreva um programa que aceite da consola a sequência de lances
+    recebidos pelo sistema e escreva, também na consola, após cada lance, o
+    valor do lance mais alto recebido até à altura e o número de lances
+    válidos. Um lance é válido se a sequência de pontos e traços representar
+    inequivocamente um número, de acordo com a tabela de códigos Morse dos
+    algarismos decimais:
+    <pre>
+     1  ·----
+     2  ··---
+     3  ···--
+     4  ····-
+     5  ·····
+     6  -····
+     7  --···
+     8  ---··
+     9  ----·
+     0  -----
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00052000000000000000">Input</a>
+    </h2>
+    <p>
+      O input é uma sequência de linhas contendo apenas carateres '.' (ponto) e
+      '-' (hífen, traço, sinal de menos). Cada linha representa um lance, que
+      pode ser válido ou inválido, tal com explicado na secção precedente. A
+      sequência termina quando chega uma linha com cinco traços, representando
+      o número zero. Um ficheiro tem no máximo 100 linhas e cada linha tem no
+      máximo 40 caracteres.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00053000000000000000">Output</a>
+    </h2>O output é uma sequência de linhas, uma linha por cada linha do input,
+    excluindo a linha de terminação. Em cada linha vêm dois números separados
+    por um espaço: o primeiro representa o maior lance até à linha de input
+    correspondente e o segundo o número de lances válidos, até essa linha de
+    input. Se não houver lances válidos até essa linha, o valor do maior lance
+    válido será 0 até essa linha.
+    <p></p>
+    <p></p>
+    <h2>
+      <a name="SECTION00054000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00054100000000000000">Input</a>
+    </h3>
+    <pre>
+.---------
+-----
+</pre>
+    <h3>
+      <a name="SECTION00054200000000000000">Output</a>
+    </h3>
+    <pre>
+10 1
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00055000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00055100000000000000">Input</a>
+    </h3>
+    <pre>
+.---------
+.-.-......
+-----
+</pre>
+    <h3>
+      <a name="SECTION00055200000000000000">Output</a>
+    </h3>
+    <pre>
+10 1
+10 1
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00056000000000000000">Exemplo 3</a>
+    </h2>
+    <h3>
+      <a name="SECTION00056100000000000000">Input</a>
+    </h3>
+    <p></p>
+    <pre>
+.---------
+.-.-......
+..........
+-----
+</pre>
+    <h3>
+      <a name="SECTION00056200000000000000">Output</a>
+    </h3>
+    <pre>
+10 1
+10 1
+55 2
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00057000000000000000">Exemplo 4</a>
+    </h2>
+    <h3>
+      <a name="SECTION00057100000000000000">Input</a>
+    </h3>
+    <pre>
+.---.--
+.----.-
+-----
+</pre>
+    <h3>
+      <a name="SECTION00057200000000000000">Output</a>
+    </h3>
+    <pre>
+0 0
+0 0
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
