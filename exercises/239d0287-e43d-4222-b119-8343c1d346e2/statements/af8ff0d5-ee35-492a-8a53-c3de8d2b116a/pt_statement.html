@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Rock in Rio
+    </title>
+    <meta name="description" content="Rock in Rio">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00010000000000000000">Rock in Rio</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="323" height="197" align="bottom" border="0" src=
+      "./rockinrio-img1.jpg" alt="Image rockinrio-img1">
+    </div>
+    <p></p>
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <p>
+      A tripulação dos aviões da companhia AirGlobe recebe um bónus sempre que
+      atravessa o meridiano de Greenwich ou o equador. O bónus pode ser
+      convertido em dias de descanso e é expresso em pontos, atribuídos do
+      seguinte modo: 1 ponto se o voo atravessa o meridiano de Greenwich; 2
+      pontos se o voo atravessa o equador; 4 pontos se o voo atravessa o
+      meridiano de Greenwich e o equador.
+    </p>
+    <p>
+      O comandante Passarinho quer ir ao Rock in Rio de Lisboa e precisa de
+      saber se já tem os pontos necessários para poder descansar nesses dias. O
+      semimeridiano de Greenwich, usado como referência para a determinação da
+      longitude, é por vezes designado por ``meridiano de Greenwich'', sendo
+      normalmente representado nas cartas geográficas (marca de 0 graus de
+      longitude). Contudo, o comandante Passarinho sabe também que o meridiano
+      de Greenwich é um círculo máximo que passa pelos polos e que divide a
+      Terra em dois hemisférios: o hemisfério oriental e o hemisfério
+      ocidental. Não dará a volta ao mundo para ganhar mais pontos mas quer os
+      pontos a que tem direito, pois meridiano é meridiano, não é
+      semimeridiano!
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00011000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Para efeito de cálculo do bónus, cada voo é descrito pelas coordenadas
+      geográficas (latitude e longitude) do aeroporto de partida e do aeroporto
+      de chegada. A latitude, que mede a distância ao equador, é expressa em
+      graus e varia entre 0 e 90 graus, para norte ou para sul. A longitude,
+      que mede a distância ao ``meridiano de Greenwich'', é também expressa em
+      graus e varia entre 0 e 180 graus, para este ou para oeste.
+    </p>
+    <p>
+      Com esta informação disponível para cada um dos voos pilotados pelo
+      comandante Passarinho, será fácil calcular quantos pontos ele tem.
+    </p>
+    <p>
+      Os dados para o programa são introduzidos da seguinte maneira: primeiro,
+      o número de voos do comandante Passarinho. Depois seguem-se tantas linhas
+      quantas o número de voos. Em cada linha surgem oito elementos de
+      informação, em dois grupos de quatro. O primeiro grupo descreve as
+      coordenadas do aeroporto de partida e o segundo grupo descreve as
+      coordenadas do aeroporto de chegada. Em cada um dos grupos, primeiro vem
+      um número inteiro, com valor entre 0 e 90 exclusive, depois uma letra
+      maiúscula <tt>N</tt> ou <tt>S</tt>, depois um número com valor entre 0 e
+      180 exclusive e depois uma letra maiúscula <tt>E</tt> ou <tt>W</tt>.
+      Nesta descrição, o primeiro par de valores, número e letra, representa a
+      latitude do aeroporto, com <tt>N</tt> significando hemisfério norte e
+      <tt>S</tt> o hemisfério sul; o segundo par representa a longitude do
+      aeroporto, com <tt>E</tt> significando que o aeroporto fica no hemisfério
+      oriental e <tt>W</tt> no ocidental.
+    </p>
+    <p>
+      O programa escreverá uma linha, com um número inteiro representando o
+      número de pontos do comandante Passarinho.
+    </p>
+    <p>
+      Note que não há nenhum aeroporto situado sobre o meridiano de Greenwich
+      nem sobre o equador.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00012000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00012100000000000000">Input</a>
+    </h3>
+    <pre>
+4
+41 N 8 W 38 N 9 W
+33 N 7 W 68 N 95 E
+1 S 69 W 3 N 25 W
+48 N 175 E 48 N 175 W
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00012200000000000000">Output</a>
+    </h3>
+    <pre>
+4
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00013000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00013100000000000000">Input</a>
+    </h3>
+    <pre>
+5
+81 N 120 W 12 S 11 W
+9 S 5 E 33 N 155 W
+34 N 56 E 68 N 95 E
+2 S 2 W 9 N 42 W
+48 N 6 E 38 N 9 W
+</pre>
+    <h3>
+      <a name="SECTION00013200000000000000">Output</a>
+    </h3>
+    <pre>
+9
+</pre><br>
+  </body>
+</html>
