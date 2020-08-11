@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>
+      <font color="blue">Corte e Costura</font>
+    </h1>
+    <p></p>
+    <div align="center">
+      <table cellpadding="3">
+        <tr>
+          <td align="center">
+            <img width="80" height="79" align="bottom" border="0" src=
+            "Wallpaper_group-p2-3.jpg" alt="Image Wallpaper_group-p2-3">
+            <img width="80" height="79" align="bottom" border="0" src=
+            "Wallpaper_group-p2-3.jpg" alt="Image Wallpaper_group-p2-3">
+            <img width="80" height="79" align="bottom" border="0" src=
+            "Wallpaper_group-p2-3.jpg" alt="Image Wallpaper_group-p2-3">
+            <img width="80" height="79" align="bottom" border="0" src=
+            "Wallpaper_group-p2-3.jpg" alt="Image Wallpaper_group-p2-3">
+          </td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+        </tr>
+      </table>
+    </div>Pretende-se cortar um pedaço de fita análogo ao da figura seguinte
+    transversalmente de modo que todos os pedaços tenham exactamente o mesmo
+    padrão. O desenho da fita é constituído por <tt>*</tt>, <tt>?</tt> e
+    <tt>T</tt>. A barra de <tt>T</tt>'s existe sempre pois forma o remate do
+    tecido, mas só ocorre num dos lados, como no exemplo. De resto, não há mais
+    <tt>T</tt>'s no desenho. Os cortes não podem partir os motivos <tt>*</tt>
+    nem <tt>?</tt> ao meio.
+    <p></p>
+    <pre>
+        TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+        ?*??***?*??****?*??***?*??****?*??***?*??****?*??***?*??*****
+        ???****???*****???****???*****???****???*****???****???******
+        ?**?**??**?**?*?**?**??**?**?*?**?**??**?**?*?**?**??**?**?**
+        *************************************************************
+        ?**?????**????*?**?????**????*?**?????**????*?**?????**????**
+        ?*?*?*??*?*?*?*?*?*?*??*?*?*?*?*?*?*??*?*?*?*?*?*?*??*?*?*?**
+        ???**??????**?*???**??????**?*???**??????**?*???**??????**?**
+        **??**??**??*****??**??**??*****??**??**??*****??**??**??****
+</pre>
+    <p>
+      Qual é o <b>maior número</b> de pedaços iguais que se pode obter? Como
+      existem várias fitas do mesmo tipo para analisar, umas mais largas do que
+      outras, umas mais compridas do que outras, vamos tentar automatizar o
+      processo.
+    </p>
+    <p></p>
+    <h2>
+      <font color="blue">Tarefa</font>
+    </h2>Escrever um programa que, dada a descrição da fita a cortar, indique o
+    número máximo de pedaços iguais que se pode obter por aplicação de cortes
+    transversais (na direcção da largura, ou seja, perpendiculares à linha de
+    remate).
+    <p></p>
+    <h2>
+      <font color="blue">Input</font>
+    </h2>Na primeira linha dois inteiros <b>L</b> e <b>C</b> representando a
+    largura da fita e o seu comprimento respectivamente. A largura e o
+    comprimento correspondem ao número de filas de símbolos. Pode assumir que o
+    valor de <b>L</b> nunca excede 8 e <b>C</b> não excede 10000. Nas linhas
+    seguintes tem a descrição de cada linha da fita (segundo a largura). O
+    caracter <tt>T</tt> existe apenas no fim de cada linha e não contará para a
+    largura da fita.
+    <p></p>
+    <h2>
+      <font color="blue">Output</font>
+    </h2>Escreverá um inteiro que indica o número de pedaços que obteria
+    (seguido de mudança de linha).
+    <p></p>
+    <h2>
+      <font color="blue">Exemplo</font>
+    </h2>
+    <h3>
+      <font color="blue">Input</font>
+    </h3><br>
+    <pre>
+7 15
+**?****T
+**?****T
+****?**T
+**?****T
+**?****T
+****?**T
+**?****T
+**?****T
+****?**T
+**?****T
+**?****T
+****?**T
+**?****T
+**?****T
+****?**T
+</pre>
+    <h3>
+      <font color="blue">Output</font>
+    </h3><br>
+    <pre>
+5
+</pre><br>
+    <hr>
+  </body>
+</html>
