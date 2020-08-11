@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Cigarras Tontas
+    </title>
+    <meta name="description" content="Cigarras Tontas">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+  </head>
+  <body>
+    <h1>
+      Cigarras Tontas
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="40" height="53" align="bottom" border="0" src="antolive.jpg"
+      alt="Image antolive"> <img width="40" height="53" align="bottom" border=
+      "0" src="antolive.jpg" alt="Image antolive"> <img width="40" height="53"
+      align="bottom" border="0" src="antolive.jpg" alt="Image antolive">
+      <img width="40" height="53" align="bottom" border="0" src="antolive.jpg"
+      alt="Image antolive"> <img width="40" height="53" align="bottom" border=
+      "0" src="antolive.jpg" alt="Image antolive">
+    </div>
+    <p></p>
+    <h2>
+      Problema
+    </h2>Fartas de ouvirem dizer que passavam o dia a cantar, algumas cigarras
+    resolveram imitar as suas rivais. Não percebendo bem a lógica da deslocação
+    em carreiros, fomos encontrá-las atarantadas: tendo saído dum certo local
+    em fila indiana, começaram a andar às voltas, passando sistematicamente por
+    locais onde anteriormente já tinham estado, como se andassem perdidas num
+    labirinto. Finalmente encontraram o local onde pretendiam chegar. De
+    qualquer modo, gostariamos de saber o que poderiam ter feito se tivessem
+    tido um melhor sentido de orientação e não tivessem ``visitado'' os mesmos
+    locais repetidamente.
+    <p></p>
+    <h2>
+      Tarefa
+    </h2>Escrever um programa que analise a sequência de locais que foram
+    ``visitando'', a qual inclui o ponto de partida e no fim o de chegada, e
+    encontre um trajecto que respeite essa sequência mas retire todas as voltas
+    desnecessárias. Só a última passagem em cada um desses locais poderá ser
+    considerada útil. Todas as outras constituem desvios. Em caso de engano,
+    toda a volta que as cigarras deram, desde que passaram num dado local até
+    que lá voltaram, será considerada desnecessária. O local de chegada não foi
+    visitado duas vezes, mas qualquer um dos restantes, incluindo a origem,
+    pode ter sido.
+    <p></p>
+    <h2>
+      Input
+    </h2>É dada apenas a sequência de locais onde as cigarras foram passando,
+    um local por cada linha de dados. A última linha tem o valor 0. O número de
+    locais distintos não excede 30. Cada local é identificado por um inteiro
+    positivo inferior a 10000.
+    <p></p>
+    <h2>
+      Output
+    </h2>A sequência de locais que visitariam se não se tivessem enganado, cada
+    local numa linha.
+    <p></p>
+    <h2>
+      Exemplo 1
+    </h2>
+    <h3>
+      Input
+    </h3><br>
+    <pre>
+1600
+15
+2315
+15
+1315
+0
+</pre>
+    <p></p>
+    <h3>
+      Output
+    </h3><br>
+    <pre>
+1600
+15
+1315
+</pre>
+    <p></p>
+    <h2>
+      Exemplo 2
+    </h2>
+    <h3>
+      Input
+    </h3><br>
+    <pre>
+1513
+3171
+178
+1316
+1600
+1513
+1774
+178
+3171
+672
+1315
+0
+</pre>
+    <p></p>
+    <h3>
+      Output
+    </h3><br>
+    <pre>
+1513
+1774
+178
+3171
+672
+1315
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
