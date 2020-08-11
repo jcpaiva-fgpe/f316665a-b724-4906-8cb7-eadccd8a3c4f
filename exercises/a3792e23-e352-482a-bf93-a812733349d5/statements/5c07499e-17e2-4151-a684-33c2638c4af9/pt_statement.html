@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Bilheteira Boas-Fitas
+    </title>
+    <meta name="description" content="Bilheteira Boas-Fitas">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00060000000000000000">Bilheteira Boas-Fitas</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="217" height="145" align="bottom" border="0" src=
+      "./600x400_gallery_sc_movie_theater_1.jpg" alt=
+      "Image 600x400_gallery_sc_movie_theater_1">
+    </div>
+    <p>
+      As salas de cinema <i>Boas-Fitas, Lda</i> necessitam de um programa para
+      gestão de reservas de bilhetes e estão a recrutar programadores para o
+      desenvolverem. As salas de cinema são retangulares. Cada lugar é
+      identificado por uma fila e coluna. As filas são identificadas por letras
+      maiúsculas consecutivas (A a Z no máximo). As colunas são identificadas
+      por inteiros positivos consecutivos (1 a 99 no máximo). Há dois tipos de
+      pedidos de reserva: <em>reservas exatas</em>, em que é dada a fila e a
+      coluna de início e o número de lugares contíguos pretendidos, e
+      <em>reservas livres</em>, em que é dado o número de lugares contíguos
+      pretendidos, devendo estes ser preenchidos por ordem de chegada,
+      começando na fila A, e por ordem crescente de colunas. Os lugares
+      reservados para um pedido ficam numa única fila.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00061000000000000000">Tarefa</a>
+    </h2>Escrever um programa para processar uma lista de pedidos de reserva de
+    bilhetes para uma sessão numa sala de cinema e dar resposta a cada pedido
+    de acordo com as reservas anteriores.
+    <p></p>
+    <h2>
+      <a name="SECTION00062000000000000000">Input</a>
+    </h2>A entrada começa com dois inteiros positivos que representam o número
+    de filas e colunas da sala. Em seguida vem o número de pedidos de reserva,
+    seguido dos pedidos propriamente ditos, um em cada linha. Os pedidos de
+    reserva exata começam com <tt>X</tt> seguido de uma linha e coluna, um
+    espaço e o número de lugares. Os pedidos de reserva livre começam por
+    <tt>L</tt> seguido do número de lugares.
+    <p></p>
+    <h2>
+      <a name="SECTION00063000000000000000">Output</a>
+    </h2>Em cada linha tem a resposta a um pedido de reserva, sendo as
+    respostas apresentadas pela ordem de chegada. As respostas podem ser
+    <tt>OK</tt> seguido de um espaço, a fila e coluna inicial e o número de
+    lugares reservados ou <tt>NA</tt> se a reserva não pode ser efetuada.
+    <p></p>
+    <h2>
+      <a name="SECTION00064000000000000000">Exemplo</a>
+    </h2>
+    <h3>
+      <a name="SECTION00064100000000000000">Input</a>
+    </h3>
+    <pre>
+3
+10
+5
+L3
+XA4 3
+L4
+XA1 2
+L2
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00064200000000000000">Output</a>
+    </h3>
+    <pre>
+OK A1 3
+OK A4 3
+OK A7 4
+NA
+OK B1 2
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
