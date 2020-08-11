@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>
+      <font color="blue">Não lhes dês Troco</font>
+    </h1>
+    <p></p>
+    <div align="center">
+      <table cellpadding="3">
+        <tr>
+          <td align="center">
+            <img width="78" height="79" align="bottom" border="0" src=
+            "2e_comm.jpg" alt="Image 2e_comm"> <img width="72" height="71"
+            align="bottom" border="0" src="1euro.jpg" alt="Image 1euro">
+            <img width="65" height="63" align="bottom" border="0" src=
+            "50eurocent.jpg" alt="Image 50eurocent"> <img width="56" height=
+            "56" align="bottom" border="0" src="20eurocent.jpg" alt=
+            "Image 20eurocent"> <img width="48" height="48" align="bottom"
+            border="0" src="10eurocent.jpg" alt="Image 10eurocent"> <img width=
+            "43" height="44" align="bottom" border="0" src="5c_comm.jpg" alt=
+            "Image 5c_comm">
+          </td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+        </tr>
+      </table>
+    </div>Uma <em>slot-machine</em> retém frequentemente o troco ou parte dele,
+    deixando os utilizadores descontentes. Tal acontece porque a máquina só
+    aceita moedas de certos valores (de 2 euros, 1 euro, e de 50, 20, 10 e 5
+    cêntimos) e, por vezes, após algumas transacções, certas moedas ficam
+    temporariamente esgotadas. Acontece também porque, para perfazer uma
+    quantia, a máquina começa sempre por usar as moedas de valor mais alto que
+    tiver. Este modo de operar não é muito correcto. Por exemplo, se num certo
+    instante, a máquina dispuser apenas de moedas de 50 e 20 cêntimos, não
+    conseguiria devolver 60 cêntimos (reteria 10 cêntimos). Utilizadores
+    desprevenidos, que insiram quantias muito superiores às necessárias, podem
+    ficar perplexos.
+    <p></p>
+    <h2>
+      <font color="blue">Tarefa</font>
+    </h2>Escrever um programa que simule o comportamento da máquina quando é
+    efectuada uma sequência de transacções, a partir dum certo estado dado. O
+    programa deverá determinar a quantia que a máquina reteve e a fracção das
+    transacções com retenção de troco.
+    <p></p>
+    <h2>
+      <font color="blue">Input</font>
+    </h2>Na primeira linha tem o número de moedas de cada tipo disponíveis
+    inicialmente, segundo a ordem dada acima. Segue-se a descrição duma
+    sequência de transacções a processar, terminada por <b>0 0</b>. Haverá pelo
+    menos uma transacção. A primeira linha de cada transacção é constituída por
+    um par <b>(E,D)</b> de inteiros não negativos que representam o montante a
+    pagar (<b>E</b> euros e <b>C</b> cêntimos), seguindo-se a sequência de
+    moedas introduzidas pelo cliente (a qual termina por <b>0</b>).
+    <p></p>
+    <h2>
+      <font color="blue">Output</font>
+    </h2>Escreverá a quantia total retida e na linha seguinte a fracção de
+    transacções com retenção, terminando por mudança de linha. Essa fracção
+    terá a forma <b>N/T</b>, em que <b>N</b> pode ser zero (<b>T</b> designa o
+    número total de transacções).
+    <p></p>
+    <h2>
+      <font color="blue">Exemplo</font>
+    </h2>
+    <h3>
+      <font color="blue">Input</font>
+    </h3><br>
+    <pre>
+0 0 4 0 0 0 
+0 25
+2
+20
+0
+3 10
+1
+20
+1
+50
+20
+20
+0
+0 40
+1
+0
+1 25
+20
+50
+50
+5
+0
+0 45
+20
+10
+5
+5
+5
+0
+0 40
+2
+0
+0 0
+</pre>
+    <h3>
+      <font color="blue">Ouput</font>
+    </h3><br>
+    <pre>
+0 35
+2/6
+</pre><br>
+    <hr>
+  </body>
+</html>
