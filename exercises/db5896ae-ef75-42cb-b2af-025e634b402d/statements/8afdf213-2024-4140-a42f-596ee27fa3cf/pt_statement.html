@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Quadrados Mágicos
+    </title>
+    <meta name="description" content="Problem&nbsp;C: Quadrados Mágicos">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00030000000000000000" id=
+      "SECTION00030000000000000000">Quadrados Mágicos</a>
+    </h1>
+    <p></p>
+    <h2>
+      <a name="SECTION00031000000000000000" id=
+      "SECTION00031000000000000000">Problema</a>
+    </h2>
+    <p>
+      Em 1514, Albrecht Dürer criou uma gravura chamada <i>Melancholia</i>.
+      Para além do seu interesse artístico, esta gravura tem uma característica
+      curiosa pois inclui uma matriz de dimensão 4x4.
+    </p>
+    <p></p>
+    <div align="center">
+      <img width="361" height="439" align="bottom" border="0" src="img9.gif"
+      alt="\includegraphics[width=8cm]{Melancholia}"> <img width="270" height=
+      "268" align="bottom" border="0" src="img10.gif" alt=
+      "\includegraphics[width=6cm]{Glisse-chiffre}">
+    </div>
+    <p>
+      A matriz representada na gravura de Albrecht Dürer é:
+    </p>
+    <p>
+      16 3 2 13
+    </p>
+    <p>
+      5 10 11 8
+    </p>
+    <p>
+      9 6 7 12
+    </p>
+    <p>
+      4 15 14 1
+    </p>
+    <p>
+      Esta matriz não só possui a data da própria gravura (1514) como para além
+      disso é um quadrado mágico! Uma matriz de n*n é considerada um quadrado
+      mágico quando é composta pelos números inteiros de 1 até n*n e o
+      resultado da soma de cada linha, coluna e ambas as diagonais é sempre o
+      mesmo. No caso da matriz da gravura a soma mágica é 34.
+    </p>
+    <p>
+      <br>
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00032000000000000000" id=
+      "SECTION00032000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escrever um programa que dada uma matriz de números inteiros positivos
+      determine se esta é ou não um quadrado mágico.
+    </p>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00033000000000000000" id=
+      "SECTION00033000000000000000">Input</a>
+    </h2>
+    <p>
+      A primeira linha do input é um inteiro <i>N</i> (&lt; 100) que representa
+      a dimensão da matriz. As restantes linhas representam a disposição da
+      matriz sob a forma de <i>N</i> linhas de <i>N</i> inteiros cada.
+    </p>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00034000000000000000" id=
+      "SECTION00034000000000000000">Output</a>
+    </h2>
+    <p>
+      O output do seu programa deverá dar como resultado a soma mágica da
+      matriz, se esta é um quadrado mágico, ou 0 se esse não for o caso.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00035000000000000000" id=
+      "SECTION00035000000000000000">Exemplo 1: Input</a>
+    </h2><br>
+    <pre>
+4
+16 3 2 13
+5 10 11 8
+9 6 7 12
+4 15 14 1
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00036000000000000000" id=
+      "SECTION00036000000000000000">Exemplo 1: Output</a>
+    </h2><br>
+    <pre>
+34
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00037000000000000000" id=
+      "SECTION00037000000000000000">Exemplo 2: Input</a>
+    </h2><br>
+    <pre>
+1
+1
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00038000000000000000" id=
+      "SECTION00038000000000000000">Exemplo 2: Output</a>
+    </h2><br>
+    <pre>
+1
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00039000000000000000" id=
+      "SECTION00039000000000000000">Exemplo 3: Input</a>
+    </h2><br>
+    <pre>
+2
+2 2
+2 2
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION000310000000000000000" id=
+      "SECTION000310000000000000000">Exemplo 3: Output</a>
+    </h2><br>
+    <pre>
+0
+</pre><br>
+    <hr>
+  </body>
+</html>
