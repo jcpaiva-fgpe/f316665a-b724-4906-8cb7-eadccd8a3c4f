@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Caçada aos Gambozinos
+    </title>
+    <meta name="description" content="Caçada aos Gambozinos">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00070000000000000000">Caçada aos Gambozinos</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="277" height="178" align="bottom" border="0" src=
+      "./gambozinos-final.png" alt="Image gambozinos-final"> <img width="132"
+      height="197" align="bottom" border="0" src="./gambozino.jpg" alt=
+      "Image gambozino"> <img width="133" height="197" align="bottom" border=
+      "0" src="./exemplo1-final.png" alt="Image exemplo1-final">
+    </div>
+    <p></p>
+    <div align="center"></div>
+    <p>
+      Os gambozinos são descritos nalguns dicionários como "peixes ou pássaros
+      imaginários, com que, por brincadeira, se logram pacóvios mandando-os à
+      caça ou à pesca desses animais", com sacos de serapilheira para que não
+      escapem, e talvez com alguns testos para os chamar ou atordoar.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00071000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Pretende-se um programa para caçar gambozinos numa região rectangular
+      dada, dividida em quadrados unitários. Essa região terá sempre um bordo
+      com uma unidade de largura, a toda a volta, e que está vazio. Um
+      gambozino é constituído por um conjunto de cinco quadrados unitários
+      ligados entre si por arestas (ou seja, é um poliominó especial), podendo
+      ser apenas das cinco formas representadas na figura, à esquerda. Nenhuma
+      outra forma que se possa obter destas, por simetria ou rotação, é
+      gambozino. O programa deverá analisar a região e indicar quantos
+      gambozinos encontrou. Durante a procura, os gambozinos não se movem. A
+      região pode ter outras espécies de animais, igualmente imóveis. Sabe-se
+      que os gambozinos são pouco sociáveis: encontram-se isolados uns dos
+      outros, partilham quando muito vértices mas nunca arestas.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00072000000000000000">Input</a>
+    </h2>Na primeira linha tem dois inteiros M e N que definem as dimensões da
+    região, sendo ambos maiores ou iguais a 5 e inferiores a 50 unidades.
+    Seguem-se M linhas que descrevem o conteúdo da região, supostamente
+    dividida em quadrados unitários. Cada linha tem N inteiros <code>0</code>
+    ou <code>1</code> separados por espaços, <code>0</code> a indicar posição
+    vazia e <code>1</code> posição ocupada. Os animais, incluindo os
+    gambozinos, são formados por <code>1</code>'s contíguos na horizontal e/ou
+    vertical. O bordo da região está sempre livre como se disse, e,
+    consequentemente, terá sempre <code>0</code>'s como nos exemplos
+    apresentados abaixo.
+    <p></p>
+    <h2>
+      <a name="SECTION00073000000000000000">Output</a>
+    </h2>Uma linha com um inteiro (positivo ou zero) que representa o número de
+    gambozinos encontrados.
+    <p></p>
+    <h2>
+      <a name="SECTION00074000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00074100000000000000">Input</a>
+    </h3>
+    <pre>
+12 14
+0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 1 0 1 0 0 0 0 0 0 0 1 0
+0 1 1 1 1 0 0 0 1 1 0 0 1 0
+0 1 0 0 1 1 0 1 0 1 1 0 1 0
+0 0 0 0 0 0 1 1 0 1 0 0 1 0
+0 0 0 1 0 0 0 1 1 0 0 1 1 0
+0 1 1 1 0 0 0 0 0 0 0 0 0 0
+0 0 1 0 0 1 1 0 0 0 1 0 0 0 
+0 0 0 0 0 0 1 1 0 1 1 1 0 0
+0 0 1 1 1 0 1 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 1 1 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00074200000000000000">Output</a>
+    </h3>
+    <pre>
+5
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00075000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00075100000000000000">Input</a>
+    </h3>
+    <pre>
+6 15
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 1 1 1 0 0 1 0 1 0 0 0 0 1 0
+0 1 0 1 1 1 1 0 1 1 0 0 1 0 0
+0 1 0 0 0 0 1 1 1 0 0 1 1 1 0
+0 0 0 1 0 0 0 0 0 0 0 1 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00075200000000000000">Output</a>
+    </h3>
+    <pre>
+1
+</pre>
+    <p></p>
+  </body>
+</html>
