@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Vai Subir?
+    </title>
+    <meta name="description" content="Vai Subir?">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00010000000000000000">Vai Subir?</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="77" height="119" align="bottom" border="0" src=
+      "./Aiga_elevator.png" alt="Image Aiga_elevator">
+    </div>
+    <p>
+      A companhia de elevadores Suba-Suba optou por um novo o sistema de
+      controlo de grupos de elevadores de forma a minimizar o consumo de
+      energia. Para um grupo de dois elevadores, identificados como 1 e 2, o
+      sistema enviará o elevador que se encontre mais próximo do andar de onde
+      foi feita a chamada. Se os elevadores se encontram à mesma distância
+      então será enviado o que encontra numa posição mais elevada. Se ambos os
+      elevadores se encontram no mesmo andar, accionará sempre o elevador 1.
+      Nem sempre os elevadores estarão parados e disponíveis a serem chamados.
+      Poderão estar em serviço, em manutenção ou avariados. Neste caso, enviará
+      o único elevador disponível, ou um erro se ambos estiverem indisponíveis.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00011000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Pretende-se programar o sistema que controla a chamada de um grupo dois
+      elevadores segundo a especificação dada. O programa receberá como input o
+      número do andar em que um elevador foi chamado, bem como a situação
+      actual de cada um dos elevadores; indicará o número do elevador melhor
+      posicionado para efectuar o percurso. O input é constituído por três
+      inteiros separados por um espaço: o número do andar de onde foi feita a
+      chamada, a situação do elevador 1, seguida da situação do elevador 2. O
+      número do andar onde foi chamado o elevador é um inteiro entre -100 e
+      100. A posição dos elevadores 1 e 2 poderá ser o número de um andar,
+      também um valor entre -100 e 100, ou o número 999 para indicar que se
+      encontra indisponível. O output é 0, 1 ou 2. O valor 0 é reservado para o
+      caso de ambos os elevadores estarem indisponíveis. Caso contrário será
+      indicado o número do elevador melhor posicionado para responder à chamada
+      (1 ou 2).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00012000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00012100000000000000">Input</a>
+    </h3>
+    <pre>
+2 4 2
+</pre>
+    <h3>
+      <a name="SECTION00012200000000000000">Output</a>
+    </h3>
+    <pre>
+2
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00013000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00013100000000000000">Input</a>
+    </h3>
+    <pre>
+1 999 -1
+</pre>
+    <h3>
+      <a name="SECTION00013200000000000000">Output</a>
+    </h3>
+    <pre>
+2
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00014000000000000000">Exemplo 3</a>
+    </h2>
+    <h3>
+      <a name="SECTION00014100000000000000">Input</a>
+    </h3>
+    <pre>
+3 1 5
+</pre>
+    <h3>
+      <a name="SECTION00014200000000000000">Output</a>
+    </h3>
+    <pre>
+2
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00015000000000000000">Exemplo 4</a>
+    </h2>
+    <h3>
+      <a name="SECTION00015100000000000000">Input</a>
+    </h3>
+    <pre>
+4 6 6
+</pre>
+    <h3>
+      <a name="SECTION00015200000000000000">Output</a>
+    </h3>
+    <pre>
+1
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00016000000000000000">Exemplo 5</a>
+    </h2>
+    <h3>
+      <a name="SECTION00016100000000000000">Input</a>
+    </h3>
+    <pre>
+7 999 999
+</pre>
+    <h3>
+      <a name="SECTION00016200000000000000">Output</a>
+    </h3>
+    <pre>
+0
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
