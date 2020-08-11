@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      O Padeiro Viajante
+    </title>
+    <meta name="description" content="O Padeiro Viajante">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00060000000000000000">O Padeiro Viajante</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="438" height="336" align="bottom" border="0" src=
+      "./mapa-padeiro-r.png" alt="Image mapa-padeiro-r">
+    </div>
+    <p>
+      João estuda Ciência de Computadores e trabalha também numa padaria para
+      ajudar a suportar os custos dos estudos. Faz entregas de pães todas as
+      manhãs a diferentes padarias e confeitarias em Espinho. Ora para
+      dificultar o seu trabalho, mesmo quando tem de ir aos mesmos locais pode
+      ter de o fazer por ordem diferente. Por isso, com alguns colegas de curso
+      resolveu desenvolver um guia GPS <i>home made</i>. Quando pegaram no mapa
+      da zona das distribuições do João (dado na figura), perceberam logo que o
+      problema era facilitado por ser em Espinho: as ruas formavam um padrão
+      quase quadricular e os seus nomes eram números. Fruto da boa organização,
+      decidiram dividir o trabalho por vários componentes. Ao João coube
+      desenvolver a parte que dava as direcções sabendo os pontos por onde ia
+      passar.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00061000000000000000">Tarefa</a>
+    </h2>O João parte todos os dias da padaria central, ponto <b>(4,5)</b>, e a
+    sua carrinha está sempre virada para <b>Este</b> (no mapa, para a direita).
+    Para a sequência de percursos que tem de efectuar nesse dia, o GPS <i>home
+    made</i> vai dando as direcções a seguir, dizendo se seguirá em frente
+    (<b>F</b>) ou se tem de virar à esquerda (<b>E</b>), virar à direita
+    (<b>D</b>), ou inverter a marcha (<b>I</b>). Caso não seja necessário mudar
+    de direcção diz frente (<b>F</b>). Assim, quando tem um cruzamento dá
+    sempre uma indicação, bem como no início de cada percurso. Se der a
+    indicação <b>E</b>, <b>D</b> ou <b>I</b>, já não dá <b>F</b>. Quando chega
+    ao fim de um percurso, ou seja, a um cliente, diz stop (<b>S</b>).
+    <p>
+      Cada percurso tem início no local onde o João se encontrar no momento e é
+      descrito por uma sequência de pontos que identificam todos os cruzamentos
+      em que deve mudar de direcção. O último ponto num percurso define um
+      local de entrega (cliente).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00062000000000000000">Input</a>
+    </h2>Na primeira linha tem o número de clientes que deverá visitar (no
+    máximo 4), que corresponde ao número de percursos a efectuar. Segue-se a
+    descrição dos percursos, a qual, para cada percurso, começa por um inteiro
+    que indica o número de pontos que o definem, e a seguir tem as coordenadas
+    desses pontos. Cada ponto é dado numa linha por dois inteiros separados por
+    um espaço.
+    <p></p>
+    <h2>
+      <a name="SECTION00063000000000000000">Output</a>
+    </h2>Em cada linha, a sequência das direcções a seguir em cada percurso,
+    identificadas pelas letras <b>F</b>, <b>E</b>, <b>D</b>, <b>I</b>, e
+    <b>S</b>, do modo descrito acima.
+    <p></p>
+    <h2>
+      <a name="SECTION00064000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00064100000000000000">Input</a>
+    </h3>
+    <p></p>
+    <pre>
+4
+2
+12 5
+12 7
+3
+12 13
+6 13
+6 9
+4
+14 9
+14 7
+2 7
+2 1
+2
+2 13
+4 13
+</pre>
+    <h3>
+      <a name="SECTION00064200000000000000">Output</a>
+    </h3>
+    <pre>
+FFFFDS
+FFFDFFDFS
+DFFFEEFFFFFDFFS
+IFFFFFES
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00065000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00065100000000000000">Input</a>
+    </h3>
+    <p></p>
+    <pre>
+1
+3
+2 5
+2 13
+4 13
+</pre>
+    <h3>
+      <a name="SECTION00065200000000000000">Output</a>
+    </h3>
+    <pre>
+IEFFFES
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
