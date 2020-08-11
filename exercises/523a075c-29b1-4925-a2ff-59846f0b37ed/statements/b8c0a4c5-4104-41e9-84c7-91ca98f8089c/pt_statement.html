@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Sopinha de letras
+    </title>
+    <meta name="description" content="Sopinha de letras">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00030000000000000000">Sopinha de letras</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <table cellpadding="3" border="1">
+        <tr>
+          <td align="center">
+            A
+          </td>
+          <td align="center">
+            T
+          </td>
+          <td align="center">
+            R
+          </td>
+          <td align="center">
+            Y
+          </td>
+          <td align="center">
+            K
+          </td>
+          <td align="center">
+            L
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            Q
+          </td>
+          <td align="center">
+            D
+          </td>
+          <td align="center">
+            X
+          </td>
+          <td align="center">
+            I
+          </td>
+          <td align="center">
+            E
+          </td>
+          <td align="center">
+            T
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            A
+          </td>
+          <td align="center">
+            E
+          </td>
+          <td align="center">
+            X
+          </td>
+          <td align="center">
+            T
+          </td>
+          <td align="center">
+            V
+          </td>
+          <td align="center">
+            A
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            M
+          </td>
+          <td align="center">
+            O
+          </td>
+          <td align="center">
+            R
+          </td>
+          <td align="center">
+            L
+          </td>
+          <td align="center">
+            K
+          </td>
+          <td align="center">
+            Z
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            Z
+          </td>
+          <td align="center">
+            A
+          </td>
+          <td align="center">
+            P
+          </td>
+          <td align="center">
+            O
+          </td>
+          <td align="center">
+            S
+          </td>
+          <td align="center">
+            I
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            S
+          </td>
+          <td align="center">
+            S
+          </td>
+          <td align="center">
+            T
+          </td>
+          <td align="center">
+            O
+          </td>
+          <td align="center">
+            A
+          </td>
+          <td align="center">
+            S
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      A sopa de letras é um género de puzzle usado muitas vezes como exercício,
+      para melhorar o vocabulário dos alunos num certo domínio. Este puzzle
+      consiste numa matriz de letras onde se formam palavras, podendo estas
+      ocorrer numa mesma linha, coluna ou diagonal. Para tornar o desafio mais
+      interessante as palavras podem até estar escritas de trás para a frente.
+      Às vezes é tão difícil encontrar todas as palavras!
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00031000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escrever um programa que lê uma matriz de letras e um conjunto de
+      palavras e escreve a localização da primeira última letra de cada palavra
+      lida. As letras das palavras estão em posições contíguas da mesma linha,
+      coluna ou diagonal, podendo estar na ordem inversa. Pode-se assumir que
+      cada palavra só ocorre uma vez, nenhuma palavra é uma sub-palavra de
+      outra, embora as mesmas posições da matriz possam ser usadas em várias
+      palavras. As células da matriz são referenciadas pela sua linha e coluna,
+      sendo a linha número 1 a primeira contar do topo e a coluna número 1 a
+      mais à esquerda.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00032000000000000000">Input</a>
+    </h2>
+    <p>
+      A primeira linha contém dois inteiros, <img width="19" height="14" align=
+      "bottom" border="0" src="img1.gif" alt="$m$"> e <img width="15" height=
+      "14" align="bottom" border="0" src="img2.gif" alt="$n$">, separados por
+      um espaço, ambos maiores ou iguais a&nbsp;4 e menores ou iguais
+      a&nbsp;20. Esses inteiros representam as dimensões da matriz, sendo
+      <img width="19" height="14" align="bottom" border="0" src="img1.gif" alt=
+      "$m$"> o número de linhas e <img width="15" height="14" align="bottom"
+      border="0" src="img2.gif" alt="$n$"> o número de colunas.
+    </p>
+    <p>
+      As <img width="19" height="14" align="bottom" border="0" src="img1.gif"
+      alt="$m$"> linhas seguintes contêm sequências de carateres com
+      <img width="15" height="14" align="bottom" border="0" src="img2.gif" alt=
+      "$n$"> letras. Segue-se uma linha com um inteiro <img width="14" height=
+      "15" align="bottom" border="0" src="img3.gif" alt="$k$">, que é o número
+      de palavras na matriz, e <img width="14" height="15" align="bottom"
+      border="0" src="img3.gif" alt="$k$"> linhas contendo sequências de
+      caracteres, que são as palavras a procurar na sopa de letras, sendo
+      <img width="95" height="34" align="middle" border="0" src="img4.gif" alt=
+      "$1\leq k \leq 100$">.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00033000000000000000">Output</a>
+    </h2>
+    <p>
+      É constituído por <img width="14" height="15" align="bottom" border="0"
+      src="img3.gif" alt="$k$"> linhas, cada uma com quatro inteiros separados
+      por um espaço, <img width="96" height="32" align="middle" border="0" src=
+      "img5.gif" alt="$L_i\; C_i\; L_f\; C_f$">, que identificam a posição da
+      palavra correspondente (segundo a ordem de leitura), sendo <img width=
+      "21" height="32" align="middle" border="0" src="img6.gif" alt="$L_i$"> a
+      linha inicial da palavra, <img width="22" height="32" align="middle"
+      border="0" src="img7.gif" alt="$C_i$"> a coluna inicial, e <img width=
+      "25" height="32" align="middle" border="0" src="img8.gif" alt="$L_f$"> e
+      <img width="25" height="32" align="middle" border="0" src="img9.gif" alt=
+      "$C_f$"> a linha final e a coluna final, com <img width="92" height="32"
+      align="middle" border="0" src="img10.gif" alt="$1\leq L_i\leq m$">,
+      <img width="88" height="32" align="middle" border="0" src="img11.gif"
+      alt="$1\leq C_i\leq n$">, <img width="95" height="32" align="middle"
+      border="0" src="img12.gif" alt="$1\leq L_f\leq m$">, e <img width="91"
+      height="32" align="middle" border="0" src="img13.gif" alt=
+      "$1\leq C_f\leq n$">.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00034000000000000000">Exemplo</a>
+    </h2>
+    <h3>
+      <a name="SECTION00034100000000000000">Input</a>
+    </h3>
+    <p></p>
+    <pre>
+ 
+6 6 
+ATRYKL
+QDXIET
+AEXTVA
+MORLKZ
+ZAPOSI
+SSTOAS
+3
+SOPA
+DE
+LETRAS
+</pre>
+    <h3>
+      <a name="SECTION00034200000000000000">Output</a>
+    </h3>
+    <p></p>
+    <pre>
+5 5 5 2
+2 2 3 2
+1 6 6 1
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
