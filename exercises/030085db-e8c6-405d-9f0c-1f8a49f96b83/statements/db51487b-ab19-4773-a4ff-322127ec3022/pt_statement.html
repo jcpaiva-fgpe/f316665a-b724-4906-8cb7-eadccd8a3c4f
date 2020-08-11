@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Robôs Ricochete
+    </title>
+    <meta name="description" content="Robôs Ricochete">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00050000000000000000">Robôs Ricochete</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="300" height="200" align="bottom" border="0" src=
+      "./robots.png" alt="Image robots">
+    </div>
+    <p>
+      A fábrica <i>Robôs Ricochete, Lda.</i> produz robôs autónomos para
+      limpeza de grandes superfícies em horário pós-laboral. Os robôs
+      movimentam-se sobre uma grelha no plano executando sequências das
+      seguintes instruções:
+    </p>
+    <dl>
+      <dt>
+        <strong>F</strong>
+      </dt>
+      <dd>
+        deslocar-se em frente até encontrar um obstáculo;
+      </dd>
+      <dt>
+        <strong>D</strong>
+      </dt>
+      <dd>
+        rodar sobre si mesmo <img width="29" height="15" align="bottom" border=
+        "0" src="img1.gif" alt="$90^\circ$"> à direita;
+      </dd>
+      <dt>
+        <strong>E</strong>
+      </dt>
+      <dd>
+        rodar sobre si mesmo <img width="29" height="15" align="bottom" border=
+        "0" src="img1.gif" alt="$90^\circ$"> à esquerda.
+      </dd>
+    </dl>
+    <p>
+      A figura ilustra um percurso dum robô numa grelha 9 x 6 , começando no
+      canto inferior esquerdo e executando a sequência "F, D, F, E, F, D, F, D,
+      F, D, F".
+    </p>
+    <p>
+      Pretende-se determinar a distância total percorrida pelo robô (número de
+      células visitadas); são dados a dimensão da grelha, a posição dos
+      obstáculos e sequência de instruções. Para simplificar o enunciado,
+      supõe-se que cada obstáculo ocupa exactamente uma célula da grelha;
+      supõe-se ainda que o robô se encontra inicialmente no canto inferior
+      esquerdo (coordenadas (0,0)) voltado para cima (i.e. na direcção do
+      vector (0,1)).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00051000000000000000">Tarefa</a>
+    </h2>Escrever um programa para determinar a distância total percorrida pelo
+    robô.
+    <p>
+      Os dados dos problema são introduzidos pela seguinte ordem, um valor por
+      cada linha: o número de colunas e o número de linhas da grelha seguido do
+      número de obstáculos e as coordenadas de cada obstáculo (coluna, linha);
+      por último, a sequência de instruções do robô (usando caracteres
+      <tt>F</tt>, <tt>D</tt>, <tt>E</tt>). Pode assumir que a grelha tem
+      dimensão máxima 30 x 30 e que o programa do robô tem no máximo 50
+      instruções.
+    </p>
+    <p>
+      A saída é um inteiro que representa a distância total percorrida pelo
+      robô.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00052000000000000000">Exemplo</a>
+    </h2>
+    <h3>
+      <a name="SECTION00052100000000000000">Input</a>
+    </h3>
+    <pre>
+9
+6
+8
+0
+4 
+1 
+1 
+6 
+3 
+6 
+4 
+7 
+0 
+8 
+0 
+8 
+1 
+8 
+5
+FDFEFDFDFDF
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00052200000000000000">Output</a>
+    </h3>
+    <pre>
+21
+</pre>
+    <p></p>
+  </body>
+</html>
