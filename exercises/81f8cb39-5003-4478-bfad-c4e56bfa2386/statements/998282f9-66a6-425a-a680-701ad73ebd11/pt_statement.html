@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Combate Final
+    </title>
+    <meta name="description" content="Combate Final">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+  </head>
+  <body>
+    <h1>
+      Combate Final
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="162" height="99" align="bottom" border="0" src="roman.jpg"
+      alt="Image roman"> <img width="88" height="99" align="bottom" border="0"
+      src="cards2.jpg" alt="Image cards2"> <img width="88" height="99" align=
+      "bottom" border="0" src="cards2.jpg" alt="Image cards2"> <img width="88"
+      height="99" align="bottom" border="0" src="cards2.jpg" alt=
+      "Image cards2">
+    </div>
+    <p></p>
+    <h2>
+      Problema
+    </h2>
+    <p>
+      Dois amigos encontram-se para um torneio de cartas mágicas. Cada um tem
+      um baralho de cartas com monstros, contendo cada carta um número inteiro
+      que indica a força de combate do personagem. Cada jogador empilha
+      ``estrategicamente'' <img width="15" height="15" align="bottom" border=
+      "0" src="img23.gif" alt="$n$"> cartas (número igual para os dois
+      jogadores). O desenvolvimento de um jogo ocorre numa sequência de
+      combates da seguinte forma. O jogador A e o jogador B tiram a carta de
+      topo do seu baralho.
+    </p>
+    <ul>
+      <li>Se a carta do jogador A for mais poderosa do que a do jogador B,
+      então o jogador A ganha esse combate, e a carta do jogador B fica para o
+      jogador A. Ambas as cartas são colocadas na base do baralho de jogador A,
+      ficando a carta do jogador B por baixo da carta do jogador A.
+      </li>
+      <li>Se a carta do jogador B tiver mais poder de ataque que a carta do
+      jogador A, então B ganha esse combate. Neste caso, é o jogador B que fica
+      com a carta do jogador A. Coloca na base do seu baralho primeiro a sua
+      carta e depois a de A.
+      </li>
+      <li>Se ambas as cartas tiverem o mesmo poder de ataque então ocorre um
+      empate. Neste caso, cada jogador coloca a sua carta na base do seu
+      baralho.
+      </li>
+    </ul>O jogo vai prosseguindo de modo análogo. A particularidade e interesse
+    do jogo advém do facto das cartas serem mágicas. De tal forma que quando
+    duas cartas se encontram, independentemente do resultado do combate, o
+    poder da carta é decrementado de um (porque o monstro fica cansado do
+    combate e perde energia). Se o valor da carta chegar a 0 ela é retirada de
+    jogo. Esta regra introduz interesse no jogo, pois caso contrário o jogador
+    com a carta mais alta nunca poderia perder o jogo.
+    <p>
+      O jogador que durante uma sequência de combates perder todas as cartas
+      perde o jogo. Para evitar jogos muito longos, se ao fim de <img width=
+      "54" height="38" align="middle" border="0" src="img24.gif" alt="$n^3+n$">
+      jogadas nenhum dos jogadores tiver ganho, o jogo é considerado como
+      empatado. Se ambos os jogadores ficarem sem cartas simultaneamente o jogo
+      também fica empatado.
+    </p>
+    <p></p>
+    <h2>
+      Tarefa
+    </h2>Implementar um programa que, dados os baralhos dos jogadores simule o
+    jogo para determinar qual dos dois jogadores ganha.
+    <p></p>
+    <h2>
+      Input
+    </h2>Na primeira linha tem o número <img width="15" height="15" align=
+    "bottom" border="0" src="img23.gif" alt="$n$"> de cartas com que jogarão
+    (<img width="87" height="31" align="middle" border="0" src="img25.gif" alt=
+    "$1 \leq n\leq 20$">). Nas linhas seguintes tem a descrição das <img width=
+    "15" height="15" align="bottom" border="0" src="img23.gif" alt="$n$">
+    cartas do baralho do jogador A (isto é, <img width="15" height="15" align=
+    "bottom" border="0" src="img23.gif" alt="$n$"> inteiros que representam o
+    poder das cartas escolhidas, do topo até à base). Nas <img width="15"
+    height="15" align="bottom" border="0" src="img23.gif" alt="$n$"> restantes,
+    tem a descrição das <img width="15" height="15" align="bottom" border="0"
+    src="img23.gif" alt="$n$"> cartas do jogador B.
+    <p></p>
+    <h2>
+      Output
+    </h2>O programa deve escrever <tt>A</tt>, <tt>B</tt> ou <tt>E</tt>, para
+    indicar o jogador que ganha o jogo, seguido de mudança de linha. Escreverá
+    <tt>E</tt> se tiver havido empate.
+    <p></p>
+    <h2>
+      Exemplo 1
+    </h2>
+    <h3>
+      Input
+    </h3><br>
+    <pre>
+3
+3
+5
+2
+2
+1
+9
+</pre>
+    <p></p>
+    <h3>
+      Output
+    </h3><br>
+    <pre>
+B
+</pre>
+    <p></p>
+    <h2>
+      Exemplo 2
+    </h2>
+    <h3>
+      Input
+    </h3><br>
+    <pre>
+5
+4
+2
+1
+6
+8
+3
+3
+4
+2
+1
+</pre>
+    <p></p>
+    <h3>
+      Output
+    </h3><br>
+    <pre>
+A
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
