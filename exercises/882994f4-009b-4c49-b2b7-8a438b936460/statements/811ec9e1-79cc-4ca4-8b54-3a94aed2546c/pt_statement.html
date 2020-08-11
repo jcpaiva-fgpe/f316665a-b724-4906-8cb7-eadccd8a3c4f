@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      cobra
+    </title>
+    <meta name="description" content="cobra">
+    <meta name="keywords" content="cobra">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <div align="center">
+      <font size="+4"><b>Problema E</b></font>
+    </div>
+    <div align="center">
+      <font size="+3"><b>Labirinto da cobra</b></font>
+    </div>
+    <p></p>
+    <h2>
+      <a name="SECTION00001000000000000000">Problema</a>
+    </h2>
+    <p>
+      Uma cobra move-se num labirinto onde existem vários obstáculos e vários
+      ovos. O objectivo da cobra é, partindo de uma posição inicial
+      pré-definida, comer todos os ovos existentes no labirinto (i.e. passar
+      por todos os pontos em que existem ovos) sem chocar contra os obstáculos
+      nem sair do labirinto. Durante o jogo a cobra pode mover-se para a
+      direita, esquerda, para cima e para baixo (sem nunca sair do labirinto).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00002000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escrever um programa que, dados um labirinto e vários caminhos devolva se
+      os caminhos são ou não válidos, isto é, se a cobra consegue para cada um
+      dos caminhos comer todos os ovos sem sair do labirinto e sem chocar
+      contra os obstáculos.
+    </p>
+    <p>
+      O labirinto consiste numa matriz quadrada cuja dimensão é dada. Os
+      obstáculos estão assinalados no labirinto como <tt>#</tt>. Os ovos estão
+      assinalados como <tt>O</tt>. A cobra ocupa apenas uma posição da matriz e
+      está assinalada como <tt>C</tt>.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00003000000000000000">Input</a>
+    </h2>
+    <p>
+      As duas primeiras linhas de input são dois inteiros inferiores a 100,
+    </p>
+    <p></p>
+    <dl>
+      <dd>
+        <tt>n</tt> - o tamanho do labirinto;
+      </dd>
+      <dd>
+        <tt>m</tt> - o número de caminhos a testar.
+      </dd>
+    </dl>
+    <p>
+      As <tt>n</tt> linhas seguintes, cada uma com <tt>n</tt> caracteres,
+      descrevem o labirinto e são constituidas apenas pelos seguintes
+      caracteres:
+    </p>
+    <p></p>
+    <dl>
+      <dd>
+        <tt>O</tt> - representa um ovo;
+      </dd>
+      <dd>
+        <tt>C</tt> - representa a posição inicial da cobra;
+      </dd>
+      <dd>
+        <tt>#</tt> - representa um obstáculo;
+      </dd>
+      <dd>
+        <tt>.</tt> - representa um espaço livre.
+      </dd>
+    </dl>
+    <p>
+      As <tt>m</tt> linhas seguintes descrevem um caminho com tamanho menor do
+      que 100 e são constituidas apenas pelos seguintes caracteres:
+    </p>
+    <p></p>
+    <dl>
+      <dd>
+        <tt>e</tt> - movimento para a esquerda;
+      </dd>
+      <dd>
+        <tt>d</tt> - movimento para a direita;
+      </dd>
+      <dd>
+        <tt>c</tt> - movimento para cima;
+      </dd>
+      <dd>
+        <tt>b</tt> - movimento para baixo;
+      </dd>
+    </dl>
+    <p></p>
+    <h2>
+      <a name="SECTION00004000000000000000">Output</a>
+    </h2>
+    <p>
+      O seu programa deve escrever <tt>SIM</tt> ou <tt>NAO</tt> conforme o
+      caminho é ou não válido para o labirinto dado.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00005000000000000000">Exemplo de Input</a>
+    </h2>
+    <p></p>
+    <pre>
+6
+4
+######
+#C..O#
+#.#..#
+#.#..#
+#O#..#
+######
+dddeeebbb
+ddeebbb
+ddbbdcceeebbb
+ddddeeebbb
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00006000000000000000">Exemplo de Output</a>
+    </h2>
+    <pre>
+SIM
+NAO
+SIM
+NAO
+</pre>
+    <p></p>
+  </body>
+</html>
