@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>
+      Química à toa
+    </title>
+    <meta name="description" content="Química à toa">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <script type="text/javascript" src=
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+  </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00030000000000000000" id=
+      "SECTION00030000000000000000">Química à toa</a>
+    </h1>
+    <p>
+      <br>
+    </p>
+    <table align="right">
+      <tr>
+        <td align="center">
+          <img width="223" height="250" src="quimicaFig.png" border="0" align=
+          "center" alt="[missing alt]">
+        </td>
+      </tr>
+    </table><br>
+    <p>
+      Quando o Rui estava a estudar Química, escrevendo fórmulas de compostos
+      no caderno (como CaCO<sub>3</sub> , Na<sub>2</sub>CO<sub>3</sub> e
+      H<sub>2</sub>SO<sub>4</sub>), , apareceu a irmã mais nova, que ficou
+      fascinada com aquelas sequências de letras e algarismos. O pior é que ela
+      não se calava, exigindo que ele lhe explicasse como dividia uma sequência
+      grande em pedacinhos. Desesperado, o Rui enunciou as regras:
+    </p>
+    <p></p>
+    <ul>
+      <li>Cada sequência de letras que começa com uma letra grande (a irmã não
+      conhecia a palavra "maiúscula") representa um elemento;
+      </li>
+    </ul>
+    <p></p>
+    <ul>
+      <li>Se houver algum número a seguir ao elemento, esse é o número de
+      átomos do elemento; se não houver, o número de átomos do elemento é 1.
+      </li>
+    </ul>
+    <p>
+      Depois, exemplificou com a fórmula do carbonato de cálcio,
+      CaCO<sub>3</sub>, que tem um átomo de cálcio (Ca), um átomo de carbono
+      (C) e três átomos de oxigénio (O).
+    </p>
+    <p>
+      A irmã ficou muito contente e queria aprender mais Química. Mas ele
+      convenceu-a a praticar. Para poder regressar ao estudo rapidamente,
+      decidiu escrever "fórmulas químicas" à toa e até inventou símbolos
+      químicos com 1, 2, 3, 4 e 5 letras. Por exemplo, deu-lhe a fórmula
+      Ai<sub>19</sub>Xpto<sub>5</sub>Uus      (que tem tamanho 12) para
+      decompor.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00031000000000000000" id=
+      "SECTION00031000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escreva um programa que, dada uma fórmula química inventada pelo Rui e
+      terminada por "<tt>.</tt>", apresenta os elementos que ocorrem na fórmula
+      e o número de átomos de cada um.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00032000000000000000" id=
+      "SECTION00032000000000000000">Input</a>
+    </h2>
+    <p>
+      Uma linha com uma fórmula química (inventada pelo Rui) terminada por
+      "<tt>.</tt>". A fórmula é uma sequência de \(n\)     letras e algarismos,
+      que começa com uma letra maiúscula e que não tem o algarismo zero
+      imediatamente a seguir a uma letra, nem uma letra minúscula imediatamente
+      a seguir a um algarismo. Nenhum elemento tem mais de cinco letras, nem
+      ocorre mais do que uma vez na fórmula. O número de algarismos seguidos
+      não excede \(n-1\).    
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00033000000000000000" id=
+      "SECTION00033000000000000000">Restrições</a>
+    </h2>
+    <p></p>
+    <table cellpadding="3">
+      <tr>
+        <td align="left">
+          \(1 \leq n \leq 1\,000\) 
+        </td>
+        <td align="left">
+          Tamanho da fórmula
+        </td>
+      </tr>
+    </table>
+    <p></p>
+    <h2>
+      <a name="SECTION00034000000000000000" id=
+      "SECTION00034000000000000000">Output</a>
+    </h2>
+    <p>
+      O output tem uma linha por cada elemento que ocorre na fórmula. Cada
+      linha tem um elemento, um espaço, o número de átomos desse elemento e uma
+      mudança de linha. Os elementos têm de aparecer pela ordem em que ocorrem
+      na fórmula.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00035000000000000000" id=
+      "SECTION00035000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00035100000000000000" id=
+      "SECTION00035100000000000000">Input</a>
+    </h3>
+    <pre>
+CaCO3.
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00035200000000000000" id=
+      "SECTION00035200000000000000">Output</a>
+    </h3>
+    <pre>
+Ca 1
+C 1
+O 3
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00036000000000000000" id=
+      "SECTION00036000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00036100000000000000" id=
+      "SECTION00036100000000000000">Input</a>
+    </h3>
+    <pre>
+Ai19Xpto5Uus.
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00036200000000000000" id=
+      "SECTION00036200000000000000">Output</a>
+    </h3>
+    <pre>
+Ai 19
+Xpto 5
+Uus 1
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
