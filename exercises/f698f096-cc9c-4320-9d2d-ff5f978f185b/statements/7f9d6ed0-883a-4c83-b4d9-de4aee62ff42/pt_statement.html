@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>
+      Registo de altos e baixos do caminhante
+    </title>
+    <meta name="description" content="Registo de altos e baixos do caminhante">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <script type="text/javascript" src=
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000" id=
+      "SECTION00010000000000000000">Registo de altos e baixos do caminhante</a>
+    </h1>
+    <table align="right">
+      <tr>
+        <td align="center">
+          <img width="223" height="250" src="caminhante.jpeg" border="0" align=
+          "center" alt="[missing alt]">
+        </td>
+      </tr>
+    </table>
+    <p>
+      Um caminhante gosta de registar a distância percorrida em cada uma das
+      suas caminhadas. E, de forma a controlar a sua evolução, quer conhecer a
+      diferença entre as distâncias percorridas em caminhadas consecutivas.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00011000000000000000" id=
+      "SECTION00011000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escreva um programa que, para cada caminhada registada (exceto a
+      primeira), indica se a distância percorrida nessa caminhada aumentou
+      (<tt>ALTO</tt>), manteve-se (<tt>PATAMAR</tt>) ou diminuiu
+      (<tt>BAIXO</tt>) em relação à distância percorrida na caminhada anterior.
+      Quando a distância aumentou ou diminuiu, o programa calcula a diferença
+      entre as distâncias percorridas, em quilómetros e metros.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00012000000000000000" id=
+      "SECTION00012000000000000000">Input</a>
+    </h2>
+    <p>
+      O input tem \(n+1\) linhas.
+    </p>
+    <p>
+      Cada uma das \(n\)    primeiras linhas tem o registo de uma caminhada. A
+      linha tem dois inteiros, \(k\)     e \(m\),    que indicam que o
+      caminhante percorreu \(k\)     quilómetros e \(m\)     metros.
+    </p>
+    <p>
+      A última linha, que já não corresponde a uma caminhada, tem <tt>0 0</tt>.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00013000000000000000" id=
+      "SECTION00013000000000000000">Restrições</a>
+    </h2>
+    <p></p>
+    <table cellpadding="3">
+      <tr>
+        <td align="left">
+          \(2 \leq n \leq 1\,000\) 
+        </td>
+        <td align="left">
+          Número de caminhadas
+        </td>
+      </tr>
+      <tr>
+        <td align="left">
+          \(0 \leq k \leq 100\) 
+        </td>
+        <td align="left">
+          Quilómetros percorridos numa caminhada
+        </td>
+      </tr>
+      <tr>
+        <td align="left">
+          \(0 \leq m \leq 999\) 
+        </td>
+        <td align="left">
+          Metros (para além dos \(k\)    quilómetros) percorridos numa
+          caminhada
+        </td>
+      </tr>
+    </table>
+    <p></p>
+    <h2>
+      <a name="SECTION00014000000000000000" id=
+      "SECTION00014000000000000000">Output</a>
+    </h2>O output tem \(n-1\)     linhas: uma linha por cada duas caminhadas
+    consecutivas. A linha correspondente às caminhadas \(i\) e \(i+1\)       
+    tem o seguinte formato:
+    <ul>
+      <li>
+        <tt>ALTO \(k\) km \(m\) m</tt>       <br>
+        se a distância percorrida na caminhada \(i+1\) aumentou \(k\)
+        quilómetros e \(m\)            metros em relação à distância percorrida
+        na caminhada \(i\);    
+      </li>
+      <li>
+        <tt>PATAMAR</tt><br>
+        se a distância percorrida na caminhada \(i+1\)     se manteve em
+        relação à distância percorrida na caminhada \(i\); 
+      </li>
+      <li>
+        <tt>BAIXO \(k\) km \(m\) m</tt>       <br>
+        se a distância percorrida na caminhada \(i+1\)    diminuiu \(k\)    
+        quilómetros e \(m\)     metros em relação à distância percorrida na
+        caminhada \(i\). 
+      </li>
+    </ul>
+    <p></p>
+    <h2>
+      <a name="SECTION00015000000000000000" id=
+      "SECTION00015000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00015100000000000000" id=
+      "SECTION00015100000000000000">Input</a>
+    </h3>
+    <pre>
+10 200
+9 800
+10 250
+20 0
+20 0
+0 900
+0 0
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00015200000000000000" id=
+      "SECTION00015200000000000000">Output</a>
+    </h3>
+    <pre>
+BAIXO 0 km 400 m
+ALTO 0 km 450 m
+ALTO 9 km 750 m
+PATAMAR
+BAIXO 19 km 100 m
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00016000000000000000" id=
+      "SECTION00016000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00016100000000000000" id=
+      "SECTION00016100000000000000">Input</a>
+    </h3>
+    <pre>
+1 205
+1 205
+0 0
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00016200000000000000" id=
+      "SECTION00016200000000000000">Output</a>
+    </h3>
+    <pre>
+PATAMAR
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
