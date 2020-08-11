@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000" id=
+      "SECTION00050000000000000000">Ti-Nó-Ni</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="139" height="119" align="bottom" border="0" src=
+      "./cartoon_ambulance.jpg" alt="Image cartoon_ambulance"> <img width="148"
+      height="138" align="bottom" border="0" src="./short_sensors.jpg" alt=
+      "Image short_sensors">
+    </div>
+    <p>
+      Num futuro não muito longínquo teremos sensores dentro e fora do nosso
+      corpo que permitirão monitorizar e auxiliar a diagnosticar as doenças que
+      nos afligem. Já não é de todo ficção científica a possibilidade de um
+      doente ir para casa com um conjunto de sensores e um PDA para ser
+      acompanhado à distância pelos seus médicos (que, eventualmente, lhe
+      ligarão para o telemóvel a dizer que não está bem). Como se pode
+      determinar o estado do doente a partir das leituras dos sensores? Usando
+      uma árvore de decisão, por exemplo, como a da figura, para obter o
+      indicador de doença (no exemplo, seria o valor do indicador de <em>Estado
+      de Ansiedade</em>).
+    </p>
+    <p></p>
+    <div align="center">
+      <img width="372" height="217" align="bottom" border="0" src=
+      "./bodySensors-img.jpg" alt="Image bodySensors-img">
+    </div>
+    <p>
+      Processa-se a árvore de baixo para cima para obter um valor para cada nó.
+      Esse valor vai ser a <em>parte inteira</em> da média pesada dos valores
+      dos nós de que depende imediatamente (nós filhos). O peso de cada filho é
+      definido pelo valor que está no ramo que o liga ao pai. O peso total dos
+      filhos será sempre 10. Os nós que não têm filhos são os que correspondem
+      aos sensores (e chamam-se folhas). Na figura, a leitura do sensor está
+      indicada no nó entre parentesis. Assim, por exemplo, para calcular o
+      <i>Nível Respiração</i>, de acordo com a figura, teriamos:<br>
+    </p>
+    <p></p>
+    <div align="center">
+      <img width="669" height="31" border="0" src="img13.gif" alt=
+      "\begin{displaymath}\mbox{\em\small Nível Respiração} = \left( 7\times \mbox{\em... ...left( 7\times 4 + 3 \times 10\right)/10 = 5.8 \approx {\bf 5} \end{displaymath}">
+    </div><br clear="all">
+    <p></p>Logo, também <img width="96" height="31" align="middle" border="0"
+    src="img14.gif" alt="$\mbox{\em\small Respiração} = 5$"> pois <img width=
+    "265" height="35" align="middle" border="0" src="img15.gif" alt=
+    "$\mbox{\em \small Respiração} = \left( 10\times \mbox{\em\small Nível Respiração} \right)/10$">
+    . Se a árvore só tivesse um nó, esse nó correspondia a um sensor e a sua
+    leitura dava o indicador da doença.
+    <p></p>
+    <h2>
+      <a name="SECTION00051000000000000000" id=
+      "SECTION00051000000000000000">Tarefa</a>
+    </h2>Pretende-se implementar um programa que, dada a especificação duma
+    árvore de decisão e os valores das leituras dos sensores, escreva o
+    ``<i>valor</i>'' do nó 1 da árvore (seguido de mudança de linha).
+    <p>
+      Na primeira linha de <em>input</em> terá dois inteiros <code>n</code> e
+      <code>f</code>, separados por espaço: <code>n</code> é o número total de
+      nós e <code>f</code> o de folhas. Cada uma das <code>n-1</code> linhas
+      seguintes define um ramo: <code>Pai</code> <code>Filho</code>
+      <code>Peso</code>. Em cada uma das <code>f</code> linhas seguintes terá
+      um par de valores <code>Sensor Leitura</code>. Os nós foram numerados de
+      1 a <code>n</code> de forma que cada filho tivesse um número superior ao
+      seu pai e os sensores tivessem números de <tt>n-f+1</tt> a
+      <code>n</code>. Os ramos estão ordenados por ordem crescente de número de
+      nó pai. O número de nós é maior ou igual a 1 e não excede 100. Os valores
+      (lidos ou calculados) também serão relativamente pequenos.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00052000000000000000" id=
+      "SECTION00052000000000000000">Exemplo</a>
+    </h2>
+    <h3>
+      <a name="SECTION00052100000000000000" id=
+      "SECTION00052100000000000000">Input</a>
+    </h3><br>
+    <pre>
+12 6
+1 2 5
+1 3 5
+2 4 6
+2 5 4
+3 6 10
+4 7 10
+5 8 3
+5 9 5
+5 10 2
+6 11 7
+6 12 3
+7 9
+8 10
+10 8
+11 4
+12 10
+9 4
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00052200000000000000" id=
+      "SECTION00052200000000000000">Output</a>
+    </h3><br>
+    <pre>
+6
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
