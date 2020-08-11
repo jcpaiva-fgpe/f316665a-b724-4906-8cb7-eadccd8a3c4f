@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00040000000000000000" id=
+      "SECTION00040000000000000000">Olh-Ó-Robot</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="119" height="125" align="bottom" border="0" src=
+      "./Robot-left.jpg" alt="Image Robot-left"> <img width="119" height="125"
+      align="bottom" border="0" src="./Robot-right.jpg" alt=
+      "Image Robot-right">
+    </div>
+    <p>
+      Uma empresa tem um armazém robotizado: 2 robôs colocam e retiram as
+      mercadorias das prateleiras sem qualquer intervenção humana. O armazém é
+      rectangular e cada um dos robôs está atribuído a um dos lado. À partida
+      os robôs nunca se encontrariam mas, por um erro de concepção, podem
+      encontrar-se num único ponto. No centro do armazém está instalado o posto
+      de carregamento das baterias que é comum a ambos os robôs. Os robôs
+      aproveitam para ir a este sítio quando estão com as baterias em baixo e
+      suficientemente perto do centro do armazém. Quando resolvem carregar
+      baterias simultaneamente colidem e é necessária a intervenção humana.
+    </p>
+    <p>
+      Os robôs são comandados por instruções que partem do princípio que o
+      armazém é uma grelha regular de 30 por 15 células, com o ponto de
+      abastecimento nas coordenadas (0,0). Uma sequência de de instruções é
+      executada sem ciclos nem saltos, indicando apenas os movimentos do robô.
+      Os comandos são apenas os números inteiros 2, 4, 5, 6 e 8, representando
+      as direcções, como no teclado numérico: o 2 aponta para Sul, o 8 para
+      Norte, o 4 para Oeste e o 6 para Este; o 5 significa permanecer no mesmo
+      lugar (este comando pode ser executado em qualquer instante). A sequência
+      de instruções é precedida pela localização do robô e terminada por 0. Os
+      robôs estão sincronizados e a cada segundo executam um comando, começando
+      exactamente ao mesmo tempo. Sabe-se que durante a execução das instruções
+      o robô vai <em>no máximo uma única vez</em> ao posto de carregamento das
+      baterias e fica aí durante alguns segundos (executando o comando 5).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00041000000000000000" id=
+      "SECTION00041000000000000000">Tarefa</a>
+    </h2>Vai ser necessário escrever um programa que analise as sequências de
+    comandos de ambos os robôs e verifique se podem ocorrer colisões; isto é,
+    se os intervalos de tempo em que os robôs estariam a abastecer se
+    sobrepõem. O programa recebe duas sequências de instruções que têm
+    exactamente o mesmo comprimento e garantem já que os robôs se deslocam no
+    interior do armazém. Cada uma delas precedida da posição inicial do robô e
+    terminada por 0. Se levarem à colisão dos robôs então o programa de
+    verificação escreve <code>KO</code>. Se não existir perigo de colisão,
+    escreve <code>OK</code>.
+    <p></p>
+    <h2>
+      <a name="SECTION00042000000000000000" id=
+      "SECTION00042000000000000000">Exemplo</a>
+    </h2>
+    <h3>
+      <a name="SECTION00042100000000000000" id=
+      "SECTION00042100000000000000">Input</a>
+    </h3><br>
+    <pre>
+-7 0
+6
+6
+6
+6
+6
+6
+6
+5
+5
+0
+7 0
+4
+4
+4
+4
+4
+4
+4
+5
+5
+0
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00042200000000000000" id=
+      "SECTION00042200000000000000">Output</a>
+    </h3><br>
+    <pre>
+KO
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
