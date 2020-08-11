@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>
+      E, de resto?
+    </title>
+    <meta name="description" content="E, de resto?">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <script type="text/javascript" src=
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00040000000000000000" id="SECTION00040000000000000000">E,
+      de resto?</a>
+    </h1>
+    <p></p>
+    <table align="right">
+      <tr>
+        <td align="center">
+          <img width="223" height="250" src="jogo_resto.png" border="0" align=
+          "center" alt="[missing alt]">
+        </td>
+      </tr>
+    </table>
+    <p>
+      Realizam-se este ano na Abobadeira as finais nacionais das Olimpíadas da
+      Numerologia, cujo evento principal é o Jogo do Resto. Nós vamos apoiar
+      com a programação do quadro de resultados e precisamos da vossa
+      colaboração. Ainda não conhecem o Jogo do Resto? É muito simples:
+    </p>
+    <p></p>
+    <ol>
+      <li>joga-se com \(N\) jogadores, do jogador \(0\) ao \(N-1\);       
+      </li>
+      <li>cada jogo tem \(M\)    jogadas;
+      </li>
+      <li>em cada jogada, cada jogador regista um número inteiro de \(0\) a
+      \(N-1\);       
+      </li>
+      <li>somam-se os números registados por todos os jogadores, \(S\);   
+      </li>
+      <li>calcula-se o resto \(R\)    da divisão inteira de \(S\)  por \(N\),  
+        com \(0\leq R \leq N-1\);
+      </li>
+      <li>o jogador com o número \(R\)    contabiliza mais 1 ponto, os
+      restantes mantêm os que têm;
+      </li>
+      <li>no final das \(M\)     jogadas ganha quem totalizar mais pontos.
+      </li>
+    </ol>
+    <p></p>
+    <h2>
+      <a name="SECTION00041000000000000000" id=
+      "SECTION00041000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escreva um programa para ler as várias jogadas, contabilizar os pontos
+      dos jogadores e indicar os vencedores.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00042000000000000000" id=
+      "SECTION00042000000000000000">Input</a>
+    </h2>
+    <p>
+      A primeira linha tem dois inteiros: \(N\)     (o número de jogadores) e
+      \(M\)    (o número de jogadas). Seguem-se \(M\)     linhas contendo as
+      jogadas. Cada linha com uma jogada contém \(N\)     inteiros \(J_0, J_1,
+      \ldots J_i, \ldots J_{N-1}\), com \(0 \leq i &lt;  N\) e \(0 \leq J_i
+      &lt; N\).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00043000000000000000" id=
+      "SECTION00043000000000000000">Restrições</a>
+    </h2>
+    <p></p>
+    <table cellpadding="3">
+      <tr>
+        <td align="left">
+          \(1\leq N &lt; 100\) 
+        </td>
+        <td align="left">
+          Número de jogadores
+        </td>
+      </tr>
+      <tr>
+        <td align="left">
+          \(1 \leq M &lt; 100\) 
+        </td>
+        <td align="left">
+          Número de jogadas
+        </td>
+      </tr>
+    </table>
+    <p></p>
+    <h2>
+      <a name="SECTION00044000000000000000" id=
+      "SECTION00044000000000000000">Output</a>
+    </h2>
+    <p>
+      O resultado consiste em 2 grupos de linhas, cada linha com apenas um
+      inteiro. As linhas do primeiro grupo têm o total de pontos de cada
+      jogador, por ordem crescente do número do jogador. Entre o primeiro e o
+      segundo grupo de linhas há uma linha em branco. As linhas do segundo
+      grupo apresentam os números dos jogadores que totalizaram o maior número
+      de pontos e por isso venceram o jogo, também por ordem crescente do seu
+      número.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00045000000000000000" id=
+      "SECTION00045000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00045100000000000000" id=
+      "SECTION00045100000000000000">Input</a>
+    </h3>
+    <pre>
+2 4 
+0 0 
+0 1 
+1 0 
+1 1
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00045200000000000000" id=
+      "SECTION00045200000000000000">Output</a>
+    </h3>
+    <pre>
+2
+2
+
+0
+1
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00046000000000000000" id=
+      "SECTION00046000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00046100000000000000" id=
+      "SECTION00046100000000000000">Input</a>
+    </h3>
+    <pre>
+3 5 
+0 1 2 
+2 1 0 
+0 0 0 
+1 1 2 
+0 2 0
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00046200000000000000" id=
+      "SECTION00046200000000000000">Output</a>
+    </h3>
+    <pre>
+3
+1
+1
+ 
+0
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
