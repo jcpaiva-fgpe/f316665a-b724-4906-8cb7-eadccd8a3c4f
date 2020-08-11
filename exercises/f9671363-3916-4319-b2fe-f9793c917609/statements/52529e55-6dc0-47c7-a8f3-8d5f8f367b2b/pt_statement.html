@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Telepreso
+    </title>
+    <meta name="description" content="Telepreso">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000">Telepreso</a>
+    </h1>
+    <p></p>
+    <h2>
+      <a name="SECTION00051000000000000000">Problema</a>
+    </h2>
+    <p>
+      O chefe máximo duma rede de crime organizado está preso numa cadeia de
+      segurança máxima, em isolamento completo, desde há 6 meses. Mesmo assim
+      tem conseguido continuar a gerir a parte da sua organização que ainda não
+      está atrás de grades porque os seus associados fizeram chegar-lhe um
+      telemóvel.
+    </p>
+    <div align="center">
+      <img width="161" height="188" align="bottom" border="0" src=
+      "cellphone.png" alt="Image cellphone">
+    </div>Na realidade apercebemo-nos atempadamente desta intenção mas optámos
+    por não evitar que o telemóvel lhe chegasse às mãos. Esperávamos obter das
+    conversas ao telemóvel informações que nos permitissem fazer outras
+    detenções e colocámo-lo numa cela com microfones ultra sensíveis. No
+    entanto o preso comunica apenas por SMS e para números de telefone no
+    estrangeiro. Para dificultar a situação as mensagens são cifradas
+    automaticamente pelo próprio telemóvel e não as conseguimos decifrar.
+    <p>
+      Felizmente os microfones instalados na cela são suficientemente sensíveis
+      para distinguirem os tons de cada uma das teclas pressionadas. Para
+      podermos decifrar rapidamente as mensagens que o preso envia,
+      necessitamos dum programa que converta sequências de uma mesma tecla na
+      letra que lhe está associada. Por exemplo, três toques consecutivos da
+      tecla "8" correspondem à letra "V". Mais dois toques na tecla "3",
+      seguidos de dois toques na tecla "6", seguidos de dois toques na tecla
+      "6", seguidos de um toque na tecla "3", seguidos de dois toques na tecla
+      "3", formam a palavra "VENDE".
+    </p>
+    <p>
+      De notar que as duas últimas letras da palavra "VENDE" ("D" e "E") são
+      conseguidas por sequências da mesma tecla ("3"). Se existir uma certa
+      demora entre o pressionar de duas teclas dos telemóveis assume que a
+      sequência terminou e se iniciou uma nova.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00052000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Converter uma sequência de valores numéricos nas letras que lhes estão
+      associadas no teclado dum telemóvel, conforme a seguinte tabela:
+    </p>
+    <p></p>
+    <div align="center">
+      <table cellpadding="3" border="1">
+        <tr>
+          <th align="center">
+            <b>Tecla</b>
+          </th>
+          <td align="center" colspan="4">
+            <b>Repetições</b>
+          </td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center">
+            <b>1</b>
+          </td>
+          <td align="center">
+            <b>2</b>
+          </td>
+          <td align="center">
+            <b>3</b>
+          </td>
+          <td align="center">
+            <b>4</b>
+          </td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>0</b>
+          </th>
+          <td align="center">
+            +
+          </td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>1</b>
+          </th>
+          <td align="center">
+            _
+          </td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>2</b>
+          </th>
+          <td align="center">
+            A
+          </td>
+          <td align="center">
+            B
+          </td>
+          <td align="center">
+            C
+          </td>
+          <td align="center"></td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>3</b>
+          </th>
+          <td align="center">
+            D
+          </td>
+          <td align="center">
+            E
+          </td>
+          <td align="center">
+            F
+          </td>
+          <td align="center"></td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>4</b>
+          </th>
+          <td align="center">
+            G
+          </td>
+          <td align="center">
+            H
+          </td>
+          <td align="center">
+            I
+          </td>
+          <td align="center"></td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>5</b>
+          </th>
+          <td align="center">
+            J
+          </td>
+          <td align="center">
+            K
+          </td>
+          <td align="center">
+            L
+          </td>
+          <td align="center"></td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>6</b>
+          </th>
+          <td align="center">
+            M
+          </td>
+          <td align="center">
+            N
+          </td>
+          <td align="center">
+            O
+          </td>
+          <td align="center"></td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>7</b>
+          </th>
+          <td align="center">
+            P
+          </td>
+          <td align="center">
+            Q
+          </td>
+          <td align="center">
+            R
+          </td>
+          <td align="center">
+            S
+          </td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>8</b>
+          </th>
+          <td align="center">
+            T
+          </td>
+          <td align="center">
+            U
+          </td>
+          <td align="center">
+            V
+          </td>
+          <td align="center"></td>
+        </tr>
+        <tr>
+          <th align="center">
+            <b>9</b>
+          </th>
+          <td align="center">
+            W
+          </td>
+          <td align="center">
+            X
+          </td>
+          <td align="center">
+            Y
+          </td>
+          <td align="center">
+            Z
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      Algumas teclas podem ser repetidas até três vezes, duas delas podem ser
+      repetidas quatro vezes e duas apenas uma vez. Para facilitar a
+      legibilidade a tecla "1" fica associada ao caracter "_" (``underscore'')
+      e não ao caracter espaço. Pode assumir que as teclas não são repetidas
+      mais vezes do que os valores definidos na tabela. Isto é, pode assumir
+      que a tecla "2" nunca é pressionada quatro vezes nem a tecla "1" duas ou
+      mais vezes.
+    </p>
+    <p>
+      Além dos valores numéricos correspondentes aos dígitos são também usados
+      dois valores númericos especiais:
+    </p>
+    <ul>
+      <li>77 - representa uma espera que permite considerar o fim duma
+      sequência;
+      </li>
+      <li>99 - representa o fim da mensagem.
+      </li>
+    </ul>
+    <p></p>
+    <h2>
+      <a name="SECTION00053000000000000000">Input</a>
+    </h2>
+    <p>
+      Uma sequência de linhas, com um inteiro (de 0 a 9 ou 77) por linha,
+      terminada por uma linha com o número 99.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00054000000000000000">Output</a>
+    </h2>
+    <p>
+      Uma linha com a sequência de letras correspondente aos inteiros lidos.
+    </p>
+    <h2>
+      <a name="SECTION00055000000000000000">Exemplo de Input</a>
+    </h2>
+    <pre>
+8
+8
+8
+3
+3
+6
+6
+3
+77
+3
+3
+1
+2
+77
+1
+3
+7
+7
+7
+6
+6
+6
+77
+4
+2
+99
+</pre>
+    <h2>
+      <a name="SECTION00056000000000000000">Exemplo de Output</a>
+    </h2>
+    <pre>
+VENDE_A_DROGA
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
