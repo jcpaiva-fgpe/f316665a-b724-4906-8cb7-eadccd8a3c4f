@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Ken-Ken
+    </title>
+    <meta name="description" content="Ken-Ken">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00050000000000000000">Ken-Ken</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="95" height="99" align="bottom" border="0" src="./ken-ken.png"
+      alt="Image ken-ken">
+    </div>
+    <p>
+      O <b>ken-ken</b> é um desafio lógico-aritmético semelhante ao sudoku.
+      Baseia-se numa grelha quadrada de tamanho <em>n</em> (i.e., com
+      <em>n</em> <b>linhas</b> e <em>n</em> <b>colunas</b>) que deve ser
+      preenchida com números e obedecer a um conjunto de regras estruturais e
+      restrições aritméticas.
+    </p>
+    <p>
+      A grelha deve ser preenchida com números inteiros de 1 a <em>n</em> e de
+      modo que em cada linha e em cada coluna não haja números repetidos.
+    </p>
+    <p>
+      Está dividida em <b>regiões</b>. As regiões são um conjunto de células
+      contíguas, com pelo menos uma e menos de <em>n</em> células, que podem
+      ter diferentes formas. As células duma região podem estender-se por uma
+      mesma linha, uma mesma coluna, ou simultaneamente por várias linhas e
+      colunas, formando um quadrado ou um L (ele).
+    </p>
+    <p>
+      Cada região tem associada uma <b>restrição</b>, definida por um valor e
+      uma operação aritmética (<tt>+</tt>, <tt>*</tt>, <tt>-</tt> ou
+      <tt>/</tt>). A operação agrega o conteúdo de todas as células da região e
+      o resultado deve ser o valor dado. Por exemplo, se a restrição for <tt>9
+      +</tt> então os valores da região somados devem totalizar <tt>9</tt>.
+    </p>
+    <p>
+      As operações soma e multiplicação podem ter um número arbitrário de
+      operandos e, sendo comutativas, a ordem pelo qual são operados é
+      irrelevante. As operações de subtração e divisão não são comutativas nem
+      associativas e, por isso, assume-se que têm sempre apenas 2 operandos e
+      que o primeiro tem valor igual ou superior ao segundo. Por exemplo, se a
+      restrição for <tt>2 /</tt> e a região contiver os valores <tt>2</tt> e
+      <tt>4</tt> então a operação em questão é <tt>4/2</tt>. No caso de a
+      região ter apenas uma célula pode assumir que a operação é uma soma
+      (sendo o resultado o valor dessa célula).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00051000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Pretende-se um programa que leia a definição de um problema de ken-ken e
+      um conjunto de preenchimentos da grelha e indique quais os corretos
+      (``<tt>OK</tt>'') e os incorretos (``<tt>KO</tt>''). O programa deve
+      verificar quer as regras estruturais (não existência de números repetidos
+      em cada linha e em cada coluna) quer as restrições aritméticas.
+    </p>
+    <p>
+      A primeira linha dos dados contem um par de inteiros <em>n r</em>, sendo
+      <em>n</em> a dimensão da grelha (maior do que 3 e menor do que 10) e
+      <em>r</em> o número de regiões. Seguem-se <em>r</em> definições de
+      regiões e respetivas restrições. A linha inicial de cada uma dessas
+      definições contem um terno <em>b v o</em>, constituído por dois inteiros
+      e um caracter: <em>b</em> é o número de células na região, <em>v</em> o
+      valor agregado (i.e., o resultado da operação de agregação) e <em>o</em>
+      a operação de agregação (<tt>+</tt>, <tt>*</tt>, <tt>-</tt> ou
+      <tt>/</tt>). As <em>b</em> linhas seguintes têm as coordenadas das
+      células que formam a região: em cada linha terá um par de inteiros <em>l
+      c</em> sendo <em>l</em> o índice de linha e <em>c</em> o de coluna (são
+      ambos não negativos e inferiores a <em>n</em>; a célula com coordenadas
+      <tt>(0,0)</tt> encontra-se no canto inferior esquerdo da grelha).
+    </p>
+    <p>
+      Depois da descrição do ken-ken, tem uma linha com um inteiro <em>p</em>
+      que indica o número de resoluções a verificar. Segue-se a descrição
+      dessas <em>p</em> resoluções: para cada resolução, tem um identificador
+      (sequência de letras ou dígitos, de comprimento inferior a 20) numa
+      primeira linha e nas <em>n</em> linhas seguintes (cada uma com <em>n</em>
+      inteiros), tem a definição dos valores da grelha após essa resolução.
+    </p>
+    <p>
+      O resultado é constituído por <em>p</em> linhas iniciadas com o
+      identificador da resolução seguido de um carater de dois-pontos e um
+      espaço seguido da sequência de caracteres <tt>OK</tt> se a resolução
+      estiver correcta, ou <tt>KO</tt> no caso contrário.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00052000000000000000">Exemplo</a>
+    </h2>
+    <h3>
+      <a name="SECTION00052100000000000000">Input</a>
+    </h3>
+    <p></p>
+    <pre>
+4 8
+2 2 *
+0 0
+1 0
+1 1 +
+1 1
+2 1 -
+0 1
+0 2
+2 2 /
+0 3
+1 3
+1 4 +
+2 0
+3 9 +
+3 0
+3 1
+2 1
+3 6 +
+3 2
+2 2
+1 2
+2 3 /
+3 3
+2 3
+3
+A
+3 4 2 1
+4 2 1 3
+2 1 3 2
+1 3 4 1
+B
+1 2 3 4
+2 3 4 1
+3 4 1 2
+4 1 2 3
+C
+3 4 2 1
+4 2 1 3
+2 1 3 4
+1 3 4 2
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00052200000000000000">Output</a>
+    </h3>
+    <pre>
+A: KO
+B: KO
+C: OK
+</pre><br>
+  </body>
+</html>
