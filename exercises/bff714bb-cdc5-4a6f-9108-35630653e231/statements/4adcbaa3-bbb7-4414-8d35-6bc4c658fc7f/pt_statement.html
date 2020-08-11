@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>
+      Compras, só em moedas
+    </title>
+    <meta name="description" content="Compras, só em moedas">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <script type="text/javascript" src=
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000" id=
+      "SECTION00050000000000000000">Compras, só em moedas</a>
+    </h1>
+    <table align="right">
+      <tr>
+        <td align="center">
+          <img width="223" height="250" src="dinheiro.jpeg" border="1" align=
+          "center" alt="[missing alt]">
+        </td>
+      </tr>
+    </table><br>
+    <p>
+      Na loja do Senhor Moeda, não se aceitam notas para pagar as compras
+      realizadas pelos clientes, nem se dá troco em notas. Tudo é realizado com
+      as moedas de&nbsp;2 e&nbsp;1 euros e as moedas de 50, 20, 10, 5, 2 e 1
+      cêntimos. Na loja existe um stock ilimitado de moedas e, já agora, de
+      artigos para venda.
+    </p>
+    <p>
+      De forma a manter os clientes satisfeitos, sempre que o Sr. Moeda dá
+      troco, dá o menor número possível de moedas.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00051000000000000000" id=
+      "SECTION00051000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escreva um programa que, dado o valor da compra e as moedas que o cliente
+      entregou para pagar a compra, indica as moedas dadas no troco, caso seja
+      possível realizar a compra (ou seja, quando o valor entregue pelo cliente
+      é superior ou igual ao valor da compra). No caso contrário, a compra não
+      se pode concretizar e as moedas entregues pelo cliente são-lhe
+      devolvidas.
+    </p>
+    <p>
+      Por exemplo, se o valor a pagar for 5 euros e 25 cêntimos e o cliente
+      entregar uma moeda de 2 euros, três moedas de 1 euro e duas moedas de 50
+      cêntimos, o troco será composto por uma moeda de 50 cêntimos, uma moeda
+      de 20 cêntimos e uma moeda de 5 cêntimos.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00052000000000000000" id=
+      "SECTION00052000000000000000">Input</a>
+    </h2>
+    <p>
+      Existem sempre 2 linhas.
+    </p>
+    <p>
+      A primeira linha tem dois números inteiros, \(E\) e \(C\),       que
+      indicam que o valor da compra é \(E\) euros e \(C\)       cêntimos. Pelo
+      menos um destes números é positivo.
+    </p>
+    <p>
+      A segunda linha tem 8 números inteiros não negativos, \(n_1, n_2, \ldots,
+      n_8\), que indicam o número de moedas de cada tipo entregues pelo cliente
+      para efetuar o pagamento. Estes números são dados da moeda com maior
+      valor à moeda com menor valor. Assim, \(n_1\)  é o número de moedas de 2
+      euros entregues pelo cliente e \(n_8\)     é o número de moedas de 1
+      cêntimo entregues pelo cliente.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00053000000000000000" id=
+      "SECTION00053000000000000000">Restrições</a>
+    </h2>
+    <p></p>
+    <table cellpadding="3">
+      <tr>
+        <td align="left">
+          \(0 \leq E \leq 1\,000\) 
+        </td>
+        <td align="left">
+          Euros do valor da compra
+        </td>
+      </tr>
+      <tr>
+        <td align="left">
+          \(0\leq C \leq 99\) 
+        </td>
+        <td align="left">
+          Cêntimos do valor da compra
+        </td>
+      </tr>
+      <tr>
+        <td align="left">
+          \(0 \leq n_i \leq 8\,000\) 
+        </td>
+        <td align="left">
+          Número de moedas de um tipo (com \(i=1,2,\ldots,8\)) 
+        </td>
+      </tr>
+    </table>
+    <p></p>
+    <h2>
+      <a name="SECTION00054000000000000000" id=
+      "SECTION00054000000000000000">Output</a>
+    </h2>
+    <p>
+      Uma única linha com 8 inteiros não negativos, que indicam o número de
+      moedas de cada tipo que serão dadas ao cliente. Caso o valor entregue
+      pelo cliente seja superior ou igual ao valor da compra, essas moedas são
+      o troco dado pelo Sr. Moeda. No caso contrário, essas moedas foram as
+      entregues pelo cliente ao Sr. Moeda. Tal como na entrada, o primeiro
+      número corresponde à moeda de 2 euros, o segundo número corresponde à
+      moeda de 1 euro, e assim sucessivamente, respeitando a ordem decrescente
+      do valor facial das moedas.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00055000000000000000" id=
+      "SECTION00055000000000000000">Exemplo 1 - Venda efetuada</a>
+    </h2>
+    <h3>
+      <a name="SECTION00055100000000000000" id=
+      "SECTION00055100000000000000">Input</a>
+    </h3>
+    <pre>
+5 25
+1 3 2 0 0 0 0 0
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00055200000000000000" id=
+      "SECTION00055200000000000000">Output</a>
+    </h3>
+    <pre>
+0 0 1 1 0 1 0 0
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00056000000000000000" id=
+      "SECTION00056000000000000000">Exemplo 2 - Venda efetuada</a>
+    </h2>
+    <h3>
+      <a name="SECTION00056100000000000000" id=
+      "SECTION00056100000000000000">Input</a>
+    </h3>
+    <pre>
+5 25
+0 3 0 1 0 1 0 200
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00056200000000000000" id=
+      "SECTION00056200000000000000">Output</a>
+    </h3>
+    <pre>
+0 0 0 0 0 0 0 0
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00057000000000000000" id=
+      "SECTION00057000000000000000">Exemplo 3 - Venda não efetuada</a>
+    </h2>
+    <h3>
+      <a name="SECTION00057100000000000000" id=
+      "SECTION00057100000000000000">Input</a>
+    </h3>
+    <pre>
+5 25
+0 3 0 1 0 1 0 100
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00057200000000000000" id=
+      "SECTION00057200000000000000">Output</a>
+    </h3>
+    <pre>
+0 3 0 1 0 1 0 100
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
