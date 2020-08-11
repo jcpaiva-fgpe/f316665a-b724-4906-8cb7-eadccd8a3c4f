@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Fogo Cruzado
+    </title>
+    <meta name="description" content="Fogo Cruzado">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00060000000000000000" id=
+      "SECTION00060000000000000000">Fogo Cruzado</a>
+    </h1>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00061000000000000000" id=
+      "SECTION00061000000000000000">Problema</a>
+    </h2>
+    <p>
+      Considere um tabuleiro com <i>L</i> linhas e <i>C</i> colunas. Na
+      primeira linha está colocada numa das colunas uma bola branca que se
+      desloca verticalmente ao longo dessa coluna e uma posição de cada vez.
+      Nas restantes linhas (em qualquer coluna), poderão estar colocadas bolas
+      pretas (no máximo uma por linha), representando projectéis. As bolas
+      pretas movem-se apenas horizontalmente, uma posição de cada vez. As bolas
+      pretas movimentam-se a partir de uma coluna inicial dada e segundo um
+      sentido inicial também dado. Quando uma bola preta atinge o limite do
+      tabuleiro esta inverte o sentido do seu movimento.
+    </p>
+    <p></p>
+    <div align="center">
+      <img width="315" height="227" align="bottom" border="0" src="img23.gif"
+      alt="\includegraphics[width=7cm]{fogo}">
+    </div>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00062000000000000000" id=
+      "SECTION00062000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escrever um programa que, dadas as dimensões do tabuleiro inicial L*C, a
+      coluna onde se encontra a bola branca, o número de bolas pretas e, para
+      cada bola preta, a sua posição inicial (linha e coluna) e o sentido de
+      movimento, determine se a bola branca chega ao fundo do tabuleiro sem
+      colidir com nenhuma das bolas pretas em movimento. Em caso de colisão, o
+      programa deve imprimir <tt>Colide</tt> e a linha correspondente à bola
+      preta que colide com a bola branca. Caso contrário o programa deverá
+      imprimir simplemente que a bola <tt>Passa</tt>.
+    </p>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00063000000000000000" id=
+      "SECTION00063000000000000000">Input</a>
+    </h2>Os dados do problema são apresentados da seguinte forma:<br>
+    <ul>
+      <li>uma linha com dois inteiros <i>L</i> e <i>C</i> (&lt;=50) que
+      correspondem ao tamanho do tabuleiro;
+        <p></p>
+      </li>
+      <li>uma linha com um só inteiro <i>ColBranca</i> que indica a coluna onde
+      inicialmente se encontra a bola branca;
+        <p></p>
+      </li>
+      <li>uma linha com um só inteiro <i>NPretas</i> que indica quantas bolas
+      pretas vão ser usadas;
+        <p></p>
+      </li>
+      <li>
+        <i>NPretas</i> linhas, cada uma com três inteiros representando
+        respectivamente: a linha onde a bola preta vai ser colocada, a coluna
+        em que se encontra inicialmente e o sentido <tt>-1</tt> (para a
+        esquerda) ou <tt>1</tt> (para a direita) do movimento.
+      </li>
+    </ul>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00064000000000000000" id=
+      "SECTION00064000000000000000">Output</a>
+    </h2>O programa deverá apresentar como resultado:
+    <ul>
+      <li>
+        <tt>passa</tt>: se não há colisão.
+      </li>
+      <li>
+        <tt>colide n</tt>: se há colisão, em que <tt>n</tt> é o número da linha
+        em que se encontra a bola preta que colidiu com a bola branca:
+      </li>
+    </ul>
+    <p></p>
+    <h2>
+      <a name="SECTION00065000000000000000" id=
+      "SECTION00065000000000000000">Exemplo 1: input</a>
+    </h2><br>
+    <pre>
+5 7
+3
+3
+2 2 -1
+5 1 1
+4 6 1
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00066000000000000000" id=
+      "SECTION00066000000000000000">Exemplo 1: output</a>
+    </h2><br>
+    <pre>
+passa
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00067000000000000000" id=
+      "SECTION00067000000000000000">Exemplo 2: input</a>
+    </h2><br>
+    <pre>
+3 3
+1
+2
+2 2 1
+3 3 1
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00068000000000000000" id=
+      "SECTION00068000000000000000">Exemplo 2: output</a>
+    </h2><br>
+    <pre>
+colide 3
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00069000000000000000" id=
+      "SECTION00069000000000000000">Exemplo 3: input</a>
+    </h2><br>
+    <pre>
+4 2
+2
+3
+4 2 -1
+2 2  1
+3 1  1
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION000610000000000000000" id=
+      "SECTION000610000000000000000">Exemplo 3: output</a>
+    </h2><br>
+    <pre>
+passa
+</pre><br>
+    <hr>
+  </body>
+</html>
