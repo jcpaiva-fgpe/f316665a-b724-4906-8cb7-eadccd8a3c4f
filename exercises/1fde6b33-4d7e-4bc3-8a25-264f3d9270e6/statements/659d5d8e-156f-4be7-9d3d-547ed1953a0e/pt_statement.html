@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Problemas de Agenda
+    </title>
+    <meta name="description" content="Problemas de Agenda">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00020000000000000000">Problemas de Agenda</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="111" height="111" align="bottom" border="0" src=
+      "./Calendar.jpg" alt="Image Calendar">
+    </div>
+    <p>
+      As pessoas com agendas sobrecarregadas têm alguma dificuldade em marcar
+      reuniões. Há as que dizem "posso das <em>x</em> às <em>y</em>, mas às
+      <em>y</em> já tenho outra reunião" e as que dizem "não posso das
+      <em>z</em> às <em>t</em>, mas às <em>t</em> já estou livre". As outras
+      possibilidades não serão interessantes agora e para simplificar vamos
+      supor que dizem sempre "posso".
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00021000000000000000">Tarefa</a>
+    </h2>Escrever um programa que, dada a duração (em horas) prevista para uma
+    reunião entre duas pessoas e dois pares de inteiros <em>A B</em> e <em>C
+    D</em>, verifica se é possível agendar a reunião e quando. Neste caso, a
+    primeira pessoa diria "posso das <em>A</em> horas às <em>B</em> horas, mas
+    às <em>B</em> já tenho outra reunião" e a segunda diria "posso das
+    <em>C</em> horas às <em>D</em> horas, mas às <em>D</em> já tenho outra
+    reunião", sendo <em>A, B, C</em> e&nbsp;<em>D</em> inteiros entre 9 e 19.
+    Assume-se que <em>A</em> é menor do que <em>B</em> e que <em>C</em> é menor
+    do que&nbsp;<em>D</em>.
+    <p>
+      A reunião tem de decorrer entre as 9 e as 19 horas e a sua duração é um
+      inteiro. A primeira linha de dados tem essa duração e as duas seguintes
+      os dois pares referidos. Conforme o caso, o programa escreve uma linha ou
+      com a palavra <code>Impossivel</code> (sem acento) ou com um inteiro se a
+      reunião só se puder realizar a uma hora ou com dois inteiros se houver
+      flexibilidade (estes inteiros definem o intervalo em que se pode fixar o
+      início da reunião).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00022000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00022100000000000000">Input</a>
+    </h3>
+    <pre>
+1
+9 12
+12 16
+</pre>
+    <h3>
+      <a name="SECTION00022200000000000000">Output</a>
+    </h3>
+    <pre>
+Impossivel
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00023000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00023100000000000000">Input</a>
+    </h3>
+    <pre>
+2
+10 15
+10 17
+</pre>
+    <h3>
+      <a name="SECTION00023200000000000000">Output</a>
+    </h3>
+    <pre>
+10 13
+</pre>
+  </body>
+</html>
