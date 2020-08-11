@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Sequência de Dígitos
+    </title>
+    <meta name="description" content="Problem&nbsp;D: Sequência de Dígitos">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00040000000000000000" id=
+      "SECTION00040000000000000000">Sequência de Dígitos</a>
+    </h1>
+    <p></p>
+    <h2>
+      <a name="SECTION00041000000000000000" id=
+      "SECTION00041000000000000000">Problema</a>
+    </h2>Numa prova com 10 jogadores (numerados de 0 a 9), ganha o concorrente
+    com o maior número de respostas correctas consecutivas. A prova
+    desenrola-se da seguinte forma: um concorrente é seleccionado
+    aleatoriamente para responder. Sempre que der uma resposta certa o
+    concorrente ganha um ponto e mantém o direito de resposta. Sempre que der
+    uma resposta errada o concorrente perde o direito a responder sendo
+    aleatoriamente seleccionado outro concorrente. A informação de uma prova
+    consiste numa sequência de dígitos que correspondem aos números dos
+    jogadores que responderam acertadamente às respostas. Por exemplo na prova
+    <pre>
+0 0 2 3 5 5 4 4 4 7 5 5 5 5 1 9
+</pre>O vencedor foi o concorrente 5 com um máximo de 4 respostas certas
+consecutivas.
+    <p>
+      No caso de empate, ganha o primeiro jogador a obter a sequência máxima de
+      respostas certas. Por exemplo na prova
+    </p>
+    <pre>
+0 2 3 4 4 4 7 5 5 1 1 1 9 4 4 5 5 5
+</pre>O vencedor foi o concorrente 4 pois foi o primeiro a obter 3 respostas
+certas consecutivas.<br>
+    <h2>
+      <a name="SECTION00042000000000000000" id=
+      "SECTION00042000000000000000">Tarefa</a>
+    </h2>Escrever um programa que, dada uma sequência de dígitos (0, 1, ...,
+    9), contendo a informação de uma prova, determine qual o vencedor da prova
+    e o número de respostas que lhe deu a vitória. Ou seja, determine qual o
+    tamanho da maior sub-sequência de ocorrências consecutivas do mesmo dígito
+    (número de respostas) e para que dígito ocorreu esse máximo (número do
+    jogador).
+    <p>
+      <br>
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00043000000000000000" id=
+      "SECTION00043000000000000000">Input</a>
+    </h2>A primeira linha do input é um inteiro <i>N</i> (&lt;=1000) que indica
+    o tamanho da sequência a considerar. A segunda linha é a sequência de N
+    dígitos que representa a informação da prova.<br>
+    <h2>
+      <a name="SECTION00044000000000000000" id=
+      "SECTION00044000000000000000">Output</a>
+    </h2>O output é uma linha com os dois inteiros, representando o número do
+    jogador que ganhou a prova e o número de respostas certas consecutivas que
+    lhe deu a vitória.
+    <p></p>
+    <h2>
+      <a name="SECTION00045000000000000000" id=
+      "SECTION00045000000000000000">Exemplo de Input</a>
+    </h2><br>
+    <p></p>
+    <pre>
+20
+0 0 2 3 3 3 4 5 5 6 3 3 3 3 3 2 3 3 3 3
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00046000000000000000" id=
+      "SECTION00046000000000000000">Exemplo de Output</a>
+    </h2><br>
+    <pre>
+3 5
+</pre><br>
+    <hr>
+  </body>
+</html>
