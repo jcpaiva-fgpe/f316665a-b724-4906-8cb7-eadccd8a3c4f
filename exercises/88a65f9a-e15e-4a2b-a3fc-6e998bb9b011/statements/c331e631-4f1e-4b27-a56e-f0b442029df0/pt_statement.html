@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>
+      Curso de verão
+    </title>
+    <meta name="description" content="Curso de verão">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <script type="text/javascript" src=
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00020000000000000000" id=
+      "SECTION00020000000000000000">Curso de verão</a>
+    </h1>
+    <p>
+      <br>
+    </p>
+    <table align="right">
+      <tr>
+        <td align="center">
+          <img width="223" height="250" src="Alfa_Pendular_184_B.jpg" border=
+          "1" align="center" alt="[missing alt]">
+        </td>
+      </tr>
+    </table>
+    <p>
+      A Ana e o Carlos, que moram no Porto, ficaram entusiasmados com a ideia
+      de em julho ir à Universidade do Algarve frequentar um curso de verão
+      para alunos do ensino secundário. Por isso, estão já a fazer os
+      preparativos para a viagem.
+    </p>
+    <p>
+      O ideal será ir de comboio, do Porto até Faro. O preço normal da viagem,
+      em classe turística, é €51.50. Felizmente, como ambos são jovens com
+      menos de 26 anos, têm automaticamente direito a um desconto de 25%. Ora
+      25% de 51.50 é 12.87.
+    </p>
+    <p>
+      Na verdade, o valor exato seria ligeiramente maior, mas a CP faz as
+      contas dos descontos até aos cêntimos. Logo, o preço da viagem ficaria em
+      €38.63. Só que a CP, para facilitar os trocos (dizem eles…) arredonda
+      todos os preços para cima, até ao múltiplo de 50 cêntimos imediato. Ou
+      seja, a viagem fica por 39 euros para cada um.
+    </p>
+    <p>
+      Já não seria mau, mas a Ana e o Carlos descobriram que se comprarem o
+      bilhete com cinco dias de antecedência ou mais terão um desconto
+      adicional de 40%. Ou seja, como 40% de 39 são 15.6, o preço com o
+      desconto de 40% e o tal arredondamento aos múltiplos de 50 cêntimos fica
+      a €23.50. Aliás, se a antecedência da compra for oito dias ou mais, o
+      desconto sobe para 65%, o que é ainda mais vantajoso.
+    </p>
+    <p>
+      Mas os descontos possíveis não ficam por aqui, descobriram a Ana e o
+      Carlos: se conseguirem trazer consigo pelo menos mais dois outros amigos,
+      passam a ser considerados um grupo e a ter direito a um desconto
+      adicional de 50%. Quer dizer, se todos os quatro (ou mais) tivessem
+      decidido comprar o bilhete ao mesmo tempo, com cinco dias de
+      antecedência, o desconto sobre 23.50 seria 11.75, pelo que, feitas as
+      contas, e considerados os malfadados arredondamentos, a viagem para cada
+      um dos membros do grupo ficaria por €12.00. Claro que se comprarem com
+      antecedência de oito dias ou mais, o preço será ainda mais baixo.
+    </p>
+    <p>
+      Este regime de descontos aplica-se a todas as viagens de longo curso. Por
+      isso, se a Ana e o Carlos acabarem por decidir ir fazer o curso de verão
+      a outro sítio, por exemplo, à Universidade Nova de Lisboa, terão de fazer
+      contas análogas, começando com o preço da viagem Porto-Lisboa.
+    </p>
+    <p>
+      Claro que, em vez de fazer as contas à mão, o melhor é escrever um
+      programa que trate disso.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00021000000000000000" id=
+      "SECTION00021000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escreva um programa que dado o preço normal, a antecedência da compra e o
+      tamanho do grupo (todos jovens), determine o preço de cada bilhete,
+      expresso por um número inteiro de cêntimos.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00022000000000000000" id=
+      "SECTION00022000000000000000">Input</a>
+    </h2>
+    <p>
+      Uma linha com três números, representando, respetivamente, o preço normal
+      da viagem (em cêntimos), a antecedência da compra (em dias) e o tamanho
+      do grupo de viajantes, todos jovens.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00023000000000000000" id=
+      "SECTION00023000000000000000">Restrições</a>
+    </h2>
+    <p></p>
+    <table cellpadding="3">
+      <tr>
+        <td align="left">
+          \(100 \leq p &lt; 100\,000\) 
+        </td>
+        <td align="left">
+          Preço normal da viagem (em cêntimos)
+        </td>
+      </tr>
+    </table>
+    <p></p>
+    <h2>
+      <a name="SECTION00024000000000000000" id=
+      "SECTION00024000000000000000">Output</a>
+    </h2>Uma linha com um número que representa o preço de cada bilhete,
+    expresso por um número inteiro de cêntimos (que há de ser um múltiplo de
+    50, por causa daquela regra dos arredondamentos).
+    <p></p>
+    <h2>
+      <a name="SECTION00025000000000000000" id=
+      "SECTION00025000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00025100000000000000" id=
+      "SECTION00025100000000000000">Input</a>
+    </h3>
+    <pre>
+5150 5 4
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00025200000000000000" id=
+      "SECTION00025200000000000000">Output</a>
+    </h3>
+    <pre>
+1200
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00026000000000000000" id=
+      "SECTION00026000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00026100000000000000" id=
+      "SECTION00026100000000000000">Input</a>
+    </h3>
+    <pre>
+3400 10 2
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00026200000000000000" id=
+      "SECTION00026200000000000000">Output</a>
+    </h3>
+    <pre>
+900
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
