@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Telefones de Emergência
+    </title>
+    <meta name="description" content="Telefones de Emergência">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+  </head>
+  <body>
+    <h1>
+      Telefones de Emergência
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="73" height="99" align="bottom" border="0" src="phone3.jpg"
+      alt="Image phone3"> <img width="96" height="99" align="bottom" border="0"
+      src="phone4.jpg" alt="Image phone4">
+    </div>
+    <p></p>
+    <h2>
+      Problema
+    </h2>
+    <p>
+      Uma determinada concessionária de auto-estradas pretende instalar uma
+      rede de telefones de emergência. Contudo, devido ao preço exorbitante dos
+      cabos eléctricos nos últimos tempos, a concessionária está a tentar
+      resolver o problema de enviar electricidade aos telefones de uma forma
+      que não a obrigue a colocar cabos ao longo de toda a auto-estrada. Embora
+      sejam amplamente adoptados noutras auto-estradas, nesta zona os painéis
+      solares não são uma opção, pois está permanentemente mau tempo.
+    </p>
+    <p>
+      Contudo nem tudo está perdido. Recentemente foi inventada uma nova
+      tecnologia de transmissão de electricidade sem fios que, recorrendo a
+      sofisticadíssimas antenas direccionais permite o envio directo de todo o
+      sinal para um dado telefone, sempre que este iniciar uma chamada. Com
+      esta tecnologia de transmissão de electricidade, a potência eléctrica
+      decresce apenas uma unidade por cada quilómetro que o sinal percorre.
+    </p>
+    <div align="center">
+      <img width="241" height="135" align="bottom" border="0" src="img1.gif"
+      alt="\includegraphics[height=3cm]{Telefones/exemplo}">
+    </div>Apesar de entusiasmados com a ideia, os responsáveis, zelosos pelas
+    questões de segurança, pretendem confirmar que todos os telefones de
+    emergência terão electricidade suficiente para funcionar.
+    <h2>
+      Tarefa
+    </h2>Escrever um programa que dadas as posições das antenas e dos telefones
+    e as suas potências (de emissão das antenas e de funcionamento dos
+    telefones), verifique se os telefones poderão ou não funcionar. Um telefone
+    poderá receber simultaneamente sinais de várias antenas, sendo a potência
+    total recebida igual ao somatório das potências recebidas de cada antena.
+    Assuma que não será utilizado mais do que um telefone em simultâneo.
+    <p></p>
+    <h2>
+      Input
+    </h2>Corresponde a um plano de instalação de <img width="20" height="15"
+    align="bottom" border="0" src="img2.gif" alt="$N$"> antenas e de
+    localização de <img width="23" height="15" align="bottom" border="0" src=
+    "img3.gif" alt="$M$"> telefones de emergência. Na primeira linha tem um
+    inteiro <img width="16" height="15" align="bottom" border="0" src=
+    "img4.gif" alt="$L$"> que indica a extensão em Km (medida em linha recta)
+    da região em que serão instaladas as antenas, <img width="106" height="32"
+    align="middle" border="0" src="img5.gif" alt="$1 \leq L \leq 1000$">. Nas
+    linhas seguintes tem o valor de <img width="20" height="15" align="bottom"
+    border="0" src="img2.gif" alt="$N$">(<img width="102" height="32" align=
+    "middle" border="0" src="img6.gif" alt="$1 \leq N \leq 100$">) e depois
+    <img width="20" height="15" align="bottom" border="0" src="img2.gif" alt=
+    "$N$"> pares de linhas: a primeira linha de cada par tem a posição
+    <img width="14" height="15" align="bottom" border="0" src="img7.gif" alt=
+    "$x$"> da antena (<img width="81" height="32" align="middle" border="0"
+    src="img8.gif" alt="$1 \leq x \leq L$">) e a segunda a sua potência
+    <img width="13" height="31" align="middle" border="0" src="img9.gif" alt=
+    "$p$"> (<img width="86" height="31" align="middle" border="0" src=
+    "img10.gif" alt="$1 \leq p \leq 64$">), medida numa unidade especialmente
+    desenvolvida para estas antenas. Depois encontrará o número de telefones
+    <img width="23" height="15" align="bottom" border="0" src="img3.gif" alt=
+    "$M$"> (<img width="104" height="32" align="middle" border="0" src=
+    "img11.gif" alt="$1 \leq M \leq 500$">) e <img width="23" height="15"
+    align="bottom" border="0" src="img3.gif" alt="$M$"> pares de linhas: a
+    primeira linha de cada par tem a posição <img width="14" height="15" align=
+    "bottom" border="0" src="img7.gif" alt="$x$"> de cada telefone (<img width=
+    "81" height="32" align="middle" border="0" src="img12.gif" alt=
+    "$1 \le x \le L$">) e a segunda, a potência <img width="13" height="31"
+    align="middle" border="0" src="img9.gif" alt="$p$"> necessária para o seu
+    funcionamento (<img width="86" height="31" align="middle" border="0" src=
+    "img13.gif" alt="$1 \le p \le 64$">).
+    <p></p>
+    <h2>
+      Output
+    </h2>É composto por <img width="23" height="15" align="bottom" border="0"
+    src="img3.gif" alt="$M$"> linhas. A <img width="10" height="16" align=
+    "bottom" border="0" src="img14.gif" alt="$i$">-ésima linha indica se o
+    <img width="10" height="16" align="bottom" border="0" src="img14.gif" alt=
+    "$i$">-ésimo telefone de emergência fica funcional ou não: terá
+    <tt>SIM</tt> se ficar e <tt>NAO</tt> caso contrário. Todas terminam por
+    mudança de linha.
+    <p></p>
+    <h2>
+      Exemplo - input
+    </h2><br>
+    <pre>
+10
+2
+1
+5
+10
+5
+4
+5
+2
+5
+1
+10
+6
+8
+3
+</pre>
+    <p></p>
+    <h2>
+      Exemplo - output
+    </h2><br>
+    <pre>
+NAO
+SIM
+NAO
+SIM
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
