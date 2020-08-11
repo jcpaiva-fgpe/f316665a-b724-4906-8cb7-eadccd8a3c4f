@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <script type="text/javascript" src=
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <title></title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000" id=
+      "SECTION00010000000000000000">Lançado às feras</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="300" height="225" align="bottom" border="0" src="./fera.jpg"
+      alt="Image fera">
+    </div>
+    <p>
+      "Limpinho, limpinho..." - Futebol ou triste fado? No ToPAS 2013, Calimero
+      procurava uma saída de um túnel. Está agora festejar ou em apuros? Vamos
+      seguir os seus passos.
+    </p>
+    <p>
+      Sabemos que está algures num domínio retangular, discreto, à beira mar
+      plantado. Tenta gerir as suas economias. Segue instruções rigorosas:
+      movimentos para Sul (<b>S</b>), Norte (<b>N</b>), Este (<b>E</b>), ou
+      Oeste (<b>W</b>), de um certo número de posições. Pelo caminho, ganha
+      algum dinheiro, que vai dando para as despesas apenas. O pior são as
+      taxas (<b>T</b>) que o surpreendem no caminho e que, instantaneamente,
+      lhe retiram 10% das economias correntes. Na verdade, pode não ser tanto
+      pois essas perdas são sempre aproximadas às unidades e nunca excedem 10%
+      dessas economias. Com sorte, encontra algum investimento (<b>I</b>) que
+      lhe permitirá instantaneamente repor 5% das economias correntes (com
+      aproximação às unidades e sem exceder 5% dessas economias).
+    </p>
+    <p>
+      Entre sortes e azares, vai andando, às vezes desnorteado (trocando o
+      Norte com o Sul) por ter apanhado uma pancada forte (<b>X</b>). Após tal
+      pancada, prossegue imediatamente, desorientado, só recuperando com uma
+      nova pancada forte (<b>X</b>) ou um grande susto (por quase se afogar).
+      Se recuperar durante um movimento para Sul/Norte, inverte imediatamente o
+      sentido, e prossegue.
+    </p>
+    <p>
+      Por vezes, recebe indicações para emigrar, saindo do domínio retangular
+      por uma fronteira (<b>A</b>). Mas não sai para Oeste nem para Sul, porque
+      não se quer afogar. Antes de entrar no oceano, interrompe sempre o
+      movimento (e, com o susto, até recupera o norte, se for caso disso!),
+      aguardando nova instrução. Fora ou dentro segue instruções precisas.
+      Quando está fora, consegue reforçar as poupanças (10 unidades monetárias
+      por cada posição que visita, mesmo de passagem) e não tem taxas nem
+      investimentos. Quando emigra, espera um dia poder voltar. Mas, na
+      fronteira (Norte e Este), existem feras (<b>F</b>) que o podem aniquilar
+      se tiver a infelicidade de esbarrar nalguma, num movimento de saída ou
+      entrada, ou no exterior (sobre a fronteira).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00011000000000000000" id=
+      "SECTION00011000000000000000">Tarefa</a>
+    </h2>Escrever um programa para seguir os passos de Calimero, na execução
+    das diretrizes recebidas e, se não for aniquilado, determinar a sua posição
+    final e o valor final das suas economias.
+    <p></p>
+    <h2>
+      <a name="SECTION00012000000000000000" id=
+      "SECTION00012000000000000000">Input</a>
+    </h2>A primeira linha tem três inteiros, \(s\), \(m\) e \(n\), com \(0\leq
+    s &lt;
+    1000\) e \(m, n &lt; 20\), que representam as economias iniciais e o número
+    de linhas e de colunas da tabela que define o <em>domínio retangular</em>.
+    Segue-se a tabela, formada por $m$ sequências de \(n\) letras maiúsculas,
+    <b>T</b>, <b>I</b>, <b>X</b>, <b>A</b>, <b>F</b>, com o significado acima,
+    e <b>V</b> (vazia). A Sul e Oeste tem apenas <b>A</b>'s. A Norte e Este tem
+    <b>A</b>'s e <b>F</b>'s. No interior tem <b>T</b>, <b>I</b>, <b>X</b> ou
+    <b>V</b>'s.<br>
+    Depois da tabela, tem o número de movimentos a efetuar e, finalmente, a
+    descrição de cada movimento, dada por um carater (S,N,E,W) seguido de um
+    dígito (0, ..., 9) que é o deslocamento.<br>
+    No início, Calimero está dentro do domínio, no canto inferior esquerdo.
+    Essa posição tem coordenadas (1,1) e contém <b>V</b>. Sobre a fronteira, já
+    está fora. Pontos com abcissa ou ordenada zero estão no oceano. As
+    coordenadas das posições visitadas no exterior são sempre positivas. O
+    referencial é o canónico. O número de movimentos a efetuar não excede 100.
+    <p></p>
+    <h2>
+      <a name="SECTION00013000000000000000" id=
+      "SECTION00013000000000000000">Output</a>
+    </h2>Uma linha com a palavra <tt>Aniquilado</tt>, se tal acontecer. Caso
+    contrário, uma linha com o formato <tt>Dentro(x,y):s:z</tt> ou
+    <tt>Fora(x,y):s:z</tt>, sem espaços, em que <tt>x</tt> e <tt>y</tt> definem
+    as coordenadas da posição final e <tt>s</tt> as economias, e <tt>z</tt> o
+    estado (<tt>D</tt> ou <tt>ND</tt> para desnorteado ou não desnorteado).
+    <p></p>
+    <h2>
+      <a name="SECTION00014000000000000000" id=
+      "SECTION00014000000000000000">Exemplo 1</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00014100000000000000" id=
+      "SECTION00014100000000000000">Input</a>
+    </h3>
+    <pre>
+108 9 9
+AFFFAFFFF
+AVXXXTVVF
+AIXVVTVVA
+AVXVVVVVA
+AVXVVVXVF
+AVVVVVXVA
+AVVVIVXVA
+AVVVVVTVF
+AAAAAAAAA
+4
+E6
+N2
+W3
+N6
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00014200000000000000" id=
+      "SECTION00014200000000000000">Output</a>
+    </h3>
+    <pre>
+Dentro(4,1):102:ND
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00016000000000000000" id=
+      "SECTION00016000000000000000">Exemplo 2</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00016100000000000000" id=
+      "SECTION00016100000000000000">Input</a>
+    </h3>
+    <pre>
+108 5 9
+AFFFAFFFF
+AVVVVVXVA
+AVVVIVXVA
+AVVVVVTVF
+AAAAAAAAA
+8
+E6
+N2
+W3
+N6
+S3
+W2
+N1
+E8
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00016200000000000000" id=
+      "SECTION00016200000000000000">Output</a>
+    </h3>
+    <pre>
+Fora(10,2):137:D
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00018000000000000000" id=
+      "SECTION00018000000000000000">Exemplo 3</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00018100000000000000" id=
+      "SECTION00018100000000000000">Input</a>
+    </h3>
+    <pre>
+510 5 9
+AFFFAFFFF
+AVVVVVXVA
+AVVVIVXVA
+AVVVVVTVF
+AAAAAAAAA
+8
+E6
+N2
+W3
+N6
+N1
+W9
+S1
+E7
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00018200000000000000" id=
+      "SECTION00018200000000000000">Output</a>
+    </h3>
+    <pre>
+Aniquilado
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
