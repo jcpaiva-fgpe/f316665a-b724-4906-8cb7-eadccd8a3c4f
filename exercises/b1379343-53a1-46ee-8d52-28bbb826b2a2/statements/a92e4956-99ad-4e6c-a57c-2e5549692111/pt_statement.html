@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Quando é o ToPAS?
+    </title>
+    <meta name="description" content="Quando é o ToPAS?">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00020000000000000000">Quando é o ToPAS?</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="205" height="148" align="bottom" border="0" src=
+      "./calendario.jpeg" alt="Image calendario">
+    </div>
+    <p>
+      É frequente perguntarem-nos: "Quando é este ano o ToPAS?". É simples. O
+      ToPAS é habitualmente na sexta feira da semana académica da Universidade
+      do Porto, que por sua vez se realiza na primeira semana completa do mês
+      de maio. Ou seja, é a sexta feira da primeira semana cujo domingo calha
+      em maio. Até se pode fazer um programa para determinar esta data!
+    </p>
+    <p>
+      Só é necessário saber como se calcula o dia da semana de uma data do
+      calendário representada por <em>ano</em>, <em>mês</em> e <em>dia</em>.
+      Uma forma simples de o fazer é usar o algoritmo de Tondering e calcular a
+      seguinte expressão.
+    </p>
+    <p></p>
+    <pre>
+   (ano + ano/4 - ano/100 + ano/400 + Tabela[mes] + dia) % 7
+</pre>
+    <p>
+      O valor da expressão é um inteiro entre 0 e 6, inclusive, sendo 0
+      interpretado como domingo, 1&nbsp;como segunda e assim sucessivamente.
+      Antes de a avaliar é necessário começar por subtrair 1 ao ano se o mês
+      for anterior a março (janeiro ou fevereiro).
+    </p>
+    <p>
+      Nesta expressão o operador <tt>%</tt> corresponde à operação módulo
+      (resto da divisão inteira), sendo as divisões indicadas também inteiras.
+      A expressão também depende do mês, sendo essa função definida pela tabela
+      que se segue.
+    </p>
+    <div align="center">
+      <table cellpadding="3" border="1">
+        <tr>
+          <td align="left">
+            <b>Mês</b>
+          </td>
+          <th align="center">
+            <b>Valor</b>
+          </th>
+          <th align="left">
+            <b>Mês</b>
+          </th>
+          <th align="center">
+            <b>Valor</b>
+          </th>
+        </tr>
+        <tr>
+          <td align="left">
+            janeiro
+          </td>
+          <td align="center">
+            0
+          </td>
+          <td align="left">
+            fevereiro
+          </td>
+          <td align="center">
+            3
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            março
+          </td>
+          <td align="center">
+            2
+          </td>
+          <td align="left">
+            abril
+          </td>
+          <td align="center">
+            5
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            maio
+          </td>
+          <td align="center">
+            0
+          </td>
+          <td align="left">
+            junho
+          </td>
+          <td align="center">
+            3
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            julho
+          </td>
+          <td align="center">
+            5
+          </td>
+          <td align="left">
+            agosto
+          </td>
+          <td align="center">
+            1
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            setembro
+          </td>
+          <td align="center">
+            4
+          </td>
+          <td align="left">
+            outubro
+          </td>
+          <td align="center">
+            6
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            novembro
+          </td>
+          <td align="center">
+            2
+          </td>
+          <td align="left">
+            dezembro
+          </td>
+          <td align="center">
+            4
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      Para a data do ToPAS, que é afinal o que se pretende, esta fórmula
+      simplifica-se porque maio é posterior a março e o respetivo valor da
+      tabela é zero.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00021000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escreva um programa que funcione como um calendário perpétuo do ToPAS, e
+      que, dado um ano, determina o dia do mês de maio em que este concurso tem
+      lugar.
+    </p>
+    <p>
+      Os dados são constituídos por uma linha com apenas o inteiro superior a
+      2010 e inferior a 3000, que identifica o ano.
+    </p>
+    <p>
+      O resultado é também constituído por uma única linha com um inteiro entre
+      1 e 31 (inclusive), e que é o dia em que se realiza o concurso no ano
+      dado.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00022000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00022100000000000000">Input</a>
+    </h3><br>
+    <pre>
+2012
+</pre>
+    <h3>
+      <a name="SECTION00022200000000000000">Output</a>
+    </h3><br>
+    <pre>
+11
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00023000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00023100000000000000">Input</a>
+    </h3><br>
+    <pre>
+2022
+</pre>
+    <h3>
+      <a name="SECTION00023200000000000000">Output</a>
+    </h3><br>
+    <pre>
+6
+</pre><br>
+  </body>
+</html>
