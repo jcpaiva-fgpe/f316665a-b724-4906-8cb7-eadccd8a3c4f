@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Relógio Digital
+    </title>
+    <meta name="description" content="Relógio Digital">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00060000000000000000">Relógio Digital</a>
+    </h1>
+    <p></p>
+    <h2>
+      <a name="SECTION00061000000000000000">Problema</a>
+    </h2>
+    <p>
+      Os relógios digitais mais comuns usam os chamados mostradores de sete
+      segmentos, em que cada dígito é construído a partir de três segmentos
+      horizontais e quatro verticais, que podem estar acesos ou apagados. O
+      mapeamento de dígitos em segmentos acesos para os dígitos de 0 a 9 é o
+      seguinte:
+    </p>
+    <p>
+      <img width="671" height="99" align="bottom" border="0" src="numbers.png"
+      alt="Image numbers">
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00062000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escrever um programa que, a partir da hora em formato HH:MM (relógio de
+      24 horas) imprima a correspondente imagem do mostrador de sete segmentos.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00063000000000000000">Input</a>
+    </h2>
+    <p>
+      A hora em formato HH:MM (relógio de 24 horas).
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00064000000000000000">Output</a>
+    </h2>
+    <p>
+      A imagem do mostrador de sete segmentos, construída a partir dos
+      caracteres ``<tt>-</tt>'', ``<tt>|</tt>'' e espaço, com a disposição
+      seguinte:
+    </p>
+    <p>
+      <img width="290" height="99" align="bottom" border="0" src="display.png"
+      alt="Image display">
+    </p>
+    <p>
+      Repare que entre os dois dígitos das horas, assim como entre os dois
+      dígitos dos minutos, existe uma coluna vertical de espaços; entre as
+      horas e os minutos existe um sinal ``<tt>:</tt>''; todas as linhas de
+      output têm 15 caracteres.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00065000000000000000">Exemplo: input</a>
+    </h2><br>
+    <pre>
+12:35
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00066000000000000000">Exemplo: output</a>
+    </h2><br>
+    <pre>
+     -   -   -  
+  |   |   | |  
+     - : -   - 
+  | |     |   |
+     -   -   -
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
