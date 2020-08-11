@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Quarto!
+    </title>
+    <meta name="description" content="Quarto!">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000">Quarto!</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="197" height="148" align="bottom" border="0" src=
+      "./quarto.jpg" alt="Image quarto">
+    </div>
+    <p>
+      No jogo <i>Quarto</i>, os jogadores colocam alternadamente uma de 16
+      peças num tabuleiro de <img width="43" height="31" align="middle" border=
+      "0" src="img1.gif" alt="$4\times 4$"> posições. As peças têm quatro
+      características dicotómicas:
+    </p>
+    <dl>
+      <dt>
+        <strong>côr</strong>
+      </dt>
+      <dd>
+        branca ou preta;
+      </dd>
+      <dt>
+        <strong>altura</strong>
+      </dt>
+      <dd>
+        baixa ou alta;
+      </dd>
+      <dt>
+        <strong>forma</strong>
+      </dt>
+      <dd>
+        redonda ou quadrada;
+      </dd>
+      <dt>
+        <strong>consistência</strong>
+      </dt>
+      <dd>
+        oca ou sólida.
+      </dd>
+    </dl>Ganha o jogo o primeiro jogador que colocar quatro peças em linha
+    horizontal, vertical ou diagonal com pelo menos uma característica comum
+    entre elas (i.e. quatro peças da mesma côr, da mesma altura, da mesma forma
+    ou com a mesma consistência).
+    <p></p>
+    <h2>
+      <a name="SECTION00051000000000000000">Tarefa</a>
+    </h2>Pretende-se analisar a descrição dum tabuleiro e indicar se a condição
+    de vitória foi satisfeita. São dadas 4 linhas de texto correspondentes às 4
+    linhas do tabuleiro; cada peça no tabuleiro é representada por uma
+    sequência de 4 letras: <b>P</b> ou <b>B</b> (preta ou branca); <b>a</b> ou
+    <b>A</b> (baixa ou alta); <b>R</b> ou <b>Q</b> (redonda ou quadrada);
+    <b>O</b> ou <b>S</b> (oca ou sólida). As posições vazias no tabuleiro são
+    representadas por 4 traços <b>-</b>.
+    <p>
+      O resultado deverá ser <b>QUARTO</b> se a condição de vitória está
+      satisfeita ou <b>NADA</b> caso contrário.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00052000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00052100000000000000">Input</a>
+    </h3>
+    <pre>
+----------------
+PAQSPaQSPAROPaRS
+----------------
+----------------
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00052200000000000000">Output</a>
+    </h3>
+    <pre>
+QUARTO
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00053000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00053100000000000000">Input</a>
+    </h3>
+    <pre>
+PaROBAROPaQS----
+PAQSBAQOPARSBaQO
+BARS--------BaQS
+BAQSPAROPaQOPaRS
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00053200000000000000">Output</a>
+    </h3>
+    <pre>
+NADA
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
