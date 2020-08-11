@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Matrículas
+    </title>
+    <meta name="description" content="Matrículas">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00030000000000000000">Matrículas</a>
+    </h1>
+    <p></p>
+    <h2>
+      <a name="SECTION00031000000000000000">Problema</a>
+    </h2>
+    <p>
+      No reino da Lusitânia, o Centro do Automóvel e das Rodovias (CAR)
+      apresentou recentemente um novo plano para a atribuição de matrículas
+      automóveis. Esse plano, para além de propor um novo modelo de atribuição,
+      apresenta um elaborado estudo estatístico sobre os anos passados. Na
+      elaboração desse estudo, uma das tarefas mais relevantes foi calcular o
+      número de veículos matriculados durante os últimos anos.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00032000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escrever um programa que dadas as matrículas do primeiro e do último
+      veículo automóvel matriculado num dado ano, calcule o número de veículos
+      matriculados nesse mesmo ano. Considere apenas matrículas do tipo
+      AA-AA-LL, em que A é um algarismo e L é uma das 23 letras do alfabeto
+      português. A primeira matrícula é 00-00-AA e a última é 99-99-ZZ. A
+      atribuição de matrículas segue o seguinte critério: (i) partindo da
+      última matrícula atribuída, o segundo par de algarismos é incrementado em
+      uma unidade; (ii) se o segundo par de algarismos atingir o valor 99, este
+      passa a 00 e o primeiro par de algarismos é incrementado em uma unidade;
+      (iii) se o primeiro par de algarismos atingir o valor 99, este passa a 00
+      e a segunda letra é incrementada em uma unidade, segundo a ordem das
+      letras no alfabeto; (iv) se a segunda letra atingir o valor Z, esta passa
+      a A e a primeira letra é incrementada em uma unidade.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00033000000000000000">Input</a>
+    </h2>
+    <p>
+      A primeira linha de input é um inteiro N (<img width="62" height="31"
+      align="middle" border="0" src="img5.gif" alt="$&lt;=100$">) que indica o
+      número de pares de matrículas a considerar. As N linhas seguintes são
+      pares de matrículas do tipo AA-AA-LL, em que A é um algarismo e L é uma
+      das 23 letras do alfabeto português. A primeira matrícula de cada par diz
+      respeito ao primeiro veículo automóvel matriculado num dado ano, enquanto
+      a segunda diz respeito ao último veículo matriculado nesse mesmo ano.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00034000000000000000">Output</a>
+    </h2>
+    <p>
+      O output é um conjunto de N linhas, em que cada linha apresenta o número
+      de veículos matriculados tendo por base o par de matrículas indicado.
+    </p>
+    <p></p>
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00035000000000000000">Exemplo de Input</a>
+    </h2>
+    <p></p>
+    <pre>
+3
+00-00-AA 99-99-AA
+00-00-AZ 00-00-BA
+01-99-XZ 99-01-ZV
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00036000000000000000">Exemplo de Output</a>
+    </h2>
+    <pre>
+10000
+10001
+449703
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
