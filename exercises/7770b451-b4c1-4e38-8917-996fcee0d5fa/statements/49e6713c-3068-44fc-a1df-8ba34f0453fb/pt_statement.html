@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Sentemo-nos
+    </title>
+    <meta name="description" content="Sentemo-nos">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00060000000000000000">Sentemo-nos</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="142" height="119" align="bottom" border="0" src=
+      "./fila_cadeiras.jpg" alt="Image fila_cadeiras"><br>
+    </div>
+    <p>
+      Nalguns cinemas, salas de espectáculo e recintos desportivos não há
+      lugares marcados. As pessoas vão escolhendo lugares da sua preferência e,
+      por vezes, acabam por "dar um jeitinho", mudando-se para a cadeira do
+      lado para que um grupo se possa sentar na sua fila. Interessa-nos
+      observar a dinâmica duma fila.
+    </p>
+    <p>
+      As pessoas chegam sózinhas ou em grupo e apresentam-se pela esquerda ou
+      pela direita. Para que um grupo se sente, é necessário haver lugares
+      suficientes na fila; se não, procurará outra fila, e não será muito
+      importante para o que se segue. Um grupo não se separa. A primeira pessoa
+      do grupo ocupa um lugar da sua preferência e as restantes sentam-se à sua
+      esquerda se o grupo entrar pela esquerda, ou à sua direita se entrar pela
+      direita. O lugar que a primeira pretende ocupar está sempre livre. Se não
+      houver lugares para todos mas a posição imediatamente ao lado da ocupada
+      pelo primeiro estiver livre, este desloca-se de modo a criar lugares para
+      os que faltam. Se mesmo assim não for possível sentar todos, então o
+      grupo senta-se numa das extremidades (para evitar mais confusão),
+      ocupando os lugares mais interiores. Preferencialmente, senta-se na
+      extremidade em que se encontra desde que tal não obrigue à deslocação de
+      mais pessoas do que seria necessário se se sentasse na outra extremidade.
+      Nos deslocamentos, as posições relativas das pessoas sentadas
+      anteriormente mantêm-se, deslocando-se apenas as pessoas que estiverem
+      mais perto da extremidade em que o grupo ficará. Para isso, ocupam
+      lugares adjacentes que estejam livres ou que fiquem livres porque outras
+      se deslocam também.
+    </p>
+    <p>
+      Ninguém terá de se deslocar para dar lugar a uma pessoa que não esteja em
+      grupo. Não haverá mudanças de fila.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00061000000000000000">Tarefa</a>
+    </h2>Escrever um programa para analisar uma sequência de chegadas a uma
+    fila e indicar a disposição final dos grupos nessa fila. Os grupos são
+    identificados pelo número de ordem de chegada (contam também os que vão ter
+    de procurar outra fila).
+    <p>
+      Na primeira linha de input tem um inteiro (positivo e menor ou igual a
+      50) que representa o número de lugares da fila. Nas linhas seguintes tem
+      uma sequência de ternos de inteiros <code>E N L</code> em que:
+      <code>E</code> é 0 ou 1 conforme o grupo se apresente pela esquerda ou
+      direita, <code>N</code> (maior ou igual a 1) é o número de elementos do
+      grupo e <code>L</code> identifica o lugar que o primeiro elemento
+      pretende. O número que identifica esse lugar tem por referência a
+      extremidade em que o grupo se encontra (por exemplo, <code>0 4 3</code>
+      significa que o primeiro elemento pretende a terceira posição a contar da
+      esquerda, enquanto em <code>1 4 3</code> seria a terceira a contar da
+      direita). O cenário termina por <code>0 0 0</code>.
+    </p>
+    <p>
+      O output é a descrição do estado final da fila, vista da esquerda para a
+      direita, uma posição em cada linha: as posições livres terão um traço; as
+      ocupadas terão o identificador do grupo a que a pessoa pertence.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00062000000000000000">Exemplo</a>
+    </h2>
+    <h3>
+      <a name="SECTION00062100000000000000">Input</a>
+    </h3>
+    <pre>
+14
+0 1 2
+1 4 6
+1 3 10
+0 10 1
+1 3 7
+0 2 8
+0 0 0
+</pre>
+    <h3>
+      <a name="SECTION00062200000000000000">Output</a>
+    </h3>
+    <pre>
+5
+5
+5
+1
+3
+3
+3
+-
+2
+2
+2
+2
+6
+6
+</pre>
+  </body>
+</html>
