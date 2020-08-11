@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00070000000000000000" id=
+      "SECTION00070000000000000000">Genial!</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="119" height="52" align="bottom" border="0" src=
+      "./igenial.jpg" alt="Image igenial">
+    </div>No jogo de tabuleiro <i>Genial!</i> cada um de quatro jogadores obtém
+    pontos em seis cores: vermelho, verde, azul, laranja, amarelo e roxo. O
+    conhecimento das regras deste jogo não é importante para o problema que se
+    segue. A posição relativa de cada jogador no final do jogo é determinada
+    pela pontuação na cor em que tiver o <i>menor</i> número de pontos. Ganha o
+    jogador que tiver mais pontos na sua <i>pior</i> cor. Quando dois jogadores
+    tiverem igual pontuação na pior cor, faz-se o desempate pela <img width=
+    "23" height="17" align="bottom" border="0" src="img16.gif" alt=
+    "$2^{\mbox{\b{a}}}$"> pior cor e assim sucessivamente. Por exemplo: sejam
+    as pontuações dadas pela tabela:
+    <div align="center">
+      <table cellpadding="3" border="1">
+        <tr>
+          <td align="left"></td>
+          <td align="center">
+            Vermelho
+          </td>
+          <td align="center">
+            Verde
+          </td>
+          <td align="center">
+            Azul
+          </td>
+          <td align="center">
+            Laranja
+          </td>
+          <td align="center">
+            Amarelo
+          </td>
+          <td align="center">
+            Roxo
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            Joana
+          </td>
+          <td align="center">
+            11
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            8
+          </td>
+          <td align="center">
+            17
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            14
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            Pedro
+          </td>
+          <td align="center">
+            8
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            9
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            18
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            Miguel
+          </td>
+          <td align="center">
+            11
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            18
+          </td>
+        </tr>
+        <tr>
+          <td align="left">
+            Beatriz
+          </td>
+          <td align="center">
+            13
+          </td>
+          <td align="center">
+            12
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            18
+          </td>
+          <td align="center">
+            15
+          </td>
+          <td align="center">
+            18
+          </td>
+        </tr>
+      </table>
+    </div>A Beatriz será vencedora (com 12 pontos) e em segundo lugar fica o
+    Miguel (com 11 pontos). A Joana e o Pedro têm a mesma pontuação na pior cor
+    (8 pontos), mas a Joana tem melhor resultado na <img width="23" height="17"
+    align="bottom" border="0" src="img16.gif" alt="$2^{\mbox{\b{a}}}$"> menor
+    (11 pontos contra 9 do Pedro); a Joana fica em terceiro e o Pedro em último
+    lugar.
+    <p></p>
+    <h2>
+      <a name="SECTION00071000000000000000" id=
+      "SECTION00071000000000000000">Tarefa</a>
+    </h2><br>
+    Escrever um programa que leia as pontuações dos jogadores e escreva a ordem
+    relativa entre estes. É dada a tabela de pontuações: 4 linhas; cada linha
+    tem as 6 pontuações de um jogador (são inteiros positivos). O programa deve
+    escrever uma única linha com a ordem relativa entre os jogadores, do melhor
+    para o pior classificado. Não haverá empates. Identificamos os jogadores
+    por números de 1 a 4: o jogador 1 tem as pontuações da primeira linha, o
+    jogador 2 as da segunda, etc.
+    <p></p>
+    <h2>
+      <a name="SECTION00072000000000000000" id=
+      "SECTION00072000000000000000">Exemplo</a>
+    </h2>
+    <h3>
+      <a name="SECTION00072100000000000000" id=
+      "SECTION00072100000000000000">Input</a>
+    </h3><br>
+    <pre>
+11 18 8 17 18 14
+8 18 18 9 18 18
+11 18 18 18 18 18
+13 12 18 18 15 18
+</pre>
+    <h3>
+      <a name="SECTION00072200000000000000" id=
+      "SECTION00072200000000000000">Output</a>
+    </h3><br>
+    <pre>
+4 3 1 2
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
