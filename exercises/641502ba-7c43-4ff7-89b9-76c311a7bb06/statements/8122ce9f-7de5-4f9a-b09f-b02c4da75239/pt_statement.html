@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Mas que calor!
+    </title>
+    <meta name="description" content="Mas que calor!">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00040000000000000000">Mas que calor!</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="101" height="158" align="bottom" border="0" src=
+      "./bhddjieb.jpeg" alt="Image bhddjieb"> <img width="266" height="217"
+      align="bottom" border="0" src="./grafico.jpg" alt="Image grafico">
+    </div>
+    <p>
+      Toda a gente está de acordo que o clima está a mudar. Uns acham que os
+      dias estão mais quentes, outros garantem que são as noites que já não
+      estão tão frias, outros ainda que são as amplitudes térmicas (a diferença
+      entre a temperatura máxima e mínima consecutivas) que aumentaram, ou
+      talvez o contrário, agora não se distinguem as temperaturas. Para tirar
+      isto a limpo vamos fazer um programa que determine todos estes máximos,
+      mínimos e variações.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00041000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escrever um programa que calcule o máximo, o mínimo, a amplitude máxima e
+      a amplitude mínima de uma sequência de valores de temperaturas. As
+      temperaturas são dadas por valores inteiros em graus centígrados. A
+      amplitude é a diferença entre um máximo local e um mínimo local
+      consecutivos. Um valor é um máximo local se for maior ou igual aos seus
+      vizinhos de ambos os lados. Do mesmo modo, um valor é um mínimo local se
+      for menor ou igual aos seus vizinhos. De notar que o valor máximo ou
+      mínimo se poderá manter ao longo de leituras consecutivas, como acontece
+      no exemplo com o mínimo local onde é atingida a amplitude máxima. Podemos
+      assumir que os valores iniciais e finais da série dada são sempre um
+      máximo ou mínimo local. Assumimos também que não há três registos
+      consecutivos iguais.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00042000000000000000">Input</a>
+    </h2>
+    <p>
+      Uma primeira linha com o inteiro <img width="15" height="14" align=
+      "bottom" border="0" src="img2.gif" alt="$n$">, com <img width="122"
+      height="31" align="middle" border="0" src="img14.gif" alt=
+      "$10 \leq n \leq 10000$">, seguida de <img width="15" height="14" align=
+      "bottom" border="0" src="img2.gif" alt="$n$"> de linhas, cada uma com um
+      inteiro <img width="16" height="31" align="middle" border="0" src=
+      "img15.gif" alt="$t_i$">, que é o valor da temperatura registada, sendo
+      <img width="128" height="31" align="middle" border="0" src="img16.gif"
+      alt="$-100 &lt; t_i &lt; 100$">.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00043000000000000000">Output</a>
+    </h2>
+    <p>
+      Uma única linha com quatro inteiros separados por espaços e que
+      representam, o máximo, o mínimo, a amplitude máxima, e a amplitude mínima
+      dos valores lidos.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00044000000000000000">Exemplo</a>
+    </h2>
+    <h3>
+      <a name="SECTION00044100000000000000">Input</a>
+    </h3>
+    <pre>
+19
+16
+19
+22
+24
+23
+20
+18
+19
+20
+22
+21
+12
+10
+10
+13
+15
+15
+12
+8
+</pre>
+    <h3>
+      <a name="SECTION00044200000000000000">Output</a>
+    </h3>
+    <pre>
+24 8 12 4
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
