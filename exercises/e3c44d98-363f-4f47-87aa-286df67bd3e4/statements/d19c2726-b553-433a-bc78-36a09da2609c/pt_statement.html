@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000" id=
+      "SECTION00010000000000000000">Caixa Negra</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="225" height="206" align="bottom" border="0" src="./550.jpg"
+      alt="Image 550">
+    </div>
+    <p>
+      Nas buscas pelo avião da Malaysia Airlines que desapareceu no oceano
+      índico, alguns navios oceanográficos detetaram sinais que parecem estar a
+      ser emitidos pela caixa negra do avião. Esses sinais são muito fracos,
+      trazem muito ruído e por isso têm de ser analisados com muito cuidado. Os
+      sinais chegam-nos na forma de uma sequência de números, cada um deles
+      representando a intensidade medida, dez vezes por segundo, ao longo do
+      tempo. Muitos dessas intensidades são muito baixas, o que quer dizer que
+      se trata de ruído oceânico, sem interesse, mas periodicamente há valores
+      que se destacam e que só podem ter tido origem num dispositivo
+      eletrónico. Eis um exemplo de um troço de observações:
+    </p>
+    <div style="margin-left: 2em">
+      2 &nbsp; 2 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; <font color=
+      "red"><b>15</b></font> &nbsp; 4 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 2
+      &nbsp; 2 &nbsp; <font color="red"><b>10</b></font> &nbsp; 4 &nbsp; 2
+      &nbsp; 2 &nbsp; 6 &nbsp; <font color="red"><b>13</b></font> &nbsp; 6
+      &nbsp; 7 &nbsp; 3 &nbsp; 4 &nbsp; <font color="red"><b>18</b></font>
+      &nbsp; 6
+    </div>Os números assinalados a vermelho destacam-se claramente dos seus
+    vizinhos e, por hipótese, são provenientes da caixa negra do avião. As
+    equipas de busca precisam de um programa para contar os sinais que vêm da
+    caixa negra do avião, na sequência de números em análise. Consideramos que
+    um sinal foi emitido pela caixa negra quando a sua intensidade é maior que
+    o dobro da intensidade de cada um dos dois sinais vizinhos, antes e depois.
+    <p></p>
+    <p></p>
+    <h2>
+      <a name="SECTION00011000000000000000" id=
+      "SECTION00011000000000000000">Tarefa</a>
+    </h2>Escrever um programa que, dada uma sequência de números inteiros
+    positivos conte o número de números que são simultaneamente maiores que o
+    dobro do número imediatamente anterior na sequência e maiores que o dobro
+    do número imediatamente a seguir na sequência.
+    <p></p>
+    <h2>
+      <a name="SECTION00012000000000000000" id=
+      "SECTION00012000000000000000">Input</a>
+    </h2>A primeira linha contém o número de números da sequência (sempre maior
+    ou igual a 3 e menor ou igual a 1000). Seguem-se os números da sequência,
+    um em cada linha.
+    <p></p>
+    <h2>
+      <a name="SECTION00013000000000000000" id=
+      "SECTION00013000000000000000">Output</a>
+    </h2>O output terá uma única linha, com o número de sinais detetados.
+    <p></p>
+    <h2>
+      <a name="SECTION00014000000000000000" id=
+      "SECTION00014000000000000000">Exemplo 1</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00014100000000000000" id=
+      "SECTION00014100000000000000">Input</a>
+    </h3>
+    <pre>
+22
+2
+2
+3
+4
+5
+15
+4
+3
+4
+5
+2
+10
+4
+2
+6
+13
+6
+7
+3
+4
+18
+6
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00014200000000000000" id=
+      "SECTION00014200000000000000">Output</a>
+    </h3>
+    <pre>
+4
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00016000000000000000" id=
+      "SECTION00016000000000000000">Exemplo 2</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00016100000000000000" id=
+      "SECTION00016100000000000000">Input</a>
+    </h3>
+    <pre>
+5
+3
+6
+4
+8
+4
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00016200000000000000" id=
+      "SECTION00016200000000000000">Output</a>
+    </h3>
+    <pre>
+0
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
