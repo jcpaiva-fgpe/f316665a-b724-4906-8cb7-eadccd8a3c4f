@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Eyjafjallajokull
+    </title>
+    <meta name="description" content="Eyjafjallajokull">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00070000000000000000">Eyjafjallajokull</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="343" height="308" align="bottom" border="0" src=
+      "./movimento-c.png" alt="Image movimento-c">
+    </div>
+    <p>
+      A nuvem de cinzas vulcânicas proveniente do vulcão Eyjafjallajokull, que
+      entrou em erupção a 14 de Abril, provocou o caos no espaço aéreo europeu
+      e obrigou ao cancelamento de mais de cem mil voos. Condições
+      metereológicas favoráveis permitiram que se propagasse inicialmente para
+      sudeste, a cerca 40 Km/h. A previsão da sua trajectória e dispersão era
+      difícil pois dependia da evolução da actividade do vulcão e dos efeitos
+      dos diversos padrões de vento a várias altitudes.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00071000000000000000">Tarefa</a>
+    </h2>Pretende-se seguir a trajectória da nuvem, a partir duma posição
+    inicial, e analisar o modo como afecta certos locais europeus. O modelo foi
+    muito simplificado: o planisfério é descrito por uma grelha rectangular;
+    cada célula da grelha é um quadrado de lado 2 e é definida pelas
+    coordenadas do seu canto inferior esquerdo, as quais pertencem ao intervalo
+    [-100000, 100000]; a nuvem é um rectângulo ajustado à grelha, ocupa uma ou
+    mais células, e é invariável (não se dispersa).
+    <p>
+      Supõe-se que a nuvem se desloca sempre à mesma altitude, e com velocidade
+      constante em cada intervalo unitário. Só se pode deslocar nas seguintes
+      direcções/sentidos: <tt>N (0,1)</tt>, <tt>S (0,-1)</tt>, <tt>E
+      (1,0)</tt>, <tt>O (-1,0)</tt>, <tt>SE (1,-1)</tt>, <tt>SO (-1,-1)</tt>,
+      <tt>NO (-1,1)</tt> ou <tt>NE (1,1)</tt>.
+    </p>
+    <p>
+      Se um ponto da nuvem estiver na posição (X,Y) num dado instante T e a
+      nuvem se deslocar com velocidade (H,V) no intervalo [T,T+1[, esse ponto
+      estará na posição (X+H,Y+V) no instante T+1. Durante esse intervalo de
+      tempo, a nuvem pode passar por vários locais, dizendo-se que estiveram
+      sob influência da nuvem nesse período.
+    </p>
+    <p>
+      Os locais situam-se no centro das células que os contêm e são: <tt>Atenas
+      (12779, 20557)</tt>, <tt>Barcelona (1113, 22779)</tt>, <tt>Frankfurt
+      (4445, 22779)</tt>, <tt>Funchal (-8887, 17779)</tt>, <tt>Lisboa (-4999,
+      21113)</tt>, <tt>Londres (1, 28335)</tt>, <tt>Madrid (-1665, 22223)</tt>,
+      <tt>Paris (1113, 26667)</tt>, <tt>Porto (-4443, 22779)</tt>.
+    </p>
+    <p>
+      O nível de afectação total de cada local será dado pelo número de
+      períodos em que o local teve algum ponto da nuvem sobre si. Em cada
+      intervalo unitário, o nível de afectação dos locais afectados cresce
+      apenas uma unidade.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00072000000000000000">Input</a>
+    </h2>Na primeira linha tem quatro inteiros, A, B, C e D, separados por um
+    espaço: (A,B) e (C,D) são as posições iniciais dos vértices inferior
+    esquerdo e superior direito da nuvem. Na linha seguinte tem o número de
+    intervalos a considerar (no máximo 300) e depois, em cada linha, um par de
+    <em>inteiros pares</em> H e V que dá a velocidade da nuvem em cada um
+    desses intervalos unitários. Pode assumir que as coordenadas da nuvem se
+    mantém no intervalo [-40000, 40000] durante a simulação.
+    <p></p>
+    <h2>
+      <a name="SECTION00073000000000000000">Output</a>
+    </h2>Na primeira linha tem o número dos locais afectados. Se esse número
+    for zero, na linha seguinte tem "<tt>Foi para o Polo Norte?</tt>", sem
+    aspas nem acentos. Se for diferente de zero, nas linhas seguintes tem a
+    lista de locais afectados, por ordem alfabética, e os níveis de afectação
+    correspondentes (o nome será separado do valor por um espaço).
+    <p></p>
+    <h2>
+      <a name="SECTION00074000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00074100000000000000">Input</a>
+    </h3>
+    <pre>
+-4442 28334 6 28338
+7
+0 70
+0 70
+200 -200
+0 -6000
+70 -70
+-710 710
+-400 400
+</pre>
+    <h3>
+      <a name="SECTION00074200000000000000">Output</a>
+    </h3>
+    <pre>
+3
+Londres 2
+Madrid 2
+Porto 1
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00075000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00075100000000000000">Input</a>
+    </h3>
+    <pre>
+4400 22800 4452 22900
+2
+50 -50
+-3000 0
+</pre>
+    <h3>
+      <a name="SECTION00075200000000000000">Output</a>
+    </h3>
+    <pre>
+1
+Frankfurt 2
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00076000000000000000">Exemplo 3</a>
+    </h2>
+    <h3>
+      <a name="SECTION00076100000000000000">Input</a>
+    </h3>
+    <pre>
+-2200 1002 -2198 1004
+15
+5000 5000
+-100 0
+0 900
+112 112
+-900 0
+-600 600
+600 600
+600 600
+-500 500
+-348 348
+900 900
+-230 -230
+234 0
+90 -90
+2 -2
+</pre>
+    <h3>
+      <a name="SECTION00076200000000000000">Output</a>
+    </h3>
+    <pre>
+0
+Foi para o Polo Norte?
+</pre>
+    <p></p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
