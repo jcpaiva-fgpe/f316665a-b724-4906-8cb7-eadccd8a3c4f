@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Casamentos Perfeitos
+    </title>
+    <meta name="description" content="Casamentos Perfeitos">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00040000000000000000">Casamentos Perfeitos</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="107" height="158" align="bottom" border="0" src=
+      "./wedding.jpg" alt="Image wedding">
+    </div>
+    <p>
+      É dia de Santo António no reino das expressões, e os parentesis e
+      chavetas estão emocionados por se irem casar. Contudo, ainda precisam de
+      encontrar o seu par. Os noivos aguardarão ordenamente as suas noivas e,
+      para não criar muita confusão, irão saindo logo que estas chegarem. Como
+      são gente moderna, vão mesmo recorrer a um programa de computador para
+      controlar este processo.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00041000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      O programa deve ler uma linha de texto com uma expressão, que pode conter
+      parentesis curvos, parentesis rectos e chavetas. Se todos os pares
+      estiverem bem casados, o programa deve imprimir o tipo de cada par -
+      <b>(&nbsp;)</b>, <b>[&nbsp;]</b> ou <b>{&nbsp;}</b> - e as respectivas
+      posições de abertura e fecho (a começar em 0). Deve ser impressa uma
+      linha para cada par, pela ordem de fecho (o segundo número é estritamente
+      crescente). Se algum dos pares estiver mal casado, o programa apenas deve
+      imprimir uma linha a dizer <b>Pares mal formados</b>. Se a linha não
+      contiver parentesis nem chavetas, o programa deve imprimir uma linha a
+      dizer <b>Sem noivos para casar</b>.
+    </p>
+    <p>
+      Não é necessário fazer qualquer validação da expressão além do casamento
+      de parentesis e chavetas. A expressão não tem mais de 1000 símbolos. Na
+      saída, os inteiros estão separados do tipo de par por um espaço, mas os
+      parentesis ou chavetas não têm separadores entre eles.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00042000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00042100000000000000">Input</a>
+    </h3>
+    <pre>
+3(x+2)-4{x+[2y-(27-z)+8w]}-1
+</pre>
+    <h3>
+      <a name="SECTION00042200000000000000">Output</a>
+    </h3>
+    <pre>
+() 1 5
+() 15 20
+[] 11 24
+{} 8 25
+</pre>
+    <h2>
+      <a name="SECTION00043000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00043100000000000000">Input</a>
+    </h3>
+    <pre>
+2(x+3]
+</pre>
+    <h3>
+      <a name="SECTION00043200000000000000">Output</a>
+    </h3>
+    <pre>
+Pares mal formados
+</pre>
+    <h2>
+      <a name="SECTION00044000000000000000">Exemplo 3</a>
+    </h2>
+    <h3>
+      <a name="SECTION00044100000000000000">Input</a>
+    </h3>
+    <pre>
+2(x+3)+2)
+</pre>
+    <h3>
+      <a name="SECTION00044200000000000000">Output</a>
+    </h3>
+    <pre>
+Pares mal formados
+</pre>
+    <h2>
+      <a name="SECTION00045000000000000000">Exemplo 3</a>
+    </h2>
+    <h3>
+      <a name="SECTION00045100000000000000">Input</a>
+    </h3>
+    <pre>
+2x+4y+7
+</pre>
+    <h3>
+      <a name="SECTION00045200000000000000">Output</a>
+    </h3>
+    <pre>
+Sem noivos para casar
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
