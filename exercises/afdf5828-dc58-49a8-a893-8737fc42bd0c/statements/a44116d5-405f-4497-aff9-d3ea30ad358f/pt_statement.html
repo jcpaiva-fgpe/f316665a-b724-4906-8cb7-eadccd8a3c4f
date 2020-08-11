@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Codificação run-length
+    </title>
+    <meta name="description" content="Codificação run-length">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00040000000000000000">Codificação <em>run-length</em></a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="165" height="148" align="bottom" border="0" src=
+      "./comprime.jpg" alt="Image comprime">
+    </div>
+    <p>
+      A codificação <i>run-length</i> é uma técnica para comprimir textos onde
+      existem sequências longas de carateres repetidos. Por exemplo, a
+      sequência <code>AAAAAAA</code> podia ser representada por <code>7A</code>
+      (sete vezes o carater <code>A</code>), facto em que se inspira a
+      representação que vamos usar.
+    </p>
+    <p>
+      Para evitar ambiguidade e não aumentar muito o comprimento do textos nos
+      casos de sequências curtas, não comprimimos as sequências com menos de
+      três carateres repetidos (i.e. ficam inalteradas). Se um carater for
+      repetido três ou mais vezes, então deve ser seguido de um dígito
+      (<tt>0</tt> a <tt>9</tt>) que indica o número de carateres repetidos
+      (para além dos três iniciais). Se um carater ocorrer repetido mais do
+      <tt>12</tt>&nbsp;vezes <tt>(3+9)</tt> então as restantes devem ser
+      tratadas como uma nova sequência; por exemplo, <tt>AAA9AAA0</tt> seria a
+      codificação de <tt>AAAAAAAAAAAAAAA</tt>, isto é, da sequência de <tt>15
+      (=3+9+3+0)</tt> carateres <tt>A</tt>.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00041000000000000000">Tarefa</a>
+    </h2>Escreva um programa que lê da entrada-padrão um texto e produz na
+    saída-padrão a sua codificação <i>run-length</i>. O texto é dado numa única
+    linha, tem apenas letras ou dígitos, tendo pelo menos uma letra ou dígito e
+    não mais do que 1000. Além desses carateres, terá apenas o terminador de
+    linha.
+    <p></p>
+    <h2>
+      <a name="SECTION00042000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00042100000000000000">Input</a>
+    </h3>
+    <pre>
+ABBA
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00042200000000000000">Output</a>
+    </h3>
+    <pre>
+ABBA
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00043000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00043100000000000000">Input</a>
+    </h3>
+    <pre>
+AAABBBBAAAAAAAAAAAAAA
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00043200000000000000">Output</a>
+    </h3>
+    <pre>
+AAA0BBB1AAA9AA
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00044000000000000000">Exemplo 3</a>
+    </h2>
+    <h3>
+      <a name="SECTION00044100000000000000">Input</a>
+    </h3>
+    <pre>
+000bbbaaaaaa1110AAA000000000000000BaaaaaBbbb000000
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00044200000000000000">Output</a>
+    </h3>
+    <pre>
+0000bbb0aaa311100AAA000090000Baaa2Bbbb00003
+</pre><br>
+  </body>
+</html>
