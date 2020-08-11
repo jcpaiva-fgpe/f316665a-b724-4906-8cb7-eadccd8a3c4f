@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000">Preço arredondado</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="185" height="302" align="bottom" border="0" src=
+      "./tio-patinhas.jpg" alt="Image tio-patinhas">
+    </div>
+    <p>
+      Com a súbida da taxa máxima do IVA para 23,25%, anunciada para 2015,
+      deparamo-nos com alguns problemas de cálculo. Para obter uma estimativa
+      do preço com IVA, podemos arredondar para o inteiro mais próximo, <em>por
+      defeito</em> (maior inteiro não superior).<br>
+      Ora, para obter o valor do imposto, multiplicamos o preço por 6 e
+      dividimos por 100, quando é a taxa mínima (6%). Logo, para 23,25%,
+      podemos multiplicar agora por 2325 e dividir por 10000 (quociente da
+      divisão inteira). Com algum cuidado, o resto da divisão inteira até nos
+      permitiria obter o erro exato, mas não interessa.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00011000000000000000">Tarefa</a>
+    </h2>Escrever um programa para calcular o preço com IVA arredondado por
+    defeito.
+    <p></p>
+    <h2>
+      <a name="SECTION00012000000000000000">Input</a>
+    </h2>Uma linha com um inteiro que representa o preço base (sem IVA).
+    <p></p>
+    <h2>
+      <a name="SECTION00013000000000000000">Output</a>
+    </h2>Uma linha com um inteiro que representa o preço com IVA, seguido de um
+    espaço, e da frase "<tt>(talvez estimativa por defeito)</tt>", sem aspas.
+    <p></p>
+    <h2>
+      <a name="SECTION00014000000000000000">Exemplo 1</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00014100000000000000">Input</a>
+    </h3>
+    <pre>
+100
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00014200000000000000">Output</a>
+    </h3>
+    <pre>
+123 (talvez estimativa por defeito)
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00016000000000000000">Exemplo 2</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00016100000000000000">Input</a>
+    </h3>
+    <pre>
+15
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00016200000000000000">Output</a>
+    </h3>
+    <pre>
+18 (talvez estimativa por defeito)
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00018000000000000000">Exemplo 3</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00018100000000000000">Input</a>
+    </h3>
+    <pre>
+3560
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00018200000000000000">Output</a>
+    </h3>
+    <pre>
+4387 (talvez estimativa por defeito)
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
