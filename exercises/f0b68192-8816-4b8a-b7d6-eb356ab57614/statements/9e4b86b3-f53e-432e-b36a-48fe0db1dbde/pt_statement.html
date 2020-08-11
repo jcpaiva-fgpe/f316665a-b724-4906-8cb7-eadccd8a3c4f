@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Preservação Digital
+    </title>
+    <meta name="description" content="Preservação Digital">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00030000000000000000">Preservação Digital</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="115" height="99" align="bottom" border="0" src=
+      "./cd_disquete.jpeg" alt="Image cd_disquete">
+    </div>
+    <p>
+      Acabamos de nos deparar com um grave problema nos nossos arquivos
+      digitais, ainda baseados em CD-ROM e alguns em disquetes. Muitos
+      ficheiros estão corrompidos e não é possível recuperar integralmente a
+      sua informação. Felizmente existem muitas cópias de cada um deles e por
+      isso pensamos que será possível recuperar a maior parte dos ficheiros.
+    </p>
+    <p></p>
+    <p></p>
+    <h2>
+      <a name="SECTION00031000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      A estratégia de recuperação é simples: analisando bit-a-bit as várias
+      cópias do mesmo ficheiro iremos tomar para cada posição o bit mais
+      frequente. Em caso de frequência igual para um dado bit, é assumido o
+      valor <code>0</code>. Por exemplo, se tivermos 4 ficheiros com as
+      seguintes sequências de 6 bits o resultado da recuperação será o indicado
+      na última linha
+    </p>
+    <pre>
+011000
+010100
+011001
+001111
+
+011000
+</pre>
+    <p>
+      Para simplificar o vosso trabalho, os ficheiros foram convertidos numa
+      sequência de caracteres <code>0</code> e <code>1</code>. A primeira linha
+      de input será constituída por N e M, onde N é o número de "ficheiros" e M
+      é o número de "bits" de cada ficheiro. As N linhas seguintes são
+      sequências de M caracteres contendo exclusivamente os caracteres
+      <code>0</code> ou <code>1</code>. Sabe-se que N não excede 30 e M não
+      excede 255.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00032000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00032100000000000000">Input</a>
+    </h3>
+    <pre>
+4 6
+011000
+010100
+011001
+001111
+</pre>
+    <h3>
+      <a name="SECTION00032200000000000000">Output</a>
+    </h3>
+    <pre>
+011000
+</pre>
+    <h2>
+      <a name="SECTION00033000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00033100000000000000">Input</a>
+    </h3>
+    <pre>
+2 4
+1100
+1010
+</pre>
+    <h3>
+      <a name="SECTION00033200000000000000">Output</a>
+    </h3>
+    <pre>
+1000
+</pre>
+  </body>
+</html>
