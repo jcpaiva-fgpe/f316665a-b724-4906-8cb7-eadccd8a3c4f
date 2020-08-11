@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Jogo do Galo
+    </title>
+    <meta name="description" content="Jogo do Galo">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00070000000000000000" id=
+      "SECTION00070000000000000000">Jogo do Galo</a>
+    </h1>
+    <p></p>
+    <h2>
+      <a name="SECTION00071000000000000000" id=
+      "SECTION00071000000000000000">Problema</a>
+    </h2>
+    <p>
+      O jogo do galo joga-se com dois jogadores num tabuleiro de dimensão 3*3.
+      Cada jogador coloca alternadamente uma das suas peças numa das posições
+      por preencher. Ganha o jogador que conseguir colocar 3 peças suas em
+      linha na horizontal, vertical ou diagonal. O jogo termina assim que um
+      dos jogadores vença ou quando todas as posições estiverem ocupadas,
+      situação esta considerada de empate.
+    </p>
+    <p>
+      <img width="724" height="234" align="bottom" border="0" src="img27.gif"
+      alt="\includegraphics[width=16cm]{galo}">
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00072000000000000000" id=
+      "SECTION00072000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Escrever um programa que, dado um tabuleiro com o estado final de um
+      jogo, verifica se o estado é correcto ou não. Se o estado for correcto, o
+      programa deve ainda determinar se existe algum vencedor ou se o jogo
+      terminou empatado. As posições no tabuleiro são representadas pelos
+      valores 0, 1 e 2. O valor 0 representa uma posição por preencher, o valor
+      1 representa uma peça do <i>jogador 1</i>, e o valor 2 representa uma
+      peça do <i>jogador 2</i>. O <i>jogador 1</i> é sempre o primeiro a jogar.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00073000000000000000" id=
+      "SECTION00073000000000000000">Input</a>
+    </h2>O input é o estado final do tabuleiro. O tabuleiro é dado por três
+    linhas, cada uma com três inteiros (0, 1 ou 2) representado as peças
+    colocadas nas posições dessa linha.
+    <p></p>
+    <h2>
+      <a name="SECTION00074000000000000000" id=
+      "SECTION00074000000000000000">Output</a>
+    </h2>O programa deverá apresentar como resultado:
+    <p>
+      <i><tt>jogo incorrecto</tt></i>: se o estado do jogo não é correcto.
+    </p>
+    <p>
+      <i><tt>venceu jogador 1</tt></i>: se o estado do jogo é correcto e se
+      venceu o jogador 1.
+    </p>
+    <p>
+      <i><tt>venceu jogador 2</tt></i>: se o estado do jogo é correcto e se
+      venceu o jogador 2.
+    </p>
+    <p>
+      <i><tt>empate</tt></i>: se o estado do jogo é correcto e se terminou com
+      um empate.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00075000000000000000" id=
+      "SECTION00075000000000000000">Exemplo 1: input</a>
+    </h2><br>
+    <pre>
+1 2 1
+2 2 1
+1 0 2
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00076000000000000000" id=
+      "SECTION00076000000000000000">Exemplo 1: output</a>
+    </h2><br>
+    <pre>
+jogo incorrecto
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00077000000000000000" id=
+      "SECTION00077000000000000000">Exemplo 2: input</a>
+    </h2><br>
+    <pre>
+1 0 2
+1 0 2
+1 0 2
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00078000000000000000" id=
+      "SECTION00078000000000000000">Exemplo 2: output</a>
+    </h2><br>
+    <pre>
+jogo incorrecto
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00079000000000000000" id=
+      "SECTION00079000000000000000">Exemplo 3: input</a>
+    </h2><br>
+    <pre>
+1 1 2
+0 2 0
+2 0 1
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION000710000000000000000" id=
+      "SECTION000710000000000000000">Exemplo 3: output</a>
+    </h2><br>
+    <pre>
+venceu jogador 2
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
