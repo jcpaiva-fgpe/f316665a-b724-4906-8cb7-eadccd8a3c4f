@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Cronogramas
+    </title>
+    <meta name="description" content="Cronogramas">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000">Cronogramas</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="188" height="99" align="bottom" border="0" src=
+      "./cronograma.png" alt="Image cronograma">
+    </div>
+    <p>
+      Um cronograma é uma frase que pode ser lida como uma data. A palavra
+      portuguesa deriva das palavras gregas "chronos" (tempo) e "grama"
+      (letra). Embora hoje em dia a palavra "cronograma" tenha adquirido uma
+      nova conotação - a de diagrama representando a evolução temporal - em
+      tempo idos os cronogramas eram simplesmente frases que escondiam uma
+      data. Os cronogramas eram inscritos em monumentos e túmulos como uma
+      forma poética de aludir às datas que estes evocam. Em vez de simplesmente
+      escrever a data em numeração romana, como nesses tempos era norma, as
+      letras da numeração romana eram usadas no meio das palavras de uma frase,
+      misturadas com outras letras que não têm significado como numerais
+      romanos. Por exemplo, da frase
+    </p>
+    <p></p>
+    <div align="center">
+      A<b>M</b>OR <b>M</b>A<b>XI</b>
+    </div>
+    <p>
+      podem-se extrair os caracteres da numeração romana MMXI que equivalem ao
+      numero 2011. Como todos sabemos, a numeração romana é de base decimal,
+      como a árabe, mas não é posicional. Cada letra tem um valor e o valor do
+      número baseia-se na soma do valor das letra que o compõem. Para os mais
+      esquecidos a tabela seguinte relembra a correspondência entre letras
+      romanas e o seu valor.
+    </p>
+    <p></p>
+    <div align="center">
+      <table cellpadding="3" border="1">
+        <tr>
+          <th align="center">
+            <b>Letra</b>
+          </th>
+          <th align="right">
+            <b>Valor</b>
+          </th>
+        </tr>
+        <tr>
+          <td align="center">
+            I
+          </td>
+          <td align="right">
+            1
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            V
+          </td>
+          <td align="right">
+            5
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            X
+          </td>
+          <td align="right">
+            10
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            L
+          </td>
+          <td align="right">
+            50
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            C
+          </td>
+          <td align="right">
+            100
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            D
+          </td>
+          <td align="right">
+            500
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            M
+          </td>
+          <td align="right">
+            1000
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      Na numeração romana as letras são geralmente escritas por ordem
+      decrescente do seu valor. Por exemplo 1500 é escrito como MD e nunca como
+      DM. As letras que correspondem a potências de 10 (I, X, C e o M) podem
+      ser repetidas até 3 vezes. Pode também ser usado o princípio subtrativo
+      para simplificar algumas representações. Escreve-se assim IV em vez de
+      IIII, e IX em vez de VIIII, por exemplo. A utilização do princípio
+      subtrativo está limitada a valores da grandeza próxima. Podemos usar um I
+      antes de um V ou um X, um X antes de um L ou um C, ou um C antes de um D
+      ou de um M; mas nunca um I antes de um C ou de um M, ou X antes de um D
+      ou de um M. Por exemplo, não faz sentido escrever MIM para 1999 que
+      deverá ser escrito como MCMXCIX.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00051000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Pretende-se um programa que recebe como entrada uma linha com uma
+      sequência de palavras que eventualmente contém um cronograma de valor
+      inferior a 3999, e produza uma linha com o número correspondente em
+      notação árabe. Dado que os romanos não usavam minúsculas, assumimos que
+      as palavras são sequências de uma ou mais maiúsculas e que os cronogramas
+      têm no máximo 100 caracteres. Se nenhuma das letras I, V, X, L, C, D, e M
+      ocorrer, então a linha resultante terá o valor 0. Caso contrário, terá o
+      valor correspondente ao numeral romano, que se supõe estar sempre bem
+      definido.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00052000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00052100000000000000">Input</a>
+    </h3>
+    <pre>
+AMORE MATVRITAS
+</pre>
+    <h3>
+      <a name="SECTION00052200000000000000">Output</a>
+    </h3>
+    <pre>
+2006
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00053000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00053100000000000000">Input</a>
+    </h3>
+    <pre>
+ESTES ROMANOS SAO LOUKOS
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00053200000000000000">Output</a>
+    </h3>
+    <pre>
+1050
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00054000000000000000">Exemplo 3</a>
+    </h2>
+    <h3>
+      <a name="SECTION00054100000000000000">Input</a>
+    </h3>
+    <pre>
+OK
+</pre>
+    <p></p>
+    <h3>
+      <a name="SECTION00054200000000000000">Output</a>
+    </h3>
+    <pre>
+0
+</pre>
+  </body>
+</html>
