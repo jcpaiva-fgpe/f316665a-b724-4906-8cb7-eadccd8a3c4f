@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>
+      iNetCode this message
+    </title>
+    <meta name="description" content="iNetCode this message">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <script type="text/javascript" src=
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00070000000000000000" id=
+      "SECTION00070000000000000000"><em>iNetCode this message</em></a>
+    </h1>
+    <p></p>
+    <table align="right">
+      <tr>
+        <td align="center">
+          <img width="230" height="370" src="butterflyNet-crop.png" border="1"
+          align="center" alt="[missing alt]">
+        </td>
+      </tr>
+    </table>
+    <p>
+      As redes de comunicação estão cada vez mais ocupadas e as aplicações
+      requerem um crescendo de largura de banda. Com o objetivo de otimizar o
+      uso das redes e conseguir transportar o maior número de bytes possíveis
+      nas mesmas ligações, desenvolveu-se a codificação de rede (<em>network
+      coding</em>).
+    </p>
+    <p>
+      Na codificação de rede não se envia os dados exatamente como são gerados
+      pelas aplicações, mas envia-se sim combinações de pedaços desses dados.
+      Desde que as combinações de pedaços recebidas sejam independentes,
+      consegue-se recuperar os dados originais. Um exemplo de operador para
+      essas combinações (um "combinador") é o XOR (\(\oplus\) ), que
+      corresponde ao <em>ou-exclusivo</em>.
+    </p>
+    <p>
+      O interessante do XOR é a sua propriedade lógica de que que \(p\oplus p =
+      0\). Ou seja, quando aplicamos a operação ao mesmo elemento (valor)
+      obtemos zero. E quando operamos com zero obtemos o valor dado, i.e.,
+      \(p\oplus 0 = p\). Por isso, se tivermos \(p\) e \(r\) temos:
+    </p>
+    <div align="center">
+      <img src="img40.gif" alt="[missing alt]"> 
+    </div><br clear="all">
+    <p></p>
+    <p>
+      Na figura, podemos ver como se consegue alguma poupança nas mensagens
+      enviadas. Os nós emissores têm, cada um, dados diferentes (\(p\) e \(r\))
+      para enviar para ambos os nós recetores. Na ligação A, usando a
+      codificação de rede, apenas precisamos de enviar uma mensagem com \(
+      p\oplus r\) em vez de enviarmos duas mensagens separadas \(p\) e \(r\).
+      E, os nós recetores conseguem descodificar o \(p\) e o \(r\) usando as
+      propriedades indicadas.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00071000000000000000" id=
+      "SECTION00071000000000000000">Tarefa</a>
+    </h2>Este problema pede que ponham as vossas mentes matemáticas a trabalhar
+    para desenvolver um programa que dada uma lista de mensagens recebidas,
+    descodifique o máximo possível de dados individuais. Serão dadas as
+    combinações de dados nas várias mensagens recebidas. Como saída devem ser
+    apresentados os dados individuais que se conseguiram descodificar (por
+    ordem alfabética). Cada letra (sempre minúscula) representa um dado
+    diferente. As várias mensagens são fornecidas em linhas separadas, e cada
+    mensagem pode conter a combinação de várias letras.
+    <p></p>
+    <h2>
+      <a name="SECTION00072000000000000000" id=
+      "SECTION00072000000000000000">Input</a>
+    </h2>Na primeira linha tem um inteiro \(n\) que é o número de mensagens
+    recebidas, com \(2\leq n\leq 10\). Seguem-se \(n\) linhas: cada uma tem uma
+    sequência de letras minúsculas que representam os dados enviados numa
+    mensagem. Em cada mensagem, as letras são distintas e, globalmente, não são
+    usadas mais do que 10 letras diferentes.
+    <p></p>
+    <h2>
+      <a name="SECTION00073000000000000000" id=
+      "SECTION00073000000000000000">Output</a>
+    </h2>Uma única linha com a lista de dados (letras únicas) que se
+    conseguiram descodificar separados por vírgulas, e um espaço a seguir a
+    cada vírgula, e ordenados alfabeticamente. Caso não se consiga descodificar
+    nada deve ter simplesmente a palavra <tt>erro</tt>.
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name="SECTION00074000000000000000" id=
+      "SECTION00074000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00074100000000000000" id=
+      "SECTION00074100000000000000">Input</a>
+    </h3>
+    <pre>
+2
+pr
+r
+</pre>
+    <h3>
+      <a name="SECTION00074200000000000000" id=
+      "SECTION00074200000000000000">Output</a>
+    </h3>
+    <pre>
+p, r
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00075000000000000000" id=
+      "SECTION00075000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00075100000000000000" id=
+      "SECTION00075100000000000000">Input</a>
+    </h3>
+    <pre>
+4
+abc
+ab
+cd
+ac
+</pre>
+    <h3>
+      <a name="SECTION00075200000000000000" id=
+      "SECTION00075200000000000000">Output</a>
+    </h3>
+    <pre>
+a, b, c, d
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00076000000000000000" id=
+      "SECTION00076000000000000000">Exemplo 3</a>
+    </h2>
+    <h3>
+      <a name="SECTION00076100000000000000" id=
+      "SECTION00076100000000000000">Input</a>
+    </h3>
+    <p></p>
+    <pre>
+3
+abc
+abd
+de
+</pre>
+    <h3>
+      <a name="SECTION00076200000000000000" id=
+      "SECTION00076200000000000000">Output</a>
+    </h3>
+    <pre>
+erro
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00077000000000000000" id=
+      "SECTION00077000000000000000">Exemplo 4</a>
+    </h2>
+    <p></p>
+    <h3>
+      <a name="SECTION00077100000000000000" id=
+      "SECTION00077100000000000000">Input</a>
+    </h3>
+    <pre>
+3
+abc
+ab
+dc
+</pre>
+    <h3>
+      <a name="SECTION00077200000000000000" id=
+      "SECTION00077200000000000000">Output</a>
+    </h3>
+    <pre>
+c, d
+</pre>
+    <p></p>
+    <p></p>
+    <p>
+      <br>
+    </p>
+    <p>
+      <b>Nota:</b> O Exemplo 1, diz respeito ao nó recetor que está à direita
+      na figura.
+    </p>
+    <p></p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
