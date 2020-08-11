@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Liga Europa
+    </title>
+    <meta name="description" content="Liga Europa">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000">Liga Europa</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="270" height="177" align="bottom" border="0" src=
+      "./taca-r.jpg" alt="Image cup_r">
+    </div>
+    <p>
+      Tivemos ontem os jogos da segunda mão das meias-finais da Liga Europa. À
+      data em que escrevemos, ainda não sabemos os resultados dos jogos, mas,
+      se tudo tiver corrido bem, teremos duas equipas portuguesas na final, o
+      que é verdadeiramente fantástico. Nesta fase, a Liga Europa é um torneio
+      a eliminar e em cada eliminatória há dois jogos entre cada par de
+      equipas, primeiro no campo de uma delas, depois no campo da outra. Vence
+      a eliminatória e passa à eliminatória seguinte (ou à final) a equipa que
+      tiver marcado mais golos no agregado, isto é, no conjunto dos dois jogos.
+      Em caso de empate no agregado, passa a equipa que tiver marcado mais
+      golos fora, isto é, no jogo no campo do adversário. Este critério de
+      desempate não é suficiente, pois pode acontecer que ambas as equipas
+      tenham marcado o mesmo número de golos fora. No caso de empate no
+      agregado e nos golos fora, já contando com o tempo suplementar que terá
+      havido no jogo da segunda mão, a eliminatória resolve-se recorrendo a
+      pontapés na marca de grande penalidade. Na gíria, dizemos <em>"vai-se a
+      penáltis"</em>.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00011000000000000000">Tarefa</a>
+    </h2>É verdade que as contas são fáceis e se fazem de cabeça, mas o sistema
+    de informação da UEFA (entidade que organiza a Liga Europa) tem de calcular
+    automaticamente quem passa à eliminatória seguinte, em função dos
+    resultados dos dois jogos. Pretendemos aqui programar esse módulo do
+    sistema: dados os resultados dos dois jogos de uma eliminatória, calcular a
+    equipa que venceu a eliminatória.
+    <p></p>
+    <h2>
+      <a name="SECTION00012000000000000000">Input</a>
+    </h2>A primeira linha tem duas cadeias de carateres, cada uma delas formada
+    só por letras e pelo caráter '<code>_</code>', e as duas separadas uma da
+    outra por um espaço. A primeira palavra representa o nome da equipa que
+    joga em casa na primeira mão (e fora na segunda); a segunda palavra
+    representa o nome da equipa que joga fora na primeira mão (e em casa na
+    segunda). A segunda linha tem dois números inteiros não negativos, que
+    representam o resultado do jogo da primeira mão e a terceira linha é
+    análoga, mas para o resultado da segunda mão. Em ambos os casos o primeiro
+    número indica o número de golos marcados pela equipa que joga em casa e o
+    segundo o número de golos marcados pela equipa que joga fora.
+    <p></p>
+    <h2>
+      <a name="SECTION00013000000000000000">Output</a>
+    </h2>Há apenas uma linha onde aparece apenas uma cadeia de carateres com o
+    nome da equipa que vence a eliminatória, se a eliminatória se tiver
+    resolvido sem recurso a penáltis, ou então a palavra <code>penaltis</code>,
+    sem as aspas e sem acento, no caso de haver empate no agregado e nos golos
+    marcados fora.
+    <p></p>
+    <h2>
+      <a name="SECTION00014000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00014100000000000000">Input</a>
+    </h3>
+    <pre>
+fcporto spartak
+5 1
+2 5
+</pre>
+    <h3>
+      <a name="SECTION00014200000000000000">Output</a>
+    </h3>
+    <pre>
+fcporto
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00015000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00015100000000000000">Input</a>
+    </h3>
+    <pre>
+dinamo_kiev sporting_braga
+1 1
+0 0
+</pre>
+    <h3>
+      <a name="SECTION00015200000000000000">Output</a>
+    </h3>
+    <pre>
+sporting_braga
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00016000000000000000">Exemplo 3</a>
+    </h2>
+    <h3>
+      <a name="SECTION00016100000000000000">Input</a>
+    </h3>
+    <pre>
+fcporto benfica
+0 2
+1 3
+</pre>
+    <h3>
+      <a name="SECTION00016200000000000000">Output</a>
+    </h3>
+    <pre>
+fcporto
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00017000000000000000">Exemplo 4</a>
+    </h2>
+    <h3>
+      <a name="SECTION00017100000000000000">Input</a>
+    </h3>
+    <pre>
+vitoria uniao
+2 1
+2 1
+</pre>
+    <h3>
+      <a name="SECTION00017200000000000000">Output</a>
+    </h3>
+    <pre>
+penaltis
+</pre>
+    <p></p>
+  </body>
+</html>
