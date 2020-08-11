@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>
+      Dilema do Prisioneiro
+    </title>
+    <meta name="description" content="Dilema do Prisioneiro">
+    <meta name="keywords" content="html">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00030000000000000000">Dilema do Prisioneiro</a>
+    </h1>
+    <p></p>
+    <div align="center">
+      <img width="90" height="130" align="bottom" border="0" src=
+      "./metralhas.png" alt="Image Prison">
+    </div>
+    <p>
+      <em>"Dois suspeitos, A e B, são presos pela polícia. A polícia tem provas
+      insuficientes para os condenar, mas, separando os prisioneiros, oferece a
+      ambos o mesmo acordo: se um dos prisioneiros, confessando, testemunhar
+      contra o outro e esse outro permanecer em silêncio, o que confessou sai
+      livre enquanto o cúmplice silencioso cumpre 10 anos de sentença. Se ambos
+      ficarem em silêncio, a polícia só pode condená-los a 6 meses de cadeia
+      cada um. Se ambos traírem o comparsa, cada um leva 5 anos de cadeia. Cada
+      prisioneiro faz a sua decisão sem saber que decisão o outro vai tomar, e
+      nenhum tem certeza da decisão do outro. A questão que o dilema propõe é:
+      o que vai acontecer? Como vai o prisioneiro reagir?"</em>
+    </p>
+    <p>
+      Esta é a formulação original do "Dilema do Prisioneiro" feita em 1950, e
+      desde então usado em Teoria dos Jogos para modelar situações tão banais,
+      como o que fazem duas pessoas que acidentalmente trocam as suas malas, ou
+      tão complexas, como o sistema que durante a Guerra Fria ficou conhecido
+      por Mutual Assured Destruction (MAD).
+    </p>
+    <p>
+      Em Teoria dos Jogos são particularmente interessantes os modelos básicos
+      que permitem jogos repetidos, com memória das jogadas anteriores.
+      Imagine-se um jogo de cartas: as regras de uma jogada podem ser repetidas
+      por várias mãos; os (bons) jogadores lembram-se das cartas jogadas
+      anteriormente; e no final são somados os ganhos de cada mão.
+    </p>
+    <p>
+      O Dilema do Prisioneiro é também um jogo básico que pode ser jogado de um
+      forma iterada. Em cada iteração os pontos do jogador são dados por uma
+      matriz de ganhos. No exemplo clássico apresentado acima a matriz de
+      ganhos seria a seguinte (tomando os meses de prisão como perdas):
+    </p>
+    <p></p>
+    <div align="center">
+      <table cellpadding="3">
+        <tr>
+          <td align="center">
+            A ; B
+          </td>
+          <td align="center">
+            Cooperar
+          </td>
+          <td align="center">
+            Desertar
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            Cooperar
+          </td>
+          <td align="center">
+            -6 ; -6
+          </td>
+          <td align="center">
+            -120 ; 0
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            Desertar
+          </td>
+          <td align="center">
+            0 ; -120
+          </td>
+          <td align="center">
+            -60 ; -60
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      A versão iterada do Dilema do Prisioneiro modela muitas situações de
+      cooperação e confronto, desde as explicações para as relações entre os
+      seres vivos baseadas na teoria da evolução Darwiniana, às teorias
+      económicas para as relações entre as empresas.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00031000000000000000">Tarefa</a>
+    </h2>
+    <p>
+      Pretende-se escrever um programa para calcular os pontos de cada jogador
+      do Dilema do Prisioneiro iterado e determinar o vencedor. Como input é
+      dada a matriz de ganhos seguida de uma sequência de <em>n</em> jogadas. A
+      matriz é dada por linhas de 2 valores, respectivamente os ganhos dos
+      jogadores A e B, para os seguintes casos: A e B cooperam; A coopera e B
+      deserta; A deserta e B coopera; A e B desertam. Segue-se uma linha com o
+      número <em>n</em> de jogadas e <em>n</em> linhas com um par de valores 0
+      ou 1 (0 se desertam e 1 se cooperam) respectivamente para os jogadores A
+      ou B.
+    </p>
+    <p>
+      O programa indicará o número de pontos acumulado por cada um dos
+      jogadores. Cada linha terá o nome dum jogador (A ou B) seguido dum espaço
+      e da respectiva pontuação, sendo os jogadores apresentados por ordem
+      decrescente de pontuação. Se os jogadores empatam então terá apenas uma
+      linha com referência AB seguida dum espaço e do valor das pontuação de
+      ambos.
+    </p>
+    <p></p>
+    <h2>
+      <a name="SECTION00032000000000000000">Exemplo 1</a>
+    </h2>
+    <h3>
+      <a name="SECTION00032100000000000000">Input</a>
+    </h3>
+    <pre>
+-1 -1
+-20 0
+0 -20
+-10 -10
+4
+1 0
+0 1
+1 1
+0 0
+</pre>
+    <h3>
+      <a name="SECTION00032200000000000000">Output</a>
+    </h3>
+    <pre>
+AB -31
+</pre>
+    <p></p>
+    <h2>
+      <a name="SECTION00033000000000000000">Exemplo 2</a>
+    </h2>
+    <h3>
+      <a name="SECTION00033100000000000000">Input</a>
+    </h3>
+    <pre>
+5 5
+3 7
+7 3
+2 2
+3
+1 1
+1 1
+1 0
+</pre>
+    <h3>
+      <a name="SECTION00033200000000000000">Output</a>
+    </h3>
+    <pre>
+B 17
+A 13
+</pre>
+    <p></p>
+  </body>
+</html>
