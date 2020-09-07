@@ -1,0 +1,1 @@
+{"id":"471f1d17-2336-458f-a8ca-c4a79e33ffaf","name":"[R-UNLOCK] Ultimate Test","triggers":[{"kind":"ACTION","event":"CHALLENGE_COMPLETED","recurrent":false,"parameters":["2d9dd968-5490-41b7-929f-43582a145888"]}],"criteria":{},"actions":[]}
