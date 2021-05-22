@@ -1,0 +1,195 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN">
+<html>
+  <head>
+    <title>
+      Purchases, only in coins
+    </title>
+    <meta name = "description" content = "Purchases, only in currencies">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    <script type = "text / javascript" src =
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00050000000000000000" id =
+      "SECTION00050000000000000000"> Purchases, only in coins </a>
+    </h1>
+    <table align = "right">
+      <tr>
+        <td align = "center">
+          <img width = "223" height = "250" src = "money.jpeg" border = "1" align =
+          "center" alt = "[missing alt]">
+        </td>
+      </tr>
+    </table> <br>
+    <p>
+      At the Senhor Moeda store, notes are not accepted to pay for purchases
+      made by customers, nor change in notes. Everything is done with
+      2 and 1 euro coins and 50, 20, 10, 5, 2 and 1 coins
+      cents. In the store there is an unlimited stock of coins and, by the way,
+      items for sale.
+    </p>
+    <p>
+      In order to keep customers happy, whenever Mr. Moeda gives
+      change, gives as few coins as possible.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00051000000000000000" id =
+      "SECTION00051000000000000000"> Task </a>
+    </h2>
+    <p>
+      Write a program that, given the purchase price and the currencies that the customer
+      delivered to pay for the purchase, it indicates the coins given in change, if it is
+      possible to make the purchase (that is, when the value delivered by the customer
+      is greater than or equal to the purchase price). Otherwise, the purchase will not
+      can be done and the coins delivered by the customer are
+      returned.
+    </p>
+    <p>
+      For example, if the amount to be paid is 5 euros and 25 cents and the customer
+      deliver a 2-euro coin, three 1-euro coins and two 50-euro coins
+      cents, the change will be made up of a 50 cent coin, a currency
+      20 cents and a 5 cent coin.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00052000000000000000" id =
+      "SECTION00052000000000000000"> Input </a>
+    </h2>
+    <p>
+      There are always 2 lines.
+    </p>
+    <p>
+      The first line has two integers, \ (E \) and \ (C \), which
+      indicate that the purchase price is \ (E \) euros and \ (C \) cents. Fur
+      least one of these numbers is positive.
+    </p>
+    <p>
+      The second line has 8 non-negative integers, \ (n_1, n_2, \ ldots,
+      n_8 \), which indicate the number of coins of each type delivered by the customer
+      to make the payment. These figures are given for the currency with the highest
+      value to the lowest value currency. Thus, \ (n_1 \) is the number of coins of 2
+      euros delivered by the customer and \ (n_8 \) is the number of coins of 1
+      cent delivered by the customer.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00053000000000000000" id =
+      "SECTION00053000000000000000"> Restrictions </a>
+    </h2>
+    <p> </p>
+    <table cellpadding = "3">
+      <tr>
+        <td align = "left">
+          \ (0 \ leq E \ leq 1 \, 000 \)
+        </td>
+        <td align = "left">
+          Euros of the purchase price
+        </td>
+      </tr>
+      <tr>
+        <td align = "left">
+          \ (0 \ leq C \ leq 99 \)
+        </td>
+        <td align = "left">
+          Cents of the purchase price
+        </td>
+      </tr>
+      <tr>
+        <td align = "left">
+          \ (0 \ leq n_i \ leq 8 \, 000 \)
+        </td>
+        <td align = "left">
+          Number of coins of a type (with \ (i = 1,2, \ ldots, 8 \))
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00054000000000000000" id =
+      "SECTION00054000000000000000"> Output </a>
+    </h2>
+    <p>
+      A single line with 8 non-negative integers, which indicate the number of
+      coins of each type that will be given to the customer. If the amount delivered
+      by the customer is greater than or equal to the purchase price, these coins are
+      the change given by Mr. Moeda. Otherwise, these coins were the
+      delivered by the customer to Mr. Currency. As at the entrance, the first
+      number corresponds to the 2 euro coin, the second number corresponds to the
+      1 euro coin, and so on, respecting the decreasing order
+      of the face value of the coins.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00055000000000000000" id =
+      "SECTION00055000000000000000"> Example 1 - Sale completed </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00055100000000000000" id =
+      "SECTION00055100000000000000"> Input </a>
+    </h3>
+    <pre>
+5 25
+1 3 2 0 0 0 0 0
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00055200000000000000" id =
+      "SECTION00055200000000000000"> Output </a>
+    </h3>
+    <pre>
+0 0 1 1 0 1 0 0
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00056000000000000000" id =
+      "SECTION00056000000000000000"> Example 2 - Sale completed </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00056100000000000000" id =
+      "SECTION00056100000000000000"> Input </a>
+    </h3>
+    <pre>
+5 25
+0 3 0 1 0 1 0 200
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00056200000000000000" id =
+      "SECTION00056200000000000000"> Output </a>
+    </h3>
+    <pre>
+0 0 0 0 0 0 0 0
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00057000000000000000" id =
+      "SECTION00057000000000000000"> Example 3 - Sale not made </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00057100000000000000" id =
+      "SECTION00057100000000000000"> Input </a>
+    </h3>
+    <pre>
+5 25
+0 3 0 1 0 1 0 100
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00057200000000000000" id =
+      "SECTION00057200000000000000"> Output </a>
+    </h3>
+    <pre>
+0 3 0 1 0 1 0 100
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
