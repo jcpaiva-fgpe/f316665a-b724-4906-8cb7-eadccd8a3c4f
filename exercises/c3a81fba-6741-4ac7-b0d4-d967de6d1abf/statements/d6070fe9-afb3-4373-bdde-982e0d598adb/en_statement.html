@@ -1,0 +1,177 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN">
+<html>
+  <head>
+    <title>
+      And, by the way?
+    </title>
+    <meta name = "description" content = "And anyway?">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    <script type = "text / javascript" src =
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00040000000000000000" id="SECTION00040000000000000000"> AND,
+      otherwise? </a>
+    </h1>
+    <p> </p>
+    <table align = "right">
+      <tr>
+        <td align = "center">
+          <img width = "223" height = "250" src = "Jogo_resto.png" border = "0" align =
+          "center" alt = "[missing alt]">
+        </td>
+      </tr>
+    </table>
+    <p>
+      This year the national finals of the Olympic Games are held in Abobadeira.
+      Numerology, whose main event is the Game of the Rest. We will support
+      with the programming of the results table and we need your
+      collaboration. You still don't know the Game of Rest? It's very simple:
+    </p>
+    <p> </p>
+    <ol>
+      <li> it is played with \ (N \) players, from player \ (0 \) to \ (N-1 \);
+      </li>
+      <li> each game has \ (M \) plays;
+      </li>
+      <li> in each move, each player registers an integer from \ (0 \) to
+      \ (N-1 \);
+      </li>
+      <li> the numbers registered by all players are added, \ (S \);
+      </li>
+      <li> the remainder \ (R \) of the entire division of \ (S \) by \ (N \) is calculated,
+        with \ (0 \ leq R \ leq N-1 \);
+      </li>
+      <li> the player with the number \ (R \) counts 1 more point, the
+      the rest keep those who have;
+      </li>
+      <li> at the end of the \ (M \) moves, the winner is the one with the most points.
+      </li>
+    </ol>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00041000000000000000" id =
+      "SECTION00041000000000000000"> Task </a>
+    </h2>
+    <p>
+      Write a program to read the various moves, count the points
+      of the players and indicate the winners.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00042000000000000000" id =
+      "SECTION00042000000000000000"> Input </a>
+    </h2>
+    <p>
+      The first line has two integers: \ (N \) (the number of players) and
+      \ (M \) (the number of moves). Following are \ (M \) lines containing the
+      plays. Each line with a move contains \ (N \) integers \ (J_0, J_1,
+      \ ldots J_i, \ ldots J_ {N-1} \), with \ (0 \ leq i <N \) and \ (0 \ leq J_i
+      <N \).
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00043000000000000000" id =
+      "SECTION00043000000000000000"> Restrictions </a>
+    </h2>
+    <p> </p>
+    <table cellpadding = "3">
+      <tr>
+        <td align = "left">
+          \ (1 \ leq N <100 \)
+        </td>
+        <td align = "left">
+          Number of players
+        </td>
+      </tr>
+      <tr>
+        <td align = "left">
+          \ (1 \ leq M <100 \)
+        </td>
+        <td align = "left">
+          Number of moves
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00044000000000000000" id =
+      "SECTION00044000000000000000"> Output </a>
+    </h2>
+    <p>
+      The result consists of 2 groups of lines, each line with only one
+      whole. The lines in the first group have the total points for each
+      player, in ascending order of the player's number. Between the first and the
+      second group of lines there is a blank line. The lines of the second
+      group show the numbers of the players who totaled the highest number
+      of points and for that reason they won the game, also in ascending order of their
+      number.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00045000000000000000" id =
+      "SECTION00045000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00045100000000000000" id =
+      "SECTION00045100000000000000"> Input </a>
+    </h3>
+    <pre>
+2 4
+0 0
+0 1
+1 0
+1 1
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00045200000000000000" id =
+      "SECTION00045200000000000000"> Output </a>
+    </h3>
+    <pre>
+two
+two
+
+0
+1
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00046000000000000000" id =
+      "SECTION00046000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00046100000000000000" id =
+      "SECTION00046100000000000000"> Input </a>
+    </h3>
+    <pre>
+3 5
+0 1 2
+2 1 0
+0 0 0
+1 1 2
+0 2 0
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00046200000000000000" id =
+      "SECTION00046200000000000000"> Output </a>
+    </h3>
+    <pre>
+3
+1
+1
+ 
+0
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
