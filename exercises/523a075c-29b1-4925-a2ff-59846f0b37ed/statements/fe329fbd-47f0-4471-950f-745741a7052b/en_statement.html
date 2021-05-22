@@ -1,0 +1,249 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Soup of letters
+    </title>
+    <meta name = "description" content = "Letter soup">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00030000000000000000"> Sopinha de letras </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <table cellpadding = "3" border = "1">
+        <tr>
+          <td align = "center">
+            THE
+          </td>
+          <td align = "center">
+            T
+          </td>
+          <td align = "center">
+            R
+          </td>
+          <td align = "center">
+            Y
+          </td>
+          <td align = "center">
+            K
+          </td>
+          <td align = "center">
+            L
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            Q
+          </td>
+          <td align = "center">
+            D
+          </td>
+          <td align = "center">
+            X
+          </td>
+          <td align = "center">
+            I
+          </td>
+          <td align = "center">
+            AND
+          </td>
+          <td align = "center">
+            T
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            THE
+          </td>
+          <td align = "center">
+            AND
+          </td>
+          <td align = "center">
+            X
+          </td>
+          <td align = "center">
+            T
+          </td>
+          <td align = "center">
+            V
+          </td>
+          <td align = "center">
+            THE
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            M
+          </td>
+          <td align = "center">
+            O
+          </td>
+          <td align = "center">
+            R
+          </td>
+          <td align = "center">
+            L
+          </td>
+          <td align = "center">
+            K
+          </td>
+          <td align = "center">
+            Z
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            Z
+          </td>
+          <td align = "center">
+            THE
+          </td>
+          <td align = "center">
+            P
+          </td>
+          <td align = "center">
+            O
+          </td>
+          <td align = "center">
+            s
+          </td>
+          <td align = "center">
+            I
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            s
+          </td>
+          <td align = "center">
+            s
+          </td>
+          <td align = "center">
+            T
+          </td>
+          <td align = "center">
+            O
+          </td>
+          <td align = "center">
+            THE
+          </td>
+          <td align = "center">
+            s
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      Letter soup is a kind of puzzle often used as an exercise,
+      to improve students' vocabulary in a certain field. This puzzle
+      consists of a matrix of letters where words are formed, which can be
+      occur in the same row, column or diagonal. To make the challenge more
+      interesting words may even be written backwards.
+      Sometimes it’s so hard to find all the words!
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00031000000000000000"> Task </a>
+    </h2>
+    <p>
+      Write a program that reads an array of letters and a set of
+      words and writes the location of the first last letter of each word
+      read. The letters of the words are in contiguous positions on the same line,
+      column or diagonal, and may be in reverse order. It can be assumed that
+      each word occurs only once, no word is a sub-word of
+      another, although the same positions of the matrix can be used in several
+      words. The matrix cells are referenced by their row and column,
+      row 1 being the first to count from the top and column number 1 being
+      further to the left.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00032000000000000000"> Input </a>
+    </h2>
+    <p>
+      The first line contains two integers, <img width = "19" height = "14" align =
+      "bottom" border = "0" src = "img1.gif" alt = "$ m $"> and <img width = "15" height =
+      "14" align = "bottom" border = "0" src = "img2.gif" alt = "$ n $">, separated by
+      a space, both greater than or equal to 4 and less than or equal
+      to 20. These integers represent the dimensions of the matrix, being
+      <img width = "19" height = "14" align = "bottom" border = "0" src = "img1.gif" alt =
+      "$ m $"> the number of lines and <img width = "15" height = "14" align = "bottom"
+      border = "0" src = "img2.gif" alt = "$ n $"> the number of columns.
+    </p>
+    <p>
+      As <img width = "19" height = "14" align = "bottom" border = "0" src = "img1.gif"
+      alt = "$ m $"> following lines contain strings with
+      <img width = "15" height = "14" align = "bottom" border = "0" src = "img2.gif" alt =
+      "$ n $"> letters. Following is a line with an integer <img width = "14" height =
+      "15" align = "bottom" border = "0" src = "img3.gif" alt = "$ k $">, which is the number
+      of words in the matrix, and <img width = "14" height = "15" align = "bottom"
+      border = "0" src = "img3.gif" alt = "$ k $"> lines containing strings
+      characters, which are the words to look for in the letter soup, being
+      <img width = "95" height = "34" align = "middle" border = "0" src = "img4.gif" alt =
+      "$ 1 \ leq k \ leq 100 $">.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00033000000000000000"> Output </a>
+    </h2>
+    <p>
+      It consists of <img width = "14" height = "15" align = "bottom" border = "0"
+      src = "img3.gif" alt = "$ k $"> lines, each with four separate integers
+      for a space, <img width = "96" height = "32" align = "middle" border = "0" src =
+      "img5.gif" alt = "$ L_i \; C_i \; L_f \; C_f $">, which identify the position of the
+      corresponding word (according to the reading order), <img width =
+      "21" height = "32" align = "middle" border = "0" src = "img6.gif" alt = "$ L_i $"> a
+      initial line of the word, <img width = "22" height = "32" align = "middle"
+      border = "0" src = "img7.gif" alt = "$ C_i $"> the starting column, and <img width =
+      "25" height = "32" align = "middle" border = "0" src = "img8.gif" alt = "$ L_f $"> e
+      <img width = "25" height = "32" align = "middle" border = "0" src = "img9.gif" alt =
+      "$ C_f $"> the final line and the final column, with <img width = "92" height = "32"
+      align = "middle" border = "0" src = "img10.gif" alt = "$ 1 \ leq L_i \ leq m $">,
+      <img width = "88" height = "32" align = "middle" border = "0" src = "img11.gif"
+      alt = "$ 1 \ leq C_i \ leq n $">, <img width = "95" height = "32" align = "middle"
+      border = "0" src = "img12.gif" alt = "$ 1 \ leq L_f \ leq m $">, and <img width = "91"
+      height = "32" align = "middle" border = "0" src = "img13.gif" alt =
+      "$ 1 \ leq C_f \ leq n $">.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00034000000000000000"> Example </a>
+    </h2>
+    <h3>
+      <a name="SECTION00034100000000000000"> Input </a>
+    </h3>
+    <p> </p>
+    <pre>
+ 
+6 6
+ATRYKL
+QDXIET
+AEXTVA
+MORLKZ
+ZAPOSI
+SSTOAS
+3
+SOUP
+IN
+LETTERS
+</pre>
+    <h3>
+      <a name="SECTION00034200000000000000"> Output </a>
+    </h3>
+    <p> </p>
+    <pre>
+5 5 5 2
+2 2 3 2
+1 6 6 1
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
