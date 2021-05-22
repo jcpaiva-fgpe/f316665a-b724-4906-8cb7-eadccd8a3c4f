@@ -1,0 +1,104 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN">
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00010000000000000000" id =
+      "SECTION00010000000000000000"> How many days do you make? </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "147" height = "119" align = "bottom" border = "0" src =
+      "./Birthday_Cake_3_Candles.jpg" alt = "Image Birthday_Cake_3_Candles">
+    </div>
+    <p>
+      We all know how old we are but we rarely take the trouble to
+      know how many days we have exactly. And this is important because for years
+      that not only seem to cost more to spend but actually have even more
+      days, like leap years.
+    </p>
+    <p>
+      In fact, there is the concept of Julian date, or Julian day, which counts the
+      number of days in a row from an arbitrary date. The Julian date is
+      used mainly to reference astronomical observations, but it simplifies
+      also calculating the number of days between dates. For example, for
+      calculate the number of days passed from our birth to today
+      just subtract the respective Julian dates.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00011000000000000000" id =
+      "SECTION00011000000000000000"> Task </a>
+    </h2> Calculate the Julian date for dates in our era. Year, month are given
+    and day as integers (January = 1). The Julian date is calculated using the
+    following algorithm. If the month is before March (month 3) then
+    <div style = "margin-left: 2em">
+      year: = year - 1 <br>
+      month: = month + 12
+    </div> From these values, it is calculated
+    <div style = "margin-left: 2em">
+      A: = year / 100 (entire division) <br>
+      B: = A / 4 (entire division)
+    </div> If the date is later than 10/15/1582, when the Calendar started
+    Gregorian that we currently use, so
+    <div style = "margin-left: 2em">
+      C: = 2 - A + B
+    </div> In the Gregorian calendar, leap years were introduced for
+    compensate for the fact that a year does not have an entire number of days, avoiding the
+    progressive mismatch between the calendar and astronomical observations. If
+    is a date equal to or earlier than 4/10/1582, the end of the Julian calendar,
+    then
+    <div style = "margin-left: 2em">
+      C: = 0
+    </div> In the Julian calendar, previously in force, the years had always
+    365 days. It should be noted that in Portugal on 4/10/1582 the day
+    10/15/1582, to readjust the calendar. From these values ​​it is calculated
+    <div style = "margin-left: 2em">
+      D: = whole part of [365.25 x (year + 4716)] <br>
+      E: = whole part of [30,6001 x (month + 1)]
+    </div> with the Julian date (DJ) being given by
+    <div style = "margin-left: 2em">
+      DJ: = D + E + day + C - 1524
+    </div>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00012000000000000000" id =
+      "SECTION00012000000000000000"> Input </a>
+    </h2> A line with three integers (year, month and day) that define a date
+    valid. We can assume that invalid dates are not provided, such as
+    dates between 10/4/1582 and 10/15/1582. Dates will also not be provided
+    prior to our era.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00013000000000000000" id =
+      "SECTION00013000000000000000"> Output </a>
+    </h2> The Julian date for the date read.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00014000000000000000" id =
+      "SECTION00014000000000000000"> Example </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00014100000000000000" id =
+      "SECTION00014100000000000000"> Input </a>
+    </h3>
+    <pre>
+2014 5 9
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00014200000000000000" id =
+      "SECTION00014200000000000000"> Output </a>
+    </h3>
+    <pre>
+2456787
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
