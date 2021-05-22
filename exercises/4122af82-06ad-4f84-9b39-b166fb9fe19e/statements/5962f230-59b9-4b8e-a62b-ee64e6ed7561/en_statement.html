@@ -1,0 +1,175 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN">
+<html>
+  <head>
+
+    <script type = "text / javascript" src =
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00010000000000000000" id =
+      "SECTION00010000000000000000"> Travel in my land </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "234" height = "320" align = "bottom" border = "0" src =
+      "./viagensGarrett_ilust.jpg" alt = "Image tripsGarrett_ilust">
+    </div>
+    <p>
+      We are not going to talk about Carlos, Frei Dinis and Joaninha, characters of this
+      Almeida Garrett's classic, edited in 1846, but by a group of people
+      you are trying to book a trip on the company portal <em> Travel on
+      my land - Go outside in here </em> (VMT @ en).
+    </p>
+    <p>
+      The group intends to travel to a certain place, and the trip must take place in a
+      certain period of time. VMT @ pt carries out several routes, some with
+      passage at the intended origin and destination, within the envisaged period, and
+      others are not. Not all routes already have enough seats for the group. THE
+      VMT @ pt tries to comply with schedules, but the status of some sections of the routes
+      has caused delays. So you have a notice on your portal with
+      information on the sections where there are problems. The group would like to
+      avoid problems that delay your trip, which can happen if your
+      problems occur between the origin of the route and the destination of the group on the route
+      selected for the trip. So they’re trying to find out how many
+      alternatives would have with minimal number of problems (which may not be
+      zero).
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00011000000000000000" id =
+      "SECTION00011000000000000000"> Task </a>
+    </h2> Write a program to indicate how many alternatives the group would have
+    with a minimum number of problems (only those that affect your trip).
+    The appropriate routes for the group must respect the time restrictions,
+    of places and go to the origin and destination of the group, of course!
+    <p> </p>
+    <h2>
+      <a name = "SECTION00012000000000000000" id =
+      "SECTION00012000000000000000"> Input </a>
+    </h2> In the first line there are five integers: number of elements in the group,
+    group origin, group destination, and two integers (between 7 and 22) that
+    represent the interval at which the trip is to take place (the hours of
+    group departure and arrival must be within that range).
+    <p>
+      In the second line there is an integer \ (n \) (less than 200) which is the number of
+      existing locations (locations are identified by integers from 1 to
+      \ (n \)). The following is a square table, with \ (n \) rows and \ (n \) columns: the
+      element in row \ (i \) and column \ (j \) is 1 if any
+      problem in the section from \ (i \) to \ (j \), is 0 if there is no problem, and is 2
+      if the section does not exist.
+    </p>
+    <p>
+      Then you have the description of the routes, their schedules, and places available
+      at the moment. For each route, there are two lines with $$ integers
+      \ begin {array} {l} k \; \; h \\ v_1 \; \; n_1 \; \; d_1 \; \; v_2 \; \;
+      n_2 \; \; d_2 \; \; v_3 \; \; n_3 \; \; d_3 \; \; \ ldots v_ {k-1} \; \; n_ {k-1} \; \;
+      d_ {k-1} \; \; v_k \ end {array} $$ where \ (k \) (greater than or equal to 2) is the
+      number of locations the route passes through and \ (h \) is the departure time of the
+      route (always at the right time), each \ (v_i \) is a location, each section
+      \ ((v_i, v_ {i + 1}) \) is always valid, the value \ (n_i \) is the number of places
+      available on that section and \ (d_i \) is the expected duration for that section
+      (in minutes) on that route. Routes are unidirectional and no routes
+      passes through the same location twice. The input ends with <tt> 0 0 </tt> (two
+      zeros, separated by space).
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00013000000000000000" id =
+      "SECTION00013000000000000000"> Output </a>
+    </h2> If it is not possible to book the trip, you will have a line with the
+    word <tt> Impossible </tt>. If possible, you will have a line with two
+    <tt> c p </tt> integers, separated by a space, where <tt> c </tt> is the
+    number of alternatives found and <tt> p </tt> is the number of problems
+    between the origin of the route and the destination of the group.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00014000000000000000" id =
+      "SECTION00014000000000000000"> Example 1 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00014100000000000000" id =
+      "SECTION00014100000000000000"> Input </a>
+    </h3>
+    <pre>
+10 5 2 10 15
+7
+2 1 2 1 1 2 2
+0 2 0 2 2 2 1
+1 0 2 0 1 2 2
+0 2 0 2 0 1 2
+0 2 0 0 2 2 2
+2 2 2 2 0 2 0
+0 0 2 2 2 1 2
+7 8
+1 20 30 2 13 50 7 15 15 6 25 12 5 17 15 3 12 23 4
+4 11
+5 30 60 3 2 10 2 15 23 7
+7 9
+4 20 70 6 13 10 5 18 30 3 10 90 2 25 90 7 2 120 1
+5 7
+7 13 17 6 ​​12 50 5 20 23 4 17 35 3
+7 12
+6 2 10 5 10 23 4 12 30 3 15 35 2 3 60 7 18 35 1
+4 14
+6 20 30 5 11 20 4 2 5 3
+7 9
+3 7 45 1 18 20 5 15 30 4 10 40 6 13 30 7 12 75 2
+4 9
+3 12 40 4 10 5 1 16 60 2
+0 0
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00014200000000000000" id =
+      "SECTION00014200000000000000"> Output </a>
+    </h3>
+    <pre>
+1 0
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00016000000000000000" id =
+      "SECTION00016000000000000000"> Example 2 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00016100000000000000" id =
+      "SECTION00016100000000000000"> Input </a>
+    </h3>
+    <pre>
+11 5 2 7 20
+7
+2 1 2 1 1 2 2
+0 2 0 2 2 2 1
+1 0 2 0 1 2 2
+0 2 0 2 0 1 2
+0 2 0 0 2 2 2
+2 2 2 2 0 2 0
+0 0 2 2 2 1 2
+7 8
+6 2 90 5 8 30 4 12 35 3 15 45 2 3 25 7 18 35 1
+4 16
+6 20 30 5 11 90 4 2 25 3
+7 18
+6 2 10 5 15 20 4 2 25 3 5 30 2 3 30 7 18 95 1
+6 19
+6 2 30 5 15 30 4 20 25 3 15 30 2 3 30 7
+0 0
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00016200000000000000" id =
+      "SECTION00016200000000000000"> Output </a>
+    </h3>
+    <pre>
+Impossible
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
