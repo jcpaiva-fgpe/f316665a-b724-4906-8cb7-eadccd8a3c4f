@@ -1,0 +1,306 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN">
+<html>
+  <head>
+    <title>
+      The strange case of the mutant symbols
+    </title>
+    <meta name = "description" content = "The strange case of mutant symbols">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    <script type = "text / javascript" src =
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00040000000000000000" id="SECTION00040000000000000000"> O
+      strange case of the mutant symbols </a>
+    </h1>
+    <p> </p>
+    <table align = "right">
+      <tr>
+        <td align = "center">
+          <img width = "315" height = "368" src = "parity_trick.jpg" border = "1"
+          align = "center" alt = "[missing alt]">
+        </td>
+      </tr>
+    </table>
+    <p>
+      Alice invented a code made up of sequences of symbols (zeros
+      and some), which she uses to exchange secret messages with Bernardo. THE
+      Teresa Coscuvilheira, who likes to be aware of everything that happens and
+      doesn’t happen, she was very frustrated when she found herself unable to decipher the
+      messages that Alice left on Bernardo's secretary. As revenge
+      because of such brazenness, she decided to tamper with Alice's secret messages.
+      Whenever she found a new note on the desk, she hurried to
+      replace <tt> 1 </tt> 's with <tt> 0 </tt>' s and <tt> 0 </tt> 's
+      by <tt> 1 </tt> 's, but not many for Bernardo and Alice no
+      suspect.
+    </p>
+    <p>
+      Realizing this strange phenomenon of mutant symbols - few,
+      but enough to make sense of the messages - Alice arranged
+      a solution to allow Bernardo to correct, or at least, detect
+      some cases of mutations. The solution is as follows. For example, for a
+      message \ (s_1 \, s_2 \, s_3 \, s_4 \, s_5 \, s_6 \, s_7 \, s_8 \, s_9 \),
+      consisting of a sequence of nine symbols (<tt> 0 </tt> 's and
+      <tt> 1 </tt> 's), Alice started adding seven new symbols \ (\, p_1 \,
+      p_2 \, p_3 \, p_4 \, p_5 \, p_6 \, p_7 \). The calculation of the new symbols is done
+      thus. The original nine symbols are grouped in a square matrix (of
+      dimension \ (3 \ times3 \), in this example). Each of the lines is
+      added a new symbol \ (p_i \), with value <tt> 0 </tt> or <tt> 1 </tt>,
+      so that the total number of <tt> 1 </tt> 's in a row is even. For
+      the columns the strategy is the same. Each of the columns is added
+      a new symbol \ (p_i \) with value <tt> 0 </tt> or <tt> 1 </tt>, for
+      so that the total number of <tt> 1 </tt> 's in each column is even.
+    </p>
+    <p> </p>
+    <div align = "center">
+      \ (\ begin {array} {lll | l} s_1 & s_2 & s_3 & p_4 \\ s_4 & s_5
+      & s_6 & p_5 \\ s_7 & s_8 & s_9 & p_6 \\ \ hline p_1
+      & p_2 & p_3 & p_7 \\ \ end {array} \)
+    </div>
+    <p>
+      The message to be transmitted would then consist of 16 symbols grouped
+      as follows \ (\, s_1 \, s_2 \, s_3 \, s_4 \, s_5 \, s_6 \, s_7 \, s_8 \,
+      s_9 \, p_1 \, p_2 \, p_3 \, p_4 \, p_5 \, p_6 \, p_7 \), that is, first you have the
+      original sequence and then the control sequence. If in the analysis of the message it is
+      a parity error is detected in a single row and in a single column, then the error
+      it's located.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00041000000000000000" id =
+      "SECTION00041000000000000000"> Task </a>
+    </h2>
+    <p>
+      Given a received message, encoded as described above,
+      indicate:
+    </p>
+    <ul>
+      <li> if no errors were detected;
+      </li>
+      <li> or if an error was detected, indicating the position where it occurred in
+      message received;
+      </li>
+      <li> or if more than one error was detected.
+      </li>
+    </ul>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00042000000000000000" id =
+      "SECTION00042000000000000000"> Input </a>
+    </h2> A line consisting of an integer \ (n \), a space, and a
+    string of \ ((n + 1) ^ 2 \) characters (<tt> 0 </tt> 's and <tt> 1 </tt>' s)
+    corresponding to the message received, being \ (2 \ leq n \ leq 50 \). note that
+    \ ((n + 1) ^ 2 = n ^ 2 + 2n + 1 \) and the square matrix formed with the message received
+    has \ (n + 1 \) rows and columns.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00043000000000000000" id =
+      "SECTION00043000000000000000"> Output </a>
+    </h2> A single line with one of the following messages (without quotes): <br>
+    <table cellpadding = "3">
+      <tr>
+        <td align = "left">
+          "<tt> OK </tt>"
+        </td>
+        <td align = "left">
+          - if no errors were detected.
+        </td>
+      </tr>
+      <tr>
+        <td align = "left">
+          "<tt> ERROR IN k </tt>"
+        </td>
+        <td align = "left">
+          - if an error was detected in the \ (k \) position, with \ (1 \ leq k \ leq
+          (n + 1) ^ 2 \).
+        </td>
+      </tr>
+      <tr>
+        <td align = "left">
+          
+        </td>
+        <td align = "left">
+          \ (k \) is the position in the received message where it was detected (and
+          corrected) the error.
+        </td>
+      </tr>
+      <tr>
+        <td align = "left">
+          "<tt> ERRORS </tt>"
+        </td>
+        <td align = "left">
+          - if more than one error has been detected.
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00044000000000000000" id =
+      "SECTION00044000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00044100000000000000" id =
+      "SECTION00044100000000000000"> Input </a>
+    </h3>
+    <pre>
+2 100111110
+</pre>
+    <h3>
+      <a name = "SECTION00044200000000000000" id =
+      "SECTION00044200000000000000"> Output </a>
+    </h3>
+    <pre>
+OK
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00045000000000000000" id =
+      "SECTION00045000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00045100000000000000" id =
+      "SECTION00045100000000000000"> Input </a>
+    </h3>
+    <pre>
+2 000111110
+</pre>
+    <h3>
+      <a name = "SECTION00045200000000000000" id =
+      "SECTION00045200000000000000"> Output </a>
+    </h3>
+    <pre>
+ERROR IN 1
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00046000000000000000" id =
+      "SECTION00046000000000000000"> Example 3 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00046100000000000000" id =
+      "SECTION00046100000000000000"> Input </a>
+    </h3>
+    <pre>
+2 000111111
+</pre>
+    <h3>
+      <a name = "SECTION00046200000000000000" id =
+      "SECTION00046200000000000000"> Output </a>
+    </h3>
+    <pre>
+ERRORS
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00047000000000000000" id =
+      "SECTION00047000000000000000"> Example 4 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00047100000000000000" id =
+      "SECTION00047100000000000000"> Input </a>
+    </h3>
+    <pre>
+3 1001011111101010
+</pre>
+    <h3>
+      <a name = "SECTION00047200000000000000" id =
+      "SECTION00047200000000000000"> Output </a>
+    </h3>
+    <pre>
+OK
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00048000000000000000" id =
+      "SECTION00048000000000000000"> Example 5 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00048100000000000000" id =
+      "SECTION00048100000000000000"> Input </a>
+    </h3>
+    <pre>
+3 1011011111101010
+</pre>
+    <h3>
+      <a name = "SECTION00048200000000000000" id =
+      "SECTION00048200000000000000"> Output </a>
+    </h3>
+    <pre>
+ERROR IN 3
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00049000000000000000" id =
+      "SECTION00049000000000000000"> Example 6 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00049100000000000000" id =
+      "SECTION00049100000000000000"> Input </a>
+    </h3>
+    <pre>
+3 1010011111101010
+</pre>
+    <h3>
+      <a name = "SECTION00049200000000000000" id =
+      "SECTION00049200000000000000"> Output </a>
+    </h3>
+    <pre>
+ERRORS
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION000410000000000000000" id =
+      "SECTION000410000000000000000"> Example 7 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION000410100000000000000" id =
+      "SECTION000410100000000000000"> Input </a>
+    </h3>
+    <pre>
+2 100111100
+</pre>
+    <h3>
+      <a name = "SECTION000410200000000000000" id =
+      "SECTION000410200000000000000"> Output </a>
+    </h3>
+    <pre>
+ERROR IN 8
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION000411000000000000000" id =
+      "SECTION000411000000000000000"> Example 8 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION000411100000000000000" id =
+      "SECTION000411100000000000000"> Input </a>
+    </h3>
+    <pre>
+5 001011010010110101010010001111001111
+</pre>
+    <h3>
+      <a name = "SECTION000411200000000000000" id =
+      "SECTION000411200000000000000"> Output </a>
+    </h3>
+    <pre>
+ERRORS
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
