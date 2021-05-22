@@ -1,0 +1,91 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Boas-Fitas Ticket Office
+    </title>
+    <meta name = "description" content = "Boas-Fitas Ticket Office">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00060000000000000000"> Boas-Fitas Ticket Office </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "217" height = "145" align = "bottom" border = "0" src =
+      "./600x400_gallery_sc_movie_theater_1.jpg" alt =
+      "Image 600x400_gallery_sc_movie_theater_1">
+    </div>
+    <p>
+      The cinema screens <i> Boas-Fitas, Lda </i> need a program to
+      ticket booking management and are recruiting programmers for the
+      develop. The movie theaters are rectangular. Each place is
+      identified by a row and column. Queues are identified by letters
+      consecutive capital letters (A to Z maximum). The columns are identified
+      consecutive positive integers (1 to 99 maximum). There are two types of
+      reservation requests: <em> exact reservations </em>, in which the queue and the
+      start column and the number of contiguous places desired, and
+      <em> free reservations </em>, where the number of contiguous seats is given
+      intended, these must be completed on a first-come, first-served basis.
+      starting in row A, and in ascending order of columns. The places
+      reserved for an order are in a single row.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00061000000000000000"> Task </a>
+    </h2> Write a program to process a list of reservation requests for
+    tickets to a screening in a movie theater and answer every request
+    according to previous reservations.
+    <p> </p>
+    <h2>
+      <a name="SECTION00062000000000000000"> Input </a>
+    </h2> The entry starts with two positive integers that represent the number
+    of rows and columns in the room. Next comes the number of reservation requests,
+    followed by the orders themselves, one on each line. Requests for
+    exact reservation starts with <tt> X </tt> followed by a line and column, a
+    space and the number of seats. Free booking requests start with
+    <tt> L </tt> followed by the number of seats.
+    <p> </p>
+    <h2>
+      <a name="SECTION00063000000000000000"> Output </a>
+    </h2> On each line you have the response to a reservation request, with the
+    responses presented in order of arrival. Answers can be
+    <tt> OK </tt> followed by a space, the starting row and column and the number of
+    reserved seats or <tt> NA </tt> if the reservation cannot be made.
+    <p> </p>
+    <h2>
+      <a name="SECTION00064000000000000000"> Example </a>
+    </h2>
+    <h3>
+      <a name="SECTION00064100000000000000"> Input </a>
+    </h3>
+    <pre>
+3
+10
+5
+L3
+XA4 3
+L4
+XA1 2
+L2
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00064200000000000000"> Output </a>
+    </h3>
+    <pre>
+OK A1 3
+OK A4 3
+OK A7 4
+AT
+OK B1 2
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
