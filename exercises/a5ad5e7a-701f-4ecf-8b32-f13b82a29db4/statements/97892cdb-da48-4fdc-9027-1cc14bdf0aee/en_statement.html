@@ -1,0 +1,98 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000"> Rounded price </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "185" height = "302" align = "bottom" border = "0" src =
+      "./tio-patinhas.jpg" alt = "Image tio-patinhas">
+    </div>
+    <p>
+      With the sudden increase in the maximum VAT rate to 23.25%, announced for 2015,
+      we run into some calculation problems. To get an estimate
+      of the price with VAT, we can round to the nearest whole, <em> for
+      defect </em> (largest integer not superior). <br>
+      Now, to get the tax amount, we multiply the price by 6 and
+      we divide by 100, when it is the minimum rate (6%). Therefore, for 23.25%,
+      we can now multiply by 2325 and divide by 10,000 (quotient of
+      entire division). With some care, the rest of the entire division even
+      would allow you to get the exact error, but it doesn't matter.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00011000000000000000"> Task </a>
+    </h2> Write a program to calculate the price with VAT rounded by
+    defect.
+    <p> </p>
+    <h2>
+      <a name="SECTION00012000000000000000"> Input </a>
+    </h2> A line with an integer that represents the base price (excluding VAT).
+    <p> </p>
+    <h2>
+      <a name="SECTION00013000000000000000"> Output </a>
+    </h2> A line with an integer that represents the price with VAT, followed by a
+    space, and the phrase "<tt> (maybe default estimate) </tt>", without quotes.
+    <p> </p>
+    <h2>
+      <a name="SECTION00014000000000000000"> Example 1 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name="SECTION00014100000000000000"> Input </a>
+    </h3>
+    <pre>
+100
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00014200000000000000"> Output </a>
+    </h3>
+    <pre>
+123 (maybe default estimate)
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00016000000000000000"> Example 2 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name="SECTION00016100000000000000"> Input </a>
+    </h3>
+    <pre>
+15
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00016200000000000000"> Output </a>
+    </h3>
+    <pre>
+18 (maybe default estimate)
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00018000000000000000"> Example 3 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name="SECTION00018100000000000000"> Input </a>
+    </h3>
+    <pre>
+3560
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00018200000000000000"> Output </a>
+    </h3>
+    <pre>
+4387 (perhaps default estimate)
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
