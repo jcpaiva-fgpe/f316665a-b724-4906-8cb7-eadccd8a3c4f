@@ -1,0 +1,199 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Calimero in the tunnel
+    </title>
+    <meta name = "description" content = "Calimero in the tunnel">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00070000000000000000"> Calimero in the tunnel </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "123" height = "99" align = "bottom" border = "0" src =
+      "./calimero_3.png" alt = "Image calimero_3">
+    </div>
+    <p> </p>
+    <div align = "center"> </div>
+    <p>
+      The first series of cartoons Calimero premiered on RTP in the
+      1970s. Calimero was a friendly and naive chick who felt
+      unhappy and wronged. Created by Italians Nino and Toni Pagot, for a
+      Soap ad in 1963 now celebrates its 50th anniversary with a new series
+      in 3D. `` Abuse because I'm tiny '' and `` It's an injustice, because it is '' were
+      two of his emblematic phrases. Go there to know why, these phrases
+      gained a new relevance, alongside another one, which has to do with `` seeing
+      light at the end of the tunnel. '' It would give a theme for a new episode: Calimero,
+      in trouble, in a tunnel. Will you be able to get out without running out of energy?
+    </p>
+    <p>
+      The tunnel does not form cycles and is in a rectangular region defined by a
+      grid. Each grid position has a letter <code> T </code>,
+      <code> F </code>, <code> X </code>, <code> N </code>, <code> S </code>,
+      <code> E </code>, <code> O </code> or <code> L </code>, or a dash
+      (<code> - </code>, indicating that it is free). The tunnel is the sequence of
+      <code> T </code> 's in the region, have at least two <code> T </code>' s and
+      ends in <code> L </code> (tunnel exit). At instant zero, Calimero
+      is at the beginning of the tunnel (position with <code> T </code>, not adjacent to
+      <code> L </code>, and with a single adjacent <code> T </code>). Each one
+      of the remaining positions of the tunnel has an adjacent
+      with <code> T </code>, which continues the tunnel, or
+      with <code> L </code>, which is your output. There is a single
+      <code> L </code> in the grid and is adjacent to just a <code> T </code>.
+      Positions with <code> N </code>, <code> S </code>, <code> E </code>, and
+      <code> The </code> contains foci that emit a ray of light (there may be types
+      repeated). At instant zero, these rays are directed to the north,
+      South, East and West, respectively, and, at each instant, rotate 90 degrees in the
+      clockwise. Calimero has some energy, initially, which is
+      positive. In each instant, you can advance one position, losing one
+      power unit. You can recover energy in certain positions using
+      cracks (marked by <code> F </code>). If you reach a position
+      adjacent to a crack the instant it is in range of the radius
+      emitted by some focus, it receives the corresponding energy. The energy of the
+      radius can only reach Calimero if between the focus and the gap there is no
+      no <code> T </code>, or <code> X </code> (obstacle) or other foci. THE
+      energy received is equal to the difference between the intensity of the focus and the
+      distance you are from it. It is zero if this value is zero or
+      negative. The distance is given by the number of cells from the focus to the
+      position that Calimero is in. The intensity of the outbreaks is the same for everyone
+      the outbreaks. Calimero can receive energy from several foci simultaneously. If
+      reach a position adjacent to a gap and not receive energy
+      (positive), it remains unclear if this is due to some lag
+      temporal. So if your energy level is <b> higher </b> than 4
+      units, you risk waiting until you get some lightning (if you don't get any,
+      advances after three moments). While you’re waiting, you lose a
+      energy unit also at every moment. If you have zero energy in the
+      the instant it is struck by lightning, receives energy and proceeds. If
+      is not saved by lightning, faints, and will not come out. You can even wait
+      being in the position adjacent to <code> L </code>. The rays do not propagate
+      in the tunnel. There are no incident foci in <code> L </code>. To never back down,
+      Calimero points out where he went.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00071000000000000000"> Task </a>
+    </h2> Write a program to follow Calimero in the tunnel from the
+    instant zero and see what will happen to him: he collapses inside the tunnel,
+    when that happened; if you can get out of the tunnel, at what time
+    <code> L </code> arrives and what energy is left. If you have zero energy in the
+    the moment it reaches <code> L </code>, it is assumed that it nevertheless left the
+    tunnel.
+    <p> </p>
+    <h2>
+      <a name="SECTION00072000000000000000"> Input </a>
+    </h2> A line with the dimensions <img width = "19" height = "14" align = "bottom"
+    border = "0" src = "img1.gif" alt = "$ m $"> and <img width = "15" height = "14" align =
+    "bottom" border = "0" src = "img2.gif" alt = "$ n $"> from the grid (<img width = "19"
+    height = "14" align = "bottom" border = "0" src = "img1.gif" alt = "$ m $"> is the number
+    of lines and <img width = "15" height = "14" align = "bottom" border = "0" src =
+    "img2.gif" alt = "$ n $"> columns, and both are no more than 50).
+    An integer follows that defines the intensity of the outbreaks (positive and
+    to 150) and another integer that represents the energy of Calimero at the instant
+    zero (positive and less than 5000). The following is the initial state of the
+    grid, given in <img width = "19" height = "14" align = "bottom" border = "0" src =
+    "img1.gif" alt = "$ m $"> lines. On each line, there is a sequence of
+    <img width = "15" height = "14" align = "bottom" border = "0" src = "img2.gif" alt =
+    "$ n $"> symbols formed by <code> T </code>, <code> F </code>, <code> X </code>,
+    <code> L </code>, <code> - </code>, <code> N </code>, <code> S </code>,
+    <code> E </code>, or <code> O </code> (a West <code> O </code>).
+    <p> </p>
+    <h2>
+      <a name="SECTION00073000000000000000"> Output </a>
+    </h2> If it arrives at <code> L </code>, it will have a line with two separate integers
+    by a space: the first is the instant it reaches <code> L </code> and the
+    according to the final energy. If not, there will be a line with an integer only, which
+    represents the instant when he fainted.
+    <p> </p>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00074000000000000000"> Example 1 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name="SECTION00074100000000000000"> Input </a>
+    </h3>
+    <pre>
+7 9
+8
+10
+---AND-----
+---S-----
+--- F --- X-
+--TTTL-X-
+N-TF -----
+--TE-X ---
+---------
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00074200000000000000"> Output </a>
+    </h3>
+    <pre>
+8 2
+</pre>
+    <h2>
+      <a name="SECTION00075000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00075100000000000000"> Input </a>
+    </h3>
+    <pre>
+6 7
+100
+3
+TTTTTTL
+T ---- F-
+TF-O-X-
+TTF - E-
+-TS ----
+-T ---- X
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00075200000000000000"> Output </a>
+    </h3>
+    <pre>
+15 181
+</pre>
+    <h2>
+      <a name="SECTION00076000000000000000"> Example 3 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00076100000000000000"> Input </a>
+    </h3>
+    <pre>
+8 10
+100
+3
+TTTTTTTT--
+T ---- F-T--
+T ------ L--
+TF-O-X ----
+TTF - O --- N
+-TS -------
+-T ---- X - S
+-----AND----
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00076200000000000000"> Output </a>
+    </h3>
+    <pre>
+3
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
