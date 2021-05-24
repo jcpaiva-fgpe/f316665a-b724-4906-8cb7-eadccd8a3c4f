@@ -1,0 +1,120 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000"> iFind - the App to find the
+      what do you want </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "452" height = "397" align = "bottom" border = "0" src =
+      "./mapa-iFind-crop.jpg" alt = "Image mapa-iFind-crop">
+    </div>
+    <p>
+      To find the store of a certain type that is as close as possible
+      possible from where we are we can use an <em> app </em> for our
+      mobile phone. That is what Manuel and his classmates thought.
+      So they decide to develop such an application for smart phone
+      (aka <em> smart-phone </em>).
+    </p>
+    <p>
+      As they are organized they decided to divide the program into several modules,
+      each one being responsible for a part. In the end they would integrate them into a
+      application. Manuel decided to implement the module to determine the location
+      of the request type that is the shortest distance from the user. The
+      coordinates of the location where the user is and the type of store that
+      intended, as well as a description of existing locations. For each location,
+      coordinates and type are given (restaurant, shopping center, bar,
+      coffee, etc.). If there are multiple locations of the desired type at the same
+      distance, it should indicate what happened first in the data list.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00011000000000000000"> Task </a>
+    </h2> Write the program to process the data and respond to the request.
+    The coordinates of each location, relative to the same reference
+    (orthonormal), are defined by a pair of integers. The location type is
+    identified by a sequence of capital letters (maximum three).
+    <p> </p>
+    <h2>
+      <a name="SECTION00012000000000000000"> Input </a>
+    </h2> The first line contains the description of the user's current location
+    and the type of store you want, the coordinates and the type being separated by a
+    space (for example, <tt> 100 -160 SM </tt>). In the second line, there is the number
+    of existing locations (there will never be more than 200). One line follows for each
+    location with the respective data: point coordinates (integers) and type of
+    separated by a space (for example, <tt> 140 120 R </tt>, which indicates
+    a restaurant). The type is always a sequence of capital letters (not
+    more than three). There may be stores other than those indicated in the
+    example. The coordinates belong to the range [-300,300].
+    <p> </p>
+    <h2>
+      <a name="SECTION00013000000000000000"> Output </a>
+    </h2> A line with the coordinates of the requested place, followed by the indication of the
+    type and an integer that is the <em> square of the distance </em> that it is (for
+    example, <tt> 220 -140 SM 14800 </tt>). <b> It will therefore not be necessary (nor
+    should) calculate square roots </b>. As mentioned, if there are two or
+    more locations at the same distance, will respond whichever comes first
+    in the data. If there is no store of the desired type you should print
+    <tt> None </tt> (note the capital letter in the first letter).
+    <p> </p>
+    <h2>
+      <a name="SECTION00014000000000000000"> Example 1 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name="SECTION00014100000000000000"> Input </a>
+    </h3>
+    <pre>
+100 -160 SM
+15
+140 120 R
+-60 160 C
+200 -200 R
+-160 180 CC
+-100 -100 SM
+220 -140 SM
+-40 160 C
+180 100 CC
+60 40 SM
+180 -20 R
+120 220 SM
+100 -180 R
+180 -100 CC
+200 0 SM
+-120 0 R
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00014200000000000000"> Output </a>
+    </h3>
+    <pre>
+220 -140 SM 14800
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00016000000000000000"> Example 2 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name="SECTION00016100000000000000"> Input </a>
+    </h3>
+    <pre>
+100 -160 SM
+0
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00016200000000000000"> Output </a>
+    </h3>
+    <pre>
+None
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
