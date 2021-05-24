@@ -1,0 +1,66 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <font color = "blue"> Panic on the freeway </font>
+    </h1> <br>
+    <img alt = "freeway" src = "HIGHWAY.gif" height = "283" width = "313" align =
+    "right"> A motorway management company has installed a system of
+    sensors to count the number of light and heavy vehicles crossing
+    each toll road. The system consists of two sensors
+    autonomous, one activated by light vehicles and the other by heavy vehicles. Per
+    In principle, a vehicle should only activate one of the sensor types, slight
+    or heavy. Due to a placement error, the results for each sensor are not
+    are reliable if vehicles of the same type pass with a lower interval
+    to 10 seconds. Therefore, whenever the heavy-duty sensor detects a
+    any vehicle your results are not reliable until
+    10 seconds without registering anything. The same is true with the
+    light. <br>
+    <br>
+    Fortunately, there are records of the sensors with the moment they were
+    activated by each type of vehicle and we can assume that they occur in the
+    same moment belong to the same vehicle. If the same vehicle is
+    simultaneously marked as light and heavy and has passed a heavy
+    in the last 10 seconds then we can conclude that it is a slight. In the same
+    situation, if a slight has passed in the last 10 seconds then we can
+    conclude that it is a heavy one. However, if there is no overlap of
+    records at the same time and if the two vehicle registers of the same type
+    differ by less than 10 seconds, so the second record is undefined. <br>
+    <h2>
+      <font color = "blue"> Task </font>
+    </h2> Write a program that reads the records from the sensors and returns the
+    counting of light, heavy and indefinite vehicles, for this reason
+    order. The first line of the input indicates the total number of record lines. Each
+    one of the remaining input lines starts at the number of seconds since
+    that the sensors were turned on, followed by a character indicating the type of
+    vehicle detected, "L" (Light) or "P" (Heavy). We can assume that the
+    registration lines are ordered in ascending order of the number of
+    seconds. <br>
+    <h2>
+      <font color = "blue"> Example of input </font>
+    </h2> <font face = "Courier New, Courier, monospace"> 13 <br>
+    100 P <br>
+    105 P <br>
+    105 L <br>
+    200 P <br>
+    205 L <br>
+    205 P <br>
+    300 P <br>
+    305 L <br>
+    307 L <br>
+    307 P <br>
+    400 P <br>
+    405 P <br>
+    500 L for </font>
+    <h2>
+      <font color = "blue"> Example of output </font>
+    </h2> <font face = "Courier New, Courier, monospace"> 4 <br>
+    4 <br>
+    2 <br> </font>
+    <br>
+    <hr>
+  </body>
+</html>
