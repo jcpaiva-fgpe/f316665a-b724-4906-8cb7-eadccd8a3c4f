@@ -1,0 +1,160 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Morse Auctions
+    </title>
+    <meta name = "description" content = "Morse auctions">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000"> Morse auctions </a>
+    </h1>
+    <p> </p>
+    <table align = "right">
+      <tr>
+        <td align = "center">
+          <img width = "306" height = "283" src = "numeros_color.png" border = "1"
+          align = "center" alt = "[missing alt]">
+        </td>
+      </tr>
+    </table> The auctioneer TopasLeilões recently inaugurated a system
+    electronic to control the auctions it organizes. With the new system,
+    buyers place their bids using a very electronic device
+    simple, where there is only one button. By briefly pressing the button, the
+    device emits a short electronic "beep", which represents the dot character,
+    '.'; charging more for longer, the device beeps more
+    long, which represents the dash character, '-'.
+    <p>
+      Using sequences of dots and dashes, buyers communicate to the system
+      the value of your bids, using Morse code.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00051000000000000000"> Task </a>
+    </h2> Write a program that accepts the bid sequence from the console
+    received by the system and write, also on the console, after each bid, the
+    highest bid amount received to date and the number of bids
+    valid. A bid is valid if the sequence of dots and dashes represents
+    unambiguously a number, according to the Morse code table of the
+    decimal digits:
+    <pre>
+     1  ·----
+     two  ··---
+     3 ··· -
+     4 ···· -
+     5 ·····
+     6 - ····
+     7 - ···
+     8 --- ··
+     9 ---- ·
+     0 -----
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00052000000000000000"> Input </a>
+    </h2>
+    <p>
+      The input is a sequence of lines containing only '.' (dot) and
+      '-' (hyphen, dash, minus sign). Each line represents a bid, which
+      it can be valid or invalid, as explained in the previous section. THE
+      sequence ends when a line with five dashes arrives, representing
+      the number zero. A file has a maximum of 100 lines and each line has at
+      maximum 40 characters.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00053000000000000000"> Output </a>
+    </h2> The output is a sequence of lines, one line for each line of the input,
+    excluding the termination line. Two separate numbers appear on each line
+    by a space: the first represents the highest bid to the input line
+    corresponding number and the second the number of valid bids, up to that line of
+    input. If there are no valid bids up to that line, the value of the highest bid
+    valid will be 0 up to that line.
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00054000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00054100000000000000"> Input </a>
+    </h3>
+    <pre>
+.---------
+-----
+</pre>
+    <h3>
+      <a name="SECTION00054200000000000000"> Output </a>
+    </h3>
+    <pre>
+10 1
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00055000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00055100000000000000"> Input </a>
+    </h3>
+    <pre>
+.---------
+.-.-......
+-----
+</pre>
+    <h3>
+      <a name="SECTION00055200000000000000"> Output </a>
+    </h3>
+    <pre>
+10 1
+10 1
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00056000000000000000"> Example 3 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00056100000000000000"> Input </a>
+    </h3>
+    <p> </p>
+    <pre>
+.---------
+.-.-......
+..........
+-----
+</pre>
+    <h3>
+      <a name="SECTION00056200000000000000"> Output </a>
+    </h3>
+    <pre>
+10 1
+10 1
+55 2
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00057000000000000000"> Example 4 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00057100000000000000"> Input </a>
+    </h3>
+    <pre>
+. --- .--
+. ---- .-
+-----
+</pre>
+    <h3>
+      <a name="SECTION00057200000000000000"> Output </a>
+    </h3>
+    <pre>
+0 0
+0 0
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
