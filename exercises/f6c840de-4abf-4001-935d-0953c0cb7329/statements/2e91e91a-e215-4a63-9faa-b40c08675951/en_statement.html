@@ -1,0 +1,103 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00040000000000000000" id =
+      "SECTION00040000000000000000"> Olh-Ó-Robot </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "119" height = "125" align = "bottom" border = "0" src =
+      "./Robot-left.jpg" alt = "Image Robot-left"> <img width = "119" height = "125"
+      align = "bottom" border = "0" src = "./ Robot-right.jpg" alt =
+      "Image Robot-right">
+    </div>
+    <p>
+      A company has a robotic warehouse: 2 robots place and remove the
+      goods off the shelves without any human intervention. The warehouse is
+      rectangular and each of the robots is assigned to one side. The game
+      robots would never meet but, due to a design error, they can
+      find yourself at a single point. At the center of the warehouse is the gas station
+      battery charging that is common to both robots. The robots
+      take the opportunity to go to this place when their batteries are low and
+      close enough to the center of the warehouse. When they decide to load
+      batteries simultaneously collide and human intervention is required.
+    </p>
+    <p>
+      The robots are controlled by instructions that assume that the
+      warehouse is a regular grid of 30 by 15 cells, with the point of
+      supply in the coordinates (0,0). A sequence of instructions is
+      executed without cycles or jumps, indicating only the movements of the robot.
+      The commands are just the integers 2, 4, 5, 6 and 8, representing
+      directions, as on the numeric keypad: 2 points south, 8 points
+      North, 4 to the West and 6 to the East; 5 means staying in the same
+      place (this command can be executed at any time). The sequence
+      instructions is preceded by the location of the robot and terminated by 0. The
+      robots are synchronized and every second execute a command, starting
+      at exactly the same time. It is known that during the execution of the instructions
+      the robot goes <em> at most only once </em> to the charging station of the
+      batteries and stays there for a few seconds (executing command 5).
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00041000000000000000" id =
+      "SECTION00041000000000000000"> Task </a>
+    </h2> It will be necessary to write a program that analyzes the sequences of
+    commands from both robots and check for collisions; that is,
+    whether the time intervals that the robots would be refueling were
+    overlap. The program receives two sequences of instructions that have
+    exactly the same length and already guarantee that the robots move in the
+    warehouse interior. Each of them preceded by the initial position of the robot and
+    terminated by 0. If they lead to the collision of the robots, then the
+    verification writes <code> KO </code>. If there is no danger of collision,
+    write <code> OK </code>.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00042000000000000000" id =
+      "SECTION00042000000000000000"> Example </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00042100000000000000" id =
+      "SECTION00042100000000000000"> Input </a>
+    </h3> <br>
+    <pre>
+-7 0
+6
+6
+6
+6
+6
+6
+6
+5
+5
+0
+7 0
+4
+4
+4
+4
+4
+4
+4
+5
+5
+0
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00042200000000000000" id =
+      "SECTION00042200000000000000"> Output </a>
+    </h3> <br>
+    <pre>
+KO
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
