@@ -1,0 +1,94 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000"> Plus-or-minus indicator </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "271" height = "277" align = "bottom" border = "0" src = "./ stats.jpg"
+      alt = "Image stats">
+    </div>
+    <p>
+      ComputerWave decided to implement a new system for the management
+      of your computer stock, asking the computer engineer
+      Bernardo to deal with the matter. Bernardo, who is an engineer
+      innovative, implemented an indicator, which he called the indicator
+      more-or-less, which calculates, on a monthly basis, the number of computers
+      should be in stock. The indicator is based on sales for the last three
+      months and sales of the same month in the previous two years. The calculation of
+      indicator is no more than the average between these two values: the average of
+      sales in the last three months and the average sales for the same month in the two
+      previous years. These averages must be truncated, that is, they must be
+      rounded to the largest integer less than or equal to the exact value.
+      To build the indicator for the current month, Bernardo draws from the base
+      of sales data the sales figures in the last 24 months.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00011000000000000000"> Task </a>
+    </h2> Write a program to help engineer Bernardo calculate the
+    plus-or-minus indicator.
+    <p> </p>
+    <h2>
+      <a name="SECTION00012000000000000000"> Input </a>
+    </h2> The input consists of a sequence of 24 lines. In each line there are
+    two numbers: the date and the value of sales. The date appears in the format
+    YYYYMM, for example 201401. The input is in chronological order and there is no
+    months of the same year, repeated. We also know that the number of sales in
+    each month does not exceed 1000.
+    <p> </p>
+    <h2>
+      <a name="SECTION00013000000000000000"> Output </a>
+    </h2> A line with only an integer that represents the number of
+    computers that need to be in stock next month, this is the value
+    of the plus-or-minus indicator.
+    <p> </p>
+    <h2>
+      <a name="SECTION00014000000000000000"> Example </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name="SECTION00014100000000000000"> Input </a>
+    </h3>
+    <pre>
+201205 28
+201206 33
+201207 28
+201208 28
+201209 28
+201210 28
+201211 28
+201212 28
+201301 28
+201302 28
+201303 28
+201304 28
+201305 26
+201306 17
+201307 28
+201308 28
+201309 28
+201310 28
+201311 28
+201312 28
+201401 28
+201402 70
+201403 43
+201404 28
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00014200000000000000"> Output </a>
+    </h3>
+    <pre>
+37
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
