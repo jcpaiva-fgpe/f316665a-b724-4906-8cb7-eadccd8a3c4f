@@ -1,0 +1,205 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN">
+<html>
+  <head>
+
+    <script type = "text / javascript" src =
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00010000000000000000" id =
+      "SECTION00010000000000000000"> Thrown to the beasts </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "300" height = "225" align = "bottom" border = "0" src = "./ fera.jpg"
+      alt = "Image beast">
+    </div>
+    <p>
+      "Clean, clean ..." - Football or sad fado? At ToPAS 2013, Calimero
+      I was looking for a way out of a tunnel. Are you now partying or in trouble? Let's go
+      follow in his footsteps.
+    </p>
+    <p>
+      We know that you are somewhere in a rectangular, discreet domain, by the sea
+      planted. Try to manage your savings. Follow strict instructions:
+      movements towards South (<b> S </b>), North (<b> N </b>), East (<b> E </b>), or
+      West (<b> W </b>), from a number of positions. Along the way, win
+      some money, which goes towards expenses only. The worst are the
+      rates (<b> T </b>) that surprise you on the way and that instantly
+      take 10% of current savings from you. In fact, it may not be as much
+      because these losses are always close to the units and never exceed 10%
+      these savings. With any luck, find an investment (<b> I </b>) that
+      allow you to instantly replenish 5% of current savings (with
+      approximation to the units and without exceeding 5% of these savings).
+    </p>
+    <p>
+      Between luck and misfortune, he walks, sometimes bewildered (changing his
+      North to South) for having hit hard (<b> X </b>). After such
+      hit, proceeds immediately, disoriented, only recovering with a
+      another strong blow (<b> X </b>) or a big scare (for almost drowning).
+      If it recovers during a South / North movement, it immediately reverses the
+      sense, and proceeds.
+    </p>
+    <p>
+      Sometimes, he receives instructions to emigrate, leaving the rectangular domain
+      by a border (<b> A </b>). But it doesn't go west or south, because
+      you don't want to drown. Before entering the ocean, always interrupt the
+      movement (and, with the fright, it even recovers the north, if necessary!),
+      awaiting further instruction. Outside or inside follow precise instructions.
+      When he is away, he is able to reinforce savings (10 monetary units
+      for each position you visit, even in transit) and has no fees or
+      investments. When he emigrates, he hopes that one day he will be able to return. But in the
+      border (North and East), there are beasts (<b> F </b>) that can annihilate you
+      if you have the misfortune to bump into someone, in an outward movement or
+      entrance, or abroad (over the border).
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00011000000000000000" id =
+      "SECTION00011000000000000000"> Task </a>
+    </h2> Write a program to follow Calimero's steps, in the execution
+    guidelines received and, if not annihilated, determine your position
+    and the final value of your savings.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00012000000000000000" id =
+      "SECTION00012000000000000000"> Input </a>
+    </h2> The first line has three integers, \ (s \), \ (m \) and \ (n \), with \ (0 \ leq
+    s <
+    1000 \) and \ (m, n <20 \), which represent the initial savings and the number
+    of rows and columns of the table that defines the <em> rectangular domain </em>.
+    Below is the table, formed by $ m $ sequences of \ (n \) capital letters,
+    <b> T </b>, <b> I </b>, <b> X </b>, <b> A </b>, <b> F </b>, with the above meaning,
+    and <b> V </b> (empty). The South and West have only <b> A </b> 's. The North and East have
+    <b> A </b> 's and <b> F </b>' s. Inside there are <b> T </b>, <b> I </b>, <b> X </b> or
+    <b> V </b> 's. <br>
+    After the table, you have the number of movements to make and, finally, the
+    description of each movement, given by a character (S, N, E, W) followed by a
+    digit (0, ..., 9) which is the offset. <br>
+    At the beginning, Calimero is inside the domain, in the lower left corner.
+    This position has coordinates (1,1) and contains <b> V </b>. Over the border, already
+    It is out. Points with abscissa or ordinate zero are in the ocean. At
+    coordinates of the positions visited abroad are always positive. O
+    referential is the canonical. The number of movements to be made does not exceed 100.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00013000000000000000" id =
+      "SECTION00013000000000000000"> Output </a>
+    </h2> A line with the word <tt> Annihilated </tt>, if that happens. Case
+    otherwise, a line with the format <tt> Inside (x, y): s: z </tt> or
+    <tt> Outside (x, y): s: z </tt>, without spaces, where <tt> x </tt> and <tt> y </tt> define
+    the coordinates of the final position and <tt> s </tt> the economies, and <tt> z </tt> the
+    state (<tt> D </tt> or <tt> ND </tt> for bewildered or not bewildered).
+    <p> </p>
+    <h2>
+      <a name = "SECTION00014000000000000000" id =
+      "SECTION00014000000000000000"> Example 1 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00014100000000000000" id =
+      "SECTION00014100000000000000"> Input </a>
+    </h3>
+    <pre>
+108 9 9
+AFFFAFFFF
+AVXXXTVVF
+AIXVVTVVA
+AVXVVVVVA
+AVXVVVXVF
+AVVVVVXVA
+AVVVIVXVA
+AVVVVVTVF
+AAAAAAAAA
+4
+E6
+N2
+W3
+N6
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00014200000000000000" id =
+      "SECTION00014200000000000000"> Output </a>
+    </h3>
+    <pre>
+Inside (4,1): 102: ND
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00016000000000000000" id =
+      "SECTION00016000000000000000"> Example 2 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00016100000000000000" id =
+      "SECTION00016100000000000000"> Input </a>
+    </h3>
+    <pre>
+108 5 9
+AFFFAFFFF
+AVVVVVXVA
+AVVVIVXVA
+AVVVVVTVF
+AAAAAAAAA
+8
+E6
+N2
+W3
+N6
+S3
+W2
+N1
+E8
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00016200000000000000" id =
+      "SECTION00016200000000000000"> Output </a>
+    </h3>
+    <pre>
+Out (10,2): 137: D
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00018000000000000000" id =
+      "SECTION00018000000000000000"> Example 3 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00018100000000000000" id =
+      "SECTION00018100000000000000"> Input </a>
+    </h3>
+    <pre>
+510 5 9
+AFFFAFFFF
+AVVVVVXVA
+AVVVIVXVA
+AVVVVVTVF
+AAAAAAAAA
+8
+E6
+N2
+W3
+N6
+N1
+W9
+S1
+E7
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00018200000000000000" id =
+      "SECTION00018200000000000000"> Output </a>
+    </h3>
+    <pre>
+Annihilated
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
