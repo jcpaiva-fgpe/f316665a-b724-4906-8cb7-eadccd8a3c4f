@@ -1,0 +1,209 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN">
+<html>
+  <head>
+    <title>
+      Naval battle
+    </title>
+    <meta name = "description" content = "Sea Battle">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    <script type = "text / javascript" src =
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00060000000000000000" id =
+      "SECTION00060000000000000000"> Naval Battle </a>
+    </h1>
+    <p> </p>
+    <table align = "right">
+      <tr>
+        <td align = "center">
+          <img width = "306" height = "217" src = "battle.png" border = "1" align =
+          "center" alt = "[missing alt]">
+        </td>
+      </tr>
+    </table>
+    <p>
+      There was no Game Boy, PlayStation, New Nintendo 3DS, Wii, PADs,
+      Smartphones, nothing, nothing ... paper and pencil was enough to give free rein to
+      imagination and ensure a few hours of entertainment. We don't talk about
+      Jurassic period. According to some records, the game Batalha Naval appears in
+      World War I (1914-1918). It is, therefore, a game of bad memory but,
+      however, centenary.
+    </p>
+    <p>
+      In the Naval Battle two players participate, each one with its fleet and the
+      objective is to sink the opponent's fleet by guessing the position of the ships
+      enemies.
+    </p>
+    <p>
+      Each player arranges his fleet on a grid and also maintains another
+      grid that represents the disposition of the opponent's fleet (according to what
+      discovering it during the game). In positioning the fleet, you can
+      choose any orientation for each ship, vertically or horizontally,
+      provided that the ships do not touch each other at any point.
+    </p>
+    <p>
+      There are several versions of the game, which differ in the size of the grid,
+      constitution of the fleet or in the rules of the game. Let's assume that the grid is
+      \ (10 ​​\ times 10 \). In each game, the constitution of the fleet is the same for both
+      the players, but we admit some flexibility in the type and number of
+      ships to use. Possible types are: aircraft carriers (<b> P </b>),
+      battleships (<b> E </b>), seaplanes (<b> H </b>),
+      cruisers (<b> C </b>) and submarines (<b> S </b>). The figure shows
+      their shapes. Players will decide how many to use of each type. How much
+      to the rules, we assume that, each player fires three shots in each move and
+      then it passes the turn to the opponent, unless his move is invalid.
+      In response, the opponent tells you if the three shots hit the water
+      or the number of shots that hit each type of ship hit (without saying
+      how many ships it reached of each type).
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00061000000000000000" id =
+      "SECTION00061000000000000000"> Task </a>
+    </h2> As paper-and-pencil and face-to-face games seem to be out of fashion,
+    let's create a simple program to support the Naval Battle
+    <em> online </em>. The program receives the disposal of each player's fleet and
+    a sequence of moves and gives the <em> feedback </em> that the opponent would give to
+    every move. The sequence ends if one of the players wins the game but can
+    also finish at any stage of the game. The program must identify the
+    chosen fleet.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00062000000000000000" id =
+      "SECTION00062000000000000000"> Input </a>
+    </h2> It starts with 10 lines, with 20 integers separated by spaces, which are
+    <tt> 0 </tt> (water) or <tt> 1 </tt> (ship). The left part defines the
+    positioning of player 1's fleet and the right defines the positioning of the
+    player 2's fleet. Next there is a line with an integer
+    positive \ (m \) representing the total number of moves. Then there's
+    \ (m \) lines, each with three pairs of positive integers. Each pair
+    corresponds to a shot and identifies the row and column of the position to be hit
+    (rows and columns are numbered from 1, from top to bottom and from
+    left to right). Always start <em> player 1 </em>.
+    If any of the shots in a move refer to a position previously
+    hit by the player (ship or water), this move is considered totally
+    invalid and, on the next line, there will be a play by the same player.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00063000000000000000" id =
+      "SECTION00063000000000000000"> Output </a>
+    </h2> For each move, there is a line with the format "<code> Player k:
+    Water </code> "," <code> Player k: Invalid </code> "," <code> Player k:
+    seq </code> ", where <code> k </code> will be replaced by the identifier of the
+    player and <code> seq </code> for information on the number of shots that
+    hit each type of ship hit. Quotation marks are not included or
+    accents. The sequence <code> seq </code> is a sequence of pairs \ (Tt \), with
+    a space between each pair but not between \ (T \) and \ (t \), with \ (T \) being the
+    identifier of a type of ship and \ (t \) the number of shots that hit
+    ships of that type in this move (\ (t = 1,2,3 \)). The string should be
+    ordered by type of ship (in the order <code> P </code>,
+    <code> E </code>, <code> H </code>, <code> C </code>, <code> S </code>).
+    <p>
+      If any of the players win the game, due to the destruction of the
+      opponent, the output will have one more line with "<code> Won the player
+      k </code> ", with <code> k </code> being the winner's identifier.
+    </p>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00064000000000000000" id =
+      "SECTION00064000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00064100000000000000" id =
+      "SECTION00064100000000000000"> Input </a>
+    </h3>
+    <pre>
+1 1 1 1 0 0 1 0 0 0 0 0 1 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0
+0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0
+1 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1
+0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1
+0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 1 1
+0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 1
+0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0
+0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0
+6
+9 1 9 8 5 3
+1 1 1 2 1 3
+8 2 9 3 9 9
+1 4 7 8 1 10
+10 2 9 7 8 8
+9 1 9 3 8 1
+</pre>
+    <h3>
+      <a name = "SECTION00064200000000000000" id =
+      "SECTION00064200000000000000"> Output </a>
+    </h3>
+    <pre>
+Player 1: H2 C1
+Player 2: E3
+Player 1: H1
+Player 2: P1 E1
+Player 1: H1
+Player 2: S1
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00065000000000000000" id =
+      "SECTION00065000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00065100000000000000" id =
+      "SECTION00065100000000000000"> Input </a>
+    </h3>
+    <pre>
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 1 1 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+11
+1 5 3 5 6 9
+1 4 4 4 10 3
+8 8 8 6 3 4
+2 4 4 4 4 3
+2 4 6 4 6 5
+1 5 10 7 9 7
+5 5 10 7 7 9
+4 6 5 6 6 6
+8 7 9 6 7 6
+6 3 4 5 1 1
+3 3 2 4 4 4
+</pre>
+    <h3>
+      <a name = "SECTION00065200000000000000" id =
+      "SECTION00065200000000000000"> Output </a>
+    </h3>
+    <pre>
+Player 1: Water
+Player 2: Water
+Player 1: P2 C1
+Player 2: Invalid
+Player 2: C1
+Player 1: Invalid
+Player 1: Water
+Player 2: P2
+Player 1: P3
+Player 2: Water
+Player 1: C1
+Player 1 won
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
