@@ -1,0 +1,110 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <font color = "blue"> Cutting and Sewing </font>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <table cellpadding = "3">
+        <tr>
+          <td align = "center">
+            <img width = "80" height = "79" align = "bottom" border = "0" src =
+            "Wallpaper_group-p2-3.jpg" alt = "Image Wallpaper_group-p2-3">
+            <img width = "80" height = "79" align = "bottom" border = "0" src =
+            "Wallpaper_group-p2-3.jpg" alt = "Image Wallpaper_group-p2-3">
+            <img width = "80" height = "79" align = "bottom" border = "0" src =
+            "Wallpaper_group-p2-3.jpg" alt = "Image Wallpaper_group-p2-3">
+            <img width = "80" height = "79" align = "bottom" border = "0" src =
+            "Wallpaper_group-p2-3.jpg" alt = "Image Wallpaper_group-p2-3">
+          </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+        </tr>
+      </table>
+    </div> It is intended to cut a piece of tape similar to the one in the following figure
+    across so that all the pieces have exactly the same
+    standard. The ribbon design consists of <tt> * </tt>, <tt>? </tt> and
+    <tt> T </tt>. The <tt> T </tt> 's bar always exists because it forms the shot of the
+    fabric, but only occurs on one side, as in the example. For the rest, there is no more
+    <tt> T </tt> 's in the drawing. Cuts cannot break the reasons <tt> * </tt>
+    nor <tt>? </tt> in half.
+    <p> </p>
+    <pre>
+        TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+        ? * ?? ***? * ?? ****? * ?? ***? * ?? ****? * ?? ***? * ?? ****? * ?? * **? * ?? *****
+        ??? **** ??? ***** ??? **** ??? ***** ??? **** ??? ***** ??? ** ** ??? ******
+        ? **? ** ?? **? **? *? **? ** ?? **? **? *? **? ** ?? **? **? *? **? * * ?? **? **? **
+        ************************************************** ***********
+        ? ** ????? ** ???? *? ** ????? ** ???? *? ** ????? ** ???? *? ** ?? ??? ** ???? **
+        ? *? *? * ?? *? *? *? *? *? *? * ?? *? *? *? *? *? *? * ?? *? *? *? * ?? *? *? *? *? *? *? * ?? *? *? *? **
+        ??? ** ?????? **? * ??? ** ?????? **? * ??? ** ?????? **? * ??? ** ?????? **? **
+        ** ?? ** ?? ** ?? ***** ?? ** ?? ** ?? ***** ?? ** ?? ** ?? ***** ?? * * ?? ** ?? ****
+</pre>
+    <p>
+      What is the <b> greatest number </b> of equal pieces that can be obtained? Like
+      there are several tapes of the same type to analyze, some wider than
+      others, some longer than others, we will try to automate the
+      process.
+    </p>
+    <p> </p>
+    <h2>
+      <font color = "blue"> Task </font>
+    </h2> Write a program that, given the description of the tape to be cut, indicates the
+    maximum number of equal pieces that can be obtained by applying cuts
+    transversal (in the direction of the width, that is, perpendicular to the line of
+    shot).
+    <p> </p>
+    <h2>
+      <font color = "blue"> Input </font>
+    </h2> In the first line two integers <b> L </b> and <b> C </b> representing the
+    tape width and length respectively. The width and the
+    length correspond to the number of rows of symbols. You can assume that the
+    <b> L </b> never exceeds 8 and <b> C </b> never exceeds 10000. On lines
+    The description of each ribbon line (depending on the width) O
+    <tt> T </tt> character exists only at the end of each line and will not count for the
+    tape width.
+    <p> </p>
+    <h2>
+      <font color = "blue"> Output </font>
+    </h2> You will write an integer that indicates the number of pieces you would get
+    (followed by line break).
+    <p> </p>
+    <h2>
+      <font color = "blue"> example </font>
+    </h2>
+    <h3>
+      <font color = "blue"> Input </font>
+    </h3> <br>
+    <pre>
+7 15
+**? **** T
+**? **** T
+****? ** T
+**? **** T
+**? **** T
+****? ** T
+**? **** T
+**? **** T
+****? ** T
+**? **** T
+**? **** T
+****? ** T
+**? **** T
+**? **** T
+****? ** T
+</pre>
+    <h3>
+      <font color = "blue"> Output </font>
+    </h3> <br>
+    <pre>
+5
+</pre> <br>
+    <hr>
+  </body>
+</html>
