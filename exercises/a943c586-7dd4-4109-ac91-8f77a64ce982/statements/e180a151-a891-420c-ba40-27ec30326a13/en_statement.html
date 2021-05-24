@@ -1,0 +1,118 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <font color = "blue"> Don't give them Change I </font>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <table cellpadding = "3">
+        <tr>
+          <td align = "center">
+            <img width = "78" height = "79" align = "bottom" border = "0" src =
+            "2e_comm.jpg" alt = "Image 2e_comm"> <img width = "72" height = "71"
+            align = "bottom" border = "0" src = "1euro.jpg" alt = "Image 1euro">
+            <img width = "65" height = "63" align = "bottom" border = "0" src =
+            "50eurocent.jpg" alt = "Image 50eurocent"> <img width = "56" height =
+            "56" align = "bottom" border = "0" src = "20eurocent.jpg" alt =
+            "Image 20eurocent"> <img width = "48" height = "48" align = "bottom"
+            border = "0" src = "10eurocent.jpg" alt = "Image 10eurocent"> <img width =
+            "43" height = "44" align = "bottom" border = "0" src = "5c_comm.jpg" alt =
+            "Image 5c_comm">
+          </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+        </tr>
+      </table>
+    </div> A <em> slot-machine </em> often retains change or part of it,
+    leaving users unhappy. This is because the machine can only
+    accepts coins of certain values ​​(from 2 euros, 1 euro, and 50, 20, 10 and 5
+    cents) and sometimes, after a few transactions, certain currencies become
+    temporarily depleted. It also happens because, to make a
+    amount, the machine always starts by using the highest value coins that
+    have. This way of operating is not very correct. For example, if in a certain
+    instant, the machine only has 50 and 20 cent coins, not
+    would be able to return 60 cents (would retain 10 cents). Users
+    unprepared, who insert much larger amounts than necessary, can
+    be baffled.
+    <p> </p>
+    <h2>
+      <font color = "blue"> Task </font>
+    </h2> Write a program that simulates the behavior of the machine when it is
+    A sequence of transactions is carried out from a given state. O
+    program should determine the amount the machine has retained and the fraction of
+    transactions with change retention.
+    <p> </p>
+    <h2>
+      <font color = "blue"> Input </font>
+    </h2> In the first line you have the number of coins of each type available
+    initially in the order given above. The following is a description of a
+    sequence of transactions to be processed, ending with <b> 0 0 </b>. There will be at
+    least one transaction. The first line of each transaction consists of
+    a pair <b> (E, D) </b> of non-negative integers that represent the amount to
+    pay (<b> E </b> euros and <b> C </b> cents), followed by the sequence of
+    currencies introduced by the customer (ending with <b> 0 </b>).
+    <p> </p>
+    <h2>
+      <font color = "blue"> Output </font>
+    </h2> You will write the total amount retained and on the next line the fraction of
+    transactions with retention, ending with a change of line. That fraction
+    will have the form <b> N / T </b>, where <b> N </b> can be zero (<b> T </b> designates the
+    total number of transactions).
+    <p> </p>
+    <h2>
+      <font color = "blue"> example </font>
+    </h2>
+    <h3>
+      <font color = "blue"> Input </font>
+    </h3> <br>
+    <pre>
+0 0 4 0 0 0
+0 25
+two
+20
+0
+3 10
+1
+20
+1
+50
+20
+20
+0
+0 40
+1
+0
+1 25
+20
+50
+50
+5
+0
+0 45
+20
+10
+5
+5
+5
+0
+0 40
+two
+0
+0 0
+</pre>
+    <h3>
+      <font color = "blue"> Ouput </font>
+    </h3> <br>
+    <pre>
+0 35
+2/6
+</pre> <br>
+    <hr>
+  </body>
+</html>
