@@ -1,0 +1,139 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Emergency Phones
+    </title>
+    <meta name = "description" content = "Emergency Phones">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+  </head>
+  <body>
+    <h1>
+      Emergency Phones
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "73" height = "99" align = "bottom" border = "0" src = "phone3.jpg"
+      alt = "Image phone3"> <img width = "96" height = "99" align = "bottom" border = "0"
+      src = "phone4.jpg" alt = "Image phone4">
+    </div>
+    <p> </p>
+    <h2>
+      Problem
+    </h2>
+    <p>
+      A given motorway concessionaire intends to install a
+      emergency telephone network. However, due to the exorbitant price of
+      electrical cables in recent times, the concessionaire is trying to
+      solve the problem of sending electricity to phones in a way
+      that does not force it to lay cables along the entire motorway. Although
+      widely adopted on other motorways, in this area the panels
+      solar panels are not an option as it is permanently bad weather.
+    </p>
+    <p>
+      However, all is not lost. Recently, a new
+      wireless electricity transmission technology that, using
+      very sophisticated directional antennas allow the direct sending of all the
+      signal to a given phone whenever it initiates a call. With
+      this electricity transmission technology, the electrical power
+      only one unit decreases for every kilometer the signal travels.
+    </p>
+    <div align = "center">
+      <img width = "241" height = "135" align = "bottom" border = "0" src = "img1.gif"
+      alt = "\ includegraphics [height = 3cm] {Phones / example}">
+    </div> Despite being enthusiastic about the idea, those responsible, zealous for
+    For security reasons, they are intended to confirm that all
+    emergency will have enough electricity to operate.
+    <h2>
+      Assignment
+    </h2> Write a program that given the positions of the antennas and the phones
+    and its powers (of emission of the antennas and of operation of the
+    phones), check whether the phones can work or not. a phone
+    simultaneously receive signals from several antennas, the power being
+    total received equal to the sum of the powers received from each antenna.
+    Assume that no more than one phone will be used at the same time.
+    <p> </p>
+    <h2>
+      Input
+    </h2> Corresponds to an installation plan of <img width = "20" height = "15"
+    align = "bottom" border = "0" src = "img2.gif" alt = "$ N $"> antennas and
+    location of <img width = "23" height = "15" align = "bottom" border = "0" src =
+    "img3.gif" alt = "$ M $"> emergency phones. In the first line there is a
+    integer <img width = "16" height = "15" align = "bottom" border = "0" src =
+    "img4.gif" alt = "$ L $"> which indicates the extension in Km (measured in a straight line)
+    of the region in which the antennas will be installed, <img width = "106" height = "32"
+    align = "middle" border = "0" src = "img5.gif" alt = "$ 1 \ leq L \ leq 1000 $">. In the
+    following lines have the value of <img width = "20" height = "15" align = "bottom"
+    border = "0" src = "img2.gif" alt = "$ N $"> (<img width = "102" height = "32" align =
+    "middle" border = "0" src = "img6.gif" alt = "$ 1 \ leq N \ leq 100 $">) and then
+    <img width = "20" height = "15" align = "bottom" border = "0" src = "img2.gif" alt =
+    "$ N $"> pairs of lines: the first line of each pair has the position
+    <img width = "14" height = "15" align = "bottom" border = "0" src = "img7.gif" alt =
+    "$ x $"> of the antenna (<img width = "81" height = "32" align = "middle" border = "0"
+    src = "img8.gif" alt = "$ 1 \ leq x \ leq L $">) and the second its power
+    <img width = "13" height = "31" align = "middle" border = "0" src = "img9.gif" alt =
+    "$ p $"> (<img width = "86" height = "31" align = "middle" border = "0" src =
+    "img10.gif" alt = "$ 1 \ leq p \ leq 64 $">), measured in a unit specially
+    developed for these antennas. Then you will find the phone number
+    <img width = "23" height = "15" align = "bottom" border = "0" src = "img3.gif" alt =
+    "$ M $"> (<img width = "104" height = "32" align = "middle" border = "0" src =
+    "img11.gif" alt = "$ 1 \ leq M \ leq 500 $">) and <img width = "23" height = "15"
+    align = "bottom" border = "0" src = "img3.gif" alt = "$ M $"> pairs of lines: a
+    the first line of each pair has the position <img width = "14" height = "15" align =
+    "bottom" border = "0" src = "img7.gif" alt = "$ x $"> for each phone (<img width =
+    "81" height = "32" align = "middle" border = "0" src = "img12.gif" alt =
+    "$ 1 \ le x \ le L $">) and the second, the power <img width = "13" height = "31"
+    align = "middle" border = "0" src = "img9.gif" alt = "$ p $"> needed for your
+    operation (<img width = "86" height = "31" align = "middle" border = "0" src =
+    "img13.gif" alt = "$ 1 \ le p \ le 64 $">).
+    <p> </p>
+    <h2>
+      Output
+    </h2> It consists of <img width = "23" height = "15" align = "bottom" border = "0"
+    src = "img3.gif" alt = "$ M $"> lines. A <img width = "10" height = "16" align =
+    "bottom" border = "0" src = "img14.gif" alt = "$ i $"> - th line indicates whether the
+    <img width = "10" height = "16" align = "bottom" border = "0" src = "img14.gif" alt =
+    "$ i $"> - th emergency phone is functional or not: it will have
+    <tt> YES </tt> if you stay and <tt> NO </tt> otherwise. They all end with
+    line change.
+    <p> </p>
+    <h2>
+      Example - input
+    </h2> <br>
+    <pre>
+10
+two
+1
+5
+10
+5
+4
+5
+two
+5
+1
+10
+6
+8
+3
+</pre>
+    <p> </p>
+    <h2>
+      Example - output
+    </h2> <br>
+    <pre>
+NO
+YEA
+NO
+YEA
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
