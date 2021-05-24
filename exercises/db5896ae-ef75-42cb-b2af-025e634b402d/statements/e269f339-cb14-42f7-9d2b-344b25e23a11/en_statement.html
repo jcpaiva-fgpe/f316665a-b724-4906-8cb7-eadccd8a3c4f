@@ -1,0 +1,150 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Magic Squares
+    </title>
+    <meta name = "description" content = "Problem C: Magic Squares">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name = "SECTION00030000000000000000" id =
+      "SECTION00030000000000000000"> Magic Squares </a>
+    </h1>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00031000000000000000" id =
+      "SECTION00031000000000000000"> Problem </a>
+    </h2>
+    <p>
+      In 1514, Albrecht Dürer created an engraving called <i> Melancholia </i>.
+      In addition to its artistic interest, this print has a characteristic
+      curious because it includes a 4x4 dimension matrix.
+    </p>
+    <p> </p>
+    <div align = "center">
+      <img width = "361" height = "439" align = "bottom" border = "0" src = "img9.gif"
+      alt = "\ includegraphics [width = 8cm] {Melancholia}"> <img width = "270" height =
+      "268" align = "bottom" border = "0" src = "img10.gif" alt =
+      "\ includegraphics [width = 6cm] {Glisse-chiffre}">
+    </div>
+    <p>
+      The matrix represented in the engraving by Albrecht Dürer is:
+    </p>
+    <p>
+      16 3 2 13
+    </p>
+    <p>
+      5 10 11 8
+    </p>
+    <p>
+      9 6 7 12
+    </p>
+    <p>
+      4 15 14 1
+    </p>
+    <p>
+      This matrix not only has the date of the engraving itself (1514) but also
+      of that is a magic square! A matrix of n * n is considered a square
+      magical when it is composed of the whole numbers from 1 to n * n and the
+      result of the sum of each row, column and both diagonals is always the
+      same. In the case of the engraving matrix, the magic sum is 34.
+    </p>
+    <p>
+      <br>
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00032000000000000000" id =
+      "SECTION00032000000000000000"> Task </a>
+    </h2>
+    <p>
+      Write a program that gives an array of positive integers
+      determine whether or not this is a magic square.
+    </p>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00033000000000000000" id =
+      "SECTION00033000000000000000"> Input </a>
+    </h2>
+    <p>
+      The first line of the input is an <i> N </i> integer (<100) that represents
+      the matrix dimension. The remaining lines represent the layout of the
+      matrix in the form of <i> N </i> lines of <i> N </i> integers each.
+    </p>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00034000000000000000" id =
+      "SECTION00034000000000000000"> Output </a>
+    </h2>
+    <p>
+      The output of your program should result in the magic sum of the
+      matrix, if this is a magic square, or 0 if that is not the case.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00035000000000000000" id =
+      "SECTION00035000000000000000"> Example 1: Input </a>
+    </h2> <br>
+    <pre>
+4
+16 3 2 13
+5 10 11 8
+9 6 7 12
+4 15 14 1
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00036000000000000000" id =
+      "SECTION00036000000000000000"> Example 1: Output </a>
+    </h2> <br>
+    <pre>
+34
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00037000000000000000" id =
+      "SECTION00037000000000000000"> Example 2: Input </a>
+    </h2> <br>
+    <pre>
+1
+1
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00038000000000000000" id =
+      "SECTION00038000000000000000"> Example 2: Output </a>
+    </h2> <br>
+    <pre>
+1
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00039000000000000000" id =
+      "SECTION00039000000000000000"> Example 3: Input </a>
+    </h2> <br>
+    <pre>
+two
+2 2
+2 2
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION000310000000000000000" id =
+      "SECTION000310000000000000000"> Example 3: Output </a>
+    </h2> <br>
+    <pre>
+0
+</pre> <br>
+    <hr>
+  </body>
+</html>
