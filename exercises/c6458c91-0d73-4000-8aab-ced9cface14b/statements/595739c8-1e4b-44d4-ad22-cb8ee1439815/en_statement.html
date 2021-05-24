@@ -1,0 +1,172 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Prisoner's Dilemma
+    </title>
+    <meta name = "description" content = "Prisoner's Dilemma">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00030000000000000000"> Prisoner's Dilemma </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "90" height = "130" align = "bottom" border = "0" src =
+      "./metralhas.png" alt = "Image Prison">
+    </div>
+    <p>
+      <em> "Two suspects, A and B, are arrested by the police. The police have evidence
+      insufficient to convict them, but, separating the prisoners, offers the
+      both the same agreement: if one of the prisoners, confessing, testifies
+      against the other and that other remains silent, what he confessed comes out
+      free while the silent accomplice serves 10 years of sentence. If both
+      remain silent, the police can only sentence them to 6 months in jail
+      each one. If they both betray the partner, they each go to jail for 5 years. Each
+      prisoner makes his decision without knowing what decision the other is going to make, and
+      neither is sure of the other's decision. The question that the dilemma poses is:
+      what will happen? How will the prisoner react? "</em>
+    </p>
+    <p>
+      This is the original formulation of the "Prisoner's Dilemma" made in 1950, and
+      since then used in Game Theory to model such trivial situations,
+      like what two people who accidentally exchange their bags do, or
+      as complex, as the system that became known during the Cold War
+      by Mutual Assured Destruction (MAD).
+    </p>
+    <p>
+      In Game Theory, the basic models are particularly interesting
+      that allow repeated games, with memory of previous moves.
+      Imagine a card game: the rules of a play can be repeated
+      by several hands; the (good) players remember the cards played
+      previously; and at the end the winnings for each hand are added.
+    </p>
+    <p>
+      The Prisoner's Dilemma is also a basic game that can be played at any time.
+      iterated form. In each iteration the player's points are given by a
+      earnings matrix. In the classic example presented above the matrix of
+      gains would be as follows (taking prison months as losses):
+    </p>
+    <p> </p>
+    <div align = "center">
+      <table cellpadding = "3">
+        <tr>
+          <td align = "center">
+            THE ; B
+          </td>
+          <td align = "center">
+            Cooperate
+          </td>
+          <td align = "center">
+            Desert
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            Cooperate
+          </td>
+          <td align = "center">
+            -6; -6
+          </td>
+          <td align = "center">
+            -120; 0
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            Desert
+          </td>
+          <td align = "center">
+            0; -120
+          </td>
+          <td align = "center">
+            -60; -60
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      The iterated version of the Prisoner's Dilemma models many situations of
+      cooperation and confrontation, from the explanations for the relations
+      living beings based on the Darwinian theory of evolution, the theories
+      economic conditions for relations between companies.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00031000000000000000"> Task </a>
+    </h2>
+    <p>
+      It is intended to write a program to calculate the points of each player
+      Prisoner's Dilemma iterated and determine the winner. How input is
+      given the winning matrix followed by a sequence of <em> n </em> moves. THE
+      matrix is ​​given by lines of 2 values, respectively the gains of the
+      players A and B, for the following cases: A and B cooperate; Cooperate and B
+      deserted; Deserted and B cooperates; A and B defect. A line follows with the
+      <em> n </em> number of moves and <em> n </em> lines with a pair of values ​​0
+      or 1 (0 defect and 1 cooperate) respectively for players A
+      or B.
+    </p>
+    <p>
+      The program will indicate the number of points accumulated by each of the
+      players. Each line will have the name of a player (A or B) followed by a space
+      and the respective score, with the players being presented in order
+      decreasing score. If players tie then there will be only one
+      line with reference AB followed by a space and the value of the
+      both.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00032000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00032100000000000000"> Input </a>
+    </h3>
+    <pre>
+-1 -1
+-20 0
+0 -20
+-10 -10
+4
+1 0
+0 1
+1 1
+0 0
+</pre>
+    <h3>
+      <a name="SECTION00032200000000000000"> Output </a>
+    </h3>
+    <pre>
+AB -31
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00033000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00033100000000000000"> Input </a>
+    </h3>
+    <pre>
+5 5
+3 7
+7 3
+2 2
+3
+1 1
+1 1
+1 0
+</pre>
+    <h3>
+      <a name="SECTION00033200000000000000"> Output </a>
+    </h3>
+    <pre>
+B 17
+A 13
+</pre>
+    <p> </p>
+  </body>
+</html>
