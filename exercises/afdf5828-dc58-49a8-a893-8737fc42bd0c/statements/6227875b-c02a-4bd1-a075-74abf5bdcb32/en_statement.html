@@ -1,0 +1,102 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Run-length encoding
+    </title>
+    <meta name = "description" content = "run-length encoding">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00040000000000000000"> Encoding <em> run-length </em> </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "165" height = "148" align = "bottom" border = "0" src =
+      "./comprime.jpg" alt = "Image compresses">
+    </div>
+    <p>
+      Run-length encoding is a technique for compressing text where
+      there are long strings of repeated characters. For example,
+      string <code> AAAAAAA </code> could be represented by <code> 7A </code>
+      (seven times the <code> A </code> character), a fact that inspires
+      representation that we're going to use.
+    </p>
+    <p>
+      In order to avoid ambiguity and not increase the length of the texts in the
+      In the case of short strings, we do not compress strings that are less than
+      three repeated characters (i.e., they are unchanged). If a character is
+      repeated three or more times, then it must be followed by a digit
+      (<tt> 0 </tt> to <tt> 9 </tt>) which indicates the number of repeated characters
+      (in addition to the initial three). If a character occurs repeated more than
+      <tt> 12 </tt> times <tt> (3 + 9) </tt> then the rest must be
+      treated as a new sequence; for example, <tt> AAA9AAA0 </tt> would be the
+      encoding of <tt> AAAAAAAAAAAAAAA </tt>, that is, of the sequence of <tt> 15
+      (= 3 + 9 + 3 + 0) </tt> <tt> A </tt> characters.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00041000000000000000"> Task </a>
+    </h2> Write a program that reads text from standard input and produces
+    standard output and its <i> run-length </i> encoding. The text is given in a single
+    line, has only letters or digits, having at least one letter or digit and
+    no more than 1000. In addition to these characters, you will only have the
+    line.
+    <p> </p>
+    <h2>
+      <a name="SECTION00042000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00042100000000000000"> Input </a>
+    </h3>
+    <pre>
+ABBA
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00042200000000000000"> Output </a>
+    </h3>
+    <pre>
+ABBA
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00043000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00043100000000000000"> Input </a>
+    </h3>
+    <pre>
+AAABBBBAAAAAAAAAAAAAAA
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00043200000000000000"> Output </a>
+    </h3>
+    <pre>
+AAA0BBB1AAA9AA
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00044000000000000000"> Example 3 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00044100000000000000"> Input </a>
+    </h3>
+    <pre>
+000bbbaaaaaa1110AAA000000000000000BaaaaaBbbb000000
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00044200000000000000"> Output </a>
+    </h3>
+    <pre>
+0000bbb0aaa311100AAA000090000Baaa2Bbbb00003
+</pre> <br>
+  </body>
+</html>
