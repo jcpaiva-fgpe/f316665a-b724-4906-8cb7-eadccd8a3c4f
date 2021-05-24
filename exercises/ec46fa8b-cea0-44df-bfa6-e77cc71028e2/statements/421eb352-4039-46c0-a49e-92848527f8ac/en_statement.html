@@ -1,0 +1,89 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title>
+      String of Digits
+    </title>
+    <meta name = "description" content = "Problem D: String of Digits">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name = "SECTION00040000000000000000" id =
+      "SECTION00040000000000000000"> String of Digits </a>
+    </h1>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00041000000000000000" id =
+      "SECTION00041000000000000000"> Problem </a>
+    </h2> In a competition with 10 players (numbered from 0 to 9), the competitor wins
+    with the most consecutive correct answers. Approves
+    unfolds as follows: a competitor is selected
+    randomly to respond. Whenever it gives a right answer the
+    competitor wins a point and retains the right to reply. Whenever
+    a wrong answer the competitor loses the right to answer being
+    randomly selected another competitor. The information of a test
+    consists of a sequence of digits corresponding to the numbers of the
+    players who responded correctly to the answers. For example in the test
+    <pre>
+0 0 2 3 5 5 4 4 4 7 5 5 5 5 1 9
+</pre> The winner was competitor 5 with a maximum of 4 right answers
+consecutive.
+    <p>
+      In the event of a tie, the first player to obtain the maximum
+      right answers. For example in the test
+    </p>
+    <pre>
+0 2 3 4 4 4 7 5 5 1 1 1 9 4 4 5 5 5
+</pre> The winner was competitor 4 because he was the first to get 3 answers
+consecutive certain. <br>
+    <h2>
+      <a name = "SECTION00042000000000000000" id =
+      "SECTION00042000000000000000"> Task </a>
+    </h2> Write a program that, given a sequence of digits (0, 1, ...,
+    9), containing the information of a race, determine which winner of the race
+    and the number of responses that gave him the victory. That is, determine what the
+    size of the largest sub-sequence of consecutive occurrences of the same digit
+    (number of responses) and for which digit did this maximum occur (number of
+    player).
+    <p>
+      <br>
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00043000000000000000" id =
+      "SECTION00043000000000000000"> Input </a>
+    </h2> The first line of the input is an <i> N </i> integer (<= 1000) that indicates
+    the size of the string to consider. The second line is the sequence of N
+    digits representing the proof information. <br>
+    <h2>
+      <a name = "SECTION00044000000000000000" id =
+      "SECTION00044000000000000000"> Output </a>
+    </h2> The output is a line with two integers, representing the number of the
+    player who won the race and the number of consecutive correct answers that
+    gave him the victory.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00045000000000000000" id =
+      "SECTION00045000000000000000"> Example of Input </a>
+    </h2> <br>
+    <p> </p>
+    <pre>
+20
+0 0 2 3 3 3 4 5 5 6 3 3 3 3 3 2 3 3 3 3
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00046000000000000000" id =
+      "SECTION00046000000000000000"> Example of Output </a>
+    </h2> <br>
+    <pre>
+3 5
+</pre> <br>
+    <hr>
+  </body>
+</html>
