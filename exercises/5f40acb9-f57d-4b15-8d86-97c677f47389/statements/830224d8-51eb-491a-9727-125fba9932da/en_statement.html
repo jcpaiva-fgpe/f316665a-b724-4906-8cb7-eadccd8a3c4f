@@ -1,0 +1,144 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Europa League
+    </title>
+    <meta name = "description" content = "Europa League">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00010000000000000000"> Europa League </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "270" height = "177" align = "bottom" border = "0" src =
+      "./taca-r.jpg" alt = "Image cup_r">
+    </div>
+    <p>
+      We had the Europa League semi-final second leg matches yesterday. THE
+      date we wrote, we still don't know the results of the games, but,
+      if everything went well, we will have two Portuguese teams in the final, the
+      which is truly fantastic. At this stage, the Europa League is a tournament
+      to eliminate and in each tie there are two games between each pair of
+      teams, first in the field of one of them, then in the field of the other. Win
+      the elimination round and the team that makes it to the next round (or the final)
+      has scored more goals in the aggregate, that is, in the set of the two games.
+      In the event of a tie in the aggregate, the team that has scored the most passes
+      goals away, that is, in the game on the opponent's field. This criterion of
+      tiebreaker is not enough, as it may happen that both teams
+      have scored the same number of goals away. In the event of a tie in the
+      aggregate and in the away goals, already counting on the extra time that will have
+      occurred in the second leg game, the elimination is resolved using
+      kicks on the penalty mark. In slang, we say <em> "go to
+      penalties "</em>.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00011000000000000000"> Task </a>
+    </h2> It is true that the accounts are easy and are done in the head, but the system
+    information system (organization that organizes the Europa League) has to calculate
+    automatically who moves on to the next round, depending on the
+    results of the two games. We intend to program this module of the
+    system: given the results of the two games of a tie, calculate the
+    team that won the tie.
+    <p> </p>
+    <h2>
+      <a name="SECTION00012000000000000000"> Input </a>
+    </h2> The first line has two character strings, each of which is formed
+    only by letters and by the character '<code> _ </code>', and the two separated one from
+    another for a space. The first word represents the name of the team that
+    plays at home in the first leg (and away in the second); the second word
+    represents the name of the team that plays away in the first leg (and at home in the
+    Monday). The second line has two non-negative integers, which
+    represent the result of the first leg game and the third row is
+    analogous, but for the result of the second leg. In both cases the first
+    number indicates the number of goals scored by the home team and the
+    according to the number of goals scored by the away team.
+    <p> </p>
+    <h2>
+      <a name="SECTION00013000000000000000"> Output </a>
+    </h2> There is only one line where only a string appears with the
+    name of the team that wins the tie, if the tie has been
+    resolved without resorting to penalties, or the word <code> penaltis </code>,
+    without quotes and without accent, in case there is a tie in the aggregate and goals
+    marked off.
+    <p> </p>
+    <h2>
+      <a name="SECTION00014000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00014100000000000000"> Input </a>
+    </h3>
+    <pre>
+fcporto spartak
+5 1
+2 5
+</pre>
+    <h3>
+      <a name="SECTION00014200000000000000"> Output </a>
+    </h3>
+    <pre>
+fcporto
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00015000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00015100000000000000"> Input </a>
+    </h3>
+    <pre>
+dinamo_kiev sporting_braga
+1 1
+0 0
+</pre>
+    <h3>
+      <a name="SECTION00015200000000000000"> Output </a>
+    </h3>
+    <pre>
+sporting_braga
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00016000000000000000"> Example 3 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00016100000000000000"> Input </a>
+    </h3>
+    <pre>
+fcporto benfica
+0 2
+1 3
+</pre>
+    <h3>
+      <a name="SECTION00016200000000000000"> Output </a>
+    </h3>
+    <pre>
+fcporto
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00017000000000000000"> Example 4 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00017100000000000000"> Input </a>
+    </h3>
+    <pre>
+victoria union
+2 1
+2 1
+</pre>
+    <h3>
+      <a name="SECTION00017200000000000000"> Output </a>
+    </h3>
+    <pre>
+penalty shootout
+</pre>
+    <p> </p>
+  </body>
+</html>
