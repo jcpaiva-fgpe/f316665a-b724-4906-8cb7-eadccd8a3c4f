@@ -1,0 +1,135 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN">
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00010000000000000000" id =
+      "SECTION00010000000000000000"> Black Box </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "225" height = "206" align = "bottom" border = "0" src = "./ 550.jpg"
+      alt = "Image 550">
+    </div>
+    <p>
+      Searching for the Malaysia Airlines plane that disappeared into the ocean
+      some oceanographic vessels have detected signals that appear to be
+      be emitted by the plane's black box. These signals are very weak,
+      they bring a lot of noise and therefore have to be analyzed very carefully. You
+      signals come to us in the form of a sequence of numbers, each of which
+      representing the measured intensity, ten times per second, over the
+      time. Many of these intensities are very low, which means that
+      it’s about ocean noise, of no interest, but periodically there are values
+      that stand out and that can only have originated in a device
+      electronic. Here is an example of a section of observations:
+    </p>
+    <div style = "margin-left: 2em">
+      2 2 2 3 4 5 <font color =
+      "red"> <b> 15 </b> </font> 4 3 4 5 2
+      2 <font color = "red"> <b> 10 </b> </font> 4 2
+      2 6 <font color = "red"> <b> 13 </b> </font> 6
+      7 3 4 <font color = "red"> <b> 18 </b> </font>
+      6
+    </div> The numbers marked in red stand out clearly from their
+    neighbors and, by chance, come from the plane's black box. At
+    search teams need a program to count the signals coming from the
+    black box of the airplane, following numbers under analysis. We consider that
+    a signal was emitted by the black box when its intensity is greater than
+    twice the intensity of each of the two neighboring signals, before and after.
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00011000000000000000" id =
+      "SECTION00011000000000000000"> Task </a>
+    </h2> Write a program that, given a sequence of integers
+    positive count the number of numbers that are simultaneously greater than the
+    double the immediately preceding number in the sequence and greater than double
+    of the number immediately following in the sequence.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00012000000000000000" id =
+      "SECTION00012000000000000000"> Input </a>
+    </h2> The first line contains the number of numbers in the sequence (always greater
+    or equal to 3 and less than or equal to 1000). Here are the sequence numbers,
+    one on each line.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00013000000000000000" id =
+      "SECTION00013000000000000000"> Output </a>
+    </h2> The output will have a single line, with the number of detected signals.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00014000000000000000" id =
+      "SECTION00014000000000000000"> Example 1 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00014100000000000000" id =
+      "SECTION00014100000000000000"> Input </a>
+    </h3>
+    <pre>
+22
+two
+two
+3
+4
+5
+15
+4
+3
+4
+5
+two
+10
+4
+two
+6
+13
+6
+7
+3
+4
+18
+6
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00014200000000000000" id =
+      "SECTION00014200000000000000"> Output </a>
+    </h3>
+    <pre>
+4
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00016000000000000000" id =
+      "SECTION00016000000000000000"> Example 2 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00016100000000000000" id =
+      "SECTION00016100000000000000"> Input </a>
+    </h3>
+    <pre>
+5
+3
+6
+4
+8
+4
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00016200000000000000" id =
+      "SECTION00016200000000000000"> Output </a>
+    </h3>
+    <pre>
+0
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
