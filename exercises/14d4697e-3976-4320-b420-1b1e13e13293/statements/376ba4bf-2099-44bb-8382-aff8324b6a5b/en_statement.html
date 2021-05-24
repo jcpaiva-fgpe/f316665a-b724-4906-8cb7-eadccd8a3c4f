@@ -1,0 +1,160 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Ken-Ken
+    </title>
+    <meta name = "description" content = "Ken-Ken">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00050000000000000000"> Ken-Ken </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "95" height = "99" align = "bottom" border = "0" src = "./ ken-ken.png"
+      alt = "Image ken-ken">
+    </div>
+    <p>
+      <b> ken-ken </b> is a logical-arithmetic challenge similar to sudoku.
+      It is based on a square grid of size <em> n </em> (i.e., with
+      <em> n </em> <b> rows </b> and <em> n </em> <b> columns </b>) which should be
+      filled with numbers and obey a set of structural rules and
+      arithmetic restrictions.
+    </p>
+    <p>
+      The grid must be filled with whole numbers from 1 to <em> n </em> and
+      so that in each row and column there are no repeated numbers.
+    </p>
+    <p>
+      It is divided into <b> regions </b>. Regions are a set of cells
+      contiguous, with at least one and less than <em> n </em> cells, which can
+      have different shapes. The cells in a region can span a
+      same row, same column, or simultaneously by several rows and
+      columns, forming a square or an L (he).
+    </p>
+    <p>
+      Each region has an associated <b> restriction </b>, defined by a value and
+      an arithmetic operation (<tt> + </tt>, <tt> * </tt>, <tt> - </tt> or
+      <tt> / </tt>). The operation aggregates the contents of all cells in the region and
+      the result must be the given value. For example, if the constraint is <tt> 9
+      + </tt> so the region values ​​added together should total <tt> 9 </tt>.
+    </p>
+    <p>
+      Sum and multiplication operations can have an arbitrary number of
+      operands and, being commutative, the order in which they are operated is
+      irrelevant. Subtraction and division operations are not commutative or
+      associative and, therefore, it is assumed that they always have only 2 operands and
+      that the first has a value equal to or greater than the second. For example, if the
+      constraint is <tt> 2 / </tt> and the region contains the values ​​<tt> 2 </tt> and
+      <tt> 4 </tt> then the operation in question is <tt> 4/2 </tt>. In case the
+      region having only one cell can assume that the operation is a sum
+      (the result being the value of that cell).
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00051000000000000000"> Task </a>
+    </h2>
+    <p>
+      A program is intended to read the definition of a ken-ken problem and
+      a set of grid fills and indicate which ones are correct
+      (`` <tt> OK </tt> '') and incorrect ones (`` <tt> KO </tt> ''). The program must
+      check either the structural rules (no repeated numbers
+      in each row and in each column) or arithmetic constraints.
+    </p>
+    <p>
+      The first line of the data contains a pair of <em> n r </em> integers, being
+      <em> n </em> the grid size (greater than 3 and less than 10) and
+      <em> r </em> the number of regions. The following are <em> r </em> definitions of
+      regions and their restrictions. The starting line for each of these
+      definitions contain a suit <em> b v o </em>, consisting of two integers
+      and a character: <em> b </em> is the number of cells in the region, <em> v </em> the
+      added value (i.e., the result of the aggregation operation) and <em> o </em>
+      the aggregation operation (<tt> + </tt>, <tt> * </tt>, <tt> - </tt> or
+      <tt> / </tt>). The following <em> b </em> lines have the coordinates of the
+      cells that form the region: in each line there will be a pair of integers <em> l
+      c </em> where <em> l </em> is the row index and <em> c </em> the column (are
+      both non-negative and less than <em> n </em>; the cell with coordinates
+      <tt> (0,0) </tt> is at the bottom left of the grid).
+    </p>
+    <p>
+      After the description of ken-ken, there is a line with an integer <em> p </em>
+      which indicates the number of resolutions to check. The description follows
+      of those <em> p </em> resolutions: for each resolution, it has an identifier
+      (sequence of letters or digits, less than 20 in length) in a
+      first line and the following <em> n </em> lines (each with <em> n </em>
+      integers), the grid values ​​are defined after this resolution.
+    </p>
+    <p>
+      The result is made up of <em> p </em> lines beginning with the
+      resolution identifier followed by a colon and a
+      space followed by the <tt> OK </tt> character string if the resolution
+      correct, or <tt> KO </tt> otherwise.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00052000000000000000"> Example </a>
+    </h2>
+    <h3>
+      <a name="SECTION00052100000000000000"> Input </a>
+    </h3>
+    <p> </p>
+    <pre>
+4 8
+2 2 *
+0 0
+1 0
+1 1 +
+1 1
+2 1 -
+0 1
+0 2
+2 2 /
+0 3
+1 3
+1 4 +
+2 0
+3 9 +
+3 0
+3 1
+2 1
+3 6 +
+3 2
+2 2
+1 2
+2 3 /
+3 3
+2 3
+3
+THE
+3 4 2 1
+4 2 1 3
+2 1 3 2
+1 3 4 1
+B
+1 2 3 4
+2 3 4 1
+3 4 1 2
+4 1 2 3
+Ç
+3 4 2 1
+4 2 1 3
+2 1 3 4
+1 3 4 2
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00052200000000000000"> Output </a>
+    </h3>
+    <pre>
+A: KO
+B: KO
+C: OK
+</pre> <br>
+  </body>
+</html>
