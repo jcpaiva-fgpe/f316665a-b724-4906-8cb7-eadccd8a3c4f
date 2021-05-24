@@ -1,0 +1,200 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN">
+<html>
+  <head>
+    <title>
+      iNetCode this message
+    </title>
+    <meta name = "description" content = "iNetCode this message">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    <script type = "text / javascript" src =
+    "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00070000000000000000" id =
+      "SECTION00070000000000000000"> <em> iNetCode this message </em> </a>
+    </h1>
+    <p> </p>
+    <table align = "right">
+      <tr>
+        <td align = "center">
+          <img width = "230" height = "370" src = "butterflyNet-crop.png" border = "1"
+          align = "center" alt = "[missing alt]">
+        </td>
+      </tr>
+    </table>
+    <p>
+      Communication networks are increasingly busy and applications
+      require an increase in bandwidth. In order to optimize the
+      use of networks and being able to transport as many bytes as possible
+      on the same connections, network coding (<em> network) was developed
+      coding </em>).
+    </p>
+    <p>
+      In network coding, data is not sent exactly as it is generated
+      by the applications, but combinations of pieces of that data are sent.
+      As long as the combinations of pieces received are independent,
+      it is possible to recover the original data. An example of an operator for
+      these combinations (a "combiner") is the XOR (\ (\ oplus \)), which
+      matches <em> or-exclusive </em>.
+    </p>
+    <p>
+      The interesting thing about XOR is its logical property that that \ (p \ oplus p =
+      0 \). That is, when we apply the operation to the same element (value)
+      we get zero. And when we operate with zero we get the given value, i.e.,
+      \ (p \ oplus 0 = p \). So if we have \ (p \) and \ (r \) we have:
+    </p>
+    <div align = "center">
+      <img src = "img40.gif" alt = "[missing alt]">
+    </div> <br clear="all">
+    <p> </p>
+    <p>
+      In the figure, we can see how some savings are achieved in messages
+      sent. The sending nodes each have different data (\ (p \) and \ (r \))
+      to send to both receiving nodes. On connection A, using the
+      network encoding, we just need to send a message with \ (
+      p \ oplus r \) instead of sending two separate messages \ (p \) and \ (r \).
+      And, the receiving nodes are able to decode the \ (p \) and \ (r \) using the
+      indicated properties.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00071000000000000000" id =
+      "SECTION00071000000000000000"> Task </a>
+    </h2> This problem asks you to put your mathematical minds to work
+    to develop a program that gives a list of messages received,
+    decode as much of the individual data as possible. The following
+    combinations of data in the various messages received. As output they must be
+    The individual data that has been successfully decoded (for example,
+    alphabetical order). Each letter (always lowercase) represents a given
+    different. The various messages are provided on separate lines, and each
+    The message may contain a combination of several letters.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00072000000000000000" id =
+      "SECTION00072000000000000000"> Input </a>
+    </h2> In the first line there is an integer \ (n \) which is the number of messages
+    received, with \ (2 \ leq n \ leq 10 \). Following are \ (n \) lines: each has a different
+    sequence of lowercase letters representing the data sent in a
+    message. In each message, the letters are distinct and, globally, are not
+    more than 10 different letters are used.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00073000000000000000" id =
+      "SECTION00073000000000000000"> Output </a>
+    </h2> A single line with the list of data (single letters) that is
+    managed to decode separated by commas, and a space after
+    each comma, and alphabetically ordered. If you can't decode
+    nothing should simply have the word <tt> error </tt>.
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00074000000000000000" id =
+      "SECTION00074000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00074100000000000000" id =
+      "SECTION00074100000000000000"> Input </a>
+    </h3>
+    <pre>
+two
+pr
+r
+</pre>
+    <h3>
+      <a name = "SECTION00074200000000000000" id =
+      "SECTION00074200000000000000"> Output </a>
+    </h3>
+    <pre>
+p, r
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00075000000000000000" id =
+      "SECTION00075000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00075100000000000000" id =
+      "SECTION00075100000000000000"> Input </a>
+    </h3>
+    <pre>
+4
+ABC
+ab
+CD
+B.C
+</pre>
+    <h3>
+      <a name = "SECTION00075200000000000000" id =
+      "SECTION00075200000000000000"> Output </a>
+    </h3>
+    <pre>
+a B C D
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00076000000000000000" id =
+      "SECTION00076000000000000000"> Example 3 </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00076100000000000000" id =
+      "SECTION00076100000000000000"> Input </a>
+    </h3>
+    <p> </p>
+    <pre>
+3
+ABC
+abd
+in
+</pre>
+    <h3>
+      <a name = "SECTION00076200000000000000" id =
+      "SECTION00076200000000000000"> Output </a>
+    </h3>
+    <pre>
+error
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00077000000000000000" id =
+      "SECTION00077000000000000000"> Example 4 </a>
+    </h2>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00077100000000000000" id =
+      "SECTION00077100000000000000"> Input </a>
+    </h3>
+    <pre>
+3
+ABC
+ab
+A.D
+</pre>
+    <h3>
+      <a name = "SECTION00077200000000000000" id =
+      "SECTION00077200000000000000"> Output </a>
+    </h3>
+    <pre>
+CD
+</pre>
+    <p> </p>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <p>
+      <b> Note: </b> Example 1, concerns the receiving node on the right
+      in the figure.
+    </p>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
