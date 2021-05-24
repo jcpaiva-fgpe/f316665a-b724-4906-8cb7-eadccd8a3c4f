@@ -1,0 +1,93 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Mastermind
+    </title>
+    <meta name = "description" content = "Mastermind">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00040000000000000000"> Mastermind </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "119" height = "126" align = "bottom" border = "0" src =
+      "./Mastermind.jpg" alt = "Image Mastermind">
+    </div>
+    <p>
+      <i> Mastermind </i> is a game for two people who play the role of
+      <i> codemaker </i> and <i> codebreaker </i>:
+    </p>
+    <ul>
+      <li> the <i> codemaker </i> chooses a secret key (a sequence of four
+      pins chosen from six colors);
+      </li>
+      <li> the <i> codebreaker </i> will deduce which key is using the smallest number
+      of attempts.
+      </li>
+    </ul> For each attempt the <i> codemaker </i> says two scores: the <i> number
+    correct colors in the correct position </i>; and the <i> number of colors
+    correct but in the wrong position </i>.
+    <p>
+      We represent the six colors by the lower case letters from '<tt> to </tt>' a
+      '<tt> f </tt>'; if the key is, for example, "<tt> acfb </tt>" and the attempt
+      "<tt> abcd </tt>" the scores are (1,2), that is, a letter
+      ('<tt> a </tt>') correct in the correct position and two ('<tt> c </tt>',
+      '<tt> b </tt>') correct but in the wrong positions.
+    </p>
+    <p>
+      Repeated colors may occur. For example, if the key is
+      "<tt> acfa </tt>" and the attempt "<tt> aaac </tt>" the scores are (1,1), or
+      that is, an '<tt> a </tt>' in the correct position and an '<tt> a </tt>' in position
+      wrong (the third '<tt> a </tt>' in the attempt does not count).
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00041000000000000000"> Task </a>
+    </h2> We want a program that reads the key and the attempt and calculates the
+    two scores.
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00042000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00042100000000000000"> Input </a>
+    </h3>
+    <pre>
+acfb
+a B C D
+</pre>
+    <h3>
+      <a name="SECTION00042200000000000000"> Output </a>
+    </h3>
+    <pre>
+1
+two
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00043000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00043100000000000000"> Input </a>
+    </h3>
+    <pre>
+acfa
+aaac
+</pre>
+    <h3>
+      <a name="SECTION00043200000000000000"> Output </a>
+    </h3>
+    <pre>
+1
+two
+</pre>
+  </body>
+</html>
