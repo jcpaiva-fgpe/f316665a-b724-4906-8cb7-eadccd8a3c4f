@@ -1,0 +1,171 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Eyjafjallajokull
+    </title>
+    <meta name = "description" content = "Eyjafjallajokull">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00070000000000000000"> Eyjafjallajokull </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "343" height = "308" align = "bottom" border = "0" src =
+      "./movimento-c.png" alt = "Image motion-c">
+    </div>
+    <p>
+      The volcanic ash cloud from the Eyjafjallajokull volcano, which
+      erupted on 14 April, caused chaos in European airspace
+      and forced the cancellation of more than one hundred thousand flights. Conditions
+      favorable weather conditions allowed it to spread initially to
+      southeast, about 40 km / h. The forecast of its trajectory and dispersion was
+      difficult because it depended on the evolution of the volcano's activity and the
+      different wind patterns at various altitudes.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00071000000000000000"> Task </a>
+    </h2> The intention is to follow the trajectory of the cloud, starting from a position
+    initial analysis, and to analyze how it affects certain European locations. The model was
+    very simplified: the planisphere is described by a rectangular grid;
+    each cell in the grid is a 2-sided square and is defined by the
+    coordinates of its lower left corner, which belong to the range
+    [-100000, 100000]; the cloud is a rectangle fitted to the grid, occupies one or
+    more cells, and it is invariable (does not disperse).
+    <p>
+      It is assumed that the cloud always moves at the same altitude, and with speed
+      constant in each unit interval. You can only move in the following
+      directions / directions: <tt> N (0.1) </tt>, <tt> S (0, -1) </tt>, <tt> E
+      (1.0) </tt>, <tt> O (-1,0) </tt>, <tt> SE (1, -1) </tt>, <tt> SO (-1, -1 ) </tt>,
+      <tt> NO (-1,1) </tt> or <tt> NE (1,1) </tt>.
+    </p>
+    <p>
+      If a point on the cloud is at the position (X, Y) at a given time T and the
+      cloud to move with speed (H, V) in the interval [T, T + 1 [, that point
+      will be in position (X + H, Y + V) at time T + 1. During that interval of
+      time, the cloud can pass through several locations, saying that they have been
+      under the influence of the cloud in that period.
+    </p>
+    <p>
+      The sites are located in the center of the cells that contain them and are: <tt> Athens
+      (12779, 20557) </tt>, <tt> Barcelona (1113, 22779) </tt>, <tt> Frankfurt
+      (4445, 22779) </tt>, <tt> Funchal (-8887, 17779) </tt>, <tt> Lisbon (-4999,
+      21113) </tt>, <tt> London (1, 28335) </tt>, <tt> Madrid (-1665, 22223) </tt>,
+      <tt> Paris (1113, 26667) </tt>, <tt> Porto (-4443, 22779) </tt>.
+    </p>
+    <p>
+      The total allocation level for each location will be given by the number of
+      periods when the location had some point in the cloud over it. On each
+      unitary interval, the level of affectation of the affected sites grows
+      just one unit.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00072000000000000000"> Input </a>
+    </h2> In the first line there are four integers, A, B, C and D, separated by a
+    space: (A, B) and (C, D) are the initial positions of the lower vertices
+    left and top right of the cloud. In the next line you have the number of
+    intervals to consider (maximum 300) and then, on each line, a pair of
+    <em> even integers </em> H and V which gives the speed of the cloud in each
+    of these unit intervals. You can assume that the coordinates of the cloud are
+    keeps in the range [-40000, 40000] during the simulation.
+    <p> </p>
+    <h2>
+      <a name="SECTION00073000000000000000"> Output </a>
+    </h2> In the first line you have the number of affected sites. If that number
+    is zero, on the next line is "<tt> Did you go to the North Pole? </tt>", without
+    quotes or accents. If it is different from zero, in the following lines it has the
+    alphabetical list of affected locations and levels of allocation
+    corresponding names (the name will be separated from the value by a space).
+    <p> </p>
+    <h2>
+      <a name="SECTION00074000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00074100000000000000"> Input </a>
+    </h3>
+    <pre>
+-4442 28334 6 28338
+7
+0 70
+0 70
+200 -200
+0 -6000
+70 -70
+-710 710
+-400 400
+</pre>
+    <h3>
+      <a name="SECTION00074200000000000000"> Output </a>
+    </h3>
+    <pre>
+3
+London 2
+Madrid 2
+Porto 1
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00075000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00075100000000000000"> Input </a>
+    </h3>
+    <pre>
+4400 22800 4452 22900
+two
+50 -50
+-3000 0
+</pre>
+    <h3>
+      <a name="SECTION00075200000000000000"> Output </a>
+    </h3>
+    <pre>
+1
+Frankfurt 2
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00076000000000000000"> Example 3 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00076100000000000000"> Input </a>
+    </h3>
+    <pre>
+-2200 1002 -2198 1004
+15
+5000 5000
+-100 0
+0 900
+112 112
+-900 0
+-600 600
+600 600
+600 600
+-500 500
+-348 348
+900 900
+-230 -230
+234 0
+90 -90
+2 -2
+</pre>
+    <h3>
+      <a name="SECTION00076200000000000000"> Output </a>
+    </h3>
+    <pre>
+0
+Did you go to the North Pole?
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
