@@ -1,0 +1,150 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Final Combat
+    </title>
+    <meta name = "description" content = "Final Combat">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+  </head>
+  <body>
+    <h1>
+      Final Combat
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "162" height = "99" align = "bottom" border = "0" src = "roman.jpg"
+      alt = "Image roman"> <img width = "88" height = "99" align = "bottom" border = "0"
+      src = "cards2.jpg" alt = "Image cards2"> <img width = "88" height = "99" align =
+      "bottom" border = "0" src = "cards2.jpg" alt = "Image cards2"> <img width = "88"
+      height = "99" align = "bottom" border = "0" src = "cards2.jpg" alt =
+      "Image cards2">
+    </div>
+    <p> </p>
+    <h2>
+      Problem
+    </h2>
+    <p>
+      Two friends meet for a magic card tournament. Each has
+      a deck of cards with monsters, each card containing an integer
+      which indicates the character's combat strength. Each player stacks
+      `` strategically '' <img width = "15" height = "15" align = "bottom" border =
+      "0" src = "img23.gif" alt = "$ n $"> letters (equal number for both
+      players). The development of a game occurs in a sequence of
+      fights as follows. Player A and Player B draw the card.
+      top of your deck.
+    </p>
+    <ul>
+      <li> If player A's card is more powerful than player B's,
+      then player A wins that match, and player B's card is for the
+      player A. Both cards are placed at the bottom of player A's deck,
+      with player B's card under player A's card.
+      </li>
+      <li> If player B's card has more attack power than player B's card
+      player A, then B wins that match. In this case, it is player B who remains
+      with player A's card. Place your card on the base of your deck first
+      letter and then A.
+      </li>
+      <li> If both cards have the same attack power then a
+      a tie. In this case, each player places his card on the basis of his
+      cheap.
+      </li>
+    </ul> The game proceeds in a similar way. The particularity and interest
+    of the game comes from the fact that the cards are magic. In such a way that when
+    two cards meet, regardless of the outcome of the fight, the
+    card power is decremented by one (because the monster gets tired of the
+    fights and loses energy). If the value of the card reaches 0 it is withdrawn from
+    game. This rule introduces interest in the game, because otherwise the player
+    with the highest card I could never lose the game.
+    <p>
+      The player who loses all cards during a sequence of matches
+      loses the game. To avoid very long games, if after <img width =
+      "54" height = "38" align = "middle" border = "0" src = "img24.gif" alt = "$ n ^ 3 + n $">
+      neither player has won, the game is considered to be
+      tied. If both players run out of cards simultaneously the game
+      is also tied.
+    </p>
+    <p> </p>
+    <h2>
+      Assignment
+    </h2> Implement a program that, given the players' decks, simulates the
+    game to determine which of the two players wins.
+    <p> </p>
+    <h2>
+      Input
+    </h2> In the first line is the number <img width = "15" height = "15" align =
+    "bottom" border = "0" src = "img23.gif" alt = "$ n $"> of cards they will play with
+    (<img width = "87" height = "31" align = "middle" border = "0" src = "img25.gif" alt =
+    "$ 1 \ leq n \ leq 20 $">). In the following lines there is a description of the <img width =
+    "15" height = "15" align = "bottom" border = "0" src = "img23.gif" alt = "$ n $">
+    cards from player A's deck (ie <img width = "15" height = "15" align =
+    "bottom" border = "0" src = "img23.gif" alt = "$ n $"> integers that represent the
+    power of the chosen cards, from top to bottom). Nas <img width = "15"
+    height = "15" align = "bottom" border = "0" src = "img23.gif" alt = "$ n $"> remaining,
+    has the description of <img width = "15" height = "15" align = "bottom" border = "0"
+    src = "img23.gif" alt = "$ n $"> cards from player B.
+    <p> </p>
+    <h2>
+      Output
+    </h2> The program must write <tt> A </tt>, <tt> B </tt> or <tt> E </tt>, to
+    indicate the player who wins the game, followed by a line change. Will write
+    <tt> And </tt> if there was a tie.
+    <p> </p>
+    <h2>
+      Example 1
+    </h2>
+    <h3>
+      Input
+    </h3> <br>
+    <pre>
+3
+3
+5
+two
+two
+1
+9
+</pre>
+    <p> </p>
+    <h3>
+      Output
+    </h3> <br>
+    <pre>
+B
+</pre>
+    <p> </p>
+    <h2>
+      Example 2
+    </h2>
+    <h3>
+      Input
+    </h3> <br>
+    <pre>
+5
+4
+two
+1
+6
+8
+3
+3
+4
+two
+1
+</pre>
+    <p> </p>
+    <h3>
+      Output
+    </h3> <br>
+    <pre>
+THE
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
