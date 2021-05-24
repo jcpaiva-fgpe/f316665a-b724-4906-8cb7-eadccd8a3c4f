@@ -1,0 +1,126 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Silly Cicadas
+    </title>
+    <meta name = "description" content = "Silly Cicadas">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+  </head>
+  <body>
+    <h1>
+      Silly Cicadas
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "40" height = "53" align = "bottom" border = "0" src = "antolive.jpg"
+      alt = "Image antolive"> <img width = "40" height = "53" align = "bottom" border =
+      "0" src = "antolive.jpg" alt = "Image antolive"> <img width = "40" height = "53"
+      align = "bottom" border = "0" src = "antolive.jpg" alt = "Image antolive">
+      <img width = "40" height = "53" align = "bottom" border = "0" src = "antolive.jpg"
+      alt = "Image antolive"> <img width = "40" height = "53" align = "bottom" border =
+      "0" src = "antolive.jpg" alt = "Image antolive">
+    </div>
+    <p> </p>
+    <h2>
+      Problem
+    </h2> Fed up with hearing that they spent the day singing, some cicadas
+    decided to imitate their rivals. Not really understanding the logic of displacement
+    on paths, we went to find them stunned: having left a certain place
+    in single file, began to walk around, systematically passing through
+    places where they had previously been, as if they were lost in a
+    maze. They finally found the place they intended to reach. In
+    anyway, we would like to know what they could have done if they had
+    had a better sense of orientation and had not `` visited '' the same
+    locations repeatedly.
+    <p> </p>
+    <h2>
+      Assignment
+    </h2> Write a program that analyzes the sequence of places that have been
+    `` visiting '', which includes the point of departure and the end of arrival, and
+    find a route that respects that sequence but removes all turns
+    unnecessary. Only the last pass at each of these locations can be
+    considered useful. All others are deviations. In case of mistake,
+    all the rounds that cicadas gave, since they passed in a given place until
+    who returned there, will be considered unnecessary. The place of arrival was not
+    visited twice, but any of the rest, including the origin,
+    it may have been.
+    <p> </p>
+    <h2>
+      Input
+    </h2> It is only given the sequence of places where the cicadas passed by,
+    one location per line of data. The last line has a value of 0. The number of
+    distinct locations does not exceed 30. Each location is identified by an integer
+    positive value less than 10000.
+    <p> </p>
+    <h2>
+      Output
+    </h2> The sequence of places they would visit if they had not been mistaken, each
+    location on a line.
+    <p> </p>
+    <h2>
+      Example 1
+    </h2>
+    <h3>
+      Input
+    </h3> <br>
+    <pre>
+1600
+15
+2315
+15
+1315
+0
+</pre>
+    <p> </p>
+    <h3>
+      Output
+    </h3> <br>
+    <pre>
+1600
+15
+1315
+</pre>
+    <p> </p>
+    <h2>
+      Example 2
+    </h2>
+    <h3>
+      Input
+    </h3> <br>
+    <pre>
+1513
+3171
+178
+1316
+1600
+1513
+1774
+178
+3171
+672
+1315
+0
+</pre>
+    <p> </p>
+    <h3>
+      Output
+    </h3> <br>
+    <pre>
+1513
+1774
+178
+3171
+672
+1315
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
