@@ -1,0 +1,173 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <font color = "blue"> Game of Life </font>
+    </h1>
+    <p> </p>
+    <p>
+      <img align = "right" src = "gameoflife.jpg" width = "251" height = "143" alt = ""
+      border = "0"> The Game of Life is not a "conventional" game. Do not exist
+      players, neither can win or lose. And once the pieces are placed,
+      seemingly simple rules determine everything that will happen to
+      follow, with very complex behaviors, full of surprises!
+    </p>
+    <p>
+      This game is played on a checkered board. Each grid (or
+      cell) may be <i> dead </i> or <i> alive </i>. We mark a cell
+      live with the character <tt> '#' </tt> and a dead cell with the character
+      <tt> '.' </tt>. In this sense, a starting board valid for the game of
+      life would be for example:
+    </p>
+    <pre>
+.........
+.........
+.... # ....
+... ### ...
+... #. # ...
+.... # ....
+.........
+.........
+</pre>
+    <p>
+      Each cell has 8 neighboring cells (except the cells at the limit of the
+      board), which are the adjacent squares in all directions
+      (including diagonals). Given an initial configuration, the board will
+      evolving with the application of rules. So, for each cell, we count the
+      number of neighbors with living cells and what happens next depends
+      of that number:
+    </p>
+    <ul>
+      <li> A dead cell with exactly 3 living neighbors <i> is born </i>,
+      staying alive in the next step;
+      </li>
+      <li> A living cell with 2 or 3 living neighbors <i> survives </i>, remaining
+      live in the next step;
+      </li>
+      <li> In all other cases, a cell <i> dies </i> (if it was alive),
+      or remains dead.
+      </li>
+    </ul>
+    <p>
+      Note that this rule is applied to all cells at the same time, that is,
+      to determine what happens at a given step we have to
+      check what happens to each cell before we actually do the
+      changes that the rules determine. For example, for the given board
+      above, the application of the rules led to the following steps (and then
+      would continue):
+    </p>
+    <table>
+      <tr>
+        <td>
+          <pre>
+.........
+.........
+.... # ....
+... ### ...
+... #. # ...
+.... # ....
+.........
+.........
+</pre>
+        </td>
+        <td>
+          <pre>
+ ->
+</pre>
+        </td>
+        <td>
+          <pre>
+.........
+.........
+... ### ...
+... #. # ...
+... #. # ...
+.... # ....
+.........
+.........
+</pre>
+        </td>
+        <td>
+          <pre>
+ ->
+</pre>
+        </td>
+        <td>
+          <pre>
+.........
+.... # ....
+... #. # ...
+.. ##. ## ..
+... #. # ...
+.... # ....
+.........
+.........
+</pre>
+        </td>
+      </tr>
+    </table>
+    <p>
+      We need your help. Will you be able to simulate the Game of Life?
+    </p>
+    <h2>
+      <font color = "blue"> Task </font>
+    </h2> Write a program that, given an initial configuration of the
+    game of life, get the state of that same board after one
+    number of steps.
+    <h2>
+      <font color = "blue"> Input </font>
+    </h2>
+    <p>
+      In the first line of <i> input </i> there are 3 whole numbers <b> L </b>,
+      <b> C </b> and <b> P </b> (separated by spaces), indicating respectively the
+      number of lines on the board, the number of columns and the number of steps to be
+      use. You can assume that 1 ≤ L, C ≤ 100 and 1 ≤ P ≤ 250 ;.
+    </p>
+    <p>
+      Follow exactly <b> L </b> lines, each containing exactly
+      <b> C </b> characters, indicating the initial state of the board
+      (<tt> '#' </tt> for a living cell, and <tt> '.' </tt> for a cell
+      dead).
+    </p>
+    <h2>
+      <font color = "blue"> Output </font>
+    </h2>
+    <p>
+      The <i> output </i> consists of <b> L </b> lines, each with <b> C </b>
+      characters, indicating the state of the board after <b> P </b> steps of
+      application of the rules. The characters to be used are the same as the
+      <i> input </i>.
+    </p>
+    <h2>
+      <font color = "blue"> Example of Input </font>
+    </h2>
+    <pre>
+8 9 3
+.........
+.........
+.... # ....
+... ### ...
+... #. # ...
+.... # ....
+.........
+.........
+</pre>
+    <h2>
+      <font color = "blue"> Example of Output </font>
+    </h2>
+    <pre>
+.........
+.... # ....
+.. ##. ## ..
+.. ##. ## ..
+.. ##. ## ..
+.... # ....
+.........
+.........
+</pre> <br>
+    <hr>
+  </body>
+</html>
