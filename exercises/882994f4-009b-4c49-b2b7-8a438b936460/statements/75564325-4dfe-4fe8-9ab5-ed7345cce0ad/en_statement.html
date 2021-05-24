@@ -1,0 +1,142 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      snake
+    </title>
+    <meta name = "description" content = "snake">
+    <meta name = "keywords" content = "snake">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <div align = "center">
+      <font size = "+ 4"> <b> Problem E </b> </font>
+    </div>
+    <div align = "center">
+      <font size = "+ 3"> <b> Maze of the snake </b> </font>
+    </div>
+    <p> </p>
+    <h2>
+      <a name="SECTION00001000000000000000"> Problem </a>
+    </h2>
+    <p>
+      A snake moves in a maze where there are several obstacles and several
+      eggs. The aim of the snake is, starting from a starting position
+      predefined, eat all the eggs in the maze (i.e. pass
+      all the points where there are eggs) without hitting the obstacles
+      nor leave the maze. During the game the snake can move towards the
+      right, left, up and down (without ever leaving the maze).
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00002000000000000000"> Task </a>
+    </h2>
+    <p>
+      Write a program that, given a maze and several paths, returns if
+      the paths are valid or not, that is, if the snake succeeds for each one
+      of the paths eat all the eggs without leaving the maze and without hatching
+      against obstacles.
+    </p>
+    <p>
+      The labyrinth consists of a square matrix whose dimension is given. You
+      obstacles are marked in the maze as <tt> # </tt>. The eggs are
+      marked as <tt> O </tt>. The snake occupies only one position of the matrix and
+      is marked as <tt> C </tt>.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00003000000000000000"> Input </a>
+    </h2>
+    <p>
+      The first two lines of input are two integers less than 100,
+    </p>
+    <p> </p>
+    <dl>
+      <dd>
+        <tt> n </tt> - the size of the maze;
+      </dd>
+      <dd>
+        <tt> m </tt> - the number of paths to test.
+      </dd>
+    </dl>
+    <p>
+      The following <tt> n </tt> lines, each with <tt> n </tt> characters,
+      describe the labyrinth and consist only of the following
+      characters:
+    </p>
+    <p> </p>
+    <dl>
+      <dd>
+        <tt> O </tt> - represents an egg;
+      </dd>
+      <dd>
+        <tt> C </tt> - represents the starting position of the snake;
+      </dd>
+      <dd>
+        <tt> # </tt> - represents an obstacle;
+      </dd>
+      <dd>
+        <tt>. </tt> - represents a free space.
+      </dd>
+    </dl>
+    <p>
+      The following <tt> m </tt> lines describe a path that is smaller than the
+      than 100 and consist only of the following characters:
+    </p>
+    <p> </p>
+    <dl>
+      <dd>
+        <tt> e </tt> - movement to the left;
+      </dd>
+      <dd>
+        <tt> d </tt> - movement to the right;
+      </dd>
+      <dd>
+        <tt> c </tt> - upward movement;
+      </dd>
+      <dd>
+        <tt> b </tt> - downward movement;
+      </dd>
+    </dl>
+    <p> </p>
+    <h2>
+      <a name="SECTION00004000000000000000"> Output </a>
+    </h2>
+    <p>
+      Your program must type <tt> YES </tt> or <tt> NO </tt> depending on the
+      path is valid or not for the given maze.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00005000000000000000"> Input example </a>
+    </h2>
+    <p> </p>
+    <pre>
+6
+4
+######
+# C..O #
+#. # .. #
+#. # .. #
+#O#..#
+######
+dddeeebbb
+ddeebbb
+ddbbdcceeebbb
+ddddeeebbb
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00006000000000000000"> Output example </a>
+    </h2>
+    <pre>
+YEA
+NO
+YEA
+NO
+</pre>
+    <p> </p>
+  </body>
+</html>
