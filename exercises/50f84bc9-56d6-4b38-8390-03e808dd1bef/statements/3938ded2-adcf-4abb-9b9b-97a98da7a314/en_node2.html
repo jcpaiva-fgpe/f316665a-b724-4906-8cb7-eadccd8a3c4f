@@ -1,0 +1,138 @@
+<H1> <A NAME="SECTION00020000000000000000">
+Hunting Tails </A>
+</H1>
+<DIV ALIGN = "CENTER">
+<IMG
+  WIDTH = "99" HEIGHT = "94" ALIGN = "BOTTOM" BORDER = "0"
+ SRC = "./ cao_a1.jpg"
+ ALT = "Image cao_a1">
+<IMG
+  WIDTH = "99" HEIGHT = "95" ALIGN = "BOTTOM" BORDER = "0"
+ SRC = "./ cao_a2.jpg"
+ ALT = "Image cao_a2">
+<IMG
+  WIDTH = "99" HEIGHT = "93" ALIGN = "BOTTOM" BORDER = "0"
+ SRC = "./ cao_a3.jpg"
+ ALT = "Image cao_a3">
+<IMG
+  WIDTH = "99" HEIGHT = "86" ALIGN = "BOTTOM" BORDER = "0"
+ SRC = "./ cao_a4.jpg"
+ ALT = "Image cao_a4">
+ 
+<IMG
+  WIDTH = "99" HEIGHT = "101" ALIGN = "BOTTOM" BORDER = "0"
+ SRC = "./ pcardeais.jpg"
+ ALT = "Image pcardeais">
+
+</DIV>
+
+<P>
+Per
+pure fun or some kind of disturbance, it is usual for dogs and
+cats whirl frantically while trying to catch their own tail
+(<EM> `` be chasing my tail '' </EM>
+it means to be busy with a thousand and one tasks, but little success).
+With so many turns, you can imagine that after a while
+dizzy, that sometimes rotate to one side now
+rotate to each other, etc. We want to know what the position, the direction of
+movement and the state of an animal
+after having made a sequence of movements,
+whereas:
+
+<UL>
+<LI> initially, the animal is fine (<code> normal </code> state) and has the
+head to the south (<code> S </code>);
+</LI>
+<LI> each movement corresponds to a rotation of a
+multiple of <IMG
+ WIDTH = "29" HEIGHT = "15" ALIGN = "BOTTOM" BORDER = "0"
+ SRC = "img11.gif"
+ ALT = "$ 45 ^ \ circ $">; can be done clockwise (<code> CW </code>) or
+counterclockwise (<code> CCW </code>); the first move will be
+counterclockwise;
+</LI>
+<LI> if the amplitude of a given movement exceeds <IMG
+ WIDTH = "38" HEIGHT = "15" ALIGN = "BOTTOM" BORDER = "0"
+ SRC = "img12.gif"
+ ALT = "$ 720 ^ \ circ $"> (two laps),
+the animal is <code> dizzy </code> and starts to rotate in the opposite direction;
+will return to
+<code> normal </code> state as soon as it rotates again (if this movement does not
+rotate too much again).
+</LI>
+</UL>
+
+<P>
+
+<H2> <A NAME="SECTION00021000000000000000">
+Task </A>
+</H2>
+Write a program that, given a sequence of movements, indicates the
+final position of the animal's head (<code> N </code>,
+<code> S </code>, <code> E </code>, <code> W </code>, <code> NE </code>, <code> SE </code>, <code> NW < / code>, or
+<code> SW </code>), the direction in which the animal would rotate
+(<code> CW </code> or <code> CCW </code>), and its final state (<code> normal </code> or
+<code> silly </code>). Each line of <EM> input </EM> has a positive integer
+multiple of 45 (and less than 2000), which
+represents the amplitude of the rotation, with the exception of the last line
+has <code> -1 </code>. There will be at least one movement. The program writes a suit
+<code> (position, direction, state) </code>, with a space after each comma,
+followed by line change.
+
+<P>
+
+<H2> <A NAME="SECTION00022000000000000000">
+Example 1 </A>
+</H2>
+<BR>
+
+<H3> <A NAME="SECTION00022100000000000000">
+Input </A>
+</H3>
+<BR>
+<PRE>
+180
+360
+360
+-1
+</PRE>
+<H3> <A NAME="SECTION00022200000000000000">
+Output </A>
+</H3>
+<BR>
+<PRE>
+(N, CCW, normal)
+</PRE>
+
+<P>
+
+<H2> <A NAME="SECTION00023000000000000000">
+Example 2 </A>
+</H2>
+<BR>
+
+<H3> <A NAME="SECTION00023100000000000000">
+Input </A>
+</H3>
+<BR>
+<PRE>
+540
+405
+765
+45
+810
+855
+810
+810
+-1
+</PRE>
+<H3> <A NAME="SECTION00023200000000000000">
+Output </A>
+</H3>
+<BR>
+<PRE>
+(W, CW, dizzy)
+</PRE>
+
+<P>
+<BR> <HR>
