@@ -1,0 +1,104 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Enrollment
+    </title>
+    <meta name = "description" content = "Enrollments">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00030000000000000000"> Enrollments </a>
+    </h1>
+    <p> </p>
+    <h2>
+      <a name="SECTION00031000000000000000"> Problem </a>
+    </h2>
+    <p>
+      In the kingdom of Lusitania, the Automobile and Highway Center (CAR)
+      recently presented a new plan for the allocation of enrollments
+      automobiles. This plan, in addition to proposing a new attribution model,
+      presents an elaborate statistical study about the past years. At
+      elaboration of this study, one of the most relevant tasks was to calculate the
+      number of vehicles registered during the last few years.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00032000000000000000"> Task </a>
+    </h2>
+    <p>
+      Write a program that, given the enrollment of the first and last
+      vehicle registered in a given year, calculate the number of vehicles
+      enrolled in that same year. Consider only enrollments of the type
+      AA-AA-LL, where A is a number and L is one of the 23 letters of the alphabet
+      Portuguese. The first registration is 00-00-AA and the last is 99-99-ZZ. THE
+      enrollment assignment follows the following criteria: (i) starting from the
+      last assigned number, the second number of digits is incremented by
+      one unit; (ii) if the second pair of digits reaches the value 99, this
+      becomes 00 and the first pair of digits is incremented by one;
+      (iii) if the first pair of digits reaches the value 99, it changes to 00
+      and the second letter is incremented by one, according to the order of
+      letters in the alphabet; (iv) if the second letter reaches the value Z, it passes
+      a A and the first letter are incremented by one.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00033000000000000000"> Input </a>
+    </h2>
+    <p>
+      The first line of input is an integer N (<img width = "62" height = "31"
+      align = "middle" border = "0" src = "img5.gif" alt = "$ <= 100 $">) which indicates the
+      number of enrollment pairs to consider. The next N lines are
+      number pairs of type AA-AA-LL, where A is a digit and L is a
+      of the 23 letters of the Portuguese alphabet. The first registration of each pair says
+      respect to the first motor vehicle registered in a given year, while
+      the second concerns the last vehicle registered that same year.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00034000000000000000"> Output </a>
+    </h2>
+    <p>
+      The output is a set of N lines, where each line has the number
+      number of vehicles registered based on the indicated registration number.
+    </p>
+    <p> </p>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00035000000000000000"> Input example </a>
+    </h2>
+    <p> </p>
+    <pre>
+3
+00-00-AA 99-99-AA
+00-00-AZ 00-00-BA
+01-99-XZ 99-01-ZV
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00036000000000000000"> Output example </a>
+    </h2>
+    <pre>
+10000
+10001
+449703
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
