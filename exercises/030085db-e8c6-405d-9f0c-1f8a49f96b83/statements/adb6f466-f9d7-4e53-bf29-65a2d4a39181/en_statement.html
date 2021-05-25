@@ -1,0 +1,121 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Ricochet Robots
+    </title>
+    <meta name = "description" content = "Rebound Robots">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00050000000000000000"> Ricochet Robots </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "300" height = "200" align = "bottom" border = "0" src =
+      "./robots.png" alt = "Image robots">
+    </div>
+    <p>
+      The <i> Robôs Ricochete, Lda. </i> factory produces autonomous robots for
+      cleaning of large surfaces in post-work hours. The robots
+      move on a grid in the plane executing sequences of the
+      following instructions:
+    </p>
+    <dl>
+      <dt>
+        <strong> F </strong>
+      </dt>
+      <dd>
+        move forward until you encounter an obstacle;
+      </dd>
+      <dt>
+        <strong> D </strong>
+      </dt>
+      <dd>
+        rotate on itself <img width = "29" height = "15" align = "bottom" border =
+        "0" src = "img1.gif" alt = "$ 90 ^ \ circ $"> to the right;
+      </dd>
+      <dt>
+        <strong> AND </strong>
+      </dt>
+      <dd>
+        rotate on itself <img width = "29" height = "15" align = "bottom" border =
+        "0" src = "img1.gif" alt = "$ 90 ^ \ circ $"> to the left.
+      </dd>
+    </dl>
+    <p>
+      The figure illustrates a robot's path on a 9 x 6 grid, starting at the
+      bottom left corner and executing the sequence "F, D, F, E, F, D, F, D,
+      F, D, F ".
+    </p>
+    <p>
+      It is intended to determine the total distance traveled by the robot (number of
+      visited cells); the size of the grid, the position of the
+      obstacles and sequence of instructions. To simplify the statement,
+      it is assumed that each obstacle occupies exactly one cell of the grid;
+      it is also assumed that the robot is initially in the lower corner
+      left (coordinates (0,0)) facing upwards (i.e. in the direction of the
+      vector (0.1)).
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00051000000000000000"> Task </a>
+    </h2> Write a program to determine the total distance traveled by the
+    robot.
+    <p>
+      The problem data is entered in the following order, a value per
+      each row: the number of columns and the number of rows in the grid followed by the
+      number of obstacles and the coordinates of each obstacle (column, row);
+      finally, the sequence of instructions from the robot (using characters
+      <tt> F </tt>, <tt> D </tt>, <tt> E </tt>). You can assume that the grid has
+      maximum dimension 30 x 30 and that the robot program has a maximum of 50
+      instructions.
+    </p>
+    <p>
+      The output is an integer that represents the total distance traveled by the
+      robot.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00052000000000000000"> Example </a>
+    </h2>
+    <h3>
+      <a name="SECTION00052100000000000000"> Input </a>
+    </h3>
+    <pre>
+9
+6
+8
+0
+4
+1
+1
+6
+3
+6
+4
+7
+0
+8
+0
+8
+1
+8
+5
+FDFEFDFDFDF
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00052200000000000000"> Output </a>
+    </h3>
+    <pre>
+21
+</pre>
+    <p> </p>
+  </body>
+</html>
