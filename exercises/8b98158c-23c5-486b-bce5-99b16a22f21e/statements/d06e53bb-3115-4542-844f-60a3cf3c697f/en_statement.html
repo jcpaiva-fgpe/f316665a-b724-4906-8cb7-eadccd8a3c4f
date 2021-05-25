@@ -1,0 +1,187 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00070000000000000000" id =
+      "SECTION00070000000000000000"> Great! </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "119" height = "52" align = "bottom" border = "0" src =
+      "./igenial.jpg" alt = "Image igenial">
+    </div> In the board game <i> Awesome! </i> each of four players gets
+    dots in six colors: red, green, blue, orange, yellow and purple. O
+    knowledge of the rules of this game is not important for the problem at hand
+    Follow. The relative position of each player at the end of the game is determined
+    by the score in the color with the <i> lowest </i> number of points. Win the
+    player who has the most points in his <i> worst </i> color. When two players
+    have the same score in the worst color, the tie is broken by <img width =
+    "23" height = "17" align = "bottom" border = "0" src = "img16.gif" alt =
+    "$ 2 ^ {\ mbox {\ b {a}}} $"> worst color and so on. For example: be
+    the scores given by the table:
+    <div align = "center">
+      <table cellpadding = "3" border = "1">
+        <tr>
+          <td align = "left"> </td>
+          <td align = "center">
+            Red
+          </td>
+          <td align = "center">
+            Green
+          </td>
+          <td align = "center">
+            Blue
+          </td>
+          <td align = "center">
+            Orange
+          </td>
+          <td align = "center">
+            Yellow
+          </td>
+          <td align = "center">
+            Purple
+          </td>
+        </tr>
+        <tr>
+          <td align = "left">
+            Joana
+          </td>
+          <td align = "center">
+            11
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            8
+          </td>
+          <td align = "center">
+            17
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            14
+          </td>
+        </tr>
+        <tr>
+          <td align = "left">
+            Peter
+          </td>
+          <td align = "center">
+            8
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            9
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            18
+          </td>
+        </tr>
+        <tr>
+          <td align = "left">
+            Miguel
+          </td>
+          <td align = "center">
+            11
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            18
+          </td>
+        </tr>
+        <tr>
+          <td align = "left">
+            Beatriz
+          </td>
+          <td align = "center">
+            13
+          </td>
+          <td align = "center">
+            12
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            18
+          </td>
+          <td align = "center">
+            15
+          </td>
+          <td align = "center">
+            18
+          </td>
+        </tr>
+      </table>
+    </div> Beatriz will be the winner (with 12 points) and in second place is the
+    Miguel (with 11 points). Joana and Pedro have the same score in the worst color
+    (8 points), but Joana has the best result at <img width = "23" height = "17"
+    align = "bottom" border = "0" src = "img16.gif" alt = "$ 2 ^ {\ mbox {\ b {a}}} $"> smaller
+    (11 points against 9 from Pedro); Joana is third and Pedro is last
+    place.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00071000000000000000" id =
+      "SECTION00071000000000000000"> Task </a>
+    </h2> <br>
+    Write a program that reads the scores of the players and writes the order
+    relative between these. The scoring table is given: 4 lines; each row
+    has the 6 scores of a player (they are positive integers). The program must
+    write a single line with the relative order among the players, of the best
+    for the worst ranked. There will be no draws. We identify the players
+    by numbers from 1 to 4: player 1 has the scores on the first line, the
+    player 2 the second, etc.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00072000000000000000" id =
+      "SECTION00072000000000000000"> Example </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00072100000000000000" id =
+      "SECTION00072100000000000000"> Input </a>
+    </h3> <br>
+    <pre>
+11 18 8 17 18 14
+8 18 18 9 18 18
+11 18 18 18 18 18
+13 12 18 18 15 18
+</pre>
+    <h3>
+      <a name = "SECTION00072200000000000000" id =
+      "SECTION00072200000000000000"> Output </a>
+    </h3> <br>
+    <pre>
+4 3 1 2
+</pre>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
