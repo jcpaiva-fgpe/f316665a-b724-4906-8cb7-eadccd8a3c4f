@@ -1,0 +1,190 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      tetris
+    </title>
+    <meta name = "description" content = "tetris">
+    <meta name = "keywords" content = "tetris">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <div align = "center">
+      <font size = "+ 4"> <b> Problem D </b> </font>
+    </div>
+    <div align = "center">
+      <font size = "+ 3"> <b> Tetris simulator </b> </font>
+    </div>
+    <p> </p>
+    <h2>
+      <a name="SECTION00001000000000000000"> Problem </a>
+    </h2>
+    <p>
+      Who doesn't know the famous Tetris game? When in the years 1985 and 1986
+      Alexey Pajitnov and Dmitry Pavlovsky, two programmers at the Center for
+      Computing of the Russian Academy of Sciences, invented the game, inspired
+      in the idea of ​​pieces falling into a glass cup, they never imagined success
+      that this one would come to have. And to think that the first version of the game had only
+      4 colors and a resolution of 320x200!
+    </p>
+    <p>
+      <img width = "607" height = "500" align = "bottom" border = "0" src = "img1.gif"
+      alt = "\ epsffile {tetris.eps}">
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00002000000000000000"> Task </a>
+    </h2>
+    <p>
+      Your task is to create a program to simulate a game of
+      Tetris. You can assume that, as illustrated in the figure, the
+      game is always a checkered matrix of 15 rows by 8 columns. At
+      pieces are small sets of connected squares that fall with the force of the
+      gravity, stopping when any of its parts touches another part or
+      at the end of the board. When a line is completely filled,
+      disappears, and all the lines above it fall, moving
+      one line down. For each completed line, the player wins one
+      series of points and goes up in level, with the pieces falling
+      each time faster. but this final part doesn’t interest you and what
+      you are asked for is a program that, given a sequence of parts, as well as the
+      where they fall, tell us how the final board configuration looks.
+      Initially, the board is always completely empty.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00003000000000000000"> Input </a>
+    </h2>
+    <p>
+      The first line of input has a number <img width = "20" height = "15"
+      align = "bottom" border = "0" src = "img2.gif" alt = "$ N $"> (<img width = "129"
+      height = "32" align = "middle" border = "0" src = "img3.gif" alt =
+      "$ 1 <= N <= 100 $">) which tells you the number of pieces in the sequence,
+      followed by <img width = "20" height = "15" align = "bottom" border = "0" src =
+      "img2.gif" alt = "$ N $"> lines describing the pieces, in order of fall.
+      Each piece is described in a line with 3 numbers: <img width = "58" height =
+      "32" align = "middle" border = "0" src = "img4.gif" alt = "$ DIM_X $">, <img width =
+      "57" height = "32" align = "middle" border = "0" src = "img5.gif" alt = "$ DIM_Y $">
+      and <img width = "20" height = "15" align = "bottom" border = "0" src = "img6.gif"
+      alt = "$ X $"> (<img width = "104" height = "32" align = "middle" border = "0" src =
+      "img7.gif" alt = "$ 1 <= DIM_X $">, <img width = "102" height = "32" align =
+      "middle" border = "0" src = "img8.gif" alt = "$ DIM_Y <= 4 $">; <img width =
+      "111" height = "32" align = "middle" border = "0" src = "img9.gif" alt =
+      "$ 1 <= X <= 8 $">) indicating the number of lines and
+      columns of the piece and the leftmost column number of the piece, which indicates
+      where the piece falls. These 3 numbers are followed by <img width = "57" height =
+      "32" align = "middle" border = "0" src = "img5.gif" alt = "$ DIM_Y $"> lines, each
+      one with <img width = "58" height = "32" align = "middle" border = "0" src =
+      "img4.gif" alt = "$ DIM_X $"> characters, indicating the configuration of the part.
+      A '#' means a filled square and a '.' means a space in
+      White.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00004000000000000000"> Output </a>
+    </h2>
+    <p>
+      The output consists of 15 lines, each with 8 characters,
+      indicating the final configuration of the board. As in the input, a '#'
+      means a filled square and a '.' means a blank space.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00005000000000000000"> Example of Input 1 </a>
+    </h2>
+    <p> </p>
+    <pre>
+4
+2 3 1
+. #.
+###
+3 2 3
+#.
+##
+. #
+2 2 5
+##
+##
+4 1 8
+#
+#
+#
+#
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00006000000000000000"> Example of Output 1 </a>
+    </h2>
+    <pre>
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+....... #
+.. # .... #
+. #####. #
+######. #
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00007000000000000000"> Input 2 example </a>
+    </h2>
+    <p> </p>
+    <pre>
+5
+2 3 1
+. #.
+###
+3 2 3
+#.
+##
+. #
+2 2 5
+##
+##
+4 1 8
+#
+#
+#
+#
+4 1 7
+#
+#
+#
+#
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00008000000000000000"> Example of Output 2 </a>
+    </h2>
+    <pre>
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+........
+...... ##
+.. # ... ##
+. #######
+</pre>
+    <p> </p>
+  </body>
+</html>
