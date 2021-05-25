@@ -1,0 +1,314 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Telepreso
+    </title>
+    <meta name = "description" content = "Telepreso">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000"> Telepreso </a>
+    </h1>
+    <p> </p>
+    <h2>
+      <a name="SECTION00051000000000000000"> Problem </a>
+    </h2>
+    <p>
+      The top head of an organized crime network is trapped in a chain of
+      maximum security, in complete isolation, for 6 months. Even though
+      he has managed to continue to manage the part of his organization that has not yet
+      is behind bars because his associates sent him a
+      mobile phone.
+    </p>
+    <div align = "center">
+      <img width = "161" height = "188" align = "bottom" border = "0" src =
+      "cellphone.png" alt = "Image cellphone">
+    </div> In reality, we realized this intention in time, but we chose
+    for not preventing the cell phone from reaching you. We hoped to get from
+    cell phone conversations information that would allow us to do other
+    arrests and put him in a cell with ultra sensitive microphones. At the
+    However, the prisoner communicates only by SMS and to telephone numbers on the
+    foreign. To make the situation more difficult, messages are encrypted
+    automatically by the phone itself and we are unable to decipher them.
+    <p>
+      Fortunately the microphones installed in the cell are sensitive enough
+      to distinguish the tones of each key pressed. For
+      we can quickly decipher the messages that the prisoner sends,
+      we need a program that converts sequences of the same key in the
+      associated letter. For example, three consecutive rings from the
+      "8" key corresponds to the letter "V". Two more presses of the "3" key,
+      followed by two touches on the "6" key, followed by two touches on the key
+      "6", followed by a touch of the "3" key, followed by two touches of the key
+      "3", form the word "SELL".
+    </p>
+    <p>
+      Note that the last two letters of the word "SELL" ("D" and "E") are
+      achieved by sequences of the same key ("3"). If there is a certain
+      delay between pressing two keys on mobile phones assumes that the
+      sequence ended and a new one started.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00052000000000000000"> Task </a>
+    </h2>
+    <p>
+      Convert a sequence of numeric values ​​to the letters that are assigned to them
+      associated with the keypad of a mobile phone, according to the following table:
+    </p>
+    <p> </p>
+    <div align = "center">
+      <table cellpadding = "3" border = "1">
+        <tr>
+          <th align = "center">
+            <b> key </b>
+          </th>
+          <td align = "center" colspan = "4">
+            <b> Repeats </b>
+          </td>
+        </tr>
+        <tr>
+          <td align = "center"> </td>
+          <td align = "center">
+            <b> 1 </b>
+          </td>
+          <td align = "center">
+            <b> 2 </b>
+          </td>
+          <td align = "center">
+            <b> 3 </b>
+          </td>
+          <td align = "center">
+            <b> 4 </b>
+          </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 0 </b>
+          </th>
+          <td align = "center">
+            +
+          </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 1 </b>
+          </th>
+          <td align = "center">
+            _
+          </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+          <td align = "center"> </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 2 </b>
+          </th>
+          <td align = "center">
+            THE
+          </td>
+          <td align = "center">
+            B
+          </td>
+          <td align = "center">
+            Ç
+          </td>
+          <td align = "center"> </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 3 </b>
+          </th>
+          <td align = "center">
+            D
+          </td>
+          <td align = "center">
+            AND
+          </td>
+          <td align = "center">
+            F
+          </td>
+          <td align = "center"> </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 4 </b>
+          </th>
+          <td align = "center">
+            G
+          </td>
+          <td align = "center">
+            H
+          </td>
+          <td align = "center">
+            I
+          </td>
+          <td align = "center"> </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 5 </b>
+          </th>
+          <td align = "center">
+            J
+          </td>
+          <td align = "center">
+            K
+          </td>
+          <td align = "center">
+            L
+          </td>
+          <td align = "center"> </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 6 </b>
+          </th>
+          <td align = "center">
+            M
+          </td>
+          <td align = "center">
+            N
+          </td>
+          <td align = "center">
+            O
+          </td>
+          <td align = "center"> </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 7 </b>
+          </th>
+          <td align = "center">
+            P
+          </td>
+          <td align = "center">
+            Q
+          </td>
+          <td align = "center">
+            R
+          </td>
+          <td align = "center">
+            s
+          </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 8 </b>
+          </th>
+          <td align = "center">
+            T
+          </td>
+          <td align = "center">
+            U
+          </td>
+          <td align = "center">
+            V
+          </td>
+          <td align = "center"> </td>
+        </tr>
+        <tr>
+          <th align = "center">
+            <b> 9 </b>
+          </th>
+          <td align = "center">
+            W
+          </td>
+          <td align = "center">
+            X
+          </td>
+          <td align = "center">
+            Y
+          </td>
+          <td align = "center">
+            Z
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      Some keys can be repeated up to three times, two of them can be
+      repeated four times and twice only once. To facilitate the
+      legibility the "1" key is associated with the "_" character (`` underscore '')
+      and not to the space character. You can assume that the keys are not repeated
+      more times than the values ​​defined in the table. That is, you can assume
+      that the "2" key is never pressed four times nor the "1" key twice or
+      more times.
+    </p>
+    <p>
+      In addition to the numerical values ​​corresponding to the digits, also used
+      two special numeric values:
+    </p>
+    <ul>
+      <li> 77 - represents a wait that allows us to consider the end of a
+      sequence;
+      </li>
+      <li> 99 - represents the end of the message.
+      </li>
+    </ul>
+    <p> </p>
+    <h2>
+      <a name="SECTION00053000000000000000"> Input </a>
+    </h2>
+    <p>
+      A sequence of lines, with an integer (from 0 to 9 or 77) per line,
+      terminated by a line with the number 99.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00054000000000000000"> Output </a>
+    </h2>
+    <p>
+      A line with the sequence of letters corresponding to the integers read.
+    </p>
+    <h2>
+      <a name="SECTION00055000000000000000"> Input example </a>
+    </h2>
+    <pre>
+8
+8
+8
+3
+3
+6
+6
+3
+77
+3
+3
+1
+two
+77
+1
+3
+7
+7
+7
+6
+6
+6
+77
+4
+two
+99
+</pre>
+    <h2>
+      <a name="SECTION00056000000000000000"> Output example </a>
+    </h2>
+    <pre>
+VENDE_A_DROGA
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
