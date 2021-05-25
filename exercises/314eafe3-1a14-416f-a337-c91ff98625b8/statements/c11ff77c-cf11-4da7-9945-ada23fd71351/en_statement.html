@@ -1,0 +1,118 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      <a name = "SECTION00050000000000000000" id =
+      "SECTION00050000000000000000"> Ti-Nó-Ni </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "139" height = "119" align = "bottom" border = "0" src =
+      "./cartoon_ambulance.jpg" alt = "Image cartoon_ambulance"> <img width = "148"
+      height = "138" align = "bottom" border = "0" src = "./ short_sensors.jpg" alt =
+      "Image short_sensors">
+    </div>
+    <p>
+      In the not too distant future we will have sensors inside and outside our
+      body that will allow monitoring and helping to diagnose the diseases that
+      afflict us. It is no longer at all science fiction the possibility of a
+      patient go home with a set of sensors and a PDA to be
+      accompanied at a distance by your doctors (who will eventually give you
+      will call the phone saying it’s not okay). How can
+      to determine the patient's condition from the sensor readings? Using
+      a decision tree, for example, like the one in the figure, to obtain the
+      disease indicator (in the example, it would be the value of the <em> State indicator
+      of Anxiety </em>).
+    </p>
+    <p> </p>
+    <div align = "center">
+      <img width = "372" height = "217" align = "bottom" border = "0" src =
+      "./bodySensors-img.jpg" alt = "Image bodySensors-img">
+    </div>
+    <p>
+      Process the tree from bottom to top to obtain a value for each node.
+      This value will be the <em> whole part </em> of the heavy average of the values
+      of the nodes on which it immediately depends (children nodes). The weight of each child is
+      defined by the value that is in the branch that links it to the parent. The total weight of
+      children will always be 10. The nodes that have no children are the ones that correspond
+      sensors (and are called leaves). In the figure, the sensor reading is
+      indicated in the node in brackets. So, for example, to calculate the
+      <i> Breath Level </i>, according to the figure, we would have: <br>
+    </p>
+    <p> </p>
+    <div align = "center">
+      <img width = "669" height = "31" border = "0" src = "img13.gif" alt =
+      "\ begin {displaymath} \ mbox {\ em \ small Breath Level} = \ left (7 \ times \ mbox {\ em ... ... left (7 \ times 4 + 3 \ times 10 \ right) / 10 = 5.8 \ approx {\ bf 5} \ end {displaymath} ">
+    </div> <br clear="all">
+    <p> </p> So also <img width = "96" height = "31" align = "middle" border = "0"
+    src = "img14.gif" alt = "$ \ mbox {\ em \ small Breath} = 5 $"> because <img width =
+    "265" height = "35" align = "middle" border = "0" src = "img15.gif" alt =
+    "$ \ mbox {\ em \ small Breath} = \ left (10 \ times \ mbox {\ em \ small Breath Level} \ right) / 10 $">
+    . If the tree had only one node, that node corresponded to a sensor and its
+    reading gave the indicator of the disease.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00051000000000000000" id =
+      "SECTION00051000000000000000"> Task </a>
+    </h2> It is intended to implement a program that, given the specification of a
+    decision tree and the values ​​of the sensor readings, write the
+    `` <i> value </i> '' of node 1 of the tree (followed by a newline).
+    <p>
+      In the first line of <em> input </em> you will have two integers <code> n </code> and
+      <code> f </code>, separated by space: <code> n </code> is the total number of
+      nodes and <code> f </code> the leaves. Each of the <code> n-1 </code> lines
+      defines a branch: <code> Parent </code> <code> Child </code>
+      <code> Weight </code>. In each of the following <code> f </code> lines you will have
+      a pair of <code> Reading Sensor </code> values. The nodes were numbered
+      1 to <code> n </code> so that each child had a number greater than
+      your father and the sensors had numbers from <tt> n-f + 1 </tt> to
+      <code> n </code>. The branches are ordered in ascending order of number of
+      parent node. The number of nodes is greater than or equal to 1 and does not exceed 100. The values
+      (read or calculated) will also be relatively small.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00052000000000000000" id =
+      "SECTION00052000000000000000"> Example </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00052100000000000000" id =
+      "SECTION00052100000000000000"> Input </a>
+    </h3> <br>
+    <pre>
+12 6
+1 2 5
+1 3 5
+2 4 6
+2 5 4
+3 6 10
+4 7 10
+5 8 3
+5 9 5
+5 10 2
+6 11 7
+6 12 3
+7 9
+8 10
+10 8
+11 4
+12 10
+9 4
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00052200000000000000" id =
+      "SECTION00052200000000000000"> Output </a>
+    </h3> <br>
+    <pre>
+6
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
