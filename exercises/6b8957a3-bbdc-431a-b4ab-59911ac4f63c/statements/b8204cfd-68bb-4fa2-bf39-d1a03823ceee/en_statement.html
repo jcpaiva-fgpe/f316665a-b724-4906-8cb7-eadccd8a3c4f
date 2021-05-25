@@ -1,0 +1,145 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      maracana
+    </title>
+    <meta name = "description" content = "maracana">
+    <meta name = "keywords" content = "maracana">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <div align = "center">
+      <font size = "+ 4"> <b> Problem G </b> </font>
+    </div>
+    <div align = "center">
+      <font size = "+ 3"> <b> Reservations for Maracanã Stadium </b> </font>
+    </div>
+    <p> </p>
+    <h2>
+      <a name="SECTION00001000000000000000"> Problem </a>
+    </h2> The Maracanã Stadium, located in the North Zone of Rio de Janeiro, was
+    opened on 16 June 1950 and currently has a capacity for 200
+    000 people, which is reduced to 100 000 for security reasons.
+    Assuming that the posts are numbered from 1 to 200 000, and that
+    ticket reservations for places with these numbers, it is intended to verify
+    whether a sequence of ticket reservations is <em> acceptable </em>. To this end, the
+    total number of tickets sold should not exceed 100 000 and cannot be
+    two (or more) tickets with the same number may be sold.
+    <p> </p>
+    <h2>
+      <a name="SECTION00002000000000000000"> Task </a>
+    </h2>
+    <p>
+      Write a program that checks whether a sequence of reservations is
+      <em> acceptable </em> and, if so, indicate the places sold, in a
+      Synthesized. Reservations can be made for individual tickets or for
+      multiple tickets with consecutive numbers.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00003000000000000000"> Input </a>
+    </h2> The sequence of reservations is given, one reservation on each line. The sequence
+    ends with <img width = "28" height = "31" align = "middle" border = "0" src =
+    "img1.gif" alt = "$ \ mathbf {{-} 1} $"> and always have at least one reservation and no
+    maximum 100. Each reservation can be of the form <img width = "30" height = "15"
+    align = "bottom" border = "0" src = "img2.gif" alt = "$ \ mathbf {0} \; n $"> or
+    <img width = "50" height = "15" align = "bottom" border = "0" src = "img3.gif" alt =
+    "$ \ mathbf {1} \; n \; m $">. In the first case, it is just a ticket, which
+    must have the number <img width = "15" height = "15" align = "bottom" border = "0"
+    src = "img4.gif" alt = "$ n $">. In the second, it's <img width = "81" height = "31"
+    align = "middle" border = "0" src = "img5.gif" alt = "$ m-n + 1 $"> tickets whose
+    numbers are those in the range <img width = "48" height = "35" align = "middle"
+    border = "0" src = "img6.gif" alt = "$ {\ mathbf [n, m]} $">, that is, <img width = "15"
+    height = "15" align = "bottom" border = "0" src = "img4.gif" alt = "$ n $">,
+    <img width = "45" height = "31" align = "middle" border = "0" src = "img7.gif" alt =
+    "$ n + 1 $">, ..., <img width = "20" height = "15" align = "bottom" border = "0" src =
+    "img8.gif" alt = "$ m $">. For example,
+    <pre>
+0 13
+1 500 1000
+1 57 499
+...
+</pre> would indicate, the reservation of number 13, of all numbers from 500 to 1000, of
+all from 57 to 499, ...
+    <p> </p>
+    <h2>
+      <a name="SECTION00004000000000000000"> Output </a>
+    </h2> You must indicate the total number of tickets booked, and on the lines
+    following a representation of the set of reservations made.
+    <p>
+      The set must be ordered, and it will be the union of the sets that
+      indicate on each line, and its representation must be the most compact
+      possible. Whenever you have booked tickets with consecutive numbers,
+      you should include them all in one interval. Isolated ticket reservations,
+      should be grouped, as long as the final set is kept in order
+      (as shown below).
+    </p>
+    <p>
+      The total number of tickets booked will be <code> 0 </code> if not
+      possible to make the sequence of reservations, as this is not
+      <em> acceptable </em>. In that case, you will not write anything on the next line.
+    </p>
+    <h2>
+      <a name="SECTION00005000000000000000"> Input example 1 </a>
+    </h2>
+    <pre>
+0 13
+0 17
+1 500 1000
+0 1001
+1 57 499
+1 17000 20535
+1 2000 2001
+0 1009
+1 1002 1003
+1 100013 100113
+0 18
+0 1150
+1 20536 50005
+0 1007
+-1
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00006000000000000000"> Example of output 1 </a>
+    </h2>
+    <pre>
+34062
+{13}
+[17.18]
+[57.1003]
+{1007,1009,1150}
+[2000,2001]
+[17000.50005]
+[100013,100113]
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00007000000000000000"> Input example 2 </a>
+    </h2>
+    <pre>
+1 502 1012
+0 1001
+1 57 495
+1 502 1000
+1 1003 1101
+1,496,500
+0 504
+1 4500 5000
+0 1002
+-1
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00008000000000000000"> Example of output 2 </a>
+    </h2>
+    <pre>
+0
+</pre>
+    <p> </p>
+  </body>
+</html>
