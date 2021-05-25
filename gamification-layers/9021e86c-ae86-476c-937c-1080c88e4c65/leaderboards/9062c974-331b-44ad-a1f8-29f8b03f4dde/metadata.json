@@ -1,0 +1,1 @@
+{"id":"9062c974-331b-44ad-a1f8-29f8b03f4dde","name":"Flash-aholic","groups":false,"metrics":["$.player.points","$.latestSubmissions.[?(@.result=='ACCEPT')].metrics.executionTime"],"sorting_orders":["DESC","ASC"]}
