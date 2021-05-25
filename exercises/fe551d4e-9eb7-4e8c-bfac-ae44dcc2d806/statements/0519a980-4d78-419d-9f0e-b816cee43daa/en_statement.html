@@ -1,0 +1,195 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Schedule
+    </title>
+    <meta name = "description" content = "Schedules">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000"> Timelines </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "188" height = "99" align = "bottom" border = "0" src =
+      "./cronograma.png" alt = "Image cronograma">
+    </div>
+    <p>
+      A timeline is a phrase that can be read as a date. The word
+      Portuguese derives from the Greek words "chronos" (tempo) and "grama"
+      (letter). Although nowadays the word "schedule" has acquired a
+      new connotation - that of a diagram representing the temporal evolution - in
+      time, the timelines were simply phrases that hid a
+      date. The schedules were inscribed on monuments and tombs as a
+      poetic way of alluding to the dates they evoke. Instead of simply
+      write the date in Roman numerals, as was the norm at that time, the
+      letters of the Roman numerals were used in the middle of the words of a sentence,
+      mixed with other letters that have no meaning as numerals
+      Romans. For example, from the phrase
+    </p>
+    <p> </p>
+    <div align = "center">
+      A <b> M </b> OR <b> M </b> A <b> XI </b>
+    </div>
+    <p>
+      you can extract the characters from the Roman numeral MMXI that are equivalent to the
+      number 2011. As we all know, Roman numerals are decimal based,
+      like Arabic, but it is not positional. Each letter has a value and the value of
+      number is based on the sum of the value of the letters that compose it. For the most
+      the following table recalls the correspondence between letters
+      and its value.
+    </p>
+    <p> </p>
+    <div align = "center">
+      <table cellpadding = "3" border = "1">
+        <tr>
+          <th align = "center">
+            <b> Letter </b>
+          </th>
+          <th align = "right">
+            <b> Value </b>
+          </th>
+        </tr>
+        <tr>
+          <td align = "center">
+            I
+          </td>
+          <td align = "right">
+            1
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            V
+          </td>
+          <td align = "right">
+            5
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            X
+          </td>
+          <td align = "right">
+            10
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            L
+          </td>
+          <td align = "right">
+            50
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            Ç
+          </td>
+          <td align = "right">
+            100
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            D
+          </td>
+          <td align = "right">
+            500
+          </td>
+        </tr>
+        <tr>
+          <td align = "center">
+            M
+          </td>
+          <td align = "right">
+            1000
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      In Roman numerals the letters are usually written in order
+      decreasing in value. For example 1500 is written as MD and never as
+      DM. The letters corresponding to powers of 10 (I, X, C and M) can
+      be repeated up to 3 times. The subtractive principle can also be used
+      to simplify some representations. So IV is written instead of
+      IIII, and IX instead of VIIII, for example. The use of the principle
+      subtractive is limited to values ​​of the next quantity. We can use an I
+      before a V or an X, an X before an L or a C, or a C before an D
+      or an M; but never an I before a C or an M, or an X before a D
+      or an M. For example, it makes no sense to write MIM for 1999 that
+      should be written as MCMXCIX.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00051000000000000000"> Task </a>
+    </h2>
+    <p>
+      It is intended a program that receives as input a line with a
+      sequence of words that eventually contains a timeline of value
+      less than 3999, and produce a line with the corresponding number in
+      arabic notation. Since the Romans did not use lowercase letters, we assume that
+      the words are sequences of one or more capital letters and that the timelines
+      maximum of 100 characters. If none of the letters I, V, X, L, C, D, and M
+      occurs, then the resulting line will have a value of 0. Otherwise, it will have the
+      value corresponding to the Roman numeral, which is supposed to always be well
+      defined.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00052000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00052100000000000000"> Input </a>
+    </h3>
+    <pre>
+AMORE MATVRITAS
+</pre>
+    <h3>
+      <a name="SECTION00052200000000000000"> Output </a>
+    </h3>
+    <pre>
+2006
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00053000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00053100000000000000"> Input </a>
+    </h3>
+    <pre>
+THESE ROMANS ARE SAO LOUKOS
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00053200000000000000"> Output </a>
+    </h3>
+    <pre>
+1050
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00054000000000000000"> Example 3 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00054100000000000000"> Input </a>
+    </h3>
+    <pre>
+OK
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00054200000000000000"> Output </a>
+    </h3>
+    <pre>
+0
+</pre>
+  </body>
+</html>
