@@ -1,0 +1,95 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h1>
+      I don't like geometry
+    </h1>
+    <p> </p>
+    <div align = "center"> </div>
+    <p> </p>
+    <div align = "center">
+      <img width = "131" height = "99" align = "bottom" border = "0" src = "./ circus.jpg"
+      alt = "Image circus">
+    </div>
+    <p>
+      A circumference of center <em> C </em> and radius <em> r </em> is the place
+      geometry of points on the plane that are <em> r </em> from the point
+      <em> C </em>. The circle delimited by this circumference is made up
+      by points whose distance <em> C </em> is less than or equal to <em> r </em>. THE
+      circumference is the boundary of the circle and the remaining points constitute
+      its interior.
+    </p>
+    <p>
+      If <em> (a, b) </em> and <em> (c, d) </em> are the coordinates of two points
+      <em> P </em> and <em> Q </em> in the usual orthonormal Cartesian framework,
+      then the square of the distance between <em> P </em> and <em> Q </em> is given by
+      <em> (c-a) (c-a) + (d-b) (d-b) </em>.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00011000000000000000" id =
+      "SECTION00011000000000000000"> Task </a>
+    </h2> Write a program that given a circumference and a sequence of
+    points characterize the position of each point in relation to the bounded circle
+    by that circle, indicating whether it is <code> inside </code>,
+    <code> at the border </code> or <code> outside </code> of the circle.
+    <p>
+      In the first line of input you have the coordinates of the center of the circle
+      and the second has the radius measurement. In the next line you have the number of
+      points of the sequence and, in the others, the <em> x </em> and
+      <em> y </em> of each point. All values ​​are integers in the range
+      [-1000,1000] (naturally the radius is positive).
+    </p>
+    <p>
+      The program presents the classification of points, in the order in which they were
+      Dice. Each line of output follows the format
+      <code>(</code><em>x</em><code>,</code><em>y</em> <code>): </code>
+      <em> pos </em>, where <em> pos </em> is the point classification and <em> x </em>
+      and <em> y </em> their coordinates.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00012000000000000000" id =
+      "SECTION00012000000000000000"> Example </a>
+    </h2>
+    <h3>
+      <a name = "SECTION00012100000000000000" id =
+      "SECTION00012100000000000000"> Input </a>
+    </h3> <br>
+    <pre>
+-1 0
+10
+10
+6 100
+-1 10
+3 2
+-3 2
+7 6
+10 -1
+7 25
+-1 0
+8 5
+25 -1000
+</pre>
+    <p> </p>
+    <h3>
+      <a name = "SECTION00012200000000000000" id =
+      "SECTION00012200000000000000"> Output </a>
+    </h3> <br>
+    <pre>
+(6,100): abroad
+(-1,10): at the border
+(3,2): inside
+(-3,2): inside
+(7.6): at the border
+(10, -1): abroad
+(7.25): abroad
+(-1,0): inside
+(8.5): abroad
+(25, -1000): abroad
+</pre> <br>
+  </body>
+</html>
