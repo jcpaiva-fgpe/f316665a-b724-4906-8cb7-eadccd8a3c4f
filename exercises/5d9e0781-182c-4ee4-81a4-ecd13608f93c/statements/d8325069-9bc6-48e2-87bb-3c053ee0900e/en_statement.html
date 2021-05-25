@@ -1,0 +1,115 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Room!
+    </title>
+    <meta name = "description" content = "Room!">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00050000000000000000"> Room! </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "197" height = "148" align = "bottom" border = "0" src =
+      "./quarto.jpg" alt = "Image quarto">
+    </div>
+    <p>
+      In the <i> Room </i> game, players alternately place one of 16
+      pieces on a <img width = "43" height = "31" align = "middle" border =
+      "0" src = "img1.gif" alt = "$ 4 \ times 4 $"> positions. The pieces have four
+      dichotomous characteristics:
+    </p>
+    <dl>
+      <dt>
+        <strong> color </strong>
+      </dt>
+      <dd>
+        white or black;
+      </dd>
+      <dt>
+        <strong> height </strong>
+      </dt>
+      <dd>
+        low or high;
+      </dd>
+      <dt>
+        <strong> shape </strong>
+      </dt>
+      <dd>
+        round or square;
+      </dd>
+      <dt>
+        <strong> consistency </strong>
+      </dt>
+      <dd>
+        hollow or solid.
+      </dd>
+    </dl> The first player who places four pieces in a row wins the game
+    horizontal, vertical or diagonal with at least one common feature
+    between them (i.e. four pieces of the same color, of the same height, in the same way
+    or with the same consistency).
+    <p> </p>
+    <h2>
+      <a name="SECTION00051000000000000000"> Task </a>
+    </h2> It is intended to analyze the description of a board and indicate whether the condition
+    victory was satisfied. 4 lines of text are given corresponding to the 4
+    board lines; each piece on the board is represented by a
+    4 letter sequence: <b> P </b> or <b> B </b> (black or white); <b> a </b> or
+    <b> A </b> (low or high); <b> R </b> or <b> Q </b> (round or square);
+    <b> O </b> or <b> S </b> (hollow or solid). The empty positions on the board are
+    represented by 4 dashes <b> - </b>.
+    <p>
+      The result should be <b> FOUR </b> if the winning condition is
+      satisfied or <b> NOTHING </b> otherwise.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00052000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00052100000000000000"> Input </a>
+    </h3>
+    <pre>
+----------------
+PAQSPaQSPAROPaRS
+----------------
+----------------
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00052200000000000000"> Output </a>
+    </h3>
+    <pre>
+ROOM
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00053000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00053100000000000000"> Input </a>
+    </h3>
+    <pre>
+PaROBAROPaQS ----
+PAQSBAQOPARSBaQO
+BARS -------- BaQS
+BAQSPAROPaQOPaRS
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00053200000000000000"> Output </a>
+    </h3>
+    <pre>
+NOTHING
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
