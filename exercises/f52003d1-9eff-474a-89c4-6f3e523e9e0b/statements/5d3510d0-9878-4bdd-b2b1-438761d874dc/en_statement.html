@@ -1,0 +1,136 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Game of the Rooster
+    </title>
+    <meta name = "description" content = "Game of the Rooster">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name = "SECTION00070000000000000000" id =
+      "SECTION00070000000000000000"> Game of the Rooster </a>
+    </h1>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00071000000000000000" id =
+      "SECTION00071000000000000000"> Problem </a>
+    </h2>
+    <p>
+      The cock game is played with two players on a 3 * 3 board.
+      Each player alternately places one of his pieces in one of the positions
+      unfilled. The player who manages to put 3 of his pieces in wins
+      line horizontally, vertically or diagonally. The game ends as soon as a
+      of the players win or when all positions are occupied,
+      situation is considered a tie.
+    </p>
+    <p>
+      <img width = "724" height = "234" align = "bottom" border = "0" src = "img27.gif"
+      alt = "\ includegraphics [width = 16cm] {cock}">
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00072000000000000000" id =
+      "SECTION00072000000000000000"> Task </a>
+    </h2>
+    <p>
+      Write a program that, given a board with the final state of a
+      check whether the status is correct or not. If the status is correct, the
+      The program must also determine if there is a winner or if the game
+      ended in a draw. The positions on the board are represented by
+      values ​​0, 1 and 2. The value 0 represents an unfilled position, the value
+      1 represents a piece by <i> player 1 </i>, and the value 2 represents a
+      piece from <i> player 2 </i>. <i> Player 1 </i> is always the first to play.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00073000000000000000" id =
+      "SECTION00073000000000000000"> Input </a>
+    </h2> The input is the final state of the board. The board is given by three
+    lines, each with three integers (0, 1 or 2) representing the pieces
+    placed in the positions of that line.
+    <p> </p>
+    <h2>
+      <a name = "SECTION00074000000000000000" id =
+      "SECTION00074000000000000000"> Output </a>
+    </h2> The program should present as a result:
+    <p>
+      <i> <tt> incorrect game </tt> </i>: if the state of the game is not correct.
+    </p>
+    <p>
+      <i> <tt> beat player 1 </tt> </i>: if the state of the game is correct and if
+      won player 1.
+    </p>
+    <p>
+      <i> <tt> beat player 2 </tt> </i>: if the state of the game is correct and if
+      won player 2.
+    </p>
+    <p>
+      <i><tt>empate</tt> </i>: if the state of the game is correct and if it ended with
+      a tie.
+    </p>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00075000000000000000" id =
+      "SECTION00075000000000000000"> Example 1: input </a>
+    </h2> <br>
+    <pre>
+1 2 1
+2 2 1
+1 0 2
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00076000000000000000" id =
+      "SECTION00076000000000000000"> Example 1: output </a>
+    </h2> <br>
+    <pre>
+incorrect game
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00077000000000000000" id =
+      "SECTION00077000000000000000"> Example 2: input </a>
+    </h2> <br>
+    <pre>
+1 0 2
+1 0 2
+1 0 2
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00078000000000000000" id =
+      "SECTION00078000000000000000"> Example 2: output </a>
+    </h2> <br>
+    <pre>
+incorrect game
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00079000000000000000" id =
+      "SECTION00079000000000000000"> Example 3: input </a>
+    </h2> <br>
+    <pre>
+1 1 2
+0 2 0
+2 0 1
+</pre>
+    <p> </p>
+    <h2>
+      <a name = "SECTION000710000000000000000" id =
+      "SECTION000710000000000000000"> Example 3: output </a>
+    </h2> <br>
+    <pre>
+won player 2
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
