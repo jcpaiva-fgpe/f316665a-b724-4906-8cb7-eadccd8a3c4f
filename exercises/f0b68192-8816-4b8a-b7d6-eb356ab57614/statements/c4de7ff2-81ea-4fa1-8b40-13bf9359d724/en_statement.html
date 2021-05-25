@@ -1,0 +1,97 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Digital Preservation
+    </title>
+    <meta name = "description" content = "Digital Preservation">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00030000000000000000"> Digital Preservation </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "115" height = "99" align = "bottom" border = "0" src =
+      "./cd_disquete.jpeg" alt = "Image cd_disquete">
+    </div>
+    <p>
+      We just came across a serious problem in our files
+      digital, still based on CD-ROM and some on floppy disks. Many
+      files are corrupted and it is not possible to fully recover the
+      your information. Fortunately, there are many copies of each
+      this we think it will be possible to recover most of the files.
+    </p>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00031000000000000000"> Task </a>
+    </h2>
+    <p>
+      The recovery strategy is simple: analyzing bit by bit the various
+      copies of the same file we will take the most bit for each position
+      frequent. In case of equal frequency for a given bit, the
+      <code> 0 </code> value. For example, if we have 4 files with the
+      following 6-bit strings the recovery result will be as indicated
+      on the last line
+    </p>
+    <pre>
+011000
+010100
+011001
+001111
+
+011000
+</pre>
+    <p>
+      To simplify your work, the files have been converted into a
+      string <code> 0 </code> and <code> 1 </code>. The first line
+      input will consist of N and M, where N is the number of "files" and M
+      is the number of "bits" of each file. The next N lines are
+      strings of M characters containing only the characters
+      <code> 0 </code> or <code> 1 </code>. It is known that N does not exceed 30 and M does not
+      exceeds 255.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00032000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00032100000000000000"> Input </a>
+    </h3>
+    <pre>
+4 6
+011000
+010100
+011001
+001111
+</pre>
+    <h3>
+      <a name="SECTION00032200000000000000"> Output </a>
+    </h3>
+    <pre>
+011000
+</pre>
+    <h2>
+      <a name="SECTION00033000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00033100000000000000"> Input </a>
+    </h3>
+    <pre>
+2 4
+1100
+1010
+</pre>
+    <h3>
+      <a name="SECTION00033200000000000000"> Output </a>
+    </h3>
+    <pre>
+1000
+</pre>
+  </body>
+</html>
