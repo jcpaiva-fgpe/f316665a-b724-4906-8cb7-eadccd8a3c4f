@@ -1,0 +1,83 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Strong authentication
+    </title>
+    <meta name = "description" content = "Strong authentication">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00020000000000000000"> Strong authentication </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "82" height = "99" align = "bottom" border = "0" src =
+      "./fingerprint-r.png" alt = "Image fingerprint-r">
+    </div>
+    <p>
+      Congratulations! You have been admitted to the GIS (Security Interest Group).
+      Your first task is to implement the strong authentication system
+      required by the authentication of our website. We don't use keywords.
+      To authenticate you, you will be presented with a challenge that will have to be
+      answered in 10 milliseconds, without fail and at the first attempt. This
+      means that the challenge will have to be answered by a program that will have
+      to install on your authentication client. This program receives a
+      string as a challenge and responds with another string
+      of characters.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00021000000000000000"> Task </a>
+    </h2>
+    <p>
+      The challenges will be changed weekly. In this first week the
+      The answer to the challenge will be the character string provided with the
+      characters in index positions <img width = "40" height = "14" align =
+      "bottom" border = "0" src = "img1.gif" alt = "$ 2 * n $"> exchanged with
+      characters in index positions <img width = "70" height = "31" align =
+      "middle" border = "0" src = "img2.gif" alt = "$ 2 * n + 1 $">, 0 being the first
+      sequence index, for <img width = "93" height = "36" align = "middle"
+      border = "0" src = "img3.gif" alt = "$ 0 \ leq n <l / 2 $">, where <img width =
+      "10" height = "15" align = "bottom" border = "0" src = "img4.gif" alt = "$ l $">,
+      string length, is an even number between 2 and 100,
+      including.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00022000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00022100000000000000"> Input </a>
+    </h3>
+    <pre>
+abba
+</pre>
+    <h3>
+      <a name="SECTION00022200000000000000"> Output </a>
+    </h3>
+    <pre>
+baab
+</pre>
+    <h2>
+      <a name="SECTION00023000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00023100000000000000"> Input </a>
+    </h3>
+    <pre>
+123456
+</pre>
+    <h3>
+      <a name="SECTION00023200000000000000"> Output </a>
+    </h3>
+    <pre>
+214365
+</pre>
+    <p> </p>
+  </body>
+</html>
