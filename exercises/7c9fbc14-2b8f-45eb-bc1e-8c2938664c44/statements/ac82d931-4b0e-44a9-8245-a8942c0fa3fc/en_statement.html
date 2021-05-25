@@ -1,0 +1,142 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Vacation plan
+    </title>
+    <meta name = "description" content = "Vacation Plan">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name="SECTION00060000000000000000"> Vacation Plan </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "242" height = "197" align = "bottom" border = "0" src =
+      "./holiday_period_503505.jpg" alt = "Image holiday_period_503505">
+      <img width = "297" height = "256" align = "bottom" border = "0" src =
+      "./calendar3.png" alt = "Image calendar3">
+    </div>
+    <p>
+      People from the north who intended to do beach in the Algarve and Andalusia in the
+      Easter holidays, was surprised by winds, downpours and a very
+      cold. <em> "Blancos llegaron y más blancos volvieron" </em>, so already
+      dream of a week or fifteen days of vacation that they plan to take in
+      June, July, August or September, if the holiday allowance is not in the
+      flash flood. It looks like it won't ... So a group of optimistic friends is
+      already trying to choose a week of vacation, according to preferences
+      and unavailability of each one. This week (seven days of vacation) has to
+      start on a Monday and end on the following Sunday or, in
+      Alternatively, start on a Saturday and end on the following Friday. Each
+      group member indicated a sequence of periods that do not overlap and
+      classified each period using integers: <code> -1 </code> to mark
+      unavailability and values ​​from <code> 1 </code> to <code> 5 </code> for
+      express preferences, with <code> 5 </code> being the maximum level. US
+      periods that it did not include, it is also available but with level of
+      zero preference, if friends think it is a good idea or if there is no
+      alternative. The classification serves to score similarly each day of the
+      referred period. The chosen week will be one that everyone can go to,
+      after 1 June (Wednesday) and ending before 12 September 2011,
+      and that has the maximum score, considering the sum of the scores
+      accumulated in the seven days, after processing everyone's preferences.
+      If there is more than one possible week, they will choose the next one,
+      don't let the cold come back in force.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00061000000000000000"> Task </a>
+    </h2>
+    <p>
+      A program is intended to process the information provided and indicate the
+      date when the group will start the vacation (or detect the inconsistency if
+      there is no possibility of going together).
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00062000000000000000"> Input </a>
+    </h2> A first line with the number of group members. It remains the same
+    number of blocks, each containing the preferences or unavailability of
+    a member of the group. A block starts with a positive integer that denotes the
+    number of periods the member referred to and then, in each row, has a
+    quintet in the <em> "day month day month preference" </em> format, for example,
+    <code> 16 6 30 6 3 </code> (which would represent the period from 16 June to 30
+    June with preference 3 on each day of that period; if it were
+    <code> 16 6 30 6 -1 </code>, would indicate that the member could not go on that
+    time course).
+    <p> </p>
+    <h2>
+      <a name="SECTION00063000000000000000"> Output </a>
+    </h2> If there is a week when everyone can, it will indicate the start date
+    of holidays in the format: number of the day followed by a space followed by
+    <code> June </code>, <code> July </code>, <code> August </code> or
+    September <code> </code>. Otherwise, the word
+    <code> inconsistent </code>.
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00064000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00064100000000000000"> Input </a>
+    </h3>
+    <pre>
+3
+two
+10 7 7 9 -1
+10 6 23 6 5
+two
+1 6 15 7 -1
+25 7 26 7 4
+1
+23 6 25 6 -1
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00064200000000000000"> Output </a>
+    </h3>
+    <pre>
+inconsistent
+</pre>
+    <p> </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00065000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00065100000000000000"> Input </a>
+    </h3>
+    <pre>
+5
+6
+16 6 30 6 3
+8 7 8 7 -1
+9 7 31 7 5
+5 8 12 8 5
+23 8 31 8 2
+7 6 8 6 -1
+1
+1 6 31 7 4
+1
+1 8 5 9 1
+two
+3 7 20 8 4
+1 9 9 9 -1
+3
+15 6 8 7 5
+15 8 31 8 -1
+7 9 10 9 5
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00065200000000000000"> Output </a>
+    </h3>
+    <pre>
+July 9
+</pre>
+    <p> </p>
+  </body>
+</html>
