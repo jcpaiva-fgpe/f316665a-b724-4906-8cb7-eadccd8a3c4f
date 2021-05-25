@@ -1,0 +1,140 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Go up?
+    </title>
+    <meta name = "description" content = "Are you going up?">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00010000000000000000"> Going Up? </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "77" height = "119" align = "bottom" border = "0" src =
+      "./Aiga_elevator.png" alt = "Image Aiga_elevator">
+    </div>
+    <p>
+      The elevator company Suba-Suba opted for a new
+      control of groups of elevators in order to minimize the consumption of
+      energy. For a group of two elevators, identified as 1 and 2, the
+      system will send the elevator that is closest to the floor from which
+      the call was made. If the elevators are at the same distance
+      then what is found in a higher position will be sent. If both
+      elevators are on the same floor, elevator 1 will always operate.
+      Elevators will not always be stopped and available to be called.
+      They may be in service, under maintenance or damaged. In this case, it will send
+      the only elevator available, or an error if both are unavailable.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00011000000000000000"> Task </a>
+    </h2>
+    <p>
+      It is intended to program the system that controls the call of a group two
+      elevators according to the given specification. The program will receive as input the
+      number of the floor on which an elevator was called, as well as the situation
+      current status of each of the elevators; will indicate the elevator number best
+      positioned to make the route. The input consists of three
+      integers separated by a space: the number of the floor from which the
+      the situation of elevator 1, followed by the situation of elevator 2. The
+      floor number where the elevator was called is an integer between -100 and
+      100. The position of elevators 1 and 2 may be the number of one floor,
+      also a value between -100 and 100, or the number 999 to indicate that
+      is unavailable. The output is 0, 1 or 2. The value 0 is reserved for the
+      if both elevators are unavailable. Otherwise,
+      the number of the elevator best positioned to answer the call
+      (1 or 2).
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00012000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00012100000000000000"> Input </a>
+    </h3>
+    <pre>
+2 4 2
+</pre>
+    <h3>
+      <a name="SECTION00012200000000000000"> Output </a>
+    </h3>
+    <pre>
+two
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00013000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00013100000000000000"> Input </a>
+    </h3>
+    <pre>
+1 999 -1
+</pre>
+    <h3>
+      <a name="SECTION00013200000000000000"> Output </a>
+    </h3>
+    <pre>
+two
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00014000000000000000"> Example 3 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00014100000000000000"> Input </a>
+    </h3>
+    <pre>
+3 1 5
+</pre>
+    <h3>
+      <a name="SECTION00014200000000000000"> Output </a>
+    </h3>
+    <pre>
+two
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00015000000000000000"> Example 4 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00015100000000000000"> Input </a>
+    </h3>
+    <pre>
+4 6 6
+</pre>
+    <h3>
+      <a name="SECTION00015200000000000000"> Output </a>
+    </h3>
+    <pre>
+1
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00016000000000000000"> Example 5 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00016100000000000000"> Input </a>
+    </h3>
+    <pre>
+7 999 999
+</pre>
+    <h3>
+      <a name="SECTION00016200000000000000"> Output </a>
+    </h3>
+    <pre>
+0
+</pre>
+    <p>
+      <br>
+    </p>
+    <hr>
+  </body>
+</html>
