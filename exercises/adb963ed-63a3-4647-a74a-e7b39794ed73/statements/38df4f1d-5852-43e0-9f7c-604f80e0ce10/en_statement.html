@@ -1,0 +1,171 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Balloon in sight
+    </title>
+    <meta name = "description" content = "Balloon in sight">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00070000000000000000"> Balloon in sight </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "126" height = "158" align = "bottom" border = "0" src =
+      "./robotics.jpg" alt = "Image robotics">
+    </div>
+    <p> </p>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <p>
+      Who blocked the doors? It was not a shocked ET, but
+      <tt> TAKIOR </tt>, intelligent robot specially programmed to put
+      holidays, parties and balloons. How could the tenth anniversary of
+      ToPAS escape you? He quickly set out for the Department to party,
+      without wasting a minute studying the floor plan of the large building, having only
+      the coordinates of the entrance door. At the entrance, it looked like a maze.
+      So, he decided to adopt a simple but risky algorithm.
+      He would go through laboratories, amphitheaters, offices, rooms and the like, without
+      away from the walls. He would block the doors he had to go through,
+      avoiding walking around and looking like a dizzy cicada. He would confiscate the
+      balloons that he found, that he would use to take off when he left.
+    </p>
+    <p>
+      To recap, <tt> TAKIOR </tt> must go through all the compartments that
+      get. When he enters a compartment, he must block the door through which
+      he entered. Then, without moving away from the wall, he walks through the compartment and
+      collects the balloons he finds near the wall (we assume that the doors do not
+      blocked are touching and act as walls in this research). THE
+      then look for the unblocked door. If it exists, open it to go to the
+      neighboring compartment or leave the building if that door is to
+      exit. If the compartment has only one door (the one you blocked when
+      entered), patiently waits for him to be found clinging to the balloons that
+      he intended to confiscate. If you leave the building, take off immediately. Will have
+      always confiscated at least one balloon.
+    </p>
+    <p>
+      <tt> TAKIOR </tt> looks like a rope doll, but in fact, that
+      side device has sensors that allow you to maintain contact
+      with the walls and return to orient yourself when entering a new compartment.
+      So, when you enter a room, <b> always turns to your right </b>, staying
+      the sensor directed to the wall that has to its right. It will keep this
+      condition during movement in the compartment.
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00071000000000000000"> Task </a>
+    </h2> Write a program to analyze a virtual scenario, and determine the
+    number of balloons that <tt> TAKIOR </tt> confiscated or intended to confiscate, and
+    also detect if it got stuck in the building or took off. Each scenario is
+    composed of a building plan, represented by a grid
+    rectangular, with identification of the positions of the walls and doors, as well as
+    as well as the positions that contain balloons. There are no balloons behind doors.
+    <b> All compartments are rectangular and have either one or two doors.
+    There are no doors next to the corners </b>. The inlet compartment always has
+    two doors and only one of them gives access to the outside. There is at least one
+    exit door to the outside in another compartment.
+    <p>
+      In the first line of data there are two integers <em> m </em> and <em> n </em>,
+      less than 100, and that represent the number of rows and columns of the
+      grid. <em> m </em> lines follow. Each contains a sequence of
+      <em> n </em> characters, formed by <tt> 'E' </tt> (entrance door),
+      <tt> 'S' </tt> (exit door), <tt> 'P' </tt> (interior door),
+      <tt> 'X' </tt> (wall), <tt> 'B' </tt> (balloon), or <tt> '' </tt> spaces. At the
+      start and end of each line can have <tt> 'X' </tt>, <tt> 'S' </tt> or
+      <tt> 'E' </tt>, with only one <tt> 'S' </tt> and <tt> 'E' </tt> in the scenario.
+      You can assume that the gateway is always in the <b> cell
+      (0.2) </b>, near the bottom left corner of the grid.
+    </p>
+    <p>
+      The result consists of two lines: the first has the number of
+      collected balloons; the second has the phrase `` <tt> took flight </tt> '' or
+      `` <tt> Came to stay </tt> '', depending on whether or not <tt> TAKIOR </tt>
+      managed to get out of the building.
+    </p>
+    <p> </p>
+    <p> </p>
+    <p>
+      <br>
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00072000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00072100000000000000"> Input </a>
+    </h3>
+    <pre>
+18 20
+XXXXXXXXXXXXXXXXXXXX
+X X X
+X B X X
+X XXPXXXXXXXXXX
+X X X X
+X BX X B S
+X P X X
+X X XXPXXXXX
+X XXXXXX X
+X X X X
+X X P X
+X X X X
+XXXXPXXXXXXXXXXXXXXX
+X BX
+X B X
+X B X
+X B X
+XXEXXXXXXXXXXXXXXXXX
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00072200000000000000"> Output </a>
+    </h3>
+    <pre>
+3
+Came to stay
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00073000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00073100000000000000"> Input </a>
+    </h3>
+    <p> </p>
+    <pre>
+14 23
+XXXXXXXXXXXXXXXXXXXXXXX
+X X X
+X B X B X
+X X B S
+X B XB X
+X B XXXXXXXPXXXXX
+X X X
+X B X B B X
+X XXXXXXXXXPXXX
+X X X X
+X P P X
+X B X B X BX
+X X X X
+XXEXXXXXXXXXXXXXXXXXXXX
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00073200000000000000"> Output </a>
+    </h3>
+    <pre>
+4
+Took off
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
