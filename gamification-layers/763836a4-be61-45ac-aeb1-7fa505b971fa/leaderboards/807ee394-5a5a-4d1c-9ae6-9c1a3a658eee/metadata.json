@@ -1,1 +1,1 @@
-{"id":"807ee394-5a5a-4d1c-9ae6-9c1a3a658eee","name":"Flash-aholic","metrics":["$.player.points","executionTime"],"sorting_orders":["DESC","ASC"]}
+{"id":"807ee394-5a5a-4d1c-9ae6-9c1a3a658eee","name":"Flash-aholic","groups":false,"metrics":["$.player.points","$.latestSubmissions.[?(@.result=='ACCEPT')].metrics.executionTime"],"sorting_orders":["DESC","ASC"]}
