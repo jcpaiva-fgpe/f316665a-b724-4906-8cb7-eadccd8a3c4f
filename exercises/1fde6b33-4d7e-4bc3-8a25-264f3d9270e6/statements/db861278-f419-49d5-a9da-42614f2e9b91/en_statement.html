@@ -1,0 +1,89 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Calendar issues
+    </title>
+    <meta name = "description" content = "Calendar issues">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00020000000000000000"> Agenda issues </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "111" height = "111" align = "bottom" border = "0" src =
+      "./Calendar.jpg" alt = "Image Calendar">
+    </div>
+    <p>
+      People with overloaded schedules have some difficulty in scheduling
+      meetings. There are those that say "I can from <em> x </em> to <em> y </em>, but to
+      <em> y </em> I already have another meeting "and the ones that say" I can't
+      <em> z </em> at <em> t </em>, but at <em> t </em> I'm already free ". The others
+      possibilities are not going to be interesting right now and for simplicity's sake let's
+      suppose they always say "I can".
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00021000000000000000"> Task </a>
+    </h2> Write a program that, given the expected duration (in hours) for a
+    meeting between two people and two pairs of integers <em> A B </em> and <em> C
+    D </em>, check if it is possible to schedule the meeting and when. In this case, the
+    first person would say "I can from <em> A </em> hours to <em> B </em> hours, but
+    at <em> B </em> I already have another meeting "and the second would say" I can
+    <em> C </em> hours at <em> D </em> hours, but at <em> D </em> I already have another
+    meeting ", with <em> A, B, C </em> and <em> D </em> integers between 9 and 19.
+    <em> A </em> is assumed to be less than <em> B </em> and <em> C </em> is less
+    than <em> D </em>.
+    <p>
+      The meeting must take place between 9 and 19 hours and its duration is a
+      whole. The first line of data has this duration and the next two
+      the two pairs mentioned. Depending on the case, the program writes a line or
+      with the word <code> Impossible </code> (without accent) or with an integer if the
+      meeting only if it can be held in an hour or with two integers if there is
+      flexibility (these integers define the interval in which you can fix the
+      beginning of the meeting).
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00022000000000000000"> Example 1 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00022100000000000000"> Input </a>
+    </h3>
+    <pre>
+1
+9 12
+12 16
+</pre>
+    <h3>
+      <a name="SECTION00022200000000000000"> Output </a>
+    </h3>
+    <pre>
+Impossible
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00023000000000000000"> Example 2 </a>
+    </h2>
+    <h3>
+      <a name="SECTION00023100000000000000"> Input </a>
+    </h3>
+    <pre>
+two
+10 15
+10 17
+</pre>
+    <h3>
+      <a name="SECTION00023200000000000000"> Output </a>
+    </h3>
+    <pre>
+10 13
+</pre>
+  </body>
+</html>
