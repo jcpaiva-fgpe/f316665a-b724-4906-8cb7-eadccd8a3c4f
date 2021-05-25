@@ -1,0 +1,140 @@
+<! DOCTYPE HTML PUBLIC "- // W3C // DTD HTML 3.2 // EN">
+<html>
+  <head>
+    <title>
+      Colored Lines
+    </title>
+    <meta name = "description" content = "Colored Lines">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <hr>
+    <h1>
+      <a name="SECTION00070000000000000000"> Colored Lines </a>
+    </h1>
+    <p> </p>
+    <div align = "center">
+      <img width = "160" height = "237" align = "bottom" border = "0" src =
+      "./glines3a.jpg" alt = "Image glines3a"> <img width = "160" height = "237"
+      align = "bottom" border = "0" src = "./ glines4a.jpg" alt = "Image glines4a">
+      <img width = "160" height = "237" align = "bottom" border = "0" src =
+      "./glines7a.jpg" alt = "Image glines7a">
+    </div>
+    <p>
+      In the board game <em> Color Lines </em>, the objective is to line up five or
+      more balls of the same color, as many times as you can, to
+      score points. The board has a dimension <img width = "43" height = "31"
+      align = "middle" border = "0" src = "img6.gif" alt = "$ 9 \ times 9 $">. O
+      alignment can be vertical, horizontal or any diagonal.
+    </p>
+    <p>
+      Normally the game starts with five balls on the board positioned at the
+      chance. In each play, the player selects any ball and the position
+      where you want to move it. The ball moves to that position as long as it
+      be free and there is a free way there (that path is always a
+      sequence of any horizontal and / or vertical unit steps). At
+      new position, the ball may complete one or more alignments, each
+      with 5 or more balls (as in the examples). Whenever this happens, the
+      player accumulates points and the balls involved leave the board. Just leave
+      balls belonging to an alignment of 5 or more balls. In the situation
+      illustrated by the figure on the far right, would complete an alignment of 6
+      balls and one of 5 (and 10 balls would come out of the board).
+    </p>
+    <p>
+      When there is no alignment, new balls enter, occupying positions
+      random. The game ends when the board runs out of space
+      free.
+    </p>
+    <p>
+      It is only intended to know if the player is able to complete any
+      alignment in a given play and, if successful, how many balls will come out of the
+      board (before others enter).
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00071000000000000000"> Task </a>
+    </h2> Write a program to simulate a move from a certain state
+    and indicate how many balls leave the board in that move.
+    <p>
+      Each position on the board is identified by a pair (I, J) of integers
+      between 1 and 9, where I is the row number and J is the column number: (1,1), (1,9), (9,9)
+      and (9.1) are the bottom left, bottom right, top
+      right and upper left, respectively. In each position there is a
+      integer (from 1 to 7).
+    </p>
+    <p>
+      The input starts with the state of the board, given by lines, from the top to the
+      base (0 means free position). The next two lines give the position
+      the selected ball and the cell to move it to, if you can.
+    </p>
+    <p>
+      The output is a line with the number of balls that have come out (possibly 0).
+    </p>
+    <p>
+      The following examples refer to the plays outlined in the two
+      figures to the left (the colors light blue, dark blue, green,
+      red, orange, pink, and yellow are represented by integers from 1 to
+      7).
+    </p>
+    <p> </p>
+    <h2>
+      <a name="SECTION00072000000000000000"> Example 1 </a>
+    </h2> <br>
+    <h3>
+      <a name="SECTION00072100000000000000"> Input </a>
+    </h3> <br>
+    <pre>
+0 2 0 7 3 0 7 0 4
+7 0 0 0 0 2 0 0 4
+6 7 0 1 2 0 0 0 7
+1 0 0 2 0 0 7 3 4
+0 4 0 0 0 6 0 3 0
+5 2 0 0 0 0 0 3 5
+2 0 0 0 1 0 0 3 5
+1 5 0 1 0 1 0 0 5
+0 6 6 6 0 0 0 3 0
+9 5
+2 8
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00072200000000000000"> Output </a>
+    </h3> <br>
+    <pre>
+6
+</pre>
+    <p> </p>
+    <h2>
+      <a name="SECTION00073000000000000000"> Example 2 </a>
+    </h2> <br>
+    <h3>
+      <a name="SECTION00073100000000000000"> Input </a>
+    </h3> <br>
+    <pre>
+0 2 0 7 0 0 7 0 4
+7 0 0 0 0 2 0 0 4
+6 7 0 1 2 0 0 0 7
+1 0 0 2 0 0 7 0 4
+0 4 0 0 0 6 0 0 0
+5 2 0 0 0 0 0 0 5
+2 0 0 0 1 0 0 0 5
+1 5 0 1 0 1 0 0 5
+0 6 6 6 0 0 0 0 0
+9 2
+5 3
+</pre>
+    <p> </p>
+    <h3>
+      <a name="SECTION00073200000000000000"> Output </a>
+    </h3> <br>
+    <pre>
+6
+</pre>
+    <p>
+      <br>
+    </p>
+  </body>
+</html>
