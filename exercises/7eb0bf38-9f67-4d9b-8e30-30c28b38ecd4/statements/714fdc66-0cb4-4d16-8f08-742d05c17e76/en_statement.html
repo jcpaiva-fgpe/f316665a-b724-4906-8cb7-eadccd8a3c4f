@@ -1,0 +1,176 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Cross-fire
+    </title>
+    <meta name = "description" content = "Crossfire">
+    <meta name = "keywords" content = "html">
+    <meta name = "resource-type" content = "document">
+    <meta name = "distribution" content = "global">
+    <meta http-equiv = "Content-Type" content = "text / html; charset = utf-8">
+    <meta http-equiv = "Content-Style-Type" content = "text / css">
+    </head>
+  <body>
+    <h1>
+      <a name = "SECTION00060000000000000000" id =
+      "SECTION00060000000000000000"> Crossfire </a>
+    </h1>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00061000000000000000" id =
+      "SECTION00061000000000000000"> Problem </a>
+    </h2>
+    <p>
+      Consider a board with <i> L </i> lines and <i> C </i> columns. At
+      A white ball is placed in one of the columns in the first row.
+      shifts vertically along that column and one position at a time.
+      In the remaining rows (in any column), balls may be placed
+      black (at most one per line), representing projectiles. The balls
+      black move only horizontally, one position at a time. The balls
+      blacks move from a given initial column and according to a
+      initial sense also given. When a black ball reaches the limit of the
+      this board reverses the direction of its movement.
+    </p>
+    <p> </p>
+    <div align = "center">
+      <img width = "315" height = "227" align = "bottom" border = "0" src = "img23.gif"
+      alt = "\ includegraphics [width = 7cm] {fire}">
+    </div>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00062000000000000000" id =
+      "SECTION00062000000000000000"> Task </a>
+    </h2>
+    <p>
+      Write a program that, given the dimensions of the initial L * C board, the
+      column where the white ball is located, the number of black balls and, for
+      each black ball, its initial position (row and column) and the direction of
+      determine whether the white ball reaches the bottom of the board without
+      collide with any of the moving black balls. In the event of a collision, the
+      program should print <tt> Collide </tt> and the line corresponding to the ball
+      black that collides with the white ball. Otherwise, the program must
+      simply print that the ball <tt> Passes </tt>.
+    </p>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00063000000000000000" id =
+      "SECTION00063000000000000000"> Input </a>
+    </h2> The problem data is presented as follows: <br>
+    <ul>
+      <li> a line with two integers <i> L </i> and <i> C </i> (<= 50) that
+      correspond to the size of the board;
+        <p> </p>
+      </li>
+      <li> a line with a single integer <i> ColBranca </i> that indicates the column where
+      the white ball is initially found;
+        <p> </p>
+      </li>
+      <li> a line with a single integer <i> NBlack </i> that indicates how many balls
+      black will be used;
+        <p> </p>
+      </li>
+      <li>
+        <i> NBlack </i> lines, each with three integers representing
+        respectively: the line where the black ball will be placed, the column
+        where it is initially and the direction <tt> -1 </tt> (for the
+        left) or <tt> 1 </tt> (to the right) of the movement.
+      </li>
+    </ul>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00064000000000000000" id =
+      "SECTION00064000000000000000"> Output </a>
+    </h2> The program should present as a result:
+    <ul>
+      <li>
+        <tt> passes </tt>: if there is no collision.
+      </li>
+      <li>
+        <tt> collides n </tt>: if there is a collision, where <tt> n </tt> is the line number
+        where is the black ball that collided with the white ball:
+      </li>
+    </ul>
+    <p> </p>
+    <h2>
+      <a name = "SECTION00065000000000000000" id =
+      "SECTION00065000000000000000"> Example 1: input </a>
+    </h2> <br>
+    <pre>
+5 7
+3
+3
+2 2 -1
+5 1 1
+4 6 1
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00066000000000000000" id =
+      "SECTION00066000000000000000"> Example 1: output </a>
+    </h2> <br>
+    <pre>
+raisin
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00067000000000000000" id =
+      "SECTION00067000000000000000"> Example 2: input </a>
+    </h2> <br>
+    <pre>
+3 3
+1
+two
+2 2 1
+3 3 1
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00068000000000000000" id =
+      "SECTION00068000000000000000"> Example 2: output </a>
+    </h2> <br>
+    <pre>
+collide 3
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION00069000000000000000" id =
+      "SECTION00069000000000000000"> Example 3: input </a>
+    </h2> <br>
+    <pre>
+4 2
+two
+3
+4 2 -1
+2 2 1
+3 1 1
+</pre>
+    <p>
+      <br>
+    </p>
+    <h2>
+      <a name = "SECTION000610000000000000000" id =
+      "SECTION000610000000000000000"> Example 3: output </a>
+    </h2> <br>
+    <pre>
+raisin
+</pre> <br>
+    <hr>
+  </body>
+</html>
