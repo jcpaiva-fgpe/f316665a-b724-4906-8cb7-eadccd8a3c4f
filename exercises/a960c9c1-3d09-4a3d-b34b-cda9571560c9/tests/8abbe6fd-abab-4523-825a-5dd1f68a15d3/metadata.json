@@ -1,1 +1,1 @@
-{"id":"8abbe6fd-abab-4523-825a-5dd1f68a15d3","arguments":["--timeout","2"],"weight":0,"visible":false,"input":"ik_07_in.txt","output":"ik_07_out.txt"}
+{"id":"8abbe6fd-abab-4523-825a-5dd1f68a15d3","arguments":["--timeout","2"],"weight":"0","visible":"false","input":"ik_07_in.txt","output":"ik_07_out.txt","timeout":"-1","feedback":[{"message":"bbb","weight":"1"},{"message":"aaa","weight":"0"}]}
