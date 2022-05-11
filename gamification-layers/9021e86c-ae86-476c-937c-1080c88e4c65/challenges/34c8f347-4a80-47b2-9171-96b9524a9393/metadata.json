@@ -1,1 +1,1 @@
-{"id":"34c8f347-4a80-47b2-9171-96b9524a9393","name":"Ultimate Test","description":"Solve A6 within one hour (3 600 000 ms).","refs":[],"mode":"TIME_BOMB","mode_parameters":["3600000"],"locked":true,"hidden":false,"difficulty":"MASTER","children":[],"rules":[],"rewards":[],"leaderboards":[]}
+{"id":"34c8f347-4a80-47b2-9171-96b9524a9393","name":"Ultimate Test","description":"Solve B7 within one hour (3 600 000 ms).","refs":["f52003d1-9eff-474a-89c4-6f3e523e9e0b"],"mode":"TIME_BOMB","mode_parameters":["3600000"],"locked":true,"hidden":false,"difficulty":"MASTER","children":[]}
